@@ -1,0 +1,29 @@
+{
+  "name": "novo_static",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "run-p scss serve",
+    "scss": "nodemon -e scss -x \"node scss.js\"",
+    "serve": "static-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m0rwin/staticplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m0rwin/staticplate/issues"
+  },
+  "homepage": "https://github.com/m0rwin/staticplate#readme",
+  "dependencies": {
+    "bourbon": "^4.3.4",
+    "compass-importer": "^0.4.1",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.12.1",
+    "npm-run-all": "^4.1.2",
+    "static-server": "^3.0.0"
+  }
+}
