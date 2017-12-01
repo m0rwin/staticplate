@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Behavioral Meta Data -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- Styles/ Font -->
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="our-world-styles.css"/>
+
+</head>
+<body>
+  <div id="title1">
+    <h1>Our world</h1>
+    <p> The World of Novo revolves around free-thinking people <br>who are empowered to deliver the extraordinary.</p>
+    <h3> We just happen to do recruitment.</h3>
+</div>
+
+  <div id="container" class="container">
+      <div class="backgound-copy1">
+          <p></p>
+        </div>
+        <div class="backgound-copy2">
+            <p></p>
+        </div>
+      <div id="scene" class="scene border fill fade-in">
+        <div class="rocks1" data-depth="0.10">
+            <img class="" src="./assets/rocks_3.svg" class="img-responsive" alt=""></img>
+      </div>
+
+      <div class="community fade-in" data-depth="0.18">
+        <img class="aspect4" src="assets/community_island.svg" class="img-responsive" alt=""></img>
+        <button class="sectorscta aspect4" data-depth="0.10">LOCAL COMMUNITY</button>
+      </div>
+
+      <div class="sectors fade-in" data-depth="0.20">
+        <img class="sectorscale aspect3" src="assets/sectors_island.svg" class="img-responsive" alt=""><img>
+      </div>
+        <div class="sectors dropdown aspect3">
+          <button class="sectorscta">SECTORS</button>
+            <div class="dropdown-content">
+              <a href="#">Main Contractor</a>
+              <a href="#">Property & Maintenance</a>
+              <a href="#">Building Services</a>
+              <a href="#">Fit Out & Interiors</a>
+              <a href="#">Residential & Housing</a>
+              <a href="#">Groundworks & Frames</a>
+              <a href="#">Freelance</a>
+            </div>
+        </div>
+
+      <div class="meet fade-in" data-depth="0.30">
+            <img class="aspect5" src="assets/meet_island.svg" class="img-responsive" alt="">
+          <button class="sectorscta aspect5" data-depth="0.10">MEET THE LOCALS</button>
+      </div> 
+
+      <div class="join fade-in" data-depth="0.25">
+        <a href="#">
+          <img class="aspect6" src="assets/join_island.svg" class="hover" alt="">
+        </a>
+       <button class="sectorscta aspect6" data-depth="0.10">JOIN THE LOCALS</button>
+      </div>        
+    </div>
+
+  <!-- Scripts -->
+  <script src="./our-world-parallax.js"></script>
+  <script>
+
+  // Nothing new here...it's all in the CSS!
+  // And don't forget to activate the pointerEvents option
+
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  var colors = ['#ff0000', '#00ff00', '#0000ff'];
+  var random_color = colors[Math.floor(Math.random() * colors.length)];
+  document.getElementById('title').style.color = random_color;
+  $('#button').css('color', random_color);
+  </script>
+
+</body>
+</html>
