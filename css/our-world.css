@@ -520,3 +520,108 @@ button:hover {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.header {
+  position: fixed;
+  height: 64px;
+  top: 0;
+  padding: 20px 24px;
+  font-size: 16px;
+  line-height: 0.75rem;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
+}
+
+.header .right {
+  text-align: right;
+  float: right;
+}
+
+.header .right button {
+  display: inline-block;
+  outline: none;
+}
+
+.header .header-logo {
+  float: left;
+}
+
+.header .header-logo img {
+  width: 119px;
+  position: relative;
+  top: -6px;
+  margin-left: 37px;
+}
+
+.header .navbar-item {
+  font-size: 19px;
+  margin-right: 48px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+}
+
+.header .navbar-item .material-icons {
+  font-size: 26px;
+  margin-right: 16px;
+}
+
+.header .navbar-toggle {
+  margin: 0;
+  padding: 0;
+  display: block;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  color: black;
+  cursor: pointer;
+}
+
+.header .navbar-toggle .navbar-icon {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 35px;
+  height: 30px;
+  top: -16px;
+  font-size: 0;
+  text-indent: -9999px;
+  transition: background 0.3s;
+  margin-right: 24px;
+}
+
+.header .navbar-toggle .navbar-icon span {
+  display: block;
+  position: relative;
+  top: 13px;
+  left: 7px;
+  right: 0px;
+  height: 3px;
+  background: black;
+  transition: background 0s 0.3s;
+  border-radius: 5px;
+  width: 28px;
+}
+
+.header .navbar-toggle .navbar-icon span::before, .header .navbar-toggle .navbar-icon span::after {
+  position: absolute;
+  display: block;
+  left: -7px;
+  right: 0;
+  height: 3px;
+  background-color: black;
+  content: "";
+  border-radius: 5px;
+}
+
+.header .navbar-toggle .navbar-icon span::before {
+  top: -10px;
+  transition-property: top, transform;
+}
+
+.header .navbar-toggle .navbar-icon span::after {
+  bottom: -10px;
+  transition-property: bottom, transform;
+}
