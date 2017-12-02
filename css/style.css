@@ -1,4 +1,522 @@
-h2 {
-  font-size: 800px;
-  color: red;
+body {
+  width: 100%;
+  width: 100%;
+  background: white;
+  font-family: 'Muli', sans-serif;
+  font-size: 19px;
+  margin: 0;
+  color: #2d2d2d;
+}
+
+a {
+  color: #2d2d2d;
+  text-decoration: none;
+}
+
+#title1 {
+  position: absolute;
+  z-index: 999999999;
+  margin-top: 12px;
+  margin-left: 48px;
+  color: #2d2d2d;
+}
+
+h1 {
+  font-family: 'Impact', sans-serif;
+  font-weight: 900;
+  font-size: 75px;
+  color: #2d2d2d;
+}
+
+.backgound-copy1 {
+  font-family: Impact, sans-serif;
+  font-size: 300px;
+  letter-spacing: 4px;
+  line-height: 0px;
+  margin: 0;
+  color: #f5f5f5;
+  position: fixed;
+  left: 0%;
+  top: -5%;
+}
+
+.backgound-copy2 {
+  font-family: Impact, sans-serif;
+  font-size: 300px;
+  letter-spacing: 4px;
+  line-height: 0px;
+  margin: 0;
+  color: #f5f5f5;
+  position: fixed;
+  right: -8%;
+  top: 55%;
+}
+
+img {
+  display: block;
+  width: 115%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100vw;
+  height: 100%;
+  position: fixed;
+  margin-top: 60px;
+}
+
+button {
+  background: #2d2d2d;
+  border: 1px solid #2d2d2d;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-family: 'Muli', sans-serif;
+  font-size: 14px;
+  height: 34px;
+  line-height: 16px;
+  margin: 0;
+  outline: none;
+  padding: 12px;
+  text-align: center;
+  border-radius: 2px;
+  font-weight: 600 !important;
+  box-shadow: none;
+  -webkit-font-smoothing: antialiased;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #fff;
+  color: #2d2d2d;
+  border: 1px solid #fff;
+  font-weight: 400;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.scene {
+  margin: 0;
+  padding: 0;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.scene button {
+  left: 10%;
+  top: 260px;
+  height: 48px;
+  min-width: 180px;
+  position: absolute;
+}
+
+.fill {
+  bottom: 5%;
+  left: 5%;
+  position: absolute;
+  right: 5%;
+  top: 5%;
+}
+
+.sectors {
+  height: 50%;
+  width: 50%;
+  top: 42% !important;
+  left: 60% !important;
+}
+
+.sectorscale {
+  height: 80%;
+  width: 80%;
+}
+
+.community {
+  height: 16%;
+  width: 16%;
+  top: -4% !important;
+  left: 76% !important;
+  margin-right: 50px;
+}
+
+.meet {
+  height: 30%;
+  width: 30%;
+  top: 14% !important;
+  left: 32% !important;
+  margin-right: 50px;
+}
+
+.join {
+  height: 27%;
+  width: 27%;
+  top: 42% !important;
+  left: 0% !important;
+}
+
+.rocks1 {
+  top: 60%;
+  Left: 50%;
+  position: absolute;
+  opacity: 0.3;
+}
+
+/*floating infinate animation for each element */
+.aspect {
+  opacity: 1;
+  animation-name: aspect;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 5px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.aspect2 {
+  opacity: 1;
+  animation-name: aspect;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect2 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(0, 5px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.aspect3 {
+  opacity: 1;
+  animation-name: aspect3;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect3 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(2px, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.aspect4 {
+  opacity: 1;
+  animation-name: aspect4;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect4 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(-2px, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.aspect5 {
+  opacity: 1;
+  animation-name: aspect5;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect5 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(2px, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.aspect6 {
+  opacity: 1;
+  animation-name: aspect6;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+@keyframes aspect6 {
+  from {
+    transform: translate(0, 0px);
+  }
+  65% {
+    transform: translate(-4px, 15px);
+  }
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+/*media queries for each element*/
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
+    margin-top: 270px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+  .container {
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
+    margin-top: 270px;
+  }
+  .sectors {
+    width: 100%;
+    height: 100%;
+    top: 150% !important;
+    left: -10% !important;
+  }
+  .community {
+    height: 60%;
+    width: 60%;
+    top: 230% !important;
+    left: 25% !important;
+  }
+  .meet {
+    height: 70%;
+    width: 70%;
+    top: 0% !important;
+    left: 0% !important;
+  }
+  .join {
+    height: 70%;
+    width: 70%;
+    top: 80% !important;
+    left: 15% !important;
+  }
+}
+
+@media screen and (max-width: 768px) and (min-width: 480px) {
+  .container {
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
+    margin-top: 330px;
+  }
+  .sectors {
+    width: 130%;
+    height: 150%;
+    top: 130% !important;
+    left: -5% !important;
+  }
+  .community {
+    height: 100%;
+    width: 100%;
+    top: 220% !important;
+    left: 10% !important;
+  }
+  .meet {
+    height: 100%;
+    width: 100%;
+    top: 0% !important;
+    left: -0% !important;
+  }
+  .join {
+    height: 100%;
+    width: 100%;
+    top: 85% !important;
+    left: -20% !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .sectors {
+    width: 130%;
+    height: 130%;
+    top: 85% !important;
+    left: -5% !important;
+  }
+  .community {
+    height: 100%;
+    width: 100%;
+    top: 140% !important;
+    left: 10% !important;
+  }
+  .meet {
+    height: 100%;
+    width: 100%;
+    top: 0% !important;
+    left: -0% !important;
+  }
+  .join {
+    height: 100%;
+    width: 100%;
+    top: 45% !important;
+    left: -20% !important;
+  }
+}
+
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  opacity: 1 \9;
+  /*just in case ie*/
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.0s;
+  -moz-animation-duration: 1.0s;
+  animation-duration: 1.0s;
+}
+
+.fade-in.container {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+/*Dropdown styles*/
+.dropbtn {
+  height: 48px;
+  width: 180px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 999999999;
+  font-size: 16px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline;
+  z-index: 999999999;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 220px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 999999999;
+  font-size: 16px;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #2d2d2d;
+  color: #fff;
+  position: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  bottom: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #2d2d2d;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }

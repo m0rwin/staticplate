@@ -454,7 +454,7 @@ body {
     transition: all 0.3s ease-in-out;
   }
   
-  .dropdown: .dropdown-content {
+  .dropdown:hover .dropdown-content {
     display: block;
     bottom: 100%;
     -webkit-transition: all 0.3s ease-in-out;
