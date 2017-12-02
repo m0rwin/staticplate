@@ -75,7 +75,7 @@ img {
   margin-top:60px;
 
 
-  button {
+  .button {
     background: #2d2d2d;
     border: 1px solid #2d2d2d;
     color: #fff;
@@ -100,8 +100,8 @@ img {
     cursor: pointer;
     }
 
-  button:hover {
-      background: #fff;
+  .button:hover {
+      background-color: #fff;
       color: #2d2d2d;
       border: 1px solid #fff;
       font-weight: 400;
