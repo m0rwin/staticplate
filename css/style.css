@@ -55,6 +55,7 @@ h1 {
 img {
   display: block;
   width: 115%;
+  pointer-events: none;
 }
 
 .container {
