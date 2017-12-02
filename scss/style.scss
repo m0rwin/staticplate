@@ -60,6 +60,11 @@ img {
   pointer-events: none;
 }
 
+.container, .container-normal {
+  margin-top:60px;  
+  background-color: white;
+}
+
 .container {
   margin: 0 auto;
   width: 100vw;
@@ -476,3 +481,4 @@ img {
 }
 
 @import './header-and-nav.scss';
+@import './footer.scss';

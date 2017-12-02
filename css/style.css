@@ -3,7 +3,7 @@
 }
 
 .material-icons {
-  vertical-align: -14.75%;
+  vertical-align: -27%;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -62,6 +62,14 @@ table {
 
 /* end reset.css */
 body {
+  line-height: 1.75;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 14px;
+}
+
+body {
   width: 100%;
   width: 100%;
   background: white;
@@ -119,6 +127,11 @@ img {
   display: block;
   width: 115%;
   pointer-events: none;
+}
+
+.container, .container-normal {
+  margin-top: 60px;
+  background-color: white;
 }
 
 .container {
@@ -588,6 +601,7 @@ img {
 .header {
   position: fixed;
   height: 64px;
+  top: 0;
   padding: 20px 24px;
   font-size: 16px;
   line-height: 0.75rem;
@@ -615,6 +629,7 @@ img {
   width: 119px;
   position: relative;
   top: -6px;
+  margin-left: 37px;
 }
 
 .header .navbar-item {
@@ -622,6 +637,12 @@ img {
   margin-right: 48px;
   text-transform: uppercase;
   line-height: 1;
+  font-weight: bold;
+}
+
+.header .navbar-item .material-icons {
+  font-size: 26px;
+  margin-right: 16px;
 }
 
 .header .navbar-toggle {
@@ -641,10 +662,11 @@ img {
   overflow: hidden;
   width: 35px;
   height: 30px;
-  top: -17px;
+  top: -16px;
   font-size: 0;
   text-indent: -9999px;
   transition: background 0.3s;
+  margin-right: 24px;
 }
 
 .header .navbar-toggle .navbar-icon span {
@@ -656,6 +678,8 @@ img {
   height: 3px;
   background: black;
   transition: background 0s 0.3s;
+  border-radius: 5px;
+  width: 28px;
 }
 
 .header .navbar-toggle .navbar-icon span::before, .header .navbar-toggle .navbar-icon span::after {
@@ -666,14 +690,81 @@ img {
   height: 3px;
   background-color: black;
   content: "";
+  border-radius: 5px;
 }
 
 .header .navbar-toggle .navbar-icon span::before {
-  top: -8px;
+  top: -10px;
   transition-property: top, transform;
 }
 
 .header .navbar-toggle .navbar-icon span::after {
-  bottom: -8px;
+  bottom: -10px;
   transition-property: bottom, transform;
+}
+
+.footer {
+  background: #191b1d;
+  font-size: 16px;
+  color: #c9ced1;
+  margin-top: 20px;
+}
+
+.footer .contact-footer {
+  padding: 78px 0;
+  border: solid 20px #191b1d;
+  display: block;
+  color: white;
+}
+
+.footer .contact-footer:hover {
+  border-color: white;
+  color: white;
+  text-decoration: none;
+}
+
+.footer .contact-footer h3 {
+  font-family: "impact", sans-serif;
+  font-size: 53px;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.footer .contact-footer p {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 01px;
+}
+
+.footer .contact-footer .contact-message {
+  width: 366px;
+  margin: 0 auto;
+}
+
+.footer .contact-footer .contact-message .text-left {
+  text-align: left;
+}
+
+.footer .contact-footer .contact-message .text-right {
+  text-align: right;
+}
+
+.footer .footer-bottom {
+  padding: 45px 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+}
+
+.footer .footer-bottom .right-side {
+  grid-area: right;
+}
+
+.footer .footer-bottom .left-side {
+  grid-area: left;
+}
+
+.footer .footer-bottom div {
+  width: 50vw;
 }
