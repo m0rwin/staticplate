@@ -1,0 +1,63 @@
+
+.footer {
+    background: #191b1d;
+    font-size: 16px;
+    color: #c9ced1;
+    margin-top: 20px;
+    
+    .contact-footer {
+        padding: 78px 0;
+        border: solid 20px #191b1d;
+        display: block;
+        color: white;
+        &:hover {
+            border-color: white;
+            color: white;
+            text-decoration: none;
+        }
+
+
+        h3 {
+            font-family: "impact", sans-serif;
+            font-size: 53px;
+            letter-spacing: 1px;
+            font-weight: normal;
+        }
+
+        p {
+            font-family: "Muli", Helvetica, Arial, sans-serif;    
+            font-size: 26px;
+            font-weight: bold;
+            letter-spacing: 01px;            
+        }
+
+        .contact-message {
+            width: 366px;
+            margin: 0 auto;
+
+            .text-left {
+                text-align: left;
+            }
+
+            .text-right {
+                text-align: right;
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 45px 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+        .right-side {
+            grid-area: right;
+        }
+        .left-side {
+            grid-area: left;
+        }
+        div {
+            width: 50vw;
+        }
+    }
+}

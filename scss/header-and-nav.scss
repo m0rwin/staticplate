@@ -1,6 +1,7 @@
 .header {
     position: fixed;
     height: 64px;
+    top:0;
     padding: 20px 24px;
     font-size: 16px;
     line-height: 0.75rem;
@@ -24,6 +25,7 @@
             width: 119px;
             position: relative;
             top: -6px;
+            margin-left: 37px;
         }
         float: left;
     }  
@@ -32,7 +34,13 @@
         font-size: 19px;   
         margin-right: 48px;
         text-transform: uppercase;
-        line-height: 1;     
+        line-height: 1;
+        font-weight: bold;
+
+        .material-icons {
+            font-size: 26px;
+            margin-right: 16px;
+        }
     }
 
     .navbar-toggle {
@@ -51,10 +59,11 @@
             overflow: hidden;
             width: 35px;
             height: 30px;
-            top: -17px;
+            top: -16px;
             font-size: 0;
             text-indent: -9999px;
             transition: background 0.3s;
+            margin-right: 24px;
             span {                
                 display: block;
                 position: relative;
@@ -64,6 +73,9 @@
                 height: 3px;
                 background: black;
                 transition: background 0s 0.3s;
+                border-radius: 5px;
+                width: 28px;
+
                 &::before, &::after {
                     position: absolute;
                     display: block;
@@ -72,13 +84,14 @@
                     height: 3px;
                     background-color: black;
                     content: "";
+                    border-radius: 5px;
                 }
                 &::before {
-                    top: -8px;
+                    top: -10px;
                     transition-property: top, transform;
                 }
                 &::after {
-                    bottom: -8px;
+                    bottom: -10px;
                     transition-property: bottom, transform;
                 }
             }
