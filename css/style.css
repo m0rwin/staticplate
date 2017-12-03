@@ -209,7 +209,7 @@ h1 {
 }
 
 .container, .container-normal {
-  margin-top: 60px;
+  margin-top: 64px;
   background-color: white;
 }
 
@@ -693,7 +693,8 @@ h1 {
   width: 100%;
   z-index: 1000;
   background: white;
-  box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  text-align: right;
 }
 
 @media screen and (max-width: 650px) {
@@ -701,17 +702,12 @@ h1 {
     height: 56px;
     display: grid;
     grid-template: "jobs icon menu";
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
-.header .right {
-  text-align: right;
-  float: right;
-}
-
-.header .right button {
+.header button {
   display: inline-block;
-  outline: none;
 }
 
 .header .header-logo {
@@ -723,6 +719,25 @@ h1 {
   position: relative;
   top: -6px;
   margin-left: 37px;
+}
+
+@media screen and (max-width: 650px) {
+  .header .header-logo {
+    float: none;
+    width: 17px;
+    height: 18px;
+    background-color: #008eda;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+  }
+  .header .header-logo img {
+    display: none;
+  }
 }
 
 .header .navbar-item {
@@ -741,6 +756,11 @@ h1 {
 }
 
 @media screen and (max-width: 650px) {
+  .header .navbar-item {
+    grid-area: jobs;
+    text-align: left;
+    margin: 0;
+  }
   .header .navbar-item span {
     display: none;
   }
@@ -748,6 +768,27 @@ h1 {
     font-size: 18px;
     font-weight: bold;
     margin-right: 0;
+  }
+}
+
+.header .button-container {
+  display: inline-block;
+}
+
+@media screen and (max-width: 650px) {
+  .header .button-container {
+    grid-area: menu;
+    align-content: right;
+  }
+  .header .navbar-toggle .navbar-icon {
+    top: 0;
+    height: 14px;
+    width: 24px;
+    margin: 0;
+    float: right;
+  }
+  .header .navbar-toggle .navbar-icon span {
+    top: 6px;
   }
 }
 
@@ -928,9 +969,10 @@ h1 {
   transition-delay: 0s, 0s;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .side-menu .overlay-menu {
     width: 100%;
+    padding: 30px 13px 0;
   }
 }
 
@@ -1102,6 +1144,25 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "left right";
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 900px) {
+  .footer .footer-bottom {
+    grid-template-columns: 1fr;
+    grid-template-areas: "right"  "left";
+    padding: 26px 0;
+    text-align: center;
+    line-height: 2;
+  }
+  .footer .footer-bottom .footer-img {
+    float: none;
+    margin-bottom: 39px;
+  }
+  .footer .footer-bottom .list-share-icons {
+    float: none;
+    margin-bottom: 13px;
+  }
 }
 
 .footer .footer-bottom .right-side {

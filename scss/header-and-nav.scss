@@ -10,22 +10,18 @@ $menu-small-width: 650px;
     width: 100%;
     z-index: 1000;
     background: white;
-    box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    text-align: right;
 
     @media screen and (max-width: $menu-small-width) {
         height: 56px;
         display: grid;
-        grid-template: "jobs icon menu"
+        grid-template: "jobs icon menu";
+        grid-template-rows: 1fr 1fr 1fr;
     }
 
-    .right {
-        text-align: right;
-        float:right;
-
-        button {
-            display: inline-block;
-            outline: none;
-        }
+    button {
+        display: inline-block;
     }
 
     .header-logo {
@@ -36,6 +32,24 @@ $menu-small-width: 650px;
             margin-left: 37px;
         }
         float: left;
+
+        @media screen and (max-width: $menu-small-width){
+            float: none;
+            img {
+                display: none;
+            }
+            width: 17px;
+            height: 18px;
+            background-color: #008eda;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            margin: 0 auto;
+
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
+        }
     }  
     
     .navbar-item {
@@ -53,6 +67,9 @@ $menu-small-width: 650px;
         }
 
         @media screen and (max-width: $menu-small-width) {
+            grid-area: jobs;
+            text-align: left;
+            margin: 0;
             span {
                 display: none;
             }
@@ -61,6 +78,29 @@ $menu-small-width: 650px;
                 font-size: 18px;
                 font-weight: bold;
                 margin-right: 0;
+            }
+        }
+    }
+
+    .button-container {
+        display: inline-block;
+    }
+    @media screen and (max-width: $menu-small-width) {
+        .button-container {
+            grid-area: menu;
+            align-content: right;
+        }
+        .navbar-toggle {
+            .navbar-icon {
+                top: 0;
+                height: 14px;
+                width: 24px;
+                margin: 0;
+                float: right;
+
+                span {
+                    top: 6px;
+                }
             }
         }
     }
@@ -219,8 +259,9 @@ $menu-small-width: 650px;
         top: 0;
         right: 0;
 
-        @media (max-width: 768px) {
+        @media screen and (max-width: $menu-small-width) {
             width: 100%;
+            padding: 30px 13px 0;
         }
 
         overflow: auto;
