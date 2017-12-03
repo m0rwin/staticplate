@@ -37,6 +37,9 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
+/* end reset.css */
+
+
 /* new typographic scale and styles */
 html {
     font-size: 1.188em;
@@ -101,7 +104,8 @@ table {
     border-spacing: 0;
 }
 
+button {
+    outline: none;
+}
+
 /* Break points */
-
-
-/* end reset.css */

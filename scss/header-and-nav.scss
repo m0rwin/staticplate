@@ -1,14 +1,22 @@
+$menu-small-width: 650px;
+
 .header {
     position: fixed;
     height: 64px;
     top:0;
     padding: 20px 24px;
     font-size: 16px;
-    line-height: 0.75rem;
+    line-height: 7.5px;
     width: 100%;
     z-index: 1000;
     background: white;
     box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
+
+    @media screen and (max-width: $menu-small-width) {
+        height: 56px;
+        display: grid;
+        grid-template: "jobs icon menu"
+    }
 
     .right {
         text-align: right;
@@ -31,361 +39,309 @@
     }  
     
     .navbar-item {
-        font-size: 19px;   
+        position: relative;
+        top: -2px;
+        font-size: 19px;
         margin-right: 48px;
         text-transform: uppercase;
         line-height: 1;
         font-weight: bold;
 
         .material-icons {
-            font-size: 26px;
+            font-size: 29px;
             margin-right: 16px;
         }
-    }
 
-    .navbar-toggle {
-        margin: 0;
-        padding: 0;
-        display: block;
-        background-color: transparent;
-        background-image: none;
-        border: 1px solid transparent;
-        color: black;
-        cursor: pointer;
+        @media screen and (max-width: $menu-small-width) {
+            span {
+                display: none;
+            }
 
-        .navbar-icon {
-            display: block;
-            position: relative;
-            overflow: hidden;
-            width: 35px;
-            height: 30px;
-            top: -16px;
-            font-size: 0;
-            text-indent: -9999px;
-            transition: background 0.3s;
-            margin-right: 24px;
-            span {                
-                display: block;
-                position: relative;
-                top: 13px;
-                left: 7px;
-                right: 0px;
-                height: 3px;
-                background: black;
-                transition: background 0s 0.3s;
-                border-radius: 5px;
-                width: 28px;
-
-                &::before, &::after {
-                    position: absolute;
-                    display: block;
-                    left: -7px;
-                    right: 0;
-                    height: 3px;
-                    background-color: black;
-                    content: "";
-                    border-radius: 5px;
-                }
-                &::before {
-                    top: -10px;
-                    transition-property: top, transform;
-                }
-                &::after {
-                    bottom: -10px;
-                    transition-property: bottom, transform;
-                }
+            .material-icons {
+                font-size: 18px;
+                font-weight: bold;
+                margin-right: 0;
             }
         }
     }
 }
 
-// .icon-dropdown-down-up
-// {
-//     position: relative;
-//     font-size: 1.3rem;
-// }
 
-// .icon-dropdown-down-up:before {
-//     content: "\e914";
-// }
+.navbar-toggle {
+    margin: 0;
+    padding: 0;
+    display: block;
+    background-color: transparent;
+    background-image: none;
+    border: 1px solid transparent;
+    color: black;
+    cursor: pointer;
 
-// .collapsed .icon-dropdown-down-up:before {
-//     content: "\e906";
-// }
-
-// .header {
-//     position: fixed;
-//     height: 64px;
-//     padding: 16px 24px 16px 24px;
-//     font-size: 16px;
-//     line-height: 0.75rem;
-//     width: 100%;
-//     z-index: 1000;
-//     background: white;
-//     box-shadow: 0 4px 0px 0 rgba(0, 0, 0, 0.2);
-//     .navbar-toggle, .search-toggle, .header-mobile-telephone {
-//         padding: 0;
-//         display: inline-block;
-//         @media (min-width: 768px) {
-//             position: relative;
-//             top: 5px;
-//         }
-//     }
-//     .navbar-toggle {
-//         &:focus, &:active, &:hover {
-//             outline: none;
-//             background: none;
-//             box-shadow: none;
-//             color: #000;
-//         }
-//     }
-//     .search-toggle {
-//         &:focus, &:active, &:hover {
-//             outline: none;
-//             background: none;
-//             box-shadow: none;
-//             color: #000;
-//         }
-//     }
-//     .header-mobile-telephone {
-        
-//         &:focus, &:active, &:hover {
-//             outline: none;
-//             background: none;
-//             box-shadow: none;
-//             color: #000;
-//         }
-        
-//         color: #000;
-//         white-space: nowrap;
-//         position: absolute;
-//         left: -47px;
-//         top: 0 !important;
-        
-//         a {
-//             color: #fff;
-//         }
-        
-//         @media (min-width: 375px) {
-//             &:before {
-//                 content: "\e915";
-//                 font-family: 'icomoon' !important;
-//                 speak: none;
-//                 font-style: normal;
-//                 font-weight: normal;
-//                 font-variant: normal;
-//                 text-transform: none;
-//                 line-height: 1;
-//                 position: absolute;
-//                 top: 4px;
-//                 left: -23px;
-//                 font-size: 21px;
-//             }
-//         }
-        
-//         @media (max-width: 310px) {
-//             display: none;
-//         }
-        
-//         @media (min-width: 480px) {
-//             position: relative;
-//             left: auto;
-//             margin-right: 20px;
-//         }
-        
-        
-        
-//         @media (min-width: 768px) {
-//             top: 5px !important;
-//         }
-//     }
-//     .search-toggle {
-//         background: none;
-//         border: none;
-//         color: #000;
-//         margin-right: 48px;
-//         line-height: 0.75rem;
-//         span {
-//             font-size: 19px;
-//         }
-//         i {
-//             font-size: 24px;
-//             position: relative;
-//             top: 2px;
-//         }
-//         .icon-close {
-//             display: none;
-//         }
-//     }
-    
-//     .navbar-toggle .navbar-icon {
-//         span, span::before, span::after {
-//             background: black;
-//         }
-//     }
-// }
+    .navbar-icon {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        width: 35px;
+        height: 30px;
+        top: -20px;
+        font-size: 0;
+        text-indent: -9999px;
+        transition: background 0.3s;
+        margin-right: 24px;
+        span {                
+            display: block;
+            position: relative;
+            top: 13px;
+            left: 7px;
+            right: 0px;
+            height: 3px;
+            background: black;
+            transition: background 0s 0.3s;
+            border-radius: 10px/6px;
+            width: 28px;
+            @media screen and (max-width: $menu-small-width) {
+                width: 17px;
+                height: 2px;
+                border-radius: 5px/3px;
+            }
 
 
-// .side-menu {
-//     width: 100%;
-//     height: 100vh;
-//     position: fixed;
-//     z-index: 999999999;
+            &::before, &::after {
+                position: absolute;
+                display: block;
+                left: -7px;
+                right: 0;
+                height: 3px;
+                background-color: black;
+                content: "";
+                border-radius: 10px/6px;
 
-//     &.collapsing {
-//         -webkit-transition: none;
-//         transition: none;
-//     }
+                @media screen and (max-width: $menu-small-width) {
+                    height: 2px;
+                    left: -4px;
+                }
+            }
+            &::before {
+                top: -10px;
+                transition-property: top, transform;
+                @media screen and (max-width: $menu-small-width) {
+                    top: -6px;
+                }
+            }
+            &::after {
+                bottom: -10px;
+                transition-property: bottom, transform;
+                @media screen and (max-width: $menu-small-width) {
+                    bottom: -6px;
+                }
+            }
+        }
 
-//     &:not(.in) {
-//         .overlay-transparent {
-//             opacity: 0;
-//         }
+        &.close-menu span {		
+            background: none;
+            &::before, &::after {		
+                transition-delay: 0s, 0.3s;		
+                background-color: white;		
+            }		
+            &::before {		
+                top: 0;		
+                transform: rotate(45deg);		
+                background-color: white;		
+            }		
+            &::after {		
+                bottom: 0;		
+                transform: rotate(-45deg);		
+                background-color: white;		
+            }		
+        }
+    }
+}
+
+.icon-dropdown-down-up
+{
+    position: relative;
+    font-size: 20px;
+}
+
+.icon-dropdown-down-up:before {
+    content: "expand_less";
+}
+
+.collapsed .icon-dropdown-down-up:before {
+    content: "expand_more";
+}
+
+.side-menu {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 999999999;
+
+    &.collapsing {
+        -webkit-transition: none;
+        transition: none;
+    }
+
+    &:not(.show) {
+        .overlay-transparent {
+            opacity: 0;
+        }
         
-//         .overlay-menu {
-//             right: -320px;
+        .overlay-menu {
+            right: -320px;
             
-//             @media (max-width: 768px) {
-//                 right: -100%;
-//             }
+            @media (max-width: 768px) {
+                right: -100%;
+            }
 
-//             .main-menu > li {
-//                 transform: translateX(200px);
-//                 opacity: 0;
-//             }
-//         }    
-//     }
+            .main-menu > li {
+                transform: translateX(200px);
+                opacity: 0;
+            }
+        }    
+    }
 
-//     .overlay-transparent {
-//         background-color: rgba(0, 0, 0, 0.8);
-//         height: 100vh;
-//         width: 100%;
-//         left: 0;
-//         top: 0;
-//         transition-duration: 0.25s, 0.25s;
-//         transition-delay: 0, 0;
-//     }
-//     .overlay-menu {
-//         background-color: black;
-//         width: 320px;
-//         height: 100vh;
-//         position: absolute;
-//         top: 0;
-//         right: 0;
+    .overlay-transparent {
+        background-color: rgba(0, 0, 0, 0.8);
+        height: 100vh;
+        width: 100%;
+        left: 0;
+        top: 0;
+        transition-duration: 0.25s, 0.25s;
+        transition-delay: 0, 0;
+    }
+    .overlay-menu {
+        background-color: black;
+        width: 320px;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
 
-//         @media (max-width: 768px) {
-//             width: 100%;
-//         }
+        @media (max-width: 768px) {
+            width: 100%;
+        }
 
-//         overflow: auto;
-//         overflow-x: hidden;
+        overflow: auto;
+        overflow-x: hidden;
         
 
-//         color: #fff;
-//         text-align: right;
-//         padding: 30px 48px 0;
+        color: #fff;
+        text-align: right;
+        padding: 30px 48px 0;
 
-//         transition-duration: 0.25s, 0.25s;
-//         transition-delay: 0s, 0s;
+        transition-duration: 0.25s, 0.25s;
+        transition-delay: 0s, 0s;
 
 
-//         .main-menu > li {
-//             transform: translateX(0);       
-//         }
+        .main-menu > li {
+            transform: translateX(0);       
+        }
 
-//         .main-menu, .sub-menu-ul {
-//             list-style: none;
-//             clear: both;
-//             margin-right: 42px;
-//             padding: 0;
+        .main-menu, .sub-menu-ul {
+            list-style: none;
+            clear: both;
+            margin-right: 42px;
+            padding: 0;
 
-//             li {
-//                 line-height: 1;
-//                 margin-bottom: 25px; 
-//                 opacity: 1;              
-//             }
+            a {
+                cursor: pointer;
+            }
 
-//             li:nth-child(1) {
-//                 transition-duration: none;                
-//             }
-//             li:nth-child(2) {
-//                 transition-duration: none;                
-//             }
-//             li:nth-child(3) {
-//                 transition-duration: none;                
-//             }
-//             li:nth-child(4) {
-//                 transition-duration: none;                
-//             }
-//             li:nth-child(5) {
-//                 transition-duration: none;                
-//             }
-//             li:nth-child(6) {
-//                 transition-duration: none;              
-//             }
-//             li:nth-child(7) {
-//                 transition-duration: none;               
-//             }
-//             li:nth-child(8) {
-//                 transition-duration: none;          
-//             }
-//             li:nth-child(9) {
-//                 transition-duration: none;      
-//             }
+            li {
+                line-height: 1;
+                margin-bottom: 25px; 
+                opacity: 1;              
+            }
 
-//             a {
-//                color: white;
+            li:nth-child(1) {
+                transition-duration: none;                
+            }
+            li:nth-child(2) {
+                transition-duration: none;                
+            }
+            li:nth-child(3) {
+                transition-duration: none;                
+            }
+            li:nth-child(4) {
+                transition-duration: none;                
+            }
+            li:nth-child(5) {
+                transition-duration: none;                
+            }
+            li:nth-child(6) {
+                transition-duration: none;              
+            }
+            li:nth-child(7) {
+                transition-duration: none;               
+            }
+            li:nth-child(8) {
+                transition-duration: none;          
+            }
+            li:nth-child(9) {
+                transition-duration: none;      
+            }
 
-//                &:hover, &:active, &:focus {
-//                    color: #1898d9;
-//                    text-decoration: none;
-//                }
-//             }
+            a {
+               color: white;
 
-//             .active > a {
-//                 color: #1898d9;
-//                 text-decoration: none;
-//             }
-//         }
+               &:hover, &:active, &:focus {
+                   color: #1898d9;
+                   text-decoration: none;
+               }
+            }
 
-//         .sub-menu-ul {
-//             margin-right: 0;
-//             li {
-//                 margin-bottom: 0;
-//                 margin-top: 25px;
-//             }
-//         }
+            .active > a {
+                color: #1898d9;
+                text-decoration: none;
+            }
+        }
 
-//         .main-menu {
+        .sub-menu-ul {
+            margin-right: 0;
+            li {
+                margin-bottom: 0;
+                margin-top: 25px;
+            }
+        }
+
+        .main-menu {
             
-//             .icon-dropdown-down-up {
-//                 left: calc(25px + 1rem);
-//                 margin-left: -25px;
-//             }
+            .icon-dropdown-down-up {
+                left: 30px;
+                margin-left: -25px;
+            }
 
-//             .collapse {
+            .collapse {
 
-//                 &.in .sub-menu {
-//                     display: block;
-//                 }
+                &.in .sub-menu {
+                    display: block;
+                }
 
-//                 .sub-menu {
-//                     display: none;
-//                 }
-//             }
-//         }
+                .sub-menu {
+                    display: none;
+                }
+            }
+        }
 
-//         .sub-menu {
-//             margin-right: 0;
-//             font-size: 1.9rem;
-//         }
-//     }
+        .sub-menu {
+            margin-right: 0;
+            font-size: 19px;
+        }
+    }
 
-//     .navbar-toggle {
-//         margin-bottom: 84px;        
-//     }
+    .navbar-toggle {
+        margin-bottom: 84px;
+        float: right;
 
-//     .main-menu {
-//         font-size: 2.6rem;
-//     }
-// }
+        .navbar-icon {
+            top: -11px;
+            margin-right: 0;
+        }
+    }
+
+    .main-menu {
+        font-size: 26px;
+    }
+}

@@ -5,6 +5,10 @@
     color: #c9ced1;
     margin-top: 20px;
     
+    a {
+        color: #c9ced1;
+    }
+
     .contact-footer {
         padding: 78px 0;
         border: solid 20px #191b1d;
@@ -50,14 +54,42 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "left right";
+
         .right-side {
+            width: 100%;
             grid-area: right;
         }
         .left-side {
+            width: 100%;
             grid-area: left;
         }
-        div {
-            width: 50vw;
+    }
+
+    .list-share-icons {
+        float: right;
+        .icon-linkedin, .icon-twitter {
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            background-color: #3c4043;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60%;
+            border-radius: 2px;
+            margin-left: 23px;
+            margin-bottom: 10px;
         }
+    
+        .icon-linkedin {
+            background-image: url(/assets/linked-in.svg)
+        }
+    
+        .icon-twitter {
+            background-image: url(/assets/twitter.svg)            
+        }
+    }
+    .footer-img {
+        float: right;
+        clear: both;
     }
 }

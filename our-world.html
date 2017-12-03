@@ -60,16 +60,122 @@
   </head>
 
 <body>
+    <header class="header">
+        <a href="/" class="header-logo">
+            <img src="/assets/logo_new.png" alt="Novo Recruitment UK" />
+        </a>
+        <nav class="right">
+            <a class="navbar-item" href="#jobs">
+                <i class="material-icons">search</i>
+                <span>Jobs</span>
+            </a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-nav-collapse">
+                <div class="navbar-icon">
+                    <span>toggle menu</span>
+                </div>
+            </button>
+        </nav>
+    </header>
+    <nav class="side-menu collapse" id="js-nav-collapse">
+        <div class="overlay-transparent" data-toggle="collapse" data-target="#js-nav-collapse"></div>
+        <div class="overlay-menu">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-nav-collapse">
+                <div class="navbar-icon close-menu"><span>toggle menu</span></div>
+            </button>
+            <ul class="main-menu">
+                <li class="active">
+                    <a data-toggle="collapse" data-target="#submenu-main-1842" class="collapsed">
+                        Candidates
+                        <span class="material-icons icon-dropdown-down-up"></span>
+                    </a>
+                    <div class="sub-menu collapse" id="submenu-main-1842">
+                        <ul class="sub-menu-ul">
+                            <li class="active">
+                                <a href="/candidates/">Candidates</a>
+                            </li>
+                            <li>
+                                <a href="/candidates/submit-your-cv/">Submit Your CV</a>
+                            </li>
+                            <li>
+                                <a href="/candidates/job-search/">Job Search</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/clients/">Clients</a>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target="#submenu-main-1873" class="collapsed">
+                        Sectors
+                        <span class="material-icons icon-dropdown-down-up"></span>
+                    </a>
+                    <div class="sub-menu collapse" id="submenu-main-1873">
+                        <ul class="sub-menu-ul">
 
-<header class="header">
-    <a href="#" class="header-logo"><img src="/assets/logo_new.png" alt="Novo Recruitment UK" /></a>
-    <nav class="right">
-        <a class="navbar-item" href="#jobs"><i class="material-icons">search</i>Jobs</a>
-        <button type="button" class="navbar-toggle">
-            <div class="navbar-icon"><span>toggle menu</span></div>
-        </button>
+                            <li>
+                                <a href="/sectors/">Sectors</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/property-maintenance/">Property &amp; Maintenance</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/main-contractor/">Main Contractor</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/building-services/">Building Services</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/fit-out-interiors/">Fit Out &amp; Interiors</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/residential-housing/">Residential / Housing</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/groundworks-and-frames/">Groundworks and Frames</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/consultancy/">Consultancy</a>
+                            </li>
+                            <li>
+                                <a href="/sectors/freelance/">Freelance</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a data-toggle="collapse" data-target="#submenu-main-3222" class="collapsed">
+                        Our world
+                        <span class="material-icons icon-dropdown-down-up"></span>
+                    </a>
+                    <div class="sub-menu collapse" id="submenu-main-3222">
+                        <ul class="sub-menu-ul">
+
+                            <li>
+                                <a href="/our-world/">Our world</a>
+                            </li>
+                            <li>
+                                <a href="/our-world/join-the-locals/">Join the locals</a>
+                            </li>
+                            <li>
+                                <a href="/our-world/meet-the-locals/">Meet the Locals</a>
+                            </li>
+                            <li>
+                                <a href="/our-world/local-community/">Local Community</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="/local-press/">Local Press</a>
+                </li>
+                <li>
+                    <a href="/contact/">Contact</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-</header>
+
 <div id="world-container">
 <div id="title1">
     <h1>Our world</h1>
@@ -115,6 +221,9 @@
     </div>
   </div>
   <!-- Scripts -->
+  <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  <script src="/scripts/jquery-3.2.1.min.js"></script>
+  <script src="/scripts/bootstrap.min.js"></script>
   <script src="./our-world-parallax.js"></script>
   <script>
 
@@ -126,7 +235,7 @@
 
   var colors = ['#ff0000', '#00ff00', '#0000ff'];
   var random_color = colors[Math.floor(Math.random() * colors.length)];
-  document.getElementById('title').style.color = random_color;
+  document.getElementById('title1').style.color = random_color;
   $('#button').css('color', random_color);
   </script>  
 </body>
