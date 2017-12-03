@@ -1,23 +1,126 @@
 $jobboard-collapse: 1284px;
-$jobboard-collapse2: 720px;
+$jobboard-collapse2: 650px;
+
+@mixin icon-mode {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    vertical-align: -27%;
+}
 
 .job-board {
     width: 1264px;
     margin: 0 auto;
+    display: grid;
+    margin-top: 28px;
+    grid-gap: 39px 48px;
+    grid-template-columns: 764fr 236fr;
+    grid-template-areas: "search search"
+                        "results filters";
 
     @media screen and (max-width: $jobboard-collapse){
+        margin-top: 0px;
         width: 100vw;
+        grid-template-areas: "search search"
+                            "filters filters"
+                            "results results";
+        grid-gap: 0;
+        
+        .wide-only {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: $jobboard-collapse) {
+        font-size: 18px;        
+    }
+
+    @media screen and (max-width: $jobboard-collapse2) {
+        font-size: 16px;        
+    }
+
+    .search {
+        grid-area: search;
+    }
+
+    .results, .filters {
+        @media screen and (max-width: $jobboard-collapse) {
+            padding: 0 24px;
+        }
+    }
+
+    .results {
+        grid-area: results;
+
+        .job-results-grid {
+            margin-top: 14px;
+            display: grid;
+            grid-gap: 48px;
+            @media screen and (max-width: $jobboard-collapse) {
+                grid-gap: 25px;
+            }
+        }
+    }
+
+    .filters {
+        grid-area: filters;
+
+        .side-box {
+            margin-top: 14px;
+            & > ul > li {
+                margin-bottom: 27px;
+            }
+            a {
+                display: block;
+                
+                .icon-dropdown-down-up {
+                    float: right;
+                }
+            }
+
+            padding-bottom: 19px;
+        }
+        @media screen and (max-width: $jobboard-collapse) {        
+            margin-bottom: 36px;
+
+            .side-box {
+                margin-top: 0;                
+            }
+        }
+    }
+
+    .side-box {
+        background-color: $shark-black;
+        padding: 46px;
+        color: $white;
+        * { color: $white; }
+
+        @media screen and (max-width: $jobboard-collapse) {
+            margin-left: -24px;
+            margin-right: -24px;
+        }
     }
 }
 
 #job-search {
     padding: 30px 46px;
-    margin: 20px 20px;  
-    background-color: #191b1d;
+    margin: 20px 0;  
+    background-color: $shark-black;
     border-radius: 3px;
 
     @media screen and (max-width: $jobboard-collapse){
         margin: 0;
+        padding: 24px 25px;
         border-radius: 0;
     }
 }
@@ -46,11 +149,30 @@ $jobboard-collapse2: 720px;
     }
     .search-box {
         grid-area: search;
-        padding: 0 28px;
-        @media screen and (max-width: $jobboard-collapse){
-            border-bottom-right-radius: 0;
-            border-top-right-radius: 0;
-        } 
+        position: relative;
+        input {
+            width: 100%;
+            padding: 0 28px;
+            @media screen and (max-width: $jobboard-collapse){
+                border-bottom-right-radius: 0;
+                border-top-right-radius: 0;
+            } 
+        }
+
+        .after {
+            @include icon-mode;            
+            position: absolute;
+            right: 25px;
+            top: 16px;
+            font-size: 19px;
+            color: $shark-black;
+            pointer-events: none;
+
+            @media screen and (max-width: $jobboard-collapse2){
+                display: none;
+            }
+        }
+        
     }
 
     .submit {
@@ -59,7 +181,7 @@ $jobboard-collapse2: 720px;
             text-transform: uppercase;    
         }
         grid-area: button;
-        background-color: #008eda;
+        background-color: $cerulean-blue;
         color: white;
         font-size: 16px;
         @media screen and (max-width: $jobboard-collapse){
@@ -69,21 +191,7 @@ $jobboard-collapse2: 720px;
 
         @media screen and (max-width: $jobboard-collapse2) {
             &::before {
-                font-family: 'Material Icons';
-                font-weight: normal;
-                font-style: normal;
-                font-size: 24px;
-                line-height: 1;
-                letter-spacing: normal;
-                text-transform: none;
-                display: inline-block;
-                white-space: nowrap;
-                word-wrap: normal;
-                direction: ltr;
-                -webkit-font-feature-settings: 'liga';
-                -webkit-font-smoothing: antialiased;
-                vertical-align: -27%;
-                
+                @include icon-mode;
                 content: 'search';
                 text-transform: none;    
             }

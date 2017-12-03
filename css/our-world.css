@@ -107,7 +107,10 @@ button {
   cursor: pointer;
 }
 
-/* Break points */
+a {
+  cursor: pointer;
+}
+
 .fade {
   opacity: 0;
   transition: opacity 0.15s linear;
@@ -703,7 +706,7 @@ img {
     float: none;
     width: 17px;
     height: 18px;
-    background-color: #008eda;
+    background-color: #008EDA;
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
     margin: 0 auto;

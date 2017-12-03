@@ -193,7 +193,10 @@
                     <fieldset>
                         <legend class="sr-only">Search Jobs</legend>
                         <div class="job-search-grid">
-                            <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" class="search-box" maxlength="50">
+                            <div class="search-box">
+                                <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
+                                <span class="after">search</span>
+                            </div>
                             <input type="hidden" name="pagesize" value="10">
                             <button class="submit" type="submit"></button>
                         </div>
@@ -203,11 +206,106 @@
             </header>
 
             <aside class="filters">
-                    
+                <strong class="wide-only">Refine search</strong>
+                <div class="side-box">
+                    <ul>
+                        <li>
+                            <a data-toggle="collapse" data-target="#filters-main-1842" class="collapsed">
+                                Type
+                                <span class="material-icons icon-dropdown-down-up"></span>
+                            </a>
+                            <div class="sub-menu collapse" id="filters-main-1842">
+                                <ul class="sub-menu-ul">
+                                    <li>
+                                        <a href="/candidates/">Permanent</a>
+                                    </li>
+                                    <li>
+                                        <a href="/candidates/submit-your-cv/">Contract</a>
+                                    </li>
+                                    <li>
+                                        <a href="/candidates/job-search/">Temporary</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" data-target="#filters-main-1873" class="collapsed">
+                                Location
+                                <span class="material-icons icon-dropdown-down-up"></span>
+                            </a>
+                            <div class="sub-menu collapse" id="filters-main-1873">
+                                <ul class="sub-menu-ul">
+        
+                                    <li>
+                                        <a href="/sectors/">Sectors</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/property-maintenance/">Property &amp; Maintenance</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/main-contractor/">Main Contractor</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/building-services/">Building Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/fit-out-interiors/">Fit Out &amp; Interiors</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/residential-housing/">Residential / Housing</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/groundworks-and-frames/">Groundworks and Frames</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/consultancy/">Consultancy</a>
+                                    </li>
+                                    <li>
+                                        <a href="/sectors/freelance/">Freelance</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a data-toggle="collapse" data-target="#filters-main-3222" class="collapsed">
+                                Sector
+                                <span class="material-icons icon-dropdown-down-up"></span>
+                            </a>
+                            <div class="sub-menu collapse" id="filters-main-3222">
+                                <ul class="sub-menu-ul">
+        
+                                    <li>
+                                        <a href="/our-world/">Our world</a>
+                                    </li>
+                                    <li>
+                                        <a href="/our-world/join-the-locals/">Join the locals</a>
+                                    </li>
+                                    <li>
+                                        <a href="/our-world/meet-the-locals/">Meet the Locals</a>
+                                    </li>
+                                    <li>
+                                        <a href="/our-world/local-community/">Local Community</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </aside>
 
-            <section class="results">
-                    
+            <section class="results" id="results">
+                <strong>Displaying 1 to 10 of 90</strong>
+                <div class="job-results-grid">
+                    <div class="side-box">
+                        hello world;
+                    </div>
+                    <div class="side-box">
+                        hello world;
+                    </div>
+                    <div class="side-box">
+                        hello world;
+                    </div>
+                </div>
             </section>
         </section>
     </main>
