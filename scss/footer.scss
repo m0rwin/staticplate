@@ -1,10 +1,17 @@
 
 .footer {
-    background: #191b1d;
     font-size: 16px;
     color: #c9ced1;
-    margin-top: 20px;
+    padding-top: 64px;
+
+    *{
+        background: #191b1d;
+    }
     
+    a {
+        color: #c9ced1;
+    }
+
     .contact-footer {
         padding: 78px 0;
         border: solid 20px #191b1d;
@@ -43,6 +50,24 @@
                 text-align: right;
             }
         }
+
+
+        @media screen and (max-width: 1440px) {
+            padding: 65px 0;
+        }
+        @media screen and (max-width: 720px) {
+            h3 {
+                font-size: 37px;
+            }
+            
+            p {
+                font-size: 26px;
+            }
+
+            .contact-message {
+                width: 299px;
+            }
+        }
     }
 
     .footer-bottom {
@@ -50,14 +75,62 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "left right";
+        line-height: 1.75;
+        
+        @media screen and (max-width: 900px) {
+            grid-template-columns: 1fr;
+            grid-template-areas: "right" 
+                                 "left";
+            padding: 26px 0;
+
+            text-align: center;
+            .footer-img {
+                float: none;    
+                margin-bottom: 39px
+            }
+            .list-share-icons {
+                float: none;
+                margin-bottom: 13px;
+            }
+
+            line-height: 2;
+        }
+
         .right-side {
+            width: 100%;
             grid-area: right;
         }
         .left-side {
+            width: 100%;
             grid-area: left;
         }
-        div {
-            width: 50vw;
+    }
+
+    .list-share-icons {
+        float: right;
+        .icon-linkedin, .icon-twitter {
+            display: inline-block;
+            width: 37px;
+            height: 37px;
+            background-color: #3c4043;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 60%;
+            border-radius: 2px;
+            margin-left: 23px;
+            margin-bottom: 10px;
         }
+    
+        .icon-linkedin {
+            background-image: url(/assets/linked-in.svg)
+        }
+    
+        .icon-twitter {
+            background-image: url(/assets/twitter.svg)            
+        }
+    }
+    .footer-img {
+        float: right;
+        clear: both;
     }
 }

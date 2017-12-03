@@ -1,4 +1,6 @@
 @import 'reset.scss';
+@import 'collapse-js.scss';
+@import 'common.scss';
 
 /* Breakpoints */
 
@@ -16,6 +18,16 @@ body {
 a {
   color: #2d2d2d;
   text-decoration: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
+
+  li {
+    display: inline-block;
+  }
 }
 
 #title1 {
@@ -56,14 +68,12 @@ h1 {
   top: 55%;
 }
 
-img {
-  display: block;
-  width: 115%; 
-  pointer-events: none;
+.container-normal {
+  padding-bottom: 20px;
 }
 
 .container, .container-normal {
-  margin-top:60px;  
+  margin-top:64px;  
   background-color: white;
 }
 
@@ -74,7 +84,12 @@ img {
   position: fixed;
   margin-top:60px;
 
-
+  img {
+    display: block;
+    width: 115%; 
+    pointer-events: none;
+  }
+  
   .button {
     background: #2d2d2d;
     border: 1px solid #2d2d2d;
@@ -482,5 +497,6 @@ img {
   transition: all 0.3s ease-in-out;
 }
 
-@import './header-and-nav.scss';
-@import './footer.scss';
+@import 'header-and-nav.scss';
+@import 'job-board.scss';
+@import 'footer.scss';
