@@ -40,7 +40,7 @@ $menu-small-width: 650px;
             }
             width: 17px;
             height: 18px;
-            background-color: #008eda;
+            background-color: $cerulean-blue;
             border-top-left-radius: 50%;
             border-top-right-radius: 50%;
             margin: 0 auto;
@@ -327,13 +327,13 @@ $menu-small-width: 650px;
                color: white;
 
                &:hover, &:active, &:focus {
-                   color: #1898d9;
+                   color: $curious-blue;
                    text-decoration: none;
                }
             }
 
             .active > a {
-                color: #1898d9;
+                color: $curious-blue;
                 text-decoration: none;
             }
         }

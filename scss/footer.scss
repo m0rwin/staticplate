@@ -1,20 +1,20 @@
 
 .footer {
     font-size: 16px;
-    color: #c9ced1;
+    color: $iron;
     padding-top: 64px;
 
     *{
-        background: #191b1d;
+        background: $shark-black;
     }
     
     a {
-        color: #c9ced1;
+        color: $iron;
     }
 
     .contact-footer {
         padding: 78px 0;
-        border: solid 20px #191b1d;
+        border: solid 20px $shark-black;
         display: block;
         color: white;
         &:hover {
@@ -112,7 +112,7 @@
             display: inline-block;
             width: 37px;
             height: 37px;
-            background-color: #3c4043;
+            background-color: $cape-cod;
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 60%;
