@@ -124,8 +124,7 @@ img {
   transition: all 1s ease-in-out; }
 
   .scene button {
-    left: 10%;
-    top: 260px;
+    top: 234px;
     height: 48px;
     min-width: 180px;
     position: absolute; 
@@ -216,8 +215,6 @@ img {
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  margin-left: 5%;
-  margin-top: 5%;
 }
 
 @keyframes aspect3 {
@@ -273,7 +270,7 @@ img {
 
 /*media queries for each element*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1329px) {
 .container {
   margin: 0 auto;
   width: 100vw;
@@ -282,7 +279,7 @@ img {
   }
 }
 
-@media screen and (max-width: 1024px) and (min-width: 768px) {
+@media screen and (max-width: 1329px) and (min-width: 768px) {
 
   .container {
     margin: 0 auto;
@@ -428,6 +425,7 @@ img {
 }
 
 .dropdown {
+    left: 50%;
     position: relative;
     display: inline;
     z-index: 999999999;
@@ -437,7 +435,6 @@ img {
     display: none;
     position: absolute;
     background-color: rgb(255, 255, 255);
-    min-width: 220px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 999999999;
     font-size: 16px;
