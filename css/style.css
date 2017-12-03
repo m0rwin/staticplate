@@ -1139,6 +1139,21 @@ h1 {
   text-align: right;
 }
 
+@media screen and (max-width: 720px) {
+  .footer .contact-footer {
+    padding: 65px 0;
+  }
+  .footer .contact-footer h3 {
+    font-size: 37px;
+  }
+  .footer .contact-footer p {
+    font-size: 26px;
+  }
+  .footer .contact-footer .contact-message {
+    width: 299px;
+  }
+}
+
 .footer .footer-bottom {
   padding: 45px 48px;
   display: grid;

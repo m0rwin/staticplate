@@ -47,6 +47,23 @@
                 text-align: right;
             }
         }
+
+
+        @media screen and (max-width: 720px) {
+            padding: 65px 0;
+        
+            h3 {
+                font-size: 37px;
+            }
+            
+            p {
+                font-size: 26px;
+            }
+
+            .contact-message {
+                width: 299px;
+            }
+        }
     }
 
     .footer-bottom {
