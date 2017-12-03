@@ -1,9 +1,12 @@
 
 .footer {
-    background: #191b1d;
     font-size: 16px;
     color: #c9ced1;
-    margin-top: 20px;
+    padding-top: 64px;
+
+    *{
+        background: #191b1d;
+    }
     
     a {
         color: #c9ced1;
@@ -49,9 +52,10 @@
         }
 
 
-        @media screen and (max-width: 720px) {
+        @media screen and (max-width: 1440px) {
             padding: 65px 0;
-        
+        }
+        @media screen and (max-width: 720px) {
             h3 {
                 font-size: 37px;
             }

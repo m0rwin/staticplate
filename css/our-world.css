@@ -104,6 +104,7 @@ table {
 
 button {
   outline: none;
+  cursor: pointer;
 }
 
 /* Break points */
@@ -776,7 +777,6 @@ img {
   background-image: none;
   border: 1px solid transparent;
   color: black;
-  cursor: pointer;
 }
 
 .navbar-toggle .navbar-icon {
