@@ -69,6 +69,68 @@ $jobboard-collapse2: 650px;
             @media screen and (max-width: $jobboard-collapse) {
                 grid-gap: 25px;
             }
+        
+            .side-box {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: auto auto 48px;
+                grid-column-gap: 30px;
+                grid-template-areas: "title list"
+                                    "body list"
+                                    "button list";
+
+                h3 {
+                    grid-area: title;
+                    font-family: "Muli", Helvetica, Arial, sans-serif;
+                    margin-top: 0;
+                    font-size: 26px;
+                    font-weight: bold; 
+                }
+
+                .content {
+                    grid-area: body;
+                    font-size: 16px;
+                    overflow: hidden;
+                    line-height: 1.7;
+                    padding-bottom: 50px;
+                }
+
+                .forbutton {
+                    grid-area: button;
+                    position: relative;
+
+                    .button {
+                        position: absolute;
+                        bottom: 0;
+                        display: inline-block;
+                        height: 48px;
+                        background-color: $curious-blue;
+                        border-radius: 2px;
+                        padding: 14px 25px;
+                        font-size: 16px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+                }
+
+                ul {
+                    grid-area: list;
+                    line-height: 2.2;
+                }
+
+                @media screen and (max-width: 915px) {
+                    grid-template-columns: auto 245px;            
+                }
+                
+                @media screen and (max-width: 675px) {
+                    text-align: left;
+                    .content { display: none; }
+                    grid-template-areas: "title" "list" "button";
+                    grid-template-columns: 1fr;
+                    ul { margin-bottom: 41px; }
+                }
+
+            }
         }
     }
 
@@ -77,15 +139,30 @@ $jobboard-collapse2: 650px;
 
         .side-box {
             margin-top: 14px;
-            & > ul > li {
+            & > ul.accordian > li {
                 margin-bottom: 27px;
-            }
-            a {
-                display: block;
-                
-                .icon-dropdown-down-up {
-                    float: right;
+
+                a {
+                    display: block;
+                    
+                    .icon-dropdown-down-up {
+                        float: right;
+                    }
                 }
+            }
+
+            a.clear-btn {
+                color: white;
+                text-transform: uppercase;
+                font-size: 12px;
+                line-height: 4;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+
+                padding-bottom: 20px;
+                display: block;
             }
 
             padding-bottom: 19px;
@@ -95,6 +172,43 @@ $jobboard-collapse2: 650px;
 
             .side-box {
                 margin-top: 0;                
+            }
+        }
+
+        .filter-pills {
+            list-style: none;
+            font-size: 12px;
+            line-height: 1.17;
+            margin:-8px -8px 0 -8px;
+            padding: 0;
+
+            max-height: 155px;
+            overflow-y: scroll;
+    
+            li {
+                a {
+                    display: inline-block;
+                    color: white;
+                    text-decoration: none;
+                    border: 1px solid white;
+                    padding: 7px 26px 7px 10px;
+                    border-radius: 2px;
+                    position: relative;
+                }
+    
+                a::after {
+                    content: "x";
+                    display: block;
+                    position: absolute;
+                    top: 7px;
+                    right: 12px;
+                    margin-left: 10px;
+                    font-size: 0.8em;
+                    vertical-align: top;
+                }
+                display: inline-block;
+                // margin-right: 16px;
+                margin: 8px;
             }
         }
     }

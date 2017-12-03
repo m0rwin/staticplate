@@ -208,7 +208,15 @@
             <aside class="filters">
                 <strong class="wide-only">Refine search</strong>
                 <div class="side-box">
-                    <ul>
+                    <ul class="filter-pills">
+                        <li><a href="#">Permanent</a></li>
+                        <li><a href="#">Temporary</a></li>
+                        <li><a href="#">Buckinghamshire</a></li>
+                        <li><a href="#">Cambridgeshire</a></li>
+                        <li><a href="#">Groundworks and Frames</a></li>
+                    </ul>
+                    <a class="clear-btn" href="#results">Clear All</a>
+                    <ul class="accordian">
                         <li>
                             <a data-toggle="collapse" data-target="#filters-main-1842" class="collapsed">
                                 Type
@@ -297,13 +305,56 @@
                 <strong>Displaying 1 to 10 of 90</strong>
                 <div class="job-results-grid">
                     <div class="side-box">
-                        hello world;
+                        <h3>Project Manager</h3>
+                        <div class="content">
+                            <p class="clamp">Job Title: Project Manager Your salary: £35,000- £45,000 Where: Kent Job type: 
+                                Permanent How you apply: Online or by phone (Lewis Nicholson-Smith) Who you'll 
+                                be working for: This is a Great opportunity for an Ambitious Project Manager 
+                                looking to Further their career with a world leading consultancy</p>
+                        </div>
+                        <div class="forbutton">
+                            <a class="button" href="#">View job details</a>
+                        </div>
+                        <ul>
+                            <li>London</li>
+                            <li>£50000 - £60000 per annum</li>
+                            <li>Fit Out and Interiors</li>
+                            <li>Permanent</li>
+                        </ul>
                     </div>
                     <div class="side-box">
-                        hello world;
+                        <h3>Site Manager</h3>
+                        <div class="content">
+                            <p class="clamp">Who you'll be working for: A multi-disciplinary UK based main contractor with 
+                                a turnover of circa £311m. Typical projects include new build educational, housing, 
+                                healthcare, retail and leisure. This company has a strong pipeline of work and are well 
+                                known throughout the industry.</p>
+                        </div>
+                        <div class="forbutton">
+                            <a class="button" href="#">View job details</a>
+                        </div>
+                        <ul>
+                            <li>Hertfordshire</li>
+                            <li>£40000 - £45000 per annum</li>
+                            <li>Main Contractor</li>
+                            <li>Permanent</li>
+                        </ul>
                     </div>
                     <div class="side-box">
-                        hello world;
+                        <h3>Senior Pitch Designer</h3>
+                        <div class="content">
+                            <p class="clamp">If you are interested in working with a forward thinking business with a great 
+                                team behind you, please get in contact with Maurice Duro</p>
+                        </div>
+                        <div class="forbutton">
+                            <a class="button" href="#">View job details</a>
+                        </div>
+                        <ul>
+                            <li>London</li>
+                            <li>£50000 - £60000 per annum</li>
+                            <li>Fit Out and Interiors</li>
+                            <li>Permanent</li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -352,11 +403,15 @@
     <script src="/scripts/jquery-3.2.1.min.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
+    <script src="/scripts/clamp.min.js"></script>
     <script type="text/javascript">
         $(window).one('mousemove wheel', function () {
             $('footer.footer').footerReveal({ shadow: false });
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
+        $('.clamp').each(function (i, e) {
+            $clamp(e, {clamp: 2});
+        })
     </script>
     <script>
         var APP_ID = "biiewbsz";

@@ -1190,6 +1190,73 @@ h1 {
   }
 }
 
+.job-board .results .job-results-grid .side-box {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto 48px;
+  grid-column-gap: 30px;
+  grid-template-areas: "title list" "body list" "button list";
+}
+
+.job-board .results .job-results-grid .side-box h3 {
+  grid-area: title;
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.job-board .results .job-results-grid .side-box .content {
+  grid-area: body;
+  font-size: 16px;
+  overflow: hidden;
+  line-height: 1.7;
+  padding-bottom: 50px;
+}
+
+.job-board .results .job-results-grid .side-box .forbutton {
+  grid-area: button;
+  position: relative;
+}
+
+.job-board .results .job-results-grid .side-box .forbutton .button {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #1898d9;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.job-board .results .job-results-grid .side-box ul {
+  grid-area: list;
+  line-height: 2.2;
+}
+
+@media screen and (max-width: 915px) {
+  .job-board .results .job-results-grid .side-box {
+    grid-template-columns: auto 245px;
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .job-board .results .job-results-grid .side-box {
+    text-align: left;
+    grid-template-areas: "title" "list" "button";
+    grid-template-columns: 1fr;
+  }
+  .job-board .results .job-results-grid .side-box .content {
+    display: none;
+  }
+  .job-board .results .job-results-grid .side-box ul {
+    margin-bottom: 41px;
+  }
+}
+
 .job-board .filters {
   grid-area: filters;
 }
@@ -1199,16 +1266,29 @@ h1 {
   padding-bottom: 19px;
 }
 
-.job-board .filters .side-box > ul > li {
+.job-board .filters .side-box > ul.accordian > li {
   margin-bottom: 27px;
 }
 
-.job-board .filters .side-box a {
+.job-board .filters .side-box > ul.accordian > li a {
   display: block;
 }
 
-.job-board .filters .side-box a .icon-dropdown-down-up {
+.job-board .filters .side-box > ul.accordian > li a .icon-dropdown-down-up {
   float: right;
+}
+
+.job-board .filters .side-box a.clear-btn {
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 4;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.job-board .filters .side-box a.clear-btn:hover {
+  text-decoration: underline;
 }
 
 @media screen and (max-width: 1284px) {
@@ -1218,6 +1298,42 @@ h1 {
   .job-board .filters .side-box {
     margin-top: 0;
   }
+}
+
+.job-board .filters .filter-pills {
+  list-style: none;
+  font-size: 12px;
+  line-height: 1.17;
+  margin: -8px -8px 0 -8px;
+  padding: 0;
+  max-height: 155px;
+  overflow-y: scroll;
+}
+
+.job-board .filters .filter-pills li {
+  display: inline-block;
+  margin: 8px;
+}
+
+.job-board .filters .filter-pills li a {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 7px 26px 7px 10px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.job-board .filters .filter-pills li a::after {
+  content: "x";
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  margin-left: 10px;
+  font-size: 0.8em;
+  vertical-align: top;
 }
 
 .job-board .side-box {
@@ -1376,6 +1492,11 @@ h1 {
   font-size: 16px;
   color: #c9ced1;
   padding-top: 64px;
+  text-align: left;
+}
+
+.section .footer {
+  padding-top: 0;
 }
 
 .footer * {
