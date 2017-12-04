@@ -756,13 +756,15 @@ h1 {
 
 .herocontent h1 {
   font-family: 'Impact', sans-serif;
+  line-height: 0.6;
   font-weight: 900;
   font-size: 75px;
   color: #ffffff;
 }
 
 .hero-subtitle {
-  font-size: 26px;
+  font-size: 19px;
+  margin-bottom: 4em;
   color: #fff;
 }
 
@@ -999,7 +1001,7 @@ h1 {
 
 .job-search-grid-home {
   display: grid;
-  grid-gap: 48px;
+  grid-gap: 24px;
   grid-template-columns: 73fr 27fr;
   grid-template-areas: "search button";
 }
