@@ -195,6 +195,22 @@
                     <div class="herocontent">
                         <h1>Construction Recruitment</h1>
                         <p>But not as you know it</p>
+                    <div class="search">
+                            <form role="form" method="get" action="/candidates/job-search/#results" id="job-search" novalidate="novalidate">
+                                <fieldset>
+                                    <legend class="sr-only">Search Jobs</legend>
+                                    <div class="job-search-grid">
+                                        <div class="search-box">
+                                            <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
+                                            <span class="after">search</span>
+                                        </div>
+                                        <input type="hidden" name="pagesize" value="10">
+                                        <button class="submit" type="submit"></button>
+                                    </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </main>
