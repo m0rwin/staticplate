@@ -196,14 +196,18 @@
                         <h1>Construction Recruitment</h1>
                         <p>But not as you know it</p>
                     <div class="search">
-                            <form role="form" method="get" action="/candidates/job-search/#results" id="job-search" novalidate="novalidate">
+                            <form role="form" method="get" action="/candidates/job-search/#results" id="job-search-home" novalidate="novalidate">
                                 <fieldset>
                                     <legend class="sr-only">Search Jobs</legend>
-                                    <div class="job-search-grid">
-                                        <div class="search-box">
+                                    <div class="job-search-grid-home">
+                                        <div class="search-box-home">
                                             <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
                                             <span class="after">search</span>
                                         </div>
+                                        <div class="search-box-home">
+                                                <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
+                                                <span class="after">search</span>
+                                            </div>
                                         <input type="hidden" name="pagesize" value="10">
                                         <button class="submit" type="submit"></button>
                                     </div>
@@ -212,7 +216,17 @@
                             </form>
                         </div>
                     </div>
+                    <div id="downarrow"> 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 197.402 197.402" id="topArrow" class="topArrow">
+                            <polygon style="fill:#fff;" points="146.883,197.402 45.255,98.698 146.883,0 152.148,5.418 56.109,98.698 152.148,191.98"/>
+                        </svg>
+                    </div>
                 </div>
+                <section id="novodefined">
+                    <div class="stuff">
+                        <h1>you what up g!</h1>
+                    </div>
+                </section>
             </main>
             <footer class="footer">
                     <a href="/contact" class="contact-footer">
@@ -248,9 +262,7 @@
                             <br> © Novo UK 2017
                             <br> Website by Red Squirrel Digital
                         </div>
-                    </div>
-            
-            
+                    </div>           
                 </footer>
             <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
             <script src="/scripts/bootstrap.min.js"></script>
@@ -260,6 +272,20 @@
                     $('footer.footer').footerReveal({ shadow: false });
                     $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
                 });
+            </script>
+            <script>
+                        $(function() {
+            setTimeout('topArrow()');
+            });
+
+            function topArrow() {
+            $('#topArrow').animate({
+                marginBottom: '-=15px'
+            }, 800).animate({
+                marginBottom: '+=15px'
+            }, 800);
+            setTimeout('topArrow()', 1600);
+            }
             </script>
             <script>
                 var APP_ID = "biiewbsz";
