@@ -497,9 +497,27 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
-/* Video styles*/
+/* Hero video styles */
+
+.hero{
+  position: relative;
+}
+
 .videocontainer {
   height: 100%;
+}
+
+.herocontent {
+  position: absolute;
+  color: #ffffff;
+  top: 50%;
+  padding: 0px 48px 0px 48px;
+}
+.herocontent h1 {
+  font-family: 'Impact', sans-serif;
+  font-weight: 900;
+  font-size: 75px;
+  color: #ffffff;
 }
 
 @import 'header-and-nav.scss';
