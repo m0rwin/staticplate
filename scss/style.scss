@@ -510,7 +510,7 @@ h1 {
 .herocontent {
   position: absolute;
   color: #ffffff;
-  top: 50%;
+  top: 38%;
   padding: 0px 48px 0px 48px;
 }
 .herocontent h1 {
@@ -520,6 +520,29 @@ h1 {
   color: #ffffff;
 }
 
+#downarrow {
+  width: 45px;
+  height: 45px;
+  margin: 96px;
+}
+
+.topArrow {
+  fill: #fff;
+  transform: rotate(-90deg);
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  bottom: 96px;
+  margin: 0 0 0 -22px;
+}
+
+#novodefined{
+  height: 1000px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+@import 'job-search-home.scss';
 @import 'header-and-nav.scss';
 @import 'job-board.scss';
 @import 'footer.scss';
