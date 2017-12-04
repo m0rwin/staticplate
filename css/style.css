@@ -806,11 +806,16 @@ h1 {
 }
 
 .sectorcopy {
-  display: grid;
   font-weight: 400;
   text-transform: uppercase;
   color: white;
   align-self: center;
+  text-align: center;
+}
+
+#sector1 {
+  display: grid;
+  grid-gap: 24px;
 }
 
 .job-board-home {

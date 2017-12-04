@@ -578,15 +578,15 @@ h1 {
 }
 
 .sectorcopy{
-  display: grid;
-
   font-weight: 400;
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   align-self:center;
+  text-align: center;
 }
 #sector1 {
-
+  display: grid;
+  grid-gap: 24px;
 }
 
 @import 'job-search-home.scss';
