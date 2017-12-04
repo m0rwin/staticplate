@@ -734,6 +734,7 @@ h1 {
 /* Hero video styles */
 .hero {
   position: relative;
+  z-index: 1;
 }
 
 .videocontainer {
