@@ -190,9 +190,52 @@
 
                 hello world
             </div>
+        <footer class="footer">
+                <a href="/contact" class="contact-footer">
+                    <div class="contact-message">
+                        <h3 class="text-left">We are ready...</h3>
+                        <p class="text-right">Let&rsquo;s talk</p>
+                    </div>
+                </a>
+        
+                <div class="footer-bottom">
+                    <div class="right-side">
+                        <ul class="list-inline list-share-icons" itemscope="" itemtype="http://schema.org/Organization">
+                            <li>
+                                <a href="https://www.linkedin.com/company/novo-uk-recruitment-ltd" target="_blank" title="LinkedIn" itemprop="sameAs">
+                                    <i class="icon-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/novo_uk" target="_blank" title="Twitter" itemprop="sameAs">
+                                    <i class="icon-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+        
+                        <img alt="Novo UK Apsco" class="footer-img" height="60" src="http://novo-staging.dipunmistry.co.uk/media/1211/novo-uk-apsco.png?height=60&amp;quality=75">
+                    </div>
+                    <div class="left-side">
+        
+                        <a href="tel:01442767808">
+                            01442 767808
+                        </a>
+                        <br> 158 Marlowes, Hertfordshire, HP1 1BA
+                        <br> © Novo UK 2017
+                        <br> Website by Red Squirrel Digital
+                    </div>
+                </div>
+        </footer>
         <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
         <script src="/scripts/jquery-3.2.1.min.js"></script>
         <script src="/scripts/bootstrap.min.js"></script>
+        <script src="/scripts/footer-reveal.min.js"></script>
+        <script type="text/javascript">
+            $(window).one('mousemove wheel', function () {
+                $('footer.footer').footerReveal({ shadow: false });
+                $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
+            });
+        </script>
         <script>
                 var APP_ID = "biiewbsz";
                 
