@@ -1077,7 +1077,7 @@ h1 {
 }
 
 .job-search-grid-home .submit::before {
-  content: 'search';
+  content: 'search jobs';
   text-transform: uppercase;
 }
 

@@ -200,7 +200,7 @@ $jobboard-collapse2: 650px;
 
     .submit {
         &::before {
-            content: 'search';
+            content: 'search jobs';
             text-transform: uppercase;    
         }
         grid-area: button;
