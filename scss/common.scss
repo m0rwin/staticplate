@@ -8,6 +8,7 @@
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
+
 // used for big headers
 .jumbo {
     background-color: $shark-black;
@@ -26,7 +27,6 @@
         margin: 0;
     }
 
-
     &::before {
         content: '';
         position: absolute;
@@ -34,13 +34,9 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: radial-gradient(
-            rgba(0, 0, 0, 0) 30%, 
-            rgba(0, 0, 0, 0.5) 70%
-        );
+        background-image: radial-gradient(rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.5) 70%);
     }
 }
-
 
 /* Hero video styles */
 .hero {
@@ -69,8 +65,7 @@
     font-size: 23px;
     margin-bottom: 2.5em;
     color: #fff;
-  }
-  
+}
 
 .herocontent h1 {
     font-family: 'Impact', sans-serif;

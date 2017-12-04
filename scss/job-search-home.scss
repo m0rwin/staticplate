@@ -25,28 +25,25 @@ $jobboard-collapse2: 650px;
     margin-top: 28px;
     grid-gap: 39px 48px;
     grid-template-columns: 764fr 236fr;
-    grid-template-areas: "search search"
-                        "results filters";
+    grid-template-areas: "search search" "results filters";
 
-    @media screen and (max-width: $jobboard-collapse){
+    @media screen and (max-width: $jobboard-collapse) {
         margin-top: 0px;
         width: 100vw;
-        grid-template-areas: "search search"
-                            "filters filters"
-                            "results results";
+        grid-template-areas: "search search" "filters filters" "results results";
         grid-gap: 0;
-        
+
         .wide-only {
             display: none;
         }
     }
 
     @media screen and (max-width: $jobboard-collapse) {
-        font-size: 18px;        
+        font-size: 18px;
     }
 
     @media screen and (max-width: $jobboard-collapse2) {
-        font-size: 16px;        
+        font-size: 16px;
     }
 
     .search-home {
@@ -66,25 +63,24 @@ $jobboard-collapse2: 650px;
             margin-top: 14px;
             display: grid;
             grid-gap: 48px;
+
             @media screen and (max-width: $jobboard-collapse) {
                 grid-gap: 25px;
             }
-        
+
             .side-box {
                 display: grid;
                 grid-template-columns: 2fr 1fr;
                 grid-template-rows: auto auto 48px;
                 grid-column-gap: 30px;
-                grid-template-areas: "title list"
-                                    "body list"
-                                    "button list";
+                grid-template-areas: "title list" "body list" "button list";
 
                 h3 {
                     grid-area: title;
                     font-family: "Muli", Helvetica, Arial, sans-serif;
                     margin-top: 0;
                     font-size: 26px;
-                    font-weight: bold; 
+                    font-weight: bold;
                 }
 
                 .content {
@@ -119,17 +115,23 @@ $jobboard-collapse2: 650px;
                 }
 
                 @media screen and (max-width: 915px) {
-                    grid-template-columns: auto 245px;            
-                }
-                
-                @media screen and (max-width: 675px) {
-                    text-align: left;
-                    .content { display: none; }
-                    grid-template-areas: "title" "list" "button";
-                    grid-template-columns: 1fr;
-                    ul { margin-bottom: 41px; }
+                    grid-template-columns: auto 245px;
                 }
 
+                @media screen and (max-width: 675px) {
+                    text-align: left;
+
+                    .content {
+                        display: none;
+                    }
+
+                    grid-template-areas: "title" "list" "button";
+                    grid-template-columns: 1fr;
+
+                    ul {
+                        margin-bottom: 41px;
+                    }
+                }
             }
         }
     }
@@ -138,10 +140,10 @@ $jobboard-collapse2: 650px;
 #job-search-home {
     padding: 19px 19px;
     margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.10);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
 
-    @media screen and (max-width: $jobboard-collapse){
+    @media screen and (max-width: $jobboard-collapse) {
         margin: 0;
         padding: 24px 25px;
         border-radius: 0;
@@ -153,37 +155,42 @@ $jobboard-collapse2: 650px;
     grid-gap: 24px;
     grid-template-columns: 73fr 27fr;
     grid-template-areas: "search button";
+
     @media screen and (max-width: $jobboard-collapse) {
         grid-gap: 0;
     }
-    
+
     @media screen and (max-width: $jobboard-collapse2) {
         grid-template-columns: auto min-content;
     }
 
     input, button {
         height: 48px;
-        border-radius: 2px;        
+        border-radius: 2px;
         border: none;
 
-        @media screen and (max-width: $jobboard-collapse){
+        @media screen and (max-width: $jobboard-collapse) {
             margin: 0;
-        }    
+        }
     }
+
     .search-box-home {
         grid-area: search;
         position: relative;
+
         input {
             width: 100%;
             padding: 0 28px;
-            @media screen and (max-width: $jobboard-collapse){
+
+            @media screen and (max-width: $jobboard-collapse) {
                 border-bottom-right-radius: 0;
                 border-top-right-radius: 0;
-            } 
+            }
         }
 
         .after {
-            @include icon-mode;            
+            @include icon-mode;
+
             position: absolute;
             right: 25px;
             top: 16px;
@@ -191,33 +198,36 @@ $jobboard-collapse2: 650px;
             color: $shark-black;
             pointer-events: none;
 
-            @media screen and (max-width: $jobboard-collapse2){
+            @media screen and (max-width: $jobboard-collapse2) {
                 display: none;
             }
         }
-        
     }
 
     .submit {
         &::before {
             content: 'search jobs';
-            text-transform: uppercase;    
+            text-transform: uppercase;
         }
+
         grid-area: button;
         background-color: $cerulean-blue;
         color: white;
         font-size: 16px;
-        @media screen and (max-width: $jobboard-collapse){
+
+        @media screen and (max-width: $jobboard-collapse) {
             border-bottom-left-radius: 0;
             border-top-left-radius: 0;
-        } 
+        }
 
         @media screen and (max-width: $jobboard-collapse2) {
             &::before {
                 @include icon-mode;
+
                 content: 'search';
-                text-transform: none;    
+                text-transform: none;
             }
+
             min-width: 49px;
         }
     }

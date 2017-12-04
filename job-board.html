@@ -85,7 +85,9 @@
         <div class="overlay-transparent" data-toggle="collapse" data-target="#js-nav-collapse"></div>
         <div class="overlay-menu">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#js-nav-collapse">
-                <div class="navbar-icon close-menu"><span>toggle menu</span></div>
+                <div class="navbar-icon close-menu">
+                    <span>toggle menu</span>
+                </div>
             </button>
             <ul class="main-menu">
                 <li class="active">
@@ -186,7 +188,7 @@
                 <h1>Job search</h1>
             </div>
         </header>
-            
+
         <section class="job-board">
             <header class="search">
                 <form role="form" method="get" action="/candidates/job-search/#results" id="job-search" novalidate="novalidate">
@@ -209,11 +211,21 @@
                 <strong class="wide-only">Refine search</strong>
                 <div class="side-box">
                     <ul class="filter-pills">
-                        <li><a href="#">Permanent</a></li>
-                        <li><a href="#">Temporary</a></li>
-                        <li><a href="#">Buckinghamshire</a></li>
-                        <li><a href="#">Cambridgeshire</a></li>
-                        <li><a href="#">Groundworks and Frames</a></li>
+                        <li>
+                            <a href="#">Permanent</a>
+                        </li>
+                        <li>
+                            <a href="#">Temporary</a>
+                        </li>
+                        <li>
+                            <a href="#">Buckinghamshire</a>
+                        </li>
+                        <li>
+                            <a href="#">Cambridgeshire</a>
+                        </li>
+                        <li>
+                            <a href="#">Groundworks and Frames</a>
+                        </li>
                     </ul>
                     <a class="clear-btn" href="#results">Clear All</a>
                     <ul class="accordian">
@@ -243,7 +255,7 @@
                             </a>
                             <div class="sub-menu collapse" id="filters-main-1873">
                                 <ul class="sub-menu-ul">
-        
+
                                     <li>
                                         <a href="/sectors/">Sectors</a>
                                     </li>
@@ -281,7 +293,7 @@
                             </a>
                             <div class="sub-menu collapse" id="filters-main-3222">
                                 <ul class="sub-menu-ul">
-        
+
                                     <li>
                                         <a href="/our-world/">Our world</a>
                                     </li>
@@ -307,10 +319,10 @@
                     <div class="side-box">
                         <h3>Project Manager</h3>
                         <div class="content">
-                            <p class="clamp">Job Title: Project Manager Your salary: £35,000- £45,000 Where: Kent Job type: 
-                                Permanent How you apply: Online or by phone (Lewis Nicholson-Smith) Who you'll 
-                                be working for: This is a Great opportunity for an Ambitious Project Manager 
-                                looking to Further their career with a world leading consultancy</p>
+                            <p class="clamp">Job Title: Project Manager Your salary: £35,000- £45,000 Where: Kent Job type: Permanent How
+                                you apply: Online or by phone (Lewis Nicholson-Smith) Who you'll be working for: This is
+                                a Great opportunity for an Ambitious Project Manager looking to Further their career with
+                                a world leading consultancy</p>
                         </div>
                         <div class="forbutton">
                             <a class="button" href="#">View job details</a>
@@ -325,10 +337,9 @@
                     <div class="side-box">
                         <h3>Site Manager</h3>
                         <div class="content">
-                            <p class="clamp">Who you'll be working for: A multi-disciplinary UK based main contractor with 
-                                a turnover of circa £311m. Typical projects include new build educational, housing, 
-                                healthcare, retail and leisure. This company has a strong pipeline of work and are well 
-                                known throughout the industry.</p>
+                            <p class="clamp">Who you'll be working for: A multi-disciplinary UK based main contractor with a turnover of circa
+                                £311m. Typical projects include new build educational, housing, healthcare, retail and leisure.
+                                This company has a strong pipeline of work and are well known throughout the industry.</p>
                         </div>
                         <div class="forbutton">
                             <a class="button" href="#">View job details</a>
@@ -343,8 +354,8 @@
                     <div class="side-box">
                         <h3>Senior Pitch Designer</h3>
                         <div class="content">
-                            <p class="clamp">If you are interested in working with a forward thinking business with a great 
-                                team behind you, please get in contact with Maurice Duro</p>
+                            <p class="clamp">If you are interested in working with a forward thinking business with a great team behind you,
+                                please get in contact with Maurice Duro</p>
                         </div>
                         <div class="forbutton">
                             <a class="button" href="#">View job details</a>
@@ -410,17 +421,17 @@
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
         $('.clamp').each(function (i, e) {
-            $clamp(e, {clamp: 2});
+            $clamp(e, { clamp: 2 });
         })
     </script>
     <script>
         var APP_ID = "biiewbsz";
-        
+
         window.intercomSettings = {
             app_id: APP_ID
         };
     </script>
-    <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/APP_ID';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
 
 </body>
 
