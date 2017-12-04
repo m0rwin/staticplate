@@ -756,15 +756,14 @@ h1 {
 
 .herocontent h1 {
   font-family: 'Impact', sans-serif;
-  line-height: 0.6;
   font-weight: 900;
   font-size: 75px;
   color: #ffffff;
 }
 
 .hero-subtitle {
-  font-size: 19px;
-  margin-bottom: 4em;
+  font-size: 23px;
+  margin-bottom: 2.5em;
   color: #fff;
 }
 
