@@ -136,9 +136,9 @@ $jobboard-collapse2: 650px;
 }
 
 #job-search-home {
-    padding: 30px 46px;
-    margin: 20px 0;  
-    background-color: $shark-black;
+    padding: 19px 19px;
+    margin: 20px 0;
+    background-color: rgba(255, 255, 255, 0.10);
     border-radius: 3px;
 
     @media screen and (max-width: $jobboard-collapse){

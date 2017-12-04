@@ -978,9 +978,9 @@ h1 {
 }
 
 #job-search-home {
-  padding: 30px 46px;
+  padding: 19px 19px;
   margin: 20px 0;
-  background-color: #191b1d;
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
 }
 
