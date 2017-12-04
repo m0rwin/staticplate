@@ -551,15 +551,9 @@ h1 {
   grid-auto-rows: 350px;
 }
 
-.nested{
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: 70px;
-  grid-gap:1em;
-}
 
 .wrapper > div{
-  background:rgb(255, 255, 255);
+  background:rgb(184, 184, 184);
   padding:1em;
   -moz-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
@@ -583,17 +577,16 @@ h1 {
   transition: all .3s ease-in-out;
 }
 
-.nested > div{
-  border:#333 1px solid;
-  padding:1em;
-}
+.sectorcopy{
+  display: grid;
 
-.linkstyle{
-  position: absolute;
   font-weight: 400;
   text-transform: uppercase;
-  text-align: center;
   color: rgb(255, 255, 255);
+  align-self:center;
+}
+#sector1 {
+
 }
 
 @import 'job-search-home.scss';
