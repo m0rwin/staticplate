@@ -497,6 +497,11 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
+/* Video styles*/
+.videocontainer {
+  height: 100%;
+}
+
 @import 'header-and-nav.scss';
 @import 'job-board.scss';
 @import 'footer.scss';
