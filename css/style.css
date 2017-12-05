@@ -201,7 +201,7 @@ tbody.collapse.show {
 .herocontent {
   position: absolute;
   color: #ffffff;
-  top: 38%;
+  top: 40%;
   padding: 0px 96px 0px 96px;
 }
 
@@ -216,6 +216,7 @@ tbody.collapse.show {
   font-weight: 900;
   font-size: 75px;
   color: #ffffff;
+  line-height: 20px;
 }
 
 .container-normal {
