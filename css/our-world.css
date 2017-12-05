@@ -908,7 +908,7 @@ img {
 }
 
 .side-menu:not(.show) .overlay-menu {
-  right: -320px;
+  right: -396px;
 }
 
 @media (max-width: 768px) {
@@ -934,7 +934,7 @@ img {
 
 .side-menu .overlay-menu {
   background-color: black;
-  width: 320px;
+  width: 396px;
   height: 100vh;
   position: absolute;
   top: 0;

@@ -239,7 +239,7 @@ $menu-small-width: 650px;
         }
 
         .overlay-menu {
-            right: -320px;
+            right: -396px;
 
             @media (max-width: 768px) {
                 right: -100%;
@@ -264,7 +264,7 @@ $menu-small-width: 650px;
 
     .overlay-menu {
         background-color: black;
-        width: 320px;
+        width: 396px;
         height: 100vh;
         position: absolute;
         top: 0;
