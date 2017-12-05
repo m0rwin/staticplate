@@ -380,6 +380,7 @@ h1 {
 #novodefined .wrapper > .sector {
   display: grid;
   background: #b8b8b8;
+  background-position: center center;
 }
 
 #novodefined .wrapper > .sector a {

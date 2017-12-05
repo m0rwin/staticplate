@@ -6,7 +6,6 @@
     text-align: center;
 }
 
-
 #novodefined {
     width: 100%;
     background-color: #ffffff;
@@ -31,6 +30,7 @@
     .wrapper > .sector {
         display: grid;
         background: rgb(184, 184, 184);
+        background-position: center center;
 
         a {
             display: flex;
