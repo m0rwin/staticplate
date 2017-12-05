@@ -404,6 +404,45 @@ h1 {
   background: rgba(231, 115, 152, 0.5);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.content-grid {
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-areas: "novo" "."  "." "adverb" "." "latin" "." "description";
+}
+
+.novo {
+  grid-area: novo;
+}
+
+.novo-definition-area {
+  grid-area: novo-definition-area;
+}
+
+.adverb {
+  grid-area: adverb;
+}
+
+.latin {
+  grid-area: latin;
+}
+
+.description {
+  grid-area: description;
+}
+
+.content-grid div:nth-child(even) {
+  background-color: aqua;
+}
+
+.content-grid div:nth-child(odd) {
+  background-color: crimson;
+}
+
 .job-board-home {
   width: 1264px;
   margin: 0 auto;
