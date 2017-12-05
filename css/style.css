@@ -697,10 +697,10 @@ h1 {
 }
 
 .header .header-logo img {
-  width: 119px;
+  width: 105px;
   position: relative;
-  top: -6px;
-  margin-left: 37px;
+  top: -4px;
+  margin-left: 24px;
 }
 
 @media screen and (max-width: 650px) {
