@@ -1,5 +1,5 @@
 $jobboard-collapse: 1284px;
-$jobboard-collapse2: 650px;
+$jobboard-collapse2: 799px;
 
 @mixin icon-mode {
     font-family: 'Material Icons';
@@ -21,17 +21,13 @@ $jobboard-collapse2: 650px;
 .job-board-home {
     width: 1264px;
     margin: 0 auto;
-    display: grid;
     margin-top: 28px;
     grid-gap: 39px 48px;
     grid-template-columns: 764fr 236fr;
-    grid-template-areas: "search search" "results filters";
 
     @media screen and (max-width: $jobboard-collapse) {
         margin-top: 0px;
         width: 100vw;
-        grid-template-areas: "search search" "filters filters" "results results";
-        grid-gap: 0;
 
         .wide-only {
             display: none;
@@ -46,93 +42,9 @@ $jobboard-collapse2: 650px;
         font-size: 16px;
     }
 
-    .search-home {
-        grid-area: search;
-    }
-
     .results, .filters {
         @media screen and (max-width: $jobboard-collapse) {
             padding: 0 24px;
-        }
-    }
-
-    .results {
-        grid-area: results;
-
-        .job-results-grid {
-            margin-top: 14px;
-            display: grid;
-            grid-gap: 48px;
-
-            @media screen and (max-width: $jobboard-collapse) {
-                grid-gap: 25px;
-            }
-
-            .side-box {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: auto auto 48px;
-                grid-column-gap: 30px;
-                grid-template-areas: "title list" "body list" "button list";
-
-                h3 {
-                    grid-area: title;
-                    font-family: "Muli", Helvetica, Arial, sans-serif;
-                    margin-top: 0;
-                    font-size: 26px;
-                    font-weight: bold;
-                }
-
-                .content {
-                    grid-area: body;
-                    font-size: 16px;
-                    overflow: hidden;
-                    line-height: 1.7;
-                    padding-bottom: 50px;
-                }
-
-                .forbutton {
-                    grid-area: button;
-                    position: relative;
-
-                    .button {
-                        position: absolute;
-                        bottom: 0;
-                        display: inline-block;
-                        height: 48px;
-                        background-color: $curious-blue;
-                        border-radius: 2px;
-                        padding: 14px 25px;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                    }
-                }
-
-                ul {
-                    grid-area: list;
-                    line-height: 2.2;
-                }
-
-                @media screen and (max-width: 915px) {
-                    grid-template-columns: auto 245px;
-                }
-
-                @media screen and (max-width: 675px) {
-                    text-align: left;
-
-                    .content {
-                        display: none;
-                    }
-
-                    grid-template-areas: "title" "list" "button";
-                    grid-template-columns: 1fr;
-
-                    ul {
-                        margin-bottom: 41px;
-                    }
-                }
-            }
         }
     }
 }
@@ -142,18 +54,23 @@ $jobboard-collapse2: 650px;
     margin: 20px 0;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 3px;
-
+    
     @media screen and (max-width: $jobboard-collapse) {
         margin: 0;
         padding: 24px 25px;
         border-radius: 0;
     }
+    @media screen and (max-width: $jobboard-collapse2) {
+        display: inline-block;
+    }
 }
 
 .job-search-grid-home {
     display: grid;
+    display: -ms-grid;
     grid-gap: 24px;
     grid-template-columns: 73fr 27fr;
+    -ms-grid-columns: 73fr 27fr;
     grid-template-areas: "search button";
 
     @media screen and (max-width: $jobboard-collapse) {
@@ -162,6 +79,7 @@ $jobboard-collapse2: 650px;
 
     @media screen and (max-width: $jobboard-collapse2) {
         grid-template-columns: auto min-content;
+        -ms-grid-columns: auto min-content;
     }
 
     input, button {
@@ -176,7 +94,15 @@ $jobboard-collapse2: 650px;
 
     .search-box-home {
         grid-area: search;
-        position: relative;
+        position: relative;   
+
+        @supports not (grid-gap: 0) {
+            margin-right: 24px;
+            @media screen and (max-width: $jobboard-collapse) {
+                margin-right: 0;
+            }
+        } 
+
 
         input {
             width: 100%;
@@ -189,8 +115,6 @@ $jobboard-collapse2: 650px;
         }
 
         .after {
-            @include icon-mode;
-
             position: absolute;
             right: 25px;
             top: 16px;
@@ -206,11 +130,13 @@ $jobboard-collapse2: 650px;
 
     .submit {
         &::before {
+            font-family: "Muli", Helvetica, Arial, sans-serif;            
             content: 'search jobs';
             text-transform: uppercase;
         }
 
         grid-area: button;
+        -ms-grid-column: 2;
         background-color: $cerulean-blue;
         color: white;
         font-size: 16px;
@@ -223,7 +149,6 @@ $jobboard-collapse2: 650px;
         @media screen and (max-width: $jobboard-collapse2) {
             &::before {
                 @include icon-mode;
-
                 content: 'search';
                 text-transform: none;
             }
