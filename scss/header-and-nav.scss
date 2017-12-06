@@ -15,13 +15,17 @@ $menu-small-width: 650px;
 
     @media screen and (max-width: $menu-small-width) {
         height: 56px;
+        display: -ms-grid;
+        -ms-grid-columns: 50% 50%;
         display: grid;
+        width: 100%;
         grid-template: "jobs icon menu";
         grid-template-rows: 1fr 1fr 1fr;
     }
 
     button {
         display: inline-block;
+        height: 1em;
     }
 
     .header-logo {
@@ -70,8 +74,11 @@ $menu-small-width: 650px;
 
         @media screen and (max-width: $menu-small-width) {
             grid-area: jobs;
+            -ms-grid-column: 2;
+            -ms-grid-column-align: end;
             text-align: left;
             margin: 0;
+            float: right;
 
             span {
                 display: none;
@@ -87,12 +94,15 @@ $menu-small-width: 650px;
 
     .button-container {
         display: inline-block;
+        height: 1em;
+        -ms-grid-column-align: start;
     }
 
     @media screen and (max-width: $menu-small-width) {
         .button-container {
             grid-area: menu;
             align-content: right;
+            -ms-grid-column: 1;
         }
 
         .navbar-toggle {
@@ -123,7 +133,6 @@ $menu-small-width: 650px;
     .navbar-icon {
         display: block;
         position: relative;
-        overflow: hidden;
         width: 35px;
         height: 30px;
         top: -20px;

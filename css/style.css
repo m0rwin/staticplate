@@ -722,7 +722,10 @@ h1 {
 @media screen and (max-width: 650px) {
   .header {
     height: 56px;
+    display: -ms-grid;
+    -ms-grid-columns: 50% 50%;
     display: grid;
+    width: 100%;
     grid-template: "jobs icon menu";
     grid-template-rows: 1fr 1fr 1fr;
   }
@@ -730,6 +733,7 @@ h1 {
 
 .header button {
   display: inline-block;
+  height: 1em;
 }
 
 .header .header-logo {
@@ -780,8 +784,11 @@ h1 {
 @media screen and (max-width: 650px) {
   .header .navbar-item {
     grid-area: jobs;
+    -ms-grid-column: 2;
+    -ms-grid-column-align: end;
     text-align: left;
     margin: 0;
+    float: right;
   }
   .header .navbar-item span {
     display: none;
@@ -795,12 +802,15 @@ h1 {
 
 .header .button-container {
   display: inline-block;
+  height: 1em;
+  -ms-grid-column-align: start;
 }
 
 @media screen and (max-width: 650px) {
   .header .button-container {
     grid-area: menu;
     align-content: right;
+    -ms-grid-column: 1;
   }
   .header .navbar-toggle .navbar-icon {
     top: 0;
@@ -827,7 +837,6 @@ h1 {
 .navbar-toggle .navbar-icon {
   display: block;
   position: relative;
-  overflow: hidden;
   width: 35px;
   height: 30px;
   top: -20px;
