@@ -362,6 +362,38 @@ tbody.collapse.show {
   }
 }
 
+/* global button */
+.button {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #1898d9;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #0e577c;
+  border-radius: 2px;
+  padding: 14px 25px;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 /* Breakpoints */
 main {
   background-color: #fff;
@@ -398,6 +430,41 @@ h1 {
   font-weight: 900;
   font-size: 75px;
   color: #2d2d2d;
+}
+
+/* global button */
+.button {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #1898d9;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #0e577c;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .sectorcopy {
