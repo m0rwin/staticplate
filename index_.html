@@ -217,7 +217,7 @@
             </div>
         </div>
 
-        <section id="novotop">
+        <section id="novotop" class="rellax" data-rellax-speed="1">
             <div class="outer-div">
                 <div id="copyouter">
                     <div id="adverb">
@@ -240,7 +240,7 @@
 
         <section id="novobot">
             <div class="whiteblock">
-                <div id="quote" class="rellax" data-rellax-percentage="0.8">
+                <div id="quote" class="rellax" data-rellax-speed="1">
                     We believe that people need change in order to achieve the extraodinary
                 </div>
             </div>
@@ -273,7 +273,7 @@
         </section>
 
         <section class="moving">
-            <div class="wordcontain">
+            <div class="wordcontain"  class="rellax" data-rellax-speed="1">
                 <div id="move1">Be yourself</div>
                 <div id="move2">Extraoridinary</div>
                 <div id="move3">Something</div>
@@ -321,7 +321,12 @@
     <script src="/scripts/rellax.js"></script>
 	<script>
 		var rellax = new Rellax();
-	</script>
+    </script>
+    <script src="/scripts/scrollreveal.js"></script>
+    <script>
+        window.sr = ScrollReveal();
+        sr.reveal('.sector');
+    </script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
