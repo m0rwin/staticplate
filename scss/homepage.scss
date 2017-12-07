@@ -1,3 +1,10 @@
+.herohome {
+    position: relative;
+    z-index: 1;
+    padding-bottom:340px;
+}
+
+
 .sectorcopy {
     font-weight: 400;
     text-transform: uppercase;
@@ -89,7 +96,7 @@
 
 .outer-div {   
     height: 280px;
-    margin: 254px 0px 128px 28%;
+    margin: 0px 0px 128px 28%;
     background-color: #2b2b2b;
     position: relative;
 }
@@ -145,5 +152,42 @@
     line-height: 1.25;
     text-align: left;
     color: #008eda;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* old school section novo main 2*/
+
+.block-div {   
+    height: 280px;
+    margin: 0px 32% 128px 0px;
+    background-color: #2b2b2b;
+    position: relative;
+}
+#copyouter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 64px 64px 48px 64px;
+}
+
+.whiteblock >div {   
+    min-height: 280px;
+    margin: -80px 0px 128px 50%;
+    background-color: #dedede;
+    position: relative;
+    z-index: 10;
+}
+
+#quote {
+    font-family: Impact;
+    letter-spacing: 1px;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.22;
+    color: #2b2b2b;
+    position: absolute;
+    padding: 48px 48px 48px 48px;
+    float: left;
     -webkit-font-smoothing: antialiased;
 }
