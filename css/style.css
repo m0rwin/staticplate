@@ -676,6 +676,21 @@ h1 {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Animated background typography */
+.backgroundwords > div {
+  width: 100%;
+  position: relative;
+}
+
+.yourself {
+  font-family: Impact;
+  font-size: 380px;
+  line-height: 1;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  z-index: 1;
+}
+
 .job-board-home {
   width: 1264px;
   margin: 0 auto;
