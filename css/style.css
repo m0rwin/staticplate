@@ -470,7 +470,7 @@ h1 {
 .herohome {
   position: relative;
   z-index: 1;
-  padding-bottom: 340px;
+  padding-bottom: 240px;
 }
 
 .sectorcopy {
@@ -568,6 +568,10 @@ h1 {
 }
 
 /* old school section novo main*/
+#novotop {
+  margin-bottom: 240px;
+}
+
 .outer-div {
   height: 280px;
   margin: 0px 0px 128px 28%;
@@ -647,9 +651,9 @@ h1 {
 }
 
 .whiteblock > div {
-  min-height: 280px;
-  margin: -80px 0px 128px 50%;
-  background-color: #dedede;
+  min-height: 240px;
+  margin: -80px 0px 180px 40%;
+  background-color: #ffffff;
   position: relative;
   z-index: 10;
 }
@@ -662,7 +666,7 @@ h1 {
   line-height: 1.22;
   color: #2b2b2b;
   position: absolute;
-  padding: 48px 48px 48px 48px;
+  padding: 76px 108px 48px 98px;
   float: left;
   -webkit-font-smoothing: antialiased;
 }
