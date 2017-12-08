@@ -1,0 +1,59 @@
+
+
+/* neat grid*/
+
+@import "bourbon";
+@import "neat";
+
+// Media queries
+$desktop: new-breakpoint(min-width 960px 12);
+$tablet: new-breakpoint(max-width 959px 12);
+$mobile: new-breakpoint(max-width 767px 4);
+
+// Variables
+$max-width: 1280px;
+
+// Colors
+$blue: #00aad8;
+$blue-light: #9fd7ee;
+$black: #141414;
+
+body {
+  font-family: helvetica, sans-serif;
+}
+
+.main-articles {
+  @include outer-container();
+  
+  // additional style
+  @include pad(20px 30px 20px 30px);
+  background-color: $blue;
+  min-height: 300px;
+  color: $black;
+  
+  article {
+    // additional style
+    height: 250px;
+    background-color: $blue-light;
+    @include pad(20px 30px 20px 30px);
+    
+    
+    &.span {
+      @include span-columns(6);
+      
+      @include media($mobile) {
+        @include fill-parent;
+      }
+    }
+    
+    &.shift {
+      @include span-columns(6);
+      @include shift(3);
+      
+       @include media($mobile) {
+         @include shift(0);
+        @include fill-parent;
+      }
+    } 
+  }
+}
