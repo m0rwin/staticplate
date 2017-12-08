@@ -22,6 +22,7 @@
     "bourbon": "^4.3.4",
     "compass-importer": "^0.4.1",
     "fullpage.js": "^2.9.5",
+    "node-neat": "^2.0.0-beta.0",
     "node-sass": "^4.7.2",
     "nodemon": "^1.12.1",
     "npm-run-all": "^4.1.2",
