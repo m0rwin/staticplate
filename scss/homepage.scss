@@ -1,7 +1,7 @@
 .herohome {
     position: relative;
     z-index: 1;
-    padding-bottom:240px;
+    padding-bottom:480px;
 }
 /* Parallax */
 
@@ -17,6 +17,7 @@
 #novodefined {
     width: 100%;
     background-color: #ffffff;
+    margin-bottom: 240px;
    
     .wrapper {
         display: grid;        
@@ -96,7 +97,6 @@
 /* old school section novo main*/
 #novotop {
     margin-bottom: 360px;
-    z-index: 1;
 }
 .outer-div {   
     height: 270px;
@@ -170,7 +170,6 @@
     margin: 0px 32% 128px 0px;
     background-color: #2b2b2b;
     position: relative;
-    z-index: 1;
 }
 #copyouter{
     position: relative;
@@ -184,7 +183,7 @@
     margin: -80px 0px 180px 40%;
     background-color: #ffffff;
     position: relative;
-    z-index: 10;
+    z-index: 1;
 }
 
 #quote {
@@ -198,6 +197,7 @@
     padding: 76px 108px 48px 98px;
     float: left;
     -webkit-font-smoothing: antialiased;
+    z-index: 1;
 }
 
 
@@ -207,12 +207,34 @@
     position: relative;
 }   
 
-.yourself {
+.original {
+    font-family: Impact;
+    font-size: 380px;
+    line-height: 1;
+    color: #f5f4f4;
+    -webkit-font-smoothing: antialiased;
+    top: -730px;
+    left: 30%;
+    z-index: 0!important;
+}
+
+.extraoridinary {
     font-family: Impact;
     font-size: 380px;
     line-height: 1;
     color: #F7F7F7;
     -webkit-font-smoothing: antialiased;
-    z-index: 0;
+    position: absolute;
 }
+
+.yourself {
+    font-family: Impact;
+    font-size: 380px;
+    line-height: 1;
+    color: #f5f4f4;
+    -webkit-font-smoothing: antialiased;
+    top: -430px;
+    left: 30%;
+}
+
 

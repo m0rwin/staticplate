@@ -201,7 +201,7 @@ tbody.collapse.show {
 .herocontent {
   position: absolute;
   color: #ffffff;
-  top: 40%;
+  top: 27%;
   padding: 0px 96px 0px 96px;
 }
 
@@ -470,7 +470,7 @@ h1 {
 .herohome {
   position: relative;
   z-index: 1;
-  padding-bottom: 240px;
+  padding-bottom: 480px;
 }
 
 /* Parallax */
@@ -485,6 +485,7 @@ h1 {
 #novodefined {
   width: 100%;
   background-color: #ffffff;
+  margin-bottom: 240px;
 }
 
 #novodefined .wrapper {
@@ -571,7 +572,6 @@ h1 {
 /* old school section novo main*/
 #novotop {
   margin-bottom: 360px;
-  z-index: 1;
 }
 
 .outer-div {
@@ -647,7 +647,6 @@ h1 {
   margin: 0px 32% 128px 0px;
   background-color: #2b2b2b;
   position: relative;
-  z-index: 1;
 }
 
 #copyouter {
@@ -662,7 +661,7 @@ h1 {
   margin: -80px 0px 180px 40%;
   background-color: #ffffff;
   position: relative;
-  z-index: 10;
+  z-index: 1;
 }
 
 #quote {
@@ -676,6 +675,7 @@ h1 {
   padding: 76px 108px 48px 98px;
   float: left;
   -webkit-font-smoothing: antialiased;
+  z-index: 1;
 }
 
 /* Animated background typography */
@@ -684,13 +684,34 @@ h1 {
   position: relative;
 }
 
-.yourself {
+.original {
+  font-family: Impact;
+  font-size: 380px;
+  line-height: 1;
+  color: #f5f4f4;
+  -webkit-font-smoothing: antialiased;
+  top: -730px;
+  left: 30%;
+  z-index: 0 !important;
+}
+
+.extraoridinary {
   font-family: Impact;
   font-size: 380px;
   line-height: 1;
   color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
-  z-index: 0;
+  position: absolute;
+}
+
+.yourself {
+  font-family: Impact;
+  font-size: 380px;
+  line-height: 1;
+  color: #f5f4f4;
+  -webkit-font-smoothing: antialiased;
+  top: -430px;
+  left: 30%;
 }
 
 .job-board-home {
