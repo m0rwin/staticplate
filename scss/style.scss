@@ -9,77 +9,97 @@
 $menu-small-width: 650px;
 
 main {
-    background-color: #fff;
-    z-index: 1;
+  background-color: #fff;
+  z-index: 1;
 }
 
 body {
-    width: 100%;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    font-family: "Muli", Helvetica, Arial, sans-serif;
-    font-size: 19px;
-    margin: 0;
-    color: #2d2d2d;
+  width: 100%;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  margin: 0;
+  color: #2d2d2d;
 }
 
 a {
-    color: #2d2d2d;
-    text-decoration: none;
+  color: #2d2d2d;
+  text-decoration: none;
 }
 
 .list-inline {
-    padding-left: 0;
-    list-style: none;
-    margin-left: -5px;
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px;
 
-    li {
-        display: inline-block;
-    }
+  li {
+    display: inline-block;
+  }
 }
 
 h1 {
-    font-family: 'Impact', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    color: #2d2d2d;
+  font-family: 'Impact', sans-serif;
+  font-weight: 900;
+  font-size: 75px;
+  color: #2d2d2d;
 }
 
 
 /* global button */
 .button {
-position: absolute;
-bottom: 0;
-display: inline-block;
-height: 48px;
-background-color: #1898d9;
-border-radius: 2px;
-padding: 14px 25px;
-font-size: 16px;
-font-weight: bold;
-text-transform: uppercase;
--webkit-transition: all 0.3s ease-in-out;
--moz-transition: all 0.3s ease-in-out;
--o-transition: all 0.3s ease-in-out;
-transition: all 0.3s ease-in-out;
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #1898d9;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-    position: absolute;
-    bottom: 0;
-    display: inline-block;
-    height: 48px;
-    background-color: #0e577c;
-    border-radius: 2px;
-    padding: 14px 25px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-    }
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  height: 48px;
+  background-color: #0e577c;
+  border-radius: 2px;
+  padding: 14px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/* testing neat grid */
+$custom-grid--thirds: (
+        columns: 3,
+        gutter: 60px,
+      );
+
+.custom-grid--thirds {
+  @include grid-container;
+}
+
+.custom-grid--thirds__a-single-column {
+  @include grid-column(1, $custom-grid--thirds);
+}
+
+.example__column--fancy {
+  background-image: linear-gradient(to bottom right, #21e9f4, #00d4ff);
+  color: #fff;
+}
+
 @import "homepage.scss";
 @import "job-search-home.scss";
 @import "header-and-nav.scss";
