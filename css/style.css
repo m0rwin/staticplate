@@ -703,6 +703,7 @@ h1 {
   top: -730px;
   left: 30%;
   z-index: 0 !important;
+  pointer-events: none;
 }
 
 .extraoridinary {
@@ -712,6 +713,7 @@ h1 {
   color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
   position: absolute;
+  pointer-events: none;
 }
 
 .yourself {
@@ -722,6 +724,7 @@ h1 {
   -webkit-font-smoothing: antialiased;
   top: -430px;
   left: 30%;
+  pointer-events: none;
 }
 
 .job-board-home {

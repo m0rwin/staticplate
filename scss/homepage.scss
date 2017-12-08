@@ -218,6 +218,7 @@
     top: -730px;
     left: 30%;
     z-index: 0!important;
+    pointer-events: none;
 }
 
 .extraoridinary {
@@ -227,6 +228,7 @@
     color: #F7F7F7;
     -webkit-font-smoothing: antialiased;
     position: absolute;
+    pointer-events: none;
 }
 
 .yourself {
@@ -237,6 +239,7 @@
     -webkit-font-smoothing: antialiased;
     top: -430px;
     left: 30%;
+    pointer-events: none;
 }
 
 
