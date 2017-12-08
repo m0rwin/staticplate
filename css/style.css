@@ -198,10 +198,20 @@ tbody.collapse.show {
   transition: all 1s ease-in-out;
 }
 
+.videocontainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.5) 70%);
+}
+
 .herocontent {
   position: absolute;
   color: #ffffff;
-  top: 27%;
+  top: 50%;
   padding: 0px 96px 0px 96px;
 }
 
@@ -209,7 +219,7 @@ tbody.collapse.show {
   .herocontent {
     position: absolute;
     color: #ffffff;
-    top: 30%;
+    top: 50%;
     padding: 0px 48px 0px 48px;
   }
 }
@@ -218,8 +228,8 @@ tbody.collapse.show {
   .herocontent {
     position: absolute;
     color: #ffffff;
-    top: 30%;
-    padding: 0px 24px 0px 24px;
+    top: 50%;
+    padding: 0px 48px 0px 48px;
   }
 }
 
@@ -470,7 +480,7 @@ h1 {
 .herohome {
   position: relative;
   z-index: 1;
-  padding-bottom: 480px;
+  margin-bottom: 480px;
 }
 
 /* Parallax */
