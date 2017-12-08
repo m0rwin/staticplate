@@ -1,5 +1,6 @@
 var sass    = require('node-sass')
 var bourbon = require('bourbon');
+var neat = require('node-neat');
 var fs = require('fs');
 function makeCss(config) {
     sass.render({
@@ -7,7 +8,7 @@ function makeCss(config) {
         outFile: config.css,
         // includePaths: bourbon.with('other/path', 'another/path'),
         // - or -
-        includePaths: bourbon.includePaths,
+        includePaths: bourbon.includePaths.concat(neat.includePaths),
         importer: require('compass-importer'),
         outputStyle: 'expanded'
       },

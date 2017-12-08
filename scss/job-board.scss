@@ -170,7 +170,7 @@ $jobboard-collapse2: 650px;
             margin: -8px -8px 0 -8px;
             padding: 0;
             max-height: 155px;
-            overflow-y: scroll;
+            overflow-y: auto;
 
             li {
                 a {
@@ -233,8 +233,10 @@ $jobboard-collapse2: 650px;
 
 .job-search-grid {
     display: grid;
+    display: -ms-grid;  
     grid-gap: 48px;
     grid-template-columns: 73fr 27fr;
+    -ms-grid-columns: 73fr 27fr;    
     grid-template-areas: "search button";
 
     @media screen and (max-width: $jobboard-collapse) {
@@ -243,6 +245,7 @@ $jobboard-collapse2: 650px;
 
     @media screen and (max-width: $jobboard-collapse2) {
         grid-template-columns: auto min-content;
+        -ms-grid-columns: 90% min-content;
     }
 
     input, button {
@@ -258,6 +261,14 @@ $jobboard-collapse2: 650px;
     .search-box {
         grid-area: search;
         position: relative;
+        width: 100%;
+        
+        @supports not (grid-gap: 0) {
+            margin-right: 24px;
+            @media screen and (max-width: $jobboard-collapse) {
+                margin-right: 0;
+            }
+        } 
 
         input {
             width: 100%;
@@ -292,6 +303,7 @@ $jobboard-collapse2: 650px;
         }
 
         grid-area: button;
+        -ms-grid-column: 2;
         background-color: $cerulean-blue;
         color: white;
         font-size: 16px;
@@ -303,12 +315,64 @@ $jobboard-collapse2: 650px;
 
         @media screen and (max-width: $jobboard-collapse2) {
             &::before {
-                font-family: 'Material-Icons';
+                font-family: 'Material Icons';
                 content: 'search';
                 text-transform: none;
             }
 
             min-width: 49px;
+        }
+    }
+}
+
+.pagination {
+    list-style: none;
+    marigin: 0;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    margin: 48px 0;
+
+    li {
+        background-color: $iron;
+        display: inline-block;
+        margin-right: 12px;
+        &>a, &>span {
+            display: block;
+            width: 36px;
+            height: 36px;
+            font-size: 16px;
+            padding: 7px 0;
+            text-align: center;
+
+        }
+        &.active, & a:hover {
+            background: $shark-black;
+            color: white;
+            a { color: white; }
+        }
+
+        &.next {
+            background-color: $cerulean-blue;
+            a { color: white; }
+        }
+    }
+}
+
+.container-normal {
+    .button {
+        position: static;
+        display: block;
+        float:none;
+        width: fit-content;
+        color: white;
+        padding-top: 13px;
+
+        &.white {
+            padding-top: 12px;
+            color: black;
+            border: 1px solid $shark-black;
+            background: white;
         }
     }
 }
