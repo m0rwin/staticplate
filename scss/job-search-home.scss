@@ -148,7 +148,7 @@ $jobboard-collapse2: 799px;
 
         @media screen and (max-width: $jobboard-collapse2) {
             &::before {
-                @include icon-mode;
+                font-family: 'Material Icons';
                 content: 'search';
                 text-transform: none;
             }

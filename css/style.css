@@ -888,19 +888,6 @@ h1 {
   }
   .job-search-grid-home .submit::before {
     font-family: 'Material Icons';
-    font-weight: normal;
-    font-style: normal;
-    font-size: 24px;
-    line-height: 1;
-    letter-spacing: normal;
-    text-transform: none;
-    display: inline-block;
-    white-space: nowrap;
-    word-wrap: normal;
-    direction: ltr;
-    -webkit-font-feature-settings: 'liga';
-    -webkit-font-smoothing: antialiased;
-    vertical-align: -27%;
     content: 'search';
     text-transform: none;
   }
@@ -1559,8 +1546,10 @@ h1 {
 
 .job-search-grid {
   display: grid;
+  display: -ms-grid;
   grid-gap: 48px;
   grid-template-columns: 73fr 27fr;
+  -ms-grid-columns: 73fr 27fr;
   grid-template-areas: "search button";
 }
 
@@ -1573,6 +1562,7 @@ h1 {
 @media screen and (max-width: 650px) {
   .job-search-grid {
     grid-template-columns: auto min-content;
+    -ms-grid-columns: max-content min-content;
   }
 }
 
@@ -1591,6 +1581,18 @@ h1 {
 .job-search-grid .search-box {
   grid-area: search;
   position: relative;
+  width: 100%;
+}
+
+@supports not (grid-gap: 0) {
+  .job-search-grid .search-box {
+    margin-right: 24px;
+  }
+  @media screen and (max-width: 1284px) {
+    .job-search-grid .search-box {
+      margin-right: 0;
+    }
+  }
 }
 
 .job-search-grid .search-box input {
@@ -1622,6 +1624,7 @@ h1 {
 
 .job-search-grid .submit {
   grid-area: button;
+  -ms-grid-column: 2;
   background-color: #008EDA;
   color: white;
   font-size: 16px;
@@ -1645,7 +1648,7 @@ h1 {
     min-width: 49px;
   }
   .job-search-grid .submit::before {
-    font-family: 'Material-Icons';
+    font-family: 'Material Icons';
     content: 'search';
     text-transform: none;
   }
