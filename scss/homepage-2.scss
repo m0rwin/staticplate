@@ -1,14 +1,9 @@
-
-
 /* neat grid*/
-
-@import "bourbon";
-@import "neat";
-
 // Media queries
-$desktop: new-breakpoint(min-width 960px 12);
-$tablet: new-breakpoint(max-width 959px 12);
-$mobile: new-breakpoint(max-width 767px 4);
+$neat-mobile: (
+  columns: 4,
+  media: 'screen and (max-width: 767px)'
+);
 
 // Variables
 $max-width: 1280px;
@@ -23,37 +18,37 @@ body {
 }
 
 .main-articles {
-  @include outer-container();
+  @include grid-container;
   
   // additional style
-  @include pad(20px 30px 20px 30px);
+  padding: 20px 30px 20px 30px;
   background-color: $blue;
   min-height: 300px;
   color: $black;
-  
+
   article {
     // additional style
     height: 250px;
     background-color: $blue-light;
-    @include pad(20px 30px 20px 30px);
-    
-    
+    padding: 20px 30px 20px 30px;
+
+
     &.span {
-      @include span-columns(6);
-      
-      @include media($mobile) {
-        @include fill-parent;
+      @include grid-column(6);
+
+      @include grid-media($neat-mobile) {
+        @include grid-column(4);
       }
     }
-    
+
     &.shift {
-      @include span-columns(6);
-      @include shift(3);
-      
-       @include media($mobile) {
-         @include shift(0);
-        @include fill-parent;
+      @include grid-column(6);
+      @include grid-shift(3);
+
+      @include grid-media($neat-mobile) {
+        @include grid-shift(0);
+        @include grid-column(4);
       }
-    } 
+    }
   }
 }

@@ -1,6 +1,5 @@
 @import "reset.scss";
 @import "collapse-js.scss";
-@import "common.scss";
 @import "neat";
 @import "bourbon";
 
@@ -100,8 +99,10 @@ $custom-grid--thirds: (
   color: #fff;
 }
 
+@import "header-and-nav.scss";
+@import "footer.scss";
+@import "common.scss";
+
 @import "homepage.scss";
 @import "job-search-home.scss";
-@import "header-and-nav.scss";
 @import "job-board.scss";
-@import "footer.scss";
