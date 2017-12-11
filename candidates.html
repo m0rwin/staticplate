@@ -194,55 +194,38 @@
         </div>
         <h1>HTML Ipsum Presents</h1>
         
-        <div class="custom-grid--thirds">
-            <div class="example__column--empty example__column--fancy custom-grid--thirds__a-single-column"></div>
-            <div class="example__column--empty example__column--fancy custom-grid--thirds__a-single-column"></div>
-            <div class="example__column--empty example__column--fancy custom-grid--thirds__a-single-column"></div>
-        </div>
+        <section class="main-articles">
+                <h1>Meet the locals</h1>
+                <article class="span">
+                  <p>span-columns(6)</p>
+                </article>
+                <article class="span">
+                  <p>span-columns(6)</p>
+                </article>
+            </section>
+              
 
-        <p>
-            <strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum
-            tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper.
-            <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper
-            pharetra. Vestibulum erat wisi, condimentum sed,
-            <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis
-            tempus lacus enim ac dui.
-            <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-            
-            <h2>Header Level 2</h2>
-            
-            <ol>
-                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                <li>Aliquam tincidunt mauris eu risus.</li>
-            </ol>
-            
-            <blockquote>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna. Cras in mi at felis aliquet congue. Ut
-                    a est eget ligula molestie gravida. Curabitur massa. Donec eleifend, libero at sagittis mollis, tellus est
-                    malesuada tellus, at luctus turpis elit sit amet quam. Vivamus pretium ornare est.</p>
-                </blockquote>
-                
-                <h3>Header Level 3</h3>
-                
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
-                    <li>Aliquam tincidunt mauris eu risus.</li>
-                </ul>
-                
-                <h4>Header Level 4</h4>
-                
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. ,
-                    <br>Aliquam tincidunt mauris eu risus.</p>
-                    
-                    <pre><code>
-                        #header h1 a {
-                            display: block;
-                            width: 300px;
-                            height: 80px;
-                        }
-                    </code></pre>
-                    
-                </main>
+        <div ="my-custom-grid">
+            <div>1</div>
+            <article class="span">
+                    <p>span-columns(6)</p>
+                  </article>
+            <div>2</div>
+            <article class="span">
+                    <p>span-columns(6)</p>
+                  </article>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+        </div>
+            <section class="main-articles">
+            <article class="shift">
+                <p>span-columns(6)</p>
+                <p>shift(3)</p>
+            </article>
+            </section>
+    </main>
                 
                 <footer class="footer">
                     <a href="/contact" class="contact-footer">
@@ -303,5 +286,4 @@
     <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
     
 </body>
-
 </html>

@@ -80,29 +80,13 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
-/* testing neat grid */
-$custom-grid--thirds: (
-        columns: 3,
-        gutter: 60px,
-      );
 
-.custom-grid--thirds {
-  @include grid-container;
-}
-
-.custom-grid--thirds__a-single-column {
-  @include grid-column(1, $custom-grid--thirds);
-}
-
-.example__column--fancy {
-  background-image: linear-gradient(to bottom right, #21e9f4, #00d4ff);
-  color: #fff;
-}
 
 @import "header-and-nav.scss";
 @import "footer.scss";
 @import "common.scss";
 
+@import "candidates.scss";
 @import "homepage.scss";
 @import "job-search-home.scss";
 @import "job-board.scss";
