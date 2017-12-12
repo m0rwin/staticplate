@@ -63,13 +63,13 @@ body {
   .consultantheader {
     @include grid-column(5);
     @include grid-push(-0.2);
-    /* styling */
+    /* styling 
     background-color: #1c1c1c;
     position: relative;
     height: 152px;
     margin-bottom: 128px;
     z-index: 1;
-    /* mobile rules */
+    /* mobile rules 
   }
   .consultants {
     margin-left: 96px;

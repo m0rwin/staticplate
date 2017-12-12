@@ -160,7 +160,7 @@ $neat-mobile: (
 }
 
 .consultanttiles {
-  @include grid-container(8);
+  @include grid-container();
 
   .tile_a,
    {

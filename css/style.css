@@ -829,6 +829,10 @@ h1 {
   position: relative;
 }
 
+.jumbo * {
+  color: white;
+}
+
 .jumbo h1 {
   color: white;
   margin: 0;
@@ -1089,7 +1093,6 @@ h1 {
   }
 }
 
-
 /* mian CTA global button style */
 .sectorbutton {
   background-color: #1897D4;
@@ -1277,6 +1280,32 @@ h1 {
   background-color: #2b2b2b;
   color: white;
   padding: 48px;
+}
+
+.test {
+  border: 1px solid black;
+  position: relative;
+}
+
+.test::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.test > div {
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #2b2b2b;
+}
+
+.test .a,
+.test .b,
+.test .c,
+.test .d {
+  width: calc(33.33333% - 26.66667px);
+  float: left;
+  margin-left: 20px;
 }
 
 /* neat grid*/
@@ -1689,6 +1718,56 @@ body {
 }
 
 */
+/*
+.consultantsection {
+  @include grid-container;
+  .consultantheader {
+    @include grid-column(5);
+    @include grid-push(-0.2);
+    /* styling 
+    background-color: #1c1c1c;
+    position: relative;
+    height: 152px;
+    margin-bottom: 128px;
+    z-index: 1;
+    /* mobile rules 
+  }
+  .consultants {
+    margin-left: 96px;
+    padding: 48px;
+    position: absolute;
+    font-family: 'muli' sans-serif;
+    font-size: 37px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+  }
+}
+
+.consultanttiles {
+  @include grid-container(8);
+
+  .tile_a,
+   {
+    @include grid-column(4);
+    @include grid-push();
+    height: 450px;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 48px;
+  }
+
+  .tile_b,
+   {
+    @include grid-column(4);
+    @include grid-push(0);
+    height: 450px;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 48px;
+  }
+}
+ */
 .job-board-home {
   width: 1264px;
   margin: 0 auto;
