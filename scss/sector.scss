@@ -1,18 +1,48 @@
+/* mian CTA global button style */
+
+.sectorbutton {
+  background-color: #1897D4;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+  border-radius: 2px;
+  cursor: pointer;
+  text-transform: uppercase;
+  min-width: 180px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
+}
+.sectorbutton:hover {
+  background-color: rgb(17, 100, 138);
+  -webkit-transition-duration: 0.5s; /* Safari */
+  transition-duration: 0.5s;
+}
+
 /* Hero video styles */
-.hero {
+.herosectors {
   position: relative;
   z-index: 1;
+  padding-bottom: 128px;
 }
 
 .videocontainersectors {
   background-color: $shark-black;
-  height: 80%;
+  height: 70%;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  position: relative;
 }
 
 
@@ -25,27 +55,25 @@
   left: 0;
   background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.5) 70%);
 }
-.herocontent {
+.herocontentsectors {
   position: absolute;
   color: #ffffff;
-  top: 50%;
+  top: 25%;
   padding: 0px 96px 0px 96px;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 650px) {
-  .herocontent {
+  .herocontentsectors {
     position: absolute;
     color: #ffffff;
-    top: 50%;
     padding: 0px 48px 0px 48px;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .herocontent {
+  .herocontentsectors {
     position: absolute;
     color: #ffffff;
-    top: 50%;
     padding: 0px 48px 0px 48px;
   }
 }
@@ -53,32 +81,27 @@
 .hero-quote {
   font-family: 'muli' sans-serif;
   font-size: 37px;
-  max-width: 600px;
+  max-width: 710px;
   color: #fff;
+  padding-bottom: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 768px) {
   .hero-quote {
-    font-size: 19px;
-    margin-bottom: 2.5em;
+    font-size: 37px;
+    margin-bottom: 24px;
     color: #fff;
   }
 }
 
 @media screen and (max-width: 768px) {
   .hero-quote {
-    font-size: 19px;
-    margin-bottom: 2.5em;
+    font-size: 26px;
+    margin-bottom: 24px;
     color: #fff;
   }
-}
-
-.herocontent h1 {
-  font-family: 'Impact', sans-serif;
-  font-weight: 900;
-  font-size: 75px;
-  color: #ffffff;
-  line-height: 20px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -88,6 +111,7 @@
     font-size: 75px;
     color: #ffffff;
     line-height: 61px;
+    letter-spacing: 1px;
   }
 }
 
@@ -98,6 +122,64 @@
     font-size: 53px;
     color: #ffffff;
     line-height: 61px;
-    letter-spacing: 1px;
+    letter-spacing: 1;
+  }
+}
+
+
+////////* consultants grid *////////
+
+$neat-mobile: (
+    columns: 1,
+    media: 'screen and (max-width: 767px)'
+  );
+
+.consultantsection {
+  @include grid-container;
+  .consultantheader {
+    @include grid-column(5);
+    @include grid-push(-0.2);
+    /* styling */
+    background-color: #1c1c1c;
+    position: relative;
+    height: 152px;
+    margin-bottom: 128px;
+    /* mobile rules */
+  }
+  .consultants {
+    margin-left: 96px;
+    padding: 48px;
+    position: absolute;
+    font-family: 'muli' sans-serif;
+    font-size: 37px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+  }
+}
+
+.consultanttiles {
+  @include grid-container(8);
+  @include grid-visual;
+
+  .tile_a,
+   {
+    @include grid-column(4);
+    @include grid-push();
+    height: 450px;
+    background-color: #2b2b2b;
+    color: white;
+    padding: 48px;
+  }
+
+  .tile_b,
+   {
+    @include grid-column(4);
+    @include grid-push(0);
+    height: 450px;
+    background-color: #2b2b2b;
+    color: white;
+
+    padding: 48px;
   }
 }
