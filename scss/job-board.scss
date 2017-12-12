@@ -3,376 +3,469 @@ $jobboard-collapse2: 650px;
 
 
 .job-board {
-    width: 1264px;
-    margin: 0 auto;
-    display: grid;
-    margin-top: 28px;
-    grid-gap: 39px 48px;
-    grid-template-columns: 764fr 236fr;
-    grid-template-areas: "search search" "results filters";
+  width: 1264px;
+  margin: 0 auto;
+  display: grid;
+  margin-top: 28px;
+  grid-gap: 39px 48px;
+  grid-template-columns: 764fr 236fr;
+  grid-template-areas: "search search" "results filters";
 
+  @media screen and (max-width: $jobboard-collapse) {
+    margin-top: 0px;
+    width: 100vw;
+    grid-template-areas: "search search" "filters filters" "results results";
+    grid-gap: 0;
+
+    .wide-only {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $jobboard-collapse) {
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: $jobboard-collapse2) {
+    font-size: 16px;
+  }
+
+  .search {
+    grid-area: search;
+  }
+
+  .results,
+  .filters {
     @media screen and (max-width: $jobboard-collapse) {
-        margin-top: 0px;
-        width: 100vw;
-        grid-template-areas: "search search" "filters filters" "results results";
-        grid-gap: 0;
+      padding: 0 24px;
+    }
+  }
 
-        .wide-only {
+  .results {
+    grid-area: results;
+
+    .job-results-grid {
+      margin-top: 14px;
+      display: grid;
+      grid-gap: 48px;
+
+      @media screen and (max-width: $jobboard-collapse) {
+        grid-gap: 25px;
+      }
+
+      .side-box {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto auto 48px;
+        grid-column-gap: 30px;
+        grid-template-areas: "title list" "body list" "button list";
+
+        h3 {
+          grid-area: title;
+          font-family: "Muli", Helvetica, Arial, sans-serif;
+          margin-top: 0;
+          font-size: 26px;
+          font-weight: bold;
+        }
+
+        .content {
+          grid-area: body;
+          font-size: 16px;
+          overflow: hidden;
+          line-height: 1.7;
+          padding-bottom: 50px;
+        }
+
+        .forbutton {
+          grid-area: button;
+          position: relative;
+
+          .button {
+            position: absolute;
+            bottom: 0;
+            display: inline-block;
+            height: 48px;
+            background-color: $curious-blue;
+            border-radius: 2px;
+            padding: 14px 25px;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        }
+
+        ul {
+          grid-area: list;
+          line-height: 2.2;
+        }
+
+        @media screen and (max-width: 915px) {
+          grid-template-columns: auto 245px;
+        }
+
+        @media screen and (max-width: 675px) {
+          text-align: left;
+
+          .content {
             display: none;
+          }
+
+          grid-template-areas: "title" "list" "button";
+          grid-template-columns: 1fr;
+
+          ul {
+            margin-bottom: 41px;
+          }
         }
+      }
     }
+  }
 
-    @media screen and (max-width: $jobboard-collapse) {
-        font-size: 18px;
-    }
-
-    @media screen and (max-width: $jobboard-collapse2) {
-        font-size: 16px;
-    }
-
-    .search {
-        grid-area: search;
-    }
-
-    .results, .filters {
-        @media screen and (max-width: $jobboard-collapse) {
-            padding: 0 24px;
-        }
-    }
-
-    .results {
-        grid-area: results;
-
-        .job-results-grid {
-            margin-top: 14px;
-            display: grid;
-            grid-gap: 48px;
-
-            @media screen and (max-width: $jobboard-collapse) {
-                grid-gap: 25px;
-            }
-
-            .side-box {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                grid-template-rows: auto auto 48px;
-                grid-column-gap: 30px;
-                grid-template-areas: "title list" "body list" "button list";
-
-                h3 {
-                    grid-area: title;
-                    font-family: "Muli", Helvetica, Arial, sans-serif;
-                    margin-top: 0;
-                    font-size: 26px;
-                    font-weight: bold;
-                }
-
-                .content {
-                    grid-area: body;
-                    font-size: 16px;
-                    overflow: hidden;
-                    line-height: 1.7;
-                    padding-bottom: 50px;
-                }
-
-                .forbutton {
-                    grid-area: button;
-                    position: relative;
-
-                    .button {
-                        position: absolute;
-                        bottom: 0;
-                        display: inline-block;
-                        height: 48px;
-                        background-color: $curious-blue;
-                        border-radius: 2px;
-                        padding: 14px 25px;
-                        font-size: 16px;
-                        font-weight: bold;
-                        text-transform: uppercase;
-                    }
-                }
-
-                ul {
-                    grid-area: list;
-                    line-height: 2.2;
-                }
-
-                @media screen and (max-width: 915px) {
-                    grid-template-columns: auto 245px;
-                }
-
-                @media screen and (max-width: 675px) {
-                    text-align: left;
-
-                    .content {
-                        display: none;
-                    }
-
-                    grid-template-areas: "title" "list" "button";
-                    grid-template-columns: 1fr;
-
-                    ul {
-                        margin-bottom: 41px;
-                    }
-                }
-            }
-        }
-    }
-
-    .filters {
-        grid-area: filters;
-
-        .side-box {
-            margin-top: 14px;
-
-            & > ul.accordian > li {
-                margin-bottom: 27px;
-
-                a {
-                    display: block;
-
-                    .icon-dropdown-down-up {
-                        float: right;
-                    }
-                }
-            }
-
-            a.clear-btn {
-                color: white;
-                text-transform: uppercase;
-                font-size: 12px;
-                line-height: 4;
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                padding-bottom: 20px;
-                display: block;
-            }
-
-            padding-bottom: 19px;
-        }
-
-        @media screen and (max-width: $jobboard-collapse) {
-            margin-bottom: 36px;
-
-            .side-box {
-                margin-top: 0;
-            }
-        }
-
-        .filter-pills {
-            list-style: none;
-            font-size: 12px;
-            line-height: 1.17;
-            margin: -8px -8px 0 -8px;
-            padding: 0;
-            max-height: 155px;
-            overflow-y: auto;
-
-            li {
-                a {
-                    display: inline-block;
-                    color: white;
-                    text-decoration: none;
-                    border: 1px solid white;
-                    padding: 7px 26px 7px 10px;
-                    border-radius: 2px;
-                    position: relative;
-                }
-
-                a::after {
-                    content: "x";
-                    display: block;
-                    position: absolute;
-                    top: 7px;
-                    right: 12px;
-                    margin-left: 10px;
-                    font-size: 0.8em;
-                    vertical-align: top;
-                }
-
-                display: inline-block;
-
-                // margin-right: 16px;
-                margin: 8px;
-            }
-        }
-    }
+  .filters {
+    grid-area: filters;
 
     .side-box {
-        background-color: $shark-black;
-        padding: 46px;
-        color: $white;
+      margin-top: 14px;
 
-        * {
+      & > ul.accordian > li {
+        margin-bottom: 27px;
+
+        .sub-menu {
+          .sub-menu-ul {
+            max-height: 210px;
+            overflow: auto;
+          }
+
+          & > ul > li,
+          input[type=search] {
+            margin-top: 15px;
+            font-size: 16px;
+          }
+
+          input[type=search] {
+            background: $shark-black;
             color: $white;
+            border: none;
+            border-bottom: 1px solid $white;
+            padding-left: 35px;
+            width: 100%;
+            outline: none;
+
+
+            &::-webkit-input-placeholder {
+              color: $white;
+              opacity: 1;
+            }
+
+            &::-moz-placeholder {
+              color: $white;
+              opacity: 1;
+            }
+
+            &:-moz-placeholder {
+              color: $white;
+              opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+              opacity: 1;
+              color: $white;
+            }
+
+            &::placeholder {
+              opacity: 1;
+              color: $white;
+            }
+          }
         }
 
-        @media screen and (max-width: $jobboard-collapse) {
-            margin-left: -24px;
-            margin-right: -24px;
+        a {
+          display: block;
+
+          .icon-dropdown-down-up {
+            float: right;
+          }
         }
+      }
+
+      .pseudo-checkbox {
+        cursor: pointer;
+
+        &::before {
+          font-family: 'Material Icons';
+          content: 'check';
+          color: $shark-black;
+          position: relative;
+          top: 2px;
+          display: inline-block;
+          margin-right: 13px;
+          background-color: $shark-black;
+          border: 2px solid white;
+          border-radius: 3px;
+          width: 18px;
+          height: 18px;
+          line-height: 0.9;
+          text-indent: -1px;
+          font-size: 16px;
+        }
+
+        &:hover::before {
+          border-color: $cerulean-blue;
+        }
+        &.active {
+          font-weight: bold;
+          &::before {
+            background-color: $cerulean-blue;
+            border-color: $cerulean-blue;
+          }
+          &:hover::before {
+            border-color: lighten($cerulean-blue, 9);
+          }
+        }
+
+
+        input[type=checkbox] {
+          visibility: hidden;
+        }
+      }
+
+      a.clear-btn {
+        color: white;
+        text-transform: uppercase;
+        font-size: 12px;
+        line-height: 4;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        padding-bottom: 20px;
+        display: block;
+      }
+
+      padding-bottom: 19px;
     }
+
+    @media screen and (max-width: $jobboard-collapse) {
+      margin-bottom: 36px;
+
+      .side-box {
+        margin-top: 0;
+      }
+    }
+
+    .filter-pills {
+      list-style: none;
+      font-size: 12px;
+      line-height: 1.17;
+      margin: -8px -8px 0 -8px;
+      padding: 0;
+      max-height: 155px;
+      overflow-y: auto;
+
+      li {
+        a {
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          border: 1px solid white;
+          padding: 7px 26px 7px 10px;
+          border-radius: 2px;
+          position: relative;
+        }
+
+        a::after {
+          content: "x";
+          display: block;
+          position: absolute;
+          top: 9px;
+          right: 12px;
+          margin-left: 10px;
+          font-size: 0.8em;
+          vertical-align: top;
+        }
+
+        display: inline-block;
+
+                // margin-right: 16px;
+        margin: 8px;
+      }
+    }
+  }
+
+  .side-box {
+    background-color: $shark-black;
+    padding: 46px;
+    color: $white;
+
+    * {
+      color: $white;
+    }
+
+    @media screen and (max-width: $jobboard-collapse) {
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
 }
 
 #job-search {
-    padding: 30px 46px;
-    margin: 20px 0;
-    background-color: $shark-black;
-    border-radius: 3px;
+  padding: 30px 46px;
+  margin: 20px 0;
+  background-color: $shark-black;
+  border-radius: 3px;
 
-    @media screen and (max-width: $jobboard-collapse) {
-        margin: 0;
-        padding: 24px 25px;
-        border-radius: 0;
-    }
+  @media screen and (max-width: $jobboard-collapse) {
+    margin: 0;
+    padding: 24px 25px;
+    border-radius: 0;
+  }
 }
 
 .job-search-grid {
-    display: grid;
-    display: -ms-grid;  
-    grid-gap: 48px;
-    grid-template-columns: 73fr 27fr;
-    -ms-grid-columns: 73fr 27fr;    
-    grid-template-areas: "search button";
+  display: grid;
+  display: -ms-grid;
+  grid-gap: 48px;
+  grid-template-columns: 73fr 27fr;
+  -ms-grid-columns: 73fr 27fr;
+  grid-template-areas: "search button";
+
+  @media screen and (max-width: $jobboard-collapse) {
+    grid-gap: 0;
+  }
+
+  @media screen and (max-width: $jobboard-collapse2) {
+    grid-template-columns: auto min-content;
+    -ms-grid-columns: 90% min-content;
+  }
+
+  input,
+  button {
+    height: 48px;
+    border-radius: 2px;
+    border: none;
 
     @media screen and (max-width: $jobboard-collapse) {
-        grid-gap: 0;
+      margin: 0;
+    }
+  }
+
+  .search-box {
+    grid-area: search;
+    position: relative;
+    width: 100%;
+
+    @supports not (grid-gap: 0) {
+      margin-right: 24px;
+      @media screen and (max-width: $jobboard-collapse) {
+        margin-right: 0;
+      }
+    }
+
+    input {
+      width: 100%;
+      padding: 0 28px;
+
+      @media screen and (max-width: $jobboard-collapse) {
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+      }
+    }
+
+    .after {
+      position: absolute;
+      right: 25px;
+      top: 16px;
+      font-size: 19px;
+      color: $shark-black;
+      pointer-events: none;
+
+      @media screen and (max-width: $jobboard-collapse2) {
+        display: none;
+      }
+    }
+  }
+
+  .submit {
+
+    &::before {
+      font-family: "Muli", Helvetica, Arial, sans-serif;
+      content: 'search';
+      text-transform: uppercase;
+    }
+
+    grid-area: button;
+    -ms-grid-column: 2;
+    background-color: $cerulean-blue;
+    color: white;
+    font-size: 16px;
+
+    @media screen and (max-width: $jobboard-collapse) {
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
     }
 
     @media screen and (max-width: $jobboard-collapse2) {
-        grid-template-columns: auto min-content;
-        -ms-grid-columns: 90% min-content;
+      &::before {
+        font-family: 'Material Icons';
+        content: 'search';
+        text-transform: none;
+      }
+
+      min-width: 49px;
     }
-
-    input, button {
-        height: 48px;
-        border-radius: 2px;
-        border: none;
-
-        @media screen and (max-width: $jobboard-collapse) {
-            margin: 0;
-        }
-    }
-
-    .search-box {
-        grid-area: search;
-        position: relative;
-        width: 100%;
-        
-        @supports not (grid-gap: 0) {
-            margin-right: 24px;
-            @media screen and (max-width: $jobboard-collapse) {
-                margin-right: 0;
-            }
-        } 
-
-        input {
-            width: 100%;
-            padding: 0 28px;
-
-            @media screen and (max-width: $jobboard-collapse) {
-                border-bottom-right-radius: 0;
-                border-top-right-radius: 0;
-            }
-        }
-
-        .after {
-            position: absolute;
-            right: 25px;
-            top: 16px;
-            font-size: 19px;
-            color: $shark-black;
-            pointer-events: none;
-
-            @media screen and (max-width: $jobboard-collapse2) {
-                display: none;
-            }
-        }
-    }
-
-    .submit {
-        
-        &::before {
-            font-family: "Muli", Helvetica, Arial, sans-serif;
-            content: 'search';
-            text-transform: uppercase;
-        }
-
-        grid-area: button;
-        -ms-grid-column: 2;
-        background-color: $cerulean-blue;
-        color: white;
-        font-size: 16px;
-
-        @media screen and (max-width: $jobboard-collapse) {
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 0;
-        }
-
-        @media screen and (max-width: $jobboard-collapse2) {
-            &::before {
-                font-family: 'Material Icons';
-                content: 'search';
-                text-transform: none;
-            }
-
-            min-width: 49px;
-        }
-    }
+  }
 }
 
 .pagination {
-    list-style: none;
-    marigin: 0;
-    padding: 0;
-    overflow-x: auto;
-    white-space: nowrap;
-    margin: 48px 0;
+  list-style: none;
+  marigin: 0;
+  padding: 0;
+  overflow-x: auto;
+  white-space: nowrap;
+  margin: 48px 0;
 
-    li {
-        background-color: $iron;
-        display: inline-block;
-        margin-right: 12px;
-        &>a, &>span {
-            display: block;
-            width: 36px;
-            height: 36px;
-            font-size: 16px;
-            padding: 7px 0;
-            text-align: center;
-
-        }
-        &.active, & a:hover {
-            background: $shark-black;
-            color: white;
-            a { color: white; }
-        }
-
-        &.next {
-            background-color: $cerulean-blue;
-            a { color: white; }
-        }
+  li {
+    background-color: $iron;
+    display: inline-block;
+    margin-right: 12px;
+    & > a,
+    & > span {
+      display: block;
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+      padding: 7px 0;
+      text-align: center;
     }
+    &.active,
+    & a:hover {
+      background: $shark-black;
+      color: white;
+      a { color: white; }
+    }
+
+    &.next {
+      background-color: $cerulean-blue;
+      a { color: white; }
+    }
+  }
 }
 
 .container-normal {
-    .button {
-        position: static;
-        display: block;
-        float:none;
-        width: fit-content;
-        color: white;
-        padding-top: 13px;
+  .button {
+    position: static;
+    display: block;
+    float: none;
+    width: fit-content;
+    color: white;
+    padding-top: 13px;
 
-        &.white {
-            padding-top: 12px;
-            color: black;
-            border: 1px solid $shark-black;
-            background: white;
-        }
+    &.white {
+      padding-top: 12px;
+      color: black;
+      border: 1px solid $shark-black;
+      background: white;
     }
+  }
 }

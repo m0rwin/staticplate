@@ -1603,7 +1603,8 @@ body {
 }
 
 @media screen and (max-width: 1284px) {
-  .job-board .results, .job-board .filters {
+  .job-board .results,
+  .job-board .filters {
     padding: 0 24px;
   }
 }
@@ -1704,12 +1705,101 @@ body {
   margin-bottom: 27px;
 }
 
+.job-board .filters .side-box > ul.accordian > li .sub-menu .sub-menu-ul {
+  max-height: 210px;
+  overflow: auto;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu > ul > li,
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search] {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search] {
+  background: #191b1d;
+  color: #FFFFFF;
+  border: none;
+  border-bottom: 1px solid #FFFFFF;
+  padding-left: 35px;
+  width: 100%;
+  outline: none;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::-webkit-input-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::-moz-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]:-moz-placeholder {
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]:-ms-input-placeholder {
+  opacity: 1;
+  color: #FFFFFF;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::placeholder {
+  opacity: 1;
+  color: #FFFFFF;
+}
+
 .job-board .filters .side-box > ul.accordian > li a {
   display: block;
 }
 
 .job-board .filters .side-box > ul.accordian > li a .icon-dropdown-down-up {
   float: right;
+}
+
+.job-board .filters .side-box .pseudo-checkbox {
+  cursor: pointer;
+}
+
+.job-board .filters .side-box .pseudo-checkbox::before {
+  font-family: 'Material Icons';
+  content: 'check';
+  color: #191b1d;
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  margin-right: 13px;
+  background-color: #191b1d;
+  border: 2px solid white;
+  border-radius: 3px;
+  width: 18px;
+  height: 18px;
+  line-height: 0.9;
+  text-indent: -1px;
+  font-size: 16px;
+}
+
+.job-board .filters .side-box .pseudo-checkbox:hover::before {
+  border-color: #008EDA;
+}
+
+.job-board .filters .side-box .pseudo-checkbox.active {
+  font-weight: bold;
+}
+
+.job-board .filters .side-box .pseudo-checkbox.active::before {
+  background-color: #008EDA;
+  border-color: #008EDA;
+}
+
+.job-board .filters .side-box .pseudo-checkbox.active:hover::before {
+  border-color: #09a9ff;
+}
+
+.job-board .filters .side-box .pseudo-checkbox input[type=checkbox] {
+  visibility: hidden;
 }
 
 .job-board .filters .side-box a.clear-btn {
@@ -1763,7 +1853,7 @@ body {
   content: "x";
   display: block;
   position: absolute;
-  top: 7px;
+  top: 9px;
   right: 12px;
   margin-left: 10px;
   font-size: 0.8em;
@@ -1824,14 +1914,16 @@ body {
   }
 }
 
-.job-search-grid input, .job-search-grid button {
+.job-search-grid input,
+.job-search-grid button {
   height: 48px;
   border-radius: 2px;
   border: none;
 }
 
 @media screen and (max-width: 1284px) {
-  .job-search-grid input, .job-search-grid button {
+  .job-search-grid input,
+  .job-search-grid button {
     margin: 0;
   }
 }
@@ -1927,7 +2019,8 @@ body {
   margin-right: 12px;
 }
 
-.pagination li > a, .pagination li > span {
+.pagination li > a,
+.pagination li > span {
   display: block;
   width: 36px;
   height: 36px;
@@ -1936,12 +2029,14 @@ body {
   text-align: center;
 }
 
-.pagination li.active, .pagination li a:hover {
+.pagination li.active,
+.pagination li a:hover {
   background: #191b1d;
   color: white;
 }
 
-.pagination li.active a, .pagination li a:hover a {
+.pagination li.active a,
+.pagination li a:hover a {
   color: white;
 }
 
