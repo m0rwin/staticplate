@@ -1,0 +1,19 @@
+.jumbo {
+  position: relative;
+  h1 { font-size: 51px; }
+  .cta {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 45%);
+    padding-left: 4em;
+    padding-right: 4em;
+  }
+}
+
+.job-spec {
+  margin: 0 auto;
+  margin-top: 78px;
+  width: 1264px;
+  padding: 0 46px;
+}
