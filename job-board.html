@@ -254,9 +254,11 @@
                                 <span class="material-icons icon-dropdown-down-up"></span>
                             </a>
                             <div class="sub-menu collapse" id="filters-main-1873">
-                                <input type="search" placeholder="eg: London" />
-                                <ul class="sub-menu-ul">
-
+                                <div class="loc-search">
+                                    <div class="icon material-icons">place</div>
+                                    <input type="search" placeholder="eg: London" data-search="#filters-main-1873 .sub-menu-ul" />
+                                </div>
+                                <ul class="sub-menu-ul fixed-height">
                                     <li>
                                         <a class="pseudo-checkbox active" href="/sectors/">Sectors</a>
                                     </li>
@@ -294,7 +296,6 @@
                             </a>
                             <div class="sub-menu collapse" id="filters-main-3222">
                                 <ul class="sub-menu-ul">
-
                                     <li>
                                         <a class="pseudo-checkbox active" href="/our-world/">Our world</a>
                                     </li>
@@ -426,7 +427,20 @@
         });
         $('.clamp').each(function (i, e) {
             $clamp(e, { clamp: 2 });
-        })
+        });
+        $('input[data-search]').each(function(i) {
+            $(this).on('change textInput input', function() {
+                var prefix = $(this).val();
+                var $target = $($(this).attr('data-search'));
+                $target.find('li').each(function(i) {
+                    if($(this).text().trim().toLowerCase().startsWith(prefix.toLowerCase())) {
+                        $(this).show();
+                    } else {
+                        $(this).hide();
+                    }
+                });
+            })
+        });
     </script>
     <script>
         var APP_ID = "biiewbsz";

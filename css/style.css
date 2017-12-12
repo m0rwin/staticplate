@@ -1999,17 +1999,37 @@ body {
 }
 
 .job-board .filters .side-box > ul.accordian > li .sub-menu .sub-menu-ul {
-  max-height: 210px;
+  max-height: 216px;
   overflow: auto;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu .sub-menu-ul.fixed-height {
+  height: 216px;
 }
 
 .job-board .filters .side-box > ul.accordian > li .sub-menu > ul > li,
 .job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search] {
   margin-top: 15px;
   font-size: 16px;
+  line-height: 2;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search] {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search {
+  position: relative;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search .icon {
+  content: 'place';
+  font-family: 'Material Icons';
+  position: absolute;
+  left: 0;
+  bottom: 1.3em;
+  display: inline-block;
+  height: 0;
+  overflow: visible;
+}
+
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search] {
   background: #191b1d;
   color: #FFFFFF;
   border: none;
@@ -2019,27 +2039,27 @@ body {
   outline: none;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::-webkit-input-placeholder {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search]::-webkit-input-placeholder {
   color: #FFFFFF;
   opacity: 1;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::-moz-placeholder {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search]::-moz-placeholder {
   color: #FFFFFF;
   opacity: 1;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]:-moz-placeholder {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search]:-moz-placeholder {
   color: #FFFFFF;
   opacity: 1;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]:-ms-input-placeholder {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search]:-ms-input-placeholder {
   opacity: 1;
   color: #FFFFFF;
 }
 
-.job-board .filters .side-box > ul.accordian > li .sub-menu input[type=search]::placeholder {
+.job-board .filters .side-box > ul.accordian > li .sub-menu .loc-search input[type=search]::placeholder {
   opacity: 1;
   color: #FFFFFF;
 }
@@ -2088,7 +2108,7 @@ body {
 }
 
 .job-board .filters .side-box .pseudo-checkbox.active:hover::before {
-  border-color: #09a9ff;
+  border-color: #1db0ff;
 }
 
 .job-board .filters .side-box .pseudo-checkbox input[type=checkbox] {
