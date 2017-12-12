@@ -144,6 +144,7 @@ $neat-mobile: (
     position: relative;
     height: 152px;
     margin-bottom: 128px;
+    z-index: 1;
     /* mobile rules */
   }
   .consultants {
@@ -160,7 +161,6 @@ $neat-mobile: (
 
 .consultanttiles {
   @include grid-container(8);
-  @include grid-visual;
 
   .tile_a,
    {
@@ -179,7 +179,24 @@ $neat-mobile: (
     height: 450px;
     background-color: #2b2b2b;
     color: white;
-
     padding: 48px;
+  }
+}
+
+
+.test {
+  border: 1px solid black;
+  @include grid-container;
+  position: relative;
+  & > div {
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #2b2b2b;
+  }
+  .a,
+  .b,
+  .c,
+  .d {
+    @include grid-column(4);
   }
 }

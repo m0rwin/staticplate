@@ -216,13 +216,14 @@
             </div>
         </div>
 
-        <div class="custom-grid--thirds">
-            <div class="a-single-column">main
-            </div>
-            <div class="a-single-column">fsjdahfasjdfhas
-            </div>
-        </div>
-<!--        <div class="backgroundwords">
+        <section class="test">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+            <div class="d"></div>
+        </section>
+
+      <!-- <div class="backgroundwords">
             <div class="original">
                 <div class="rellax" data-rellax-speed="-2">Original</div>
             </div>
@@ -233,7 +234,7 @@
                 <div class="rellax" data-rellax-speed="-1">Yourself</div>
             </div>
         </section>
--->
+    -->
     </main>
 
     <footer class="footer">
@@ -277,7 +278,9 @@
     <script src="/scripts/jquery.vide.min.js"></script>
     <script src="/scripts/rellax.js"></script>
 	<script>
-		var rellax = new Rellax();
+        var rellax = new Rellax('.rellax', {
+            center: true
+        });
     </script>
     <script src="/scripts/scrollreveal.js"></script>
     <script>

@@ -1221,6 +1221,7 @@ h1 {
   position: relative;
   height: 152px;
   margin-bottom: 128px;
+  z-index: 1;
   /* mobile rules */
 }
 
@@ -1233,10 +1234,6 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fff;
-}
-
-.consultanttiles {
-  background-image: repeating-linear-gradient(to right, transparent, transparent 20px, rgba(0, 212, 255, 0.25) 20px, rgba(0, 212, 255, 0.25) calc(8.33333% - 21.66667px + 20px));
 }
 
 .consultanttiles::after {
@@ -1581,6 +1578,7 @@ h1 {
 .backgroundwords > div {
   width: 100%;
   position: relative;
+  z-index: -10;
 }
 
 .original {
@@ -1592,6 +1590,7 @@ h1 {
   top: -730px;
   left: 30%;
   z-index: 0 !important;
+  z-index: -10;
   pointer-events: none;
 }
 
@@ -1602,6 +1601,7 @@ h1 {
   color: #F7F7F7;
   -webkit-font-smoothing: antialiased;
   position: absolute;
+  z-index: -10;
   pointer-events: none;
 }
 
@@ -1613,6 +1613,7 @@ h1 {
   -webkit-font-smoothing: antialiased;
   top: -430px;
   left: 30%;
+  z-index: -10;
   pointer-events: none;
 }
 
