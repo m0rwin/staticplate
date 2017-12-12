@@ -267,3 +267,14 @@
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
+
+.anchor {
+  position: relative;
+  top: -64px;
+  visibility: hidden;
+  display: block;
+  height: 0;
+  @media screen and (max-width: $menu-small-width) {
+    top: -56px;
+  }
+}

@@ -1075,6 +1075,21 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
+.anchor {
+  position: relative;
+  top: -64px;
+  visibility: hidden;
+  display: block;
+  height: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .anchor {
+    top: -56px;
+  }
+}
+
+
 /* mian CTA global button style */
 .sectorbutton {
   background-color: #1897D4;

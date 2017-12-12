@@ -208,6 +208,7 @@
             </header>
 
             <aside class="filters">
+                <a class="anchor" id="filters"></a>
                 <strong class="wide-only">Refine search</strong>
                 <div class="side-box">
                     <ul class="filter-pills">
@@ -237,13 +238,13 @@
                             <div class="sub-menu collapse" id="filters-main-1842">
                                 <ul class="sub-menu-ul">
                                     <li>
-                                        <a href="#" class="pseudo-checkbox active">Permanent</a>
+                                        <a href="?hello=world1#filters" class="pseudo-checkbox active">Permanent</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="pseudo-checkbox">Contract</a>
+                                        <a href="?hello=world2#filters" class="pseudo-checkbox">Contract</a>
                                     </li>
                                     <li>
-                                        <a href="#" class="pseudo-checkbox">Temporary</a>
+                                        <a href="?hello=world3#filters" class="pseudo-checkbox">Temporary</a>
                                     </li>
                                 </ul>
                             </div>
@@ -260,31 +261,31 @@
                                 </div>
                                 <ul class="sub-menu-ul fixed-height">
                                     <li>
-                                        <a class="pseudo-checkbox active" href="/sectors/">Sectors</a>
+                                        <a class="pseudo-checkbox active" href="?hello=world4#filters">Sectors</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox active" href="/sectors/property-maintenance/">Property &amp; Maintenance</a>
+                                        <a class="pseudo-checkbox active" href="?hello=world5#filters">Property &amp; Maintenance</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/main-contractor/">Main Contractor</a>
+                                        <a class="pseudo-checkbox" href="?hello=world6#filters">Main Contractor</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/building-services/">Building Services</a>
+                                        <a class="pseudo-checkbox" href="?hello=world7#filters">Building Services</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/fit-out-interiors/">Fit Out &amp; Interiors</a>
+                                        <a class="pseudo-checkbox" href="?hello=world8#filters">Fit Out &amp; Interiors</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/residential-housing/">Residential / Housing</a>
+                                        <a class="pseudo-checkbox" href="?hello=world9#filters">Residential / Housing</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/groundworks-and-frames/">Groundworks and Frames</a>
+                                        <a class="pseudo-checkbox" href="?hello=world0#filters">Groundworks and Frames</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/sectors/consultancy/">Consultancy</a>
+                                        <a class="pseudo-checkbox" href="?hello=worlda#filters">Consultancy</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox active" href="/sectors/freelance/">Freelance</a>
+                                        <a class="pseudo-checkbox active" href="?hello=worldb#filters">Freelance</a>
                                     </li>
                                 </ul>
                             </div>
@@ -297,16 +298,16 @@
                             <div class="sub-menu collapse" id="filters-main-3222">
                                 <ul class="sub-menu-ul">
                                     <li>
-                                        <a class="pseudo-checkbox active" href="/our-world/">Our world</a>
+                                        <a class="pseudo-checkbox active" href="?hello=worldc#filters">Our world</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/our-world/join-the-locals/">Join the locals</a>
+                                        <a class="pseudo-checkbox" href="?hello=worldd#filters">Join the locals</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/our-world/meet-the-locals/">Meet the Locals</a>
+                                        <a class="pseudo-checkbox" href="?hello=worlde#filters">Meet the Locals</a>
                                     </li>
                                     <li>
-                                        <a class="pseudo-checkbox" href="/our-world/local-community/">Local Community</a>
+                                        <a class="pseudo-checkbox" href="?hello=worldf#filters">Local Community</a>
                                     </li>
                                 </ul>
                             </div>
@@ -441,6 +442,32 @@
                 });
             })
         });
+        $('.filters .side-box .accordian').on('click', 'a', function() {
+            // save state:
+            var state = {
+                accordians: $('.filters .side-box .accordian > li > a').map(function() {
+                    return !$(this).hasClass('collapsed');
+                }).get()
+            }
+            console.log('saving state');
+            window.sessionStorage.setItem('job-filters', JSON.stringify(state));
+        })
+        $(function() {
+            //load state:
+            var state = window.sessionStorage.getItem('job-filters');
+            window.sessionStorage.removeItem('job-filters');
+            if (state) {
+            console.log('state new');
+                state = JSON.parse(state);
+                for(var i = 0; i < state.accordians.length; i++) {
+                    var target = $('.filters .side-box .accordian > li > a').eq(i);
+                    if(state.accordians[i]) {
+                        target.removeClass('collapsed');
+                        $(target.attr('data-target')).addClass('show');
+                    }
+                }
+            }
+        })
     </script>
     <script>
         var APP_ID = "biiewbsz";
