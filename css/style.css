@@ -1260,6 +1260,46 @@ h1 {
   }
 }
 
+.herocontentmeet {
+  color: #2b2b2b;
+}
+
+/* Extraodinary block */
+.valuescontainer .newscontainer {
+  background-color: #1c1c1c;
+  padding: 48px;
+  position: relative;
+  height: 310px;
+  margin-bottom: 128px;
+  z-index: 1;
+  max-width: 919px;
+  float: right;
+  width: 100%;
+}
+
+.valuescontainer .betextracopy {
+  margin-left: -270px;
+  position: absolute;
+  font-family: 'impact';
+  letter-spacing: 2px;
+  font-size: 160px;
+  color: #e77397;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #2b2b2b;
+}
+
+.valuescontainer .meetextracopy {
+  margin-left: 24px;
+  position: absolute;
+  font-family: 'impact';
+  letter-spacing: 2px;
+  font-size: 160px;
+  color: #e77397;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 /* mian CTA global button style */
 .sectorbutton {
   background-color: #1897D4;

@@ -1,376 +1,42 @@
-/* mian CTA global button style */
-
-.sectorbutton {
-  background-color: #1897D4;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.5s; /* Safari */
-  transition-duration: 0.5s;
-  border-radius: 2px;
-  cursor: pointer;
-  text-transform: uppercase;
-  min-width: 180px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: bold;
-}
-.sectorbutton:hover {
-  background-color: rgb(17, 100, 138);
-  -webkit-transition-duration: 0.5s; /* Safari */
-  transition-duration: 0.5s;
-}
-
-/* Hero video styles */
-.herosectors {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 128px;
-}
-
-.videocontainersectors {
-  background-color: $shark-black;
-  height: 70%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  position: relative;
+.herocontentmeet {
+  color: #2b2b2b;
 }
 
 
-.videocontainersectors::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.5) 70%);
-}
-.herocontentsectors {
-  position: absolute;
-  color: #ffffff;
-  top: 25%;
-  padding: 0px 96px 0px 96px;
-}
-
-@media screen and (max-width: 1024px) and (min-width: 650px) {
-  .herocontentsectors {
-    position: absolute;
-    color: #ffffff;
-    padding: 0px 48px 0px 48px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .herocontentsectors {
-    position: absolute;
-    color: #ffffff;
-    padding: 0px 48px 0px 48px;
-  }
-}
-
-.hero-quote {
-  font-family: 'muli' sans-serif;
-  font-size: 37px;
-  max-width: 710px;
-  color: #fff;
-  padding-bottom: 24px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-  .hero-quote {
-    font-size: 37px;
-    margin-bottom: 24px;
-    color: #fff;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .hero-quote {
-    font-size: 26px;
-    margin-bottom: 24px;
-    color: #fff;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .herocontent h1 {
-    font-family: 'Impact', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    color: #ffffff;
-    line-height: 61px;
-    letter-spacing: 1px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .herocontent h1 {
-    font-family: 'Impact', sans-serif;
-    font-weight: 900;
-    font-size: 53px;
-    color: #ffffff;
-    line-height: 61px;
-    letter-spacing: 1;
-  }
-}
-
-
-/* section header (consultants)*/
-.consultantsection {
-  .consultantcontainer {
-    background-color: #1c1c1c;
-    padding: 48px;
-    position: relative;
-    height: 152px;
-    margin-bottom: 128px;
-    z-index: 1;
-    max-width: 700px;
-
-    /* mobile rules */
-    @media screen and (max-width: 768px) {
-      height: 116px;
-      margin-bottom: 96px;
-      width: 100%;
-      padding: 0px;
-    }
-  }
-
-  .consultantscopy {
-    margin-left: 24px;
-    position: absolute;
-    font-family: 'muli' sans-serif;
-    font-size: 37px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #fff;
-      /* mobile rules */
-    @media screen and (max-width: 768px) {
-      font-size: 26px;
-      text-align: center;
-      padding: 39px 0px 39px 0px;
-    }
-  }
-}
-
-/* consultant grid */
-$neat-mobile: (
-  columns: 1,
-  media: 'screen and (max-width: 767px)',
-  margin-bottom: 24px,
-  padding: 24px
-);
-
-$neat-tablet: (
-  columns: 1,
-  media: 'screen and (max-width: 1024px)',
-  margin-bottom: 24px,
-  padding: 24px
-);
-
-.consultanttiles {
-  @include grid-container;
-  padding-bottom: 304px;
-}
-
-.tile_a,
- {
-  @include grid-column(4);
-  height: 450px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 48px;
-  position: relative;
-  @include grid-media($neat-mobile) {
-    @include grid-column(1);
-    margin-bottom: 240px;
-    position: relative;
-  }
-  @include grid-media($neat-mobile) {
-    @include grid-column(1);
-    margin-bottom: 24px;
-    position: relative;
-  }
-}
-
-.tile_b,
- {
-  @include grid-column(4);
-  height: 450px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 48px;
-  position: relative;
-  @include grid-media($neat-mobile) {
-    @include grid-column(1);
-    margin-bottom: 24px;
-  }
-
-  .tile_c,
-   {
-    @include grid-column(4);
-    height: 45px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 24px;
-      position: relative;
-    }
-  }
-
-  .copycontainer {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 400;
-    font-family: 'muli' sans-serif;
-    padding: 24px;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-  }
-
-  .copy {
-    left: 0;
-    bottom: 0;
-    position: absolute;
-  }
-}
-
-
-/* section header (news) */
-.newssection {
+/* Extraodinary block */
+.valuescontainer {
   .newscontainer {
     background-color: #1c1c1c;
     padding: 48px;
     position: relative;
-    height: 152px;
+    height: 310px;
     margin-bottom: 128px;
     z-index: 1;
-    max-width: 700px;
+    max-width: 919px;
     float: right;
     width: 100%;
-
-    /* mobile rules */
-    @media screen and (max-width: 768px) {
-      height: 116px;
-      margin-bottom: 96px;
-      width: 100%;
-      padding: 0px;
-    }
-
-
-    .newscopy {
-      margin-left: 24px;
-      position: absolute;
-      font-family: 'muli' sans-serif;
-      font-size: 37px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #fff;
-      /* mobile rules */
-      @media screen and (max-width: 768px) {
-        font-size: 26px;
-        text-align: center;
-        padding: 39px 0px 39px 0px;
-      }
-    }
   }
 
-/* news grid */
-  $neat-mobile: (
-  columns: 1,
-  media: 'screen and (max-width: 767px)',
-  margin-bottom: 24px,
-  padding: 24px
-);
-
-  $neat-tablet: (
-  columns: 1,
-  media: 'screen and (max-width: 1024px)',
-  margin-bottom: 24px,
-  padding: 24px
-);
-
-  .newstiles {
-    @include grid-container;
-    position: relative;
+  .betextracopy {
+    margin-left: -270px;
+    position: absolute;
+    font-family: 'impact';
+    letter-spacing: 2px;
+    font-size: 160px;
+    color: #e77397;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2b2b2b;
   }
 
-  .tile_a,
-   {
-    @include grid-column(4);
-    height: 450px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-    position: relative;
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 240px;
-      position: relative;
-    }
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 24px;
-      position: relative;
-    }
-  }
-
-  .tile_b,
-   {
-    @include grid-column(4);
-    height: 450px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-    position: relative;
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 24px;
-    }
-
-    .tile_c,
-     {
-      @include grid-column(4);
-      height: 45px;
-      background-color: #2b2b2b;
-      color: white;
-      padding: 48px;
-      @include grid-media($neat-mobile) {
-        @include grid-column(1);
-        margin-bottom: 24px;
-        position: relative;
-      }
-    }
-
-    .copycontainer {
-      color: #fff;
-      font-size: 26px;
-      font-weight: 400;
-      font-family: 'muli' sans-serif;
-      padding: 24px;
-      left: 0;
-      bottom: 0;
-      position: absolute;
-    }
-
-    .copy {
-      left: 0;
-      bottom: 0;
-      position: absolute;
-    }
+  .meetextracopy {
+    margin-left: 24px;
+    position: absolute;
+    font-family: 'impact';
+    letter-spacing: 2px;
+    font-size: 160px;
+    color: #e77397;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
