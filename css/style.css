@@ -985,6 +985,18 @@ h1 {
 .copy h3,
 .copy h4 {
   font-family: "Muli", Helvetica, Arial, sans-serif;
+  margin-bottom: 1em;
+}
+
+.copy h1 strong,
+.copy h2 strong,
+.copy h3 strong,
+.copy h4 strong {
+  font-size: inherit;
+}
+
+.copy strong {
+  font-size: 1.3em;
 }
 
 .copy ul li {
@@ -997,6 +1009,10 @@ h1 {
   float: left;
   width: 1em;
   content: '\2022';
+}
+
+.copy ul {
+  margin-bottom: 2em;
 }
 
 /* Hero video styles */

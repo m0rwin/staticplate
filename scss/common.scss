@@ -83,7 +83,12 @@
   h3,
   h4 {
     font-family: "Muli", Helvetica, Arial, sans-serif;
+    margin-bottom: 1em;
+
+    strong { font-size: inherit; }
   }
+
+  strong { font-size: 1.3em; }
 
   ul li {
     list-style-type: none;
@@ -95,6 +100,9 @@
     float: left;
     width: 1em;
     content: '\2022';
+  }
+  ul {
+    margin-bottom: 2em;
   }
 }
 
