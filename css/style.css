@@ -1390,28 +1390,18 @@ h1 {
   }
 }
 
-.consultantsection::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.consultantsection .consultantheader {
-  width: calc(41.66667% - 28.33333px);
-  float: left;
-  margin-left: 20px;
-  margin-left: calc(-1.66667% - 19.66667px + 40px);
-  /* styling */
+.consultantsection .consultantcontainer {
   background-color: #1c1c1c;
   position: relative;
   height: 152px;
   margin-bottom: 128px;
   z-index: 1;
+  max-width: 700px;
   /* mobile rules */
 }
 
-.consultantsection .consultants {
-  margin-left: 96px;
+.consultantsection .consultantscopy {
+  margin-left: 48px;
   padding: 48px;
   position: absolute;
   font-family: 'muli' sans-serif;

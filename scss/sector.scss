@@ -135,20 +135,17 @@ $neat-mobile: (
   );
 
 .consultantsection {
-  @include grid-container;
-  .consultantheader {
-    @include grid-column(5);
-    @include grid-push(-0.2);
-    /* styling */
+  .consultantcontainer {
     background-color: #1c1c1c;
     position: relative;
     height: 152px;
     margin-bottom: 128px;
     z-index: 1;
+    max-width: 700px;
     /* mobile rules */
   }
-  .consultants {
-    margin-left: 96px;
+  .consultantscopy {
+    margin-left: 48px;
     padding: 48px;
     position: absolute;
     font-family: 'muli' sans-serif;
