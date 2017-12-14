@@ -1260,18 +1260,30 @@ h1 {
   }
 }
 
-.topsectionmeet {
-  margin-bottom: 250px;
+::-moz-selection {
+  /* Code for Firefox */
+  color: #fff;
+  background: #2b2b2b;
+}
+
+::selection {
+  color: #fff;
+  background: #2b2b2b;
+}
+
+.inner-container {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .herocontentmeet {
-  margin: 148px 148px 5% 48px;
-  color: #2b2b2b;
+  padding: 148px 148px 185px 48px;
+  color: #1c1c1c;
 }
 
 /* Extraodinary block */
 .valuescontainer {
-  height: 20vh;
+  height: 240px;
 }
 
 .valuescontainer .newscontainer {
@@ -1279,7 +1291,7 @@ h1 {
   padding: 48px;
   position: relative;
   height: 284px;
-  margin-bottom: 128px;
+  margin-bottom: 265px;
   z-index: 1;
   max-width: 860px;
   float: right;
@@ -1311,14 +1323,14 @@ h1 {
 /* values block */
 .meetquotecontainer {
   height: 100%;
-  margin-bottom: 850px;
+  margin-bottom: 780px;
+  min-height: 284px;
 }
 
 .meetquotecontainer .quotecontainer {
   background-color: #1c1c1c;
-  padding: 48px;
+  padding: 48px 48px 48px 108px;
   position: relative;
-  height: 284px;
   margin-bottom: 128px;
   z-index: 1;
   max-width: 860px;
@@ -1354,15 +1366,35 @@ h1 {
   transition: all 0.3s ease-in-out;
 }
 
+/* video section */
 .madness-container {
-  height: 1000px;
+  height: 640px;
   width: 100%;
+  position: relative;
+}
+
+.madness-container .vimeosection {
+  float: right;
+  margin: -262px 48px 48px 48px;
 }
 
 .madness-container .madness-background {
-  height: 65%;
+  height: 100%;
   width: 100%;
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
+}
+
+.madness-container .madness-background .madness-quote {
+  font-family: 'muli';
+  padding: 48px;
+  font-weight: bold;
+  font-size: 37px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* mian CTA global button style */
