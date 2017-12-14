@@ -1309,6 +1309,11 @@ h1 {
 }
 
 /* values block */
+.meetquotecontainer {
+  height: 100%;
+  margin-bottom: 850px;
+}
+
 .meetquotecontainer .quotecontainer {
   background-color: #1c1c1c;
   padding: 48px;
@@ -1341,12 +1346,23 @@ h1 {
   text-transform: lowercase;
   display: inline;
   border-bottom: 4px solid #2496d4;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .meetquotecontainer .hellotrigger:hover {
   border-color: #fff;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.madness-container {
+  height: 1000px;
+  width: 100%;
+}
+
+.madness-container .madness-background {
+  height: 65%;
+  width: 100%;
+  background-color: #2b2b2b;
 }
 
 /* mian CTA global button style */
