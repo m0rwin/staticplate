@@ -1260,6 +1260,10 @@ h1 {
   }
 }
 
+.topsectionmeet {
+  margin-bottom: 250px;
+}
+
 .herocontentmeet {
   margin: 148px 148px 5% 48px;
   color: #2b2b2b;
@@ -1274,20 +1278,20 @@ h1 {
   background-color: #1c1c1c;
   padding: 48px;
   position: relative;
-  height: 310px;
+  height: 284px;
   margin-bottom: 128px;
   z-index: 1;
-  max-width: 990px;
+  max-width: 860px;
   float: right;
   width: 100%;
 }
 
 .valuescontainer .betextracopy {
-  margin-left: -240px;
+  margin-left: -220px;
   position: absolute;
   font-family: 'impact';
   letter-spacing: 2px;
-  font-size: 145px;
+  font-size: 126px;
   color: #e77397;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -1298,10 +1302,51 @@ h1 {
   position: absolute;
   font-family: 'impact';
   letter-spacing: 2px;
-  font-size: 145px;
+  font-size: 126px;
   color: #e77397;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* values block */
+.meetquotecontainer .quotecontainer {
+  background-color: #1c1c1c;
+  padding: 48px;
+  position: relative;
+  height: 284px;
+  margin-bottom: 128px;
+  z-index: 1;
+  max-width: 860px;
+  float: left;
+  width: 100%;
+}
+
+.meetquotecontainer .quote {
+  font-family: 'muli';
+  font-weight: bold;
+  font-size: 37px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: inline;
+}
+
+.meetquotecontainer .hellotrigger {
+  font-family: 'muli';
+  font-weight: bold;
+  font-size: 37px;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-transform: lowercase;
+  display: inline;
+  border-bottom: 4px solid #2496d4;
+  transition: all 0.5s ease-in-out;
+}
+
+.meetquotecontainer .hellotrigger:hover {
+  border-color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
 /* mian CTA global button style */
