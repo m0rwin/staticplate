@@ -62,7 +62,7 @@ $jobboard-collapse2: 650px;
 
         h3 {
           grid-area: title;
-          font-family: "Muli", Helvetica, Arial, sans-serif;
+          font-family: $muli-font;
           margin-top: 0;
           font-size: 26px;
           font-weight: bold;
@@ -406,7 +406,7 @@ $jobboard-collapse2: 650px;
   .submit {
 
     &::before {
-      font-family: "Muli", Helvetica, Arial, sans-serif;
+      font-family: $muli-font;
       content: 'search';
       text-transform: uppercase;
     }

@@ -138,7 +138,7 @@ h3,
 h4 {
   margin: 1.414em 0 0.5em;
   font-family: impact;
-  font-weight: inherit;
+  font-weight: bold;
   line-height: 1.2;
 }
 
@@ -829,7 +829,8 @@ h1 {
   float: right;
 }
 
-.footer .list-share-icons .icon-linkedin, .footer .list-share-icons .icon-twitter {
+.footer .list-share-icons .icon-linkedin,
+.footer .list-share-icons .icon-twitter {
   display: inline-block;
   width: 37px;
   height: 37px;
@@ -869,7 +870,8 @@ h1 {
   transition: all .3s ease-in-out;
 }
 
-.icon-linkedin:hover, .icon-twitter:hover {
+.icon-linkedin:hover,
+.icon-twitter:hover {
   display: inline-block;
   width: 37px;
   height: 37px;
@@ -3000,8 +3002,62 @@ body {
 }
 
 .job-spec {
-  margin: 0 auto;
+  margin-left: -80px;
+  margin-right: -80px;
+  width: calc(100% + 160px);
+  position: relative;
+  padding: 0 123px;
   margin-top: 78px;
-  width: 1264px;
-  padding: 0 46px;
+}
+
+.job-spec::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.job-spec nav {
+  width: calc(100% - 160px);
+  float: left;
+  margin-left: 80px;
+}
+
+.job-spec aside {
+  width: calc(33.33333% - 106.66667px);
+  float: left;
+  margin-left: 80px;
+}
+
+.job-spec aside h2,
+.job-spec aside h3 {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+  font-size: 26px;
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+.job-spec aside img {
+  display: block;
+}
+
+.job-spec .copy {
+  width: calc(66.66667% - 133.33333px);
+  float: left;
+  margin-left: 80px;
+}
+
+.job-spec .copy h2 {
+  font-size: 37px;
+  margin-top: 24px;
+  margin-bottom: 64px;
+}
+
+.job-spec .side-box {
+  background-color: #191b1d;
+  padding: 24px;
+  color: #FFFFFF;
+}
+
+.job-spec .side-box * {
+  color: #FFFFFF;
 }

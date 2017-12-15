@@ -144,7 +144,7 @@ $jobboard-collapse2: 799px;
 
   .submit {
     &::before {
-      font-family: "Muli", Helvetica, Arial, sans-serif;
+      font-family: $muli-font;
       content: 'search jobs';
       text-transform: uppercase;
     }

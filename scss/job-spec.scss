@@ -11,9 +11,49 @@
   }
 }
 
+$jobspec-grid: (
+  gutter: 80px,
+  columns: 3
+);
+
 .job-spec {
-  margin: 0 auto;
+  @include grid-container;
+  @include grid-collapse($jobspec-grid);
+  position: relative;
+  padding: 0 123px;
   margin-top: 78px;
-  width: 1264px;
-  padding: 0 46px;
+
+  nav {
+    @include grid-column(3, $jobspec-grid);
+  }
+  aside {
+    @include grid-column(1, $jobspec-grid);
+
+    h2,
+    h3 {
+      font-family: $muli-font;
+      font-size: 26px;
+      margin-top: 24px;
+      margin-bottom: 64px;
+    }
+    img {
+      display: block;
+    }
+  }
+
+  .copy {
+    @include grid-column(2, $jobspec-grid);
+    h2 {
+      font-size: 37px;
+      margin-top: 24px;
+      margin-bottom: 64px;
+    }
+  }
+
+  .side-box {
+    background-color: $shark-black;
+    padding: 24px;
+    color: $white;
+    * { color: $white; }
+  }
 }

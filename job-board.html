@@ -442,7 +442,7 @@
                 });
             })
         });
-        $('.filters .side-box .accordian').on('click', 'a', function() {
+        $('.filters .side-box .accordian').on('click', 'a[href]', function() {
             // save state:
             var state = {
                 accordians: $('.filters .side-box .accordian > li > a').map(function() {
