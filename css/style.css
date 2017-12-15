@@ -1403,8 +1403,9 @@ h1 {
 
 /* responsive video section */
 .madness-container1 {
-  height: 800px;
+  height: 100%;
   width: 100%;
+  margin-bottom: 340px;
   position: relative;
 }
 
@@ -1451,7 +1452,7 @@ h1 {
 
 .vimeoembed {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 51.25%;
   height: 0;
   overflow: hidden;
 }
@@ -1483,19 +1484,21 @@ h1 {
   float: left;
   margin-left: 20px;
   height: 450px;
-  background-color: #2b2b2b;
+  background-color: #1c1c1c;
   color: white;
-  padding: 48px;
   margin-bottom: 24px;
   position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
 }
 
 @media screen and (max-width: 1024px) {
   .tile_z {
-    width: calc(100% - 40px);
+    width: calc(200% - 60px);
     float: left;
     margin-left: 20px;
-    margin-bottom: 240px;
+    margin-bottom: 24px;
     position: relative;
   }
 }
@@ -1508,6 +1511,9 @@ h1 {
     margin-bottom: 24px;
     position: relative;
   }
+  .tile_z a:hover {
+    background: rgba(0, 145, 218, 0.5);
+  }
 }
 
 .tile_z .copycontainer {
@@ -1519,6 +1525,7 @@ h1 {
   left: 0;
   bottom: 0;
   position: absolute;
+  -webkit-font-smoothing: antialiased;
 }
 
 .tile_z .copycontainer .name {
@@ -1527,7 +1534,18 @@ h1 {
 
 .tile_z .copycontainer .viewprofile {
   font-size: 19px;
+  font-weight: bold;
   text-transform: uppercase;
+}
+
+.tile_z:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transition: scale(1.05, 1.05);
+  /* Standard syntax */
+  transition: all 0.5s;
 }
 
 /* mian CTA global button style */
