@@ -50,7 +50,6 @@
 /* values block */
 .meetquotecontainer {
   height: 100%;
-  margin-bottom: 590px;
   min-height: 284px;
   .quotecontainer {
     background-color: #1c1c1c;
@@ -94,7 +93,8 @@
 /* down arrow section black */
 .downsection {
   width: 100%;
-  padding: 48px 48px 228px 48px;
+  display: inline-block;
+  margin-bottom: 450px;
 }
 
 .downblackarrow {
