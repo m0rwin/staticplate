@@ -11,38 +11,52 @@
   }
 }
 
-$jobspec-grid: (
-  gutter: 80px,
-  columns: 3
-);
+$break-sidebar: 'max-width: 1120px';
 
 .job-spec {
-  @include grid-container;
-  @include grid-collapse($jobspec-grid);
   position: relative;
   padding: 0 123px;
   margin-top: 78px;
 
-  nav {
-    @include grid-column(3, $jobspec-grid);
-  }
   aside {
-    @include grid-column(1, $jobspec-grid);
+    position: absolute;
+    top: 27px;
+    right: 123px;
+    width: 337px;
 
-    h2,
-    h3 {
-      font-family: $muli-font;
-      font-size: 26px;
-      margin-top: 24px;
-      margin-bottom: 64px;
+    @media screen and ($break-sidebar) {
+      width: 45%;
+      float: left;
+      position: static;
     }
-    img {
-      display: block;
+
+    .key-contact {
+      h2,
+      h3 {
+        font-family: $muli-font;
+        font-size: 26px;
+        margin-top: 24px;
+        margin-bottom: 64px;
+      }
+      img {
+        display: block;
+      }
+
+      .sector {
+        font-size: 19px;
+      }
+      .details {
+        font-size: 16px;
+      }
     }
   }
 
   .copy {
-    @include grid-column(2, $jobspec-grid);
+    margin-right: 417px;
+    @media screen and ($break-sidebar) {
+      margin-right: 0;
+    }
+
     h2 {
       font-size: 37px;
       margin-top: 24px;

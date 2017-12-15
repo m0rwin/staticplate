@@ -3002,48 +3002,54 @@ body {
 }
 
 .job-spec {
-  margin-left: -80px;
-  margin-right: -80px;
-  width: calc(100% + 160px);
   position: relative;
   padding: 0 123px;
   margin-top: 78px;
 }
 
-.job-spec::after {
-  clear: both;
-  content: "";
-  display: block;
-}
-
-.job-spec nav {
-  width: calc(100% - 160px);
-  float: left;
-  margin-left: 80px;
-}
-
 .job-spec aside {
-  width: calc(33.33333% - 106.66667px);
-  float: left;
-  margin-left: 80px;
+  position: absolute;
+  top: 27px;
+  right: 123px;
+  width: 337px;
 }
 
-.job-spec aside h2,
-.job-spec aside h3 {
+@media screen and (max-width: 1120px) {
+  .job-spec aside {
+    width: 45%;
+    float: left;
+    position: static;
+  }
+}
+
+.job-spec aside .key-contact h2,
+.job-spec aside .key-contact h3 {
   font-family: "Muli", Helvetica, Arial, sans-serif;
   font-size: 26px;
   margin-top: 24px;
   margin-bottom: 64px;
 }
 
-.job-spec aside img {
+.job-spec aside .key-contact img {
   display: block;
 }
 
+.job-spec aside .key-contact .sector {
+  font-size: 19px;
+}
+
+.job-spec aside .key-contact .details {
+  font-size: 16px;
+}
+
 .job-spec .copy {
-  width: calc(66.66667% - 133.33333px);
-  float: left;
-  margin-left: 80px;
+  margin-right: 417px;
+}
+
+@media screen and (max-width: 1120px) {
+  .job-spec .copy {
+    margin-right: 0;
+  }
 }
 
 .job-spec .copy h2 {
