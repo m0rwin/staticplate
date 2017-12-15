@@ -1274,8 +1274,11 @@ h1 {
   background: #2b2b2b;
 }
 
+.container-normal {
+  overflow: hidden;
+}
+
 .inner-container {
-  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -1286,7 +1289,8 @@ h1 {
 
 /* Extraodinary block */
 .valuescontainer {
-  height: 240px;
+  height: 284px;
+  margin-bottom: 310px;
 }
 
 .valuescontainer .newscontainer {
@@ -1307,7 +1311,6 @@ h1 {
   font-family: 'impact';
   letter-spacing: 2px;
   font-size: 126px;
-  color: #e77397;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2b2b2b;
@@ -1319,14 +1322,14 @@ h1 {
   letter-spacing: 2px;
   font-size: 126px;
   color: #e77397;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* values block */
 .meetquotecontainer {
-  height: 100%;
-  min-height: 284px;
+  margin: 0 auto;
 }
 
 .meetquotecontainer .quotecontainer {
@@ -1372,7 +1375,7 @@ h1 {
 .downsection {
   width: 100%;
   display: inline-block;
-  /*margin-bottom: 450px;*/
+  margin-bottom: 450px;
   cursor: pointer;
 }
 
@@ -1385,45 +1388,20 @@ h1 {
   width: 100%;
   display: inline-block;
   cursor: pointer;
+  padding: 24px 48px 48px 96px;
+}
+
+@media only screen and (max-width: 650px) {
+  .downmad {
+    padding: 12px 24px 24px 24px;
+  }
 }
 
 .downwhitarrowmad {
   float: left;
 }
 
-/* video section */
-.madness-container {
-  height: 640px;
-  width: 100%;
-  position: relative;
-}
-
-.madness-container .vimeosection {
-  float: right;
-  margin: -262px 48px 48px 48px;
-}
-
-.madness-container .madness-background {
-  height: 100%;
-  width: 100%;
-  background-color: #1c1c1c;
-}
-
-.madness-container .madness-background .madness-quote {
-  font-family: 'muli';
-  margin-bottom: 48px;
-  margin-left: 48px;
-  font-weight: bold;
-  font-size: 37px;
-  color: #fff;
-  position: relative;
-  display: inline-block;
-  bottom: 0;
-  left: 0;
-  -webkit-font-smoothing: antialiased;
-}
-
-/* video section */
+/* responsive video section */
 .madness-container1 {
   height: 800px;
   width: 100%;
@@ -1431,15 +1409,13 @@ h1 {
 }
 
 .madness-container1 .madness-background1 {
-  height: 100%;
   width: 100%;
   background-color: #1c1c1c;
 }
 
 .madness-container1 .madness-background1 .madness-quote1 {
   font-family: 'muli';
-  margin-bottom: 48px;
-  margin-left: 48px;
+  margin: 24px;
   font-weight: bold;
   font-size: 37px;
   color: #fff;
@@ -1447,7 +1423,21 @@ h1 {
   display: inline-block;
   bottom: 0;
   left: 0;
+  padding: 24px 24px 24px 48px;
+  width: 100%;
   -webkit-font-smoothing: antialiased;
+}
+
+@media only screen and (max-width: 650px) {
+  .madness-container1 .madness-background1 .madness-quote1 {
+    font-size: 26px;
+    padding: 24px;
+  }
+}
+
+.vidouter {
+  width: 100%;
+  height: auto;
 }
 
 .vimeocontainer {
@@ -1456,6 +1446,7 @@ h1 {
   width: 100%;
   float: right;
   margin-top: -200px;
+  margin-bottom: 48px;
 }
 
 .vimeoembed {
@@ -1475,6 +1466,7 @@ h1 {
   left: 0;
 }
 
+/* Team section */
 /* mian CTA global button style */
 .sectorbutton {
   background-color: #1897D4;
