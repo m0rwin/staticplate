@@ -200,27 +200,43 @@
                 </div>
             </div>
         </div>
+
         <div class="meetquotecontainer">
-                <div class="quotecontainer">
-                    <div class="quote">
-                        We encourage individuality.<br>
-                        We employ the extraordinary.<br>
-                        Why not say 
-                    </div>
-                    <a href="#">
-                        <div class="hellotrigger">
-                            hello.
-                        </div>
-                    </a>
+            <div class="quotecontainer">
+                <div class="quote">
+                    We encourage individuality.<br>
+                    We employ the extraordinary.<br>
+                    Why not say 
                 </div>
-                <div class="downsection">
-                    <svg class="downblackarrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                        <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
-                    </svg>
+                <a href="#">
+                    <div class="hellotrigger">
+                        hello.
+                    </div>
+                </a>
+            </div>
+            <div class="downsection">
+                <svg class="downblackarrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
+                </svg>
+            </div>
+        </div>
+
+        <section class="madness-container1">
+            <div class="vimeocontainer">
+                <div class="vimeoembed">
+                    <iframe src="https://player.vimeo.com/video/246063545" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                 </div>
             </div>
+            <div class="madness-background1">
+                <div class="madness-quote1">
+                    “Strength lies in the differences,<br>not in the similarities”
+                </div>
+            </div>
+        </section>
 
-        <section class="madness-container">
+
+
+        <!--<section class="madness-container">
             <div class="vimeosection">
                 <iframe src="https://player.vimeo.com/video/246063545" width="1024" height="576" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
             </div>
@@ -228,8 +244,14 @@
                 <div class="madness-quote">
                     “Strength lies in the differences,<br>not in the similarities”
                 </div>
+                <div class="downmad">
+                    <svg class="downwhitarrowmad" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                        <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
+                    </svg>
+                </div>
             </div>
-        </section>
+        </section>-->
+
         <h1>HTML Ipsum Presents</h1>
         
                 <p>
@@ -325,6 +347,18 @@
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
         </script>
+    <script>
+        $(".downblackarrow").click(function() {
+            $('html,body').animate({
+                scrollTop: $(".vimeosection").offset().top},
+                'slow');
+        });
+        $(".downwhitarrowmad").click(function() {
+            $('html,body').animate({
+                scrollTop: $(".localscontainer").offset().top},
+                'slow');
+        });
+    </script>
     <script>
         var APP_ID = "biiewbsz";
         
