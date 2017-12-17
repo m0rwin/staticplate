@@ -250,12 +250,13 @@ $neat-mobile: (
     position: absolute;
     -webkit-font-smoothing: antialiased;
     .name {
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
     .viewprofile {
       font-size: 19px;
       font-weight: bold;
       text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
     }
   }
 }

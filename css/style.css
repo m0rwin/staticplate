@@ -1558,13 +1558,14 @@ a:not(.button):hover {
 }
 
 .tile_z .copycontainer .name {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 
 .tile_z .copycontainer .viewprofile {
   font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
 }
 
 .tile_z:hover {
