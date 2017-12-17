@@ -18,6 +18,10 @@ $break-sidebar: 'max-width: 1120px';
   padding: 0 123px;
   margin-top: 78px;
 
+  @media screen and (max-width: 650px) {
+    padding: 0 25px;
+  }
+
   aside {
     position: absolute;
     top: 27px;
@@ -66,13 +70,45 @@ $break-sidebar: 'max-width: 1120px';
         font-size: 16px;
         font-weight: normal;
       }
+    }
 
-      .cta {
-        text-transform: uppercase;
-        font-size: 16px;
-        margin-top: 26px;
-        line-height: 2;
-        display: block;
+    & > .key-contact,
+    & > .side-box {
+      margin-bottom: 48px;
+    }
+
+    @media screen and (max-width: 919px) {
+      & > div:nth-child(even) {
+        float: right;
+        margin-right: 48px;
+        margin-left: 0;
+      }
+    }
+  }
+
+  @media screen and ($break-sidebar) {
+    $grid-spec-mobile: (columns: 1);
+    aside {
+      @include grid-container;
+      @include grid-collapse($grid-spec-mobile);
+      & > .key-contact,
+      & > .side-box {
+        @include grid-column(1, $grid-spec-mobile);
+      }
+    }
+  }
+
+  @media screen and (max-width: 585px) {
+    aside {
+      margin: 0;
+      width: auto;
+      & > div.key-contact,
+      & > div.side-box {
+        max-width: none;
+        width: auto;
+        float: left;
+        margin-left: 0;
+        margin-right: 0;
       }
     }
   }
@@ -91,10 +127,50 @@ $break-sidebar: 'max-width: 1120px';
   }
 
   .side-box {
+
+    h1,
+    h2 {
+      font-family: $muli-font;
+      color: $white;
+      line-height: 1.23;
+      margin: 0 0 23px 0;
+      font-size: 26px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      font-weight: normal;
+    }
+
+    ul li {
+      list-style-type: none;
+      line-height: 2;
+    }
+
+    ul li:before {
+      color: $white;
+      float: left;
+      width: 1em;
+      content: '\2022';
+    }
+    ul {
+
+      font-size: 16px;
+      margin-bottom: 2em;
+    }
+
     background-color: $shark-black;
     padding: 24px;
     color: $white;
     .cta { color: $white; }
     .cta:hover { color: $cerulean-blue; }
+    .cta {
+      text-transform: uppercase;
+      font-size: 16px;
+      margin-top: 26px;
+      line-height: 2;
+      display: block;
+    }
   }
 }

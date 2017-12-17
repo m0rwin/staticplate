@@ -3201,6 +3201,12 @@ a:not(.button):hover {
   margin-top: 78px;
 }
 
+@media screen and (max-width: 650px) {
+  .job-spec {
+    padding: 0 25px;
+  }
+}
+
 .job-spec aside {
   position: absolute;
   top: 27px;
@@ -3256,12 +3262,51 @@ a:not(.button):hover {
   font-weight: normal;
 }
 
-.job-spec aside .key-contact .cta {
-  text-transform: uppercase;
-  font-size: 16px;
-  margin-top: 26px;
-  line-height: 2;
-  display: block;
+.job-spec aside > .key-contact,
+.job-spec aside > .side-box {
+  margin-bottom: 48px;
+}
+
+@media screen and (max-width: 919px) {
+  .job-spec aside > div:nth-child(even) {
+    float: right;
+    margin-right: 48px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .job-spec aside {
+    margin-left: -48px;
+    margin-right: -48px;
+    width: calc(100% + 96px);
+  }
+  .job-spec aside::after {
+    clear: both;
+    content: "";
+    display: block;
+  }
+  .job-spec aside > .key-contact,
+  .job-spec aside > .side-box {
+    width: calc(100% - 96px);
+    float: left;
+    margin-left: 48px;
+  }
+}
+
+@media screen and (max-width: 585px) {
+  .job-spec aside {
+    margin: 0;
+    width: auto;
+  }
+  .job-spec aside > div.key-contact,
+  .job-spec aside > div.side-box {
+    max-width: none;
+    width: auto;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .job-spec .copy {
@@ -3286,10 +3331,50 @@ a:not(.button):hover {
   color: #FFFFFF;
 }
 
+.job-spec .side-box h1,
+.job-spec .side-box h2 {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  line-height: 1.23;
+  margin: 0 0 23px 0;
+  font-size: 26px;
+}
+
+.job-spec .side-box p {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: normal;
+}
+
+.job-spec .side-box ul li {
+  list-style-type: none;
+  line-height: 2;
+}
+
+.job-spec .side-box ul li:before {
+  color: #FFFFFF;
+  float: left;
+  width: 1em;
+  content: '\2022';
+}
+
+.job-spec .side-box ul {
+  font-size: 16px;
+  margin-bottom: 2em;
+}
+
 .job-spec .side-box .cta {
   color: #FFFFFF;
 }
 
 .job-spec .side-box .cta:hover {
   color: #008EDA;
+}
+
+.job-spec .side-box .cta {
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-top: 26px;
+  line-height: 2;
+  display: block;
 }
