@@ -1512,7 +1512,7 @@ a:not(.button):hover {
   height: 450px;
   background-color: #1c1c1c;
   color: white;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   position: relative;
   transition: all 0.5s;
   overflow: hidden;
@@ -1522,7 +1522,11 @@ a:not(.button):hover {
   background-image: url("..//assets/Benjamin-Gatt_greyscale_small.jpg");
 }
 
-@media screen and (max-width: 1024px) {
+.tile_z a:hover {
+  background-color: rgba(0, 145, 218, 0.5);
+}
+
+@media screen and (max-width: 1422px) {
   .tile_z {
     width: calc(50% - 72px);
     float: left;
@@ -1531,16 +1535,14 @@ a:not(.button):hover {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .tile_z {
     width: calc(100% - 48px);
     float: left;
     margin-left: 24px;
     margin-bottom: 24px;
+    height: 450px;
     position: relative;
-  }
-  .tile_z a:hover {
-    background: rgba(0, 145, 218, 0.5);
   }
 }
 

@@ -194,16 +194,16 @@ $neat-grid: (
   margin-bottom: 48px
 );
 
-$neat-mobile: (
-  columns: 1,
-  media: 'screen and (max-width: 767px)',
-  gutter: 24px
-);
-
 $neat-tablet: (
   columns: 2,
-  media: 'screen and (max-width: 1024px)',
+  media: 'screen and (max-width: 1422px)',
   gutter: 48px
+);
+
+$neat-mobile: (
+  columns: 1,
+  media: 'screen and (max-width: 768px)',
+  gutter: 24px
 );
 
 .consultanttiles {
@@ -217,7 +217,7 @@ $neat-tablet: (
   height: 450px;
   background-color: #1c1c1c;
   color: white;
-  margin-bottom: 24px;
+  margin-bottom: 48px;
   position: relative;
   transition: all 0.5s;
   overflow: hidden;
@@ -225,6 +225,9 @@ $neat-tablet: (
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
+  a:hover {
+    background-color: rgba(0, 145, 218, 0.5);
+  }
 
   @include grid-media($neat-tablet) {
     @include grid-column(1);
@@ -233,10 +236,8 @@ $neat-tablet: (
   @include grid-media($neat-mobile) {
     @include grid-column(1);
     margin-bottom: 24px;
+    height: 450px;
     position: relative;
-    a:hover {
-      background: rgba(0, 145, 218, 0.5);
-    }
   }
 
   .copycontainer {
@@ -258,8 +259,6 @@ $neat-tablet: (
       text-transform: uppercase;
     }
   }
-}
-.tile_z {
 }
 
 .tile_z:hover {
