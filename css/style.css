@@ -1305,12 +1305,27 @@ a:not(.button):hover {
 }
 
 .inner-container {
+  z-index: 1;
   margin: 0 auto;
 }
 
 .herocontentmeet {
   padding: 148px 148px 185px 48px;
   color: #1c1c1c;
+}
+
+/* background words */
+.rellax {
+  overflow: hidden;
+}
+
+.yourself1 {
+  font-family: Impact;
+  font-size: 380px;
+  color: #2e74de;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  z-index: -99999999;
 }
 
 /* Extraodinary block */
@@ -1402,6 +1417,7 @@ a:not(.button):hover {
   width: 100%;
   display: inline-block;
   margin-bottom: 450px;
+  padding: 96px;
   cursor: pointer;
 }
 
@@ -1494,7 +1510,6 @@ a:not(.button):hover {
 }
 
 /* Team section grid */
-/* consultant grid */
 .consultanttiles {
   padding-bottom: 304px;
 }
@@ -1519,10 +1534,6 @@ a:not(.button):hover {
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url("..//assets/Benjamin-Gatt_greyscale_small.jpg");
-}
-
-.tile_z a:hover {
-  background-color: rgba(0, 145, 218, 0.5);
 }
 
 @media screen and (max-width: 1422px) {

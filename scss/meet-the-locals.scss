@@ -2,7 +2,7 @@
   overflow: hidden;
 }
 .inner-container {
-
+  z-index: 1;
   margin: 0 auto;
 }
 
@@ -11,7 +11,18 @@
   color: #1c1c1c;
 }
 
-
+/* background words */
+.rellax {
+  overflow: hidden;
+}
+.yourself1 {
+  font-family: Impact;
+  font-size: 380px;
+  color: #2e74de;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  z-index: -99999999;
+}
 /* Extraodinary block */
 .valuescontainer {
   height: 284px;
@@ -99,6 +110,7 @@
   width: 100%;
   display: inline-block;
   margin-bottom: 450px;
+  padding: 96px;
   cursor: pointer;
 }
 
@@ -183,10 +195,7 @@
   left: 0;
 }
 
-
 /* Team section grid */
-
-/* consultant grid */
 
 $neat-grid: (
   columns: 12,
@@ -224,9 +233,6 @@ $neat-mobile: (
   background-repeat: no-repeat;
   background-position: top center;
   background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
-  a:hover {
-    background-color: rgba(0, 145, 218, 0.5);
-  }
 
   @include grid-media($neat-tablet) {
     @include grid-column(1);
