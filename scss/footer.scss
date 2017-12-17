@@ -133,6 +133,33 @@
     .icon-twitter {
       background-image: url(/assets/twitter.svg);
     }
+
+
+    .icon-linkedin:hover,
+    .icon-twitter:hover {
+      display: inline-block;
+      width: 37px;
+      height: 37px;
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 60%;
+      border-radius: 2px;
+      margin-left: 23px;
+      margin-bottom: 10px;
+      -moz-transition: all .3s ease-in-out;
+      -o-transition: all .3s ease-in-out;
+      -webkit-transition: all .3s ease-in-out;
+      transition: all .3s ease-in-out;
+    }
+
+    .icon-linkedin:hover {
+      background-image: url(/assets/linked-in-hover.svg);
+    }
+
+    .icon-twitter:hover {
+      background-image: url(/assets/twitter-hover.svg);
+    }
   }
 
   .footer-img {
@@ -149,31 +176,4 @@
   -o-transition: all .3s ease-in-out;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-}
-
-
-.icon-linkedin:hover,
-.icon-twitter:hover {
-  display: inline-block;
-  width: 37px;
-  height: 37px;
-  background-color: #fff !important;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 60%;
-  border-radius: 2px;
-  margin-left: 23px;
-  margin-bottom: 10px;
-  -moz-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-}
-
-.icon-linkedin:hover {
-  background-image: url(/assets/linked-in-hover.svg) !important;
-}
-
-.icon-twitter:hover {
-  background-image: url(/assets/twitter-hover.svg) !important;
 }

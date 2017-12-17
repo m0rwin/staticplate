@@ -25,9 +25,15 @@ $break-sidebar: 'max-width: 1120px';
     width: 337px;
 
     @media screen and ($break-sidebar) {
-      width: 45%;
-      float: left;
+      @include grid-container;
       position: static;
+      width: 100%;
+
+      & > * {
+        max-width: 337px;
+        width: 100%;
+        float: left;
+      }
     }
 
     .key-contact {
@@ -35,18 +41,38 @@ $break-sidebar: 'max-width: 1120px';
       h3 {
         font-family: $muli-font;
         font-size: 26px;
-        margin-top: 24px;
-        margin-bottom: 64px;
       }
+
+      h2 {
+        margin-top: 24px;
+        margin-bottom: 22px;
+      }
+
+      h3 {
+        margin: 0;
+        line-height: 1.6;
+      }
+
       img {
         display: block;
       }
 
       .sector {
         font-size: 19px;
+        color: $cerulean-blue;
+        font-weight: bold;
       }
       .details {
         font-size: 16px;
+        font-weight: normal;
+      }
+
+      .cta {
+        text-transform: uppercase;
+        font-size: 16px;
+        margin-top: 26px;
+        line-height: 2;
+        display: block;
       }
     }
   }
@@ -68,6 +94,7 @@ $break-sidebar: 'max-width: 1120px';
     background-color: $shark-black;
     padding: 24px;
     color: $white;
-    * { color: $white; }
+    .cta { color: $white; }
+    .cta:hover { color: $cerulean-blue; }
   }
 }
