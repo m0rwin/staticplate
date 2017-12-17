@@ -263,8 +263,8 @@ $neat-mobile: (
 .tile_z:hover {
   -ms-transform: scale(1.05,1.05); /* IE 9 */
   -webkit-transform: scale(1.05,1.05); /* Safari */
-  transition: scale(1.05,1.05); /* Standard syntax */
-  transition: all 0.5s;
+  transform: scale(1.05,1.05); /* Standard syntax */
+  transform: all 0.5s;
 }
 
 .tile_z .tile_z-overlay {
