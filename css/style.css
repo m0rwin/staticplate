@@ -1572,9 +1572,9 @@ a:not(.button):hover {
   /* IE 9 */
   -webkit-transform: scale(1.05, 1.05);
   /* Safari */
-  transform: scale(1.05, 1.05);
+  transition: scale(1.05, 1.05);
   /* Standard syntax */
-  transform: all 0.5s;
+  transition: all 0.5s;
 }
 
 .tile_z .tile_z-overlay {
