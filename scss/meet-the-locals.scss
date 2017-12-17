@@ -187,18 +187,23 @@
 /* Team section grid */
 
 /* consultant grid */
+
+$neat-grid: (
+  columns: 12,
+  gutter: 48px,
+  margin-bottom: 48px
+);
+
 $neat-mobile: (
   columns: 1,
   media: 'screen and (max-width: 767px)',
-  margin-bottom: 48px,
-  padding: 48px
+  gutter: 24px
 );
 
 $neat-tablet: (
-  columns: 1,
+  columns: 2,
   media: 'screen and (max-width: 1024px)',
-  margin-bottom: 24px,
-  padding: 24px
+  gutter: 48px
 );
 
 .consultanttiles {
@@ -217,10 +222,12 @@ $neat-tablet: (
   transition: all 0.5s;
   overflow: hidden;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
 
   @include grid-media($neat-tablet) {
-    @include grid-column(2);
-    margin-bottom: 24px;
+    @include grid-column(1);
     position: relative;
   }
   @include grid-media($neat-mobile) {

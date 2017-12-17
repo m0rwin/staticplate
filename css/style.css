@@ -1506,9 +1506,9 @@ a:not(.button):hover {
 }
 
 .tile_z {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 450px;
   background-color: #1c1c1c;
   color: white;
@@ -1517,23 +1517,25 @@ a:not(.button):hover {
   transition: all 0.5s;
   overflow: hidden;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("..//assets/Benjamin-Gatt_greyscale_small.jpg");
 }
 
 @media screen and (max-width: 1024px) {
   .tile_z {
-    width: calc(200% - 60px);
+    width: calc(50% - 72px);
     float: left;
-    margin-left: 20px;
-    margin-bottom: 24px;
+    margin-left: 48px;
     position: relative;
   }
 }
 
 @media screen and (max-width: 767px) {
   .tile_z {
-    width: calc(100% - 40px);
+    width: calc(100% - 48px);
     float: left;
-    margin-left: 20px;
+    margin-left: 24px;
     margin-bottom: 24px;
     position: relative;
   }
@@ -1756,9 +1758,9 @@ a:not(.button):hover {
 }
 
 .tile_a {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 450px;
   background-color: #2b2b2b;
   color: white;
@@ -1768,9 +1770,9 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .tile_a {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 240px;
     position: relative;
   }
@@ -1778,18 +1780,18 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .tile_a {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
     position: relative;
   }
 }
 
 .tile_b {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 450px;
   background-color: #2b2b2b;
   color: white;
@@ -1799,17 +1801,17 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .tile_b {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
   }
 }
 
 .tile_b .tile_c {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 45px;
   background-color: #2b2b2b;
   color: white;
@@ -1818,9 +1820,9 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .tile_b .tile_c {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
     position: relative;
   }
@@ -1900,9 +1902,9 @@ a:not(.button):hover {
 }
 
 .newssection .tile_a {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 450px;
   background-color: #2b2b2b;
   color: white;
@@ -1912,9 +1914,9 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .newssection .tile_a {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 240px;
     position: relative;
   }
@@ -1922,18 +1924,18 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .newssection .tile_a {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
     position: relative;
   }
 }
 
 .newssection .tile_b {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 450px;
   background-color: #2b2b2b;
   color: white;
@@ -1943,17 +1945,17 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .newssection .tile_b {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
   }
 }
 
 .newssection .tile_b .tile_c {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
   height: 45px;
   background-color: #2b2b2b;
   color: white;
@@ -1962,9 +1964,9 @@ a:not(.button):hover {
 
 @media screen and (max-width: 767px) {
   .newssection .tile_b .tile_c {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
     margin-bottom: 24px;
     position: relative;
   }
@@ -2006,34 +2008,34 @@ a:not(.button):hover {
 }
 
 .test .a {
-  width: calc(100% - 40px);
+  width: calc(100% - 96px);
   float: left;
-  margin-left: 20px;
-  margin-left: calc(-1.66667% - 19.66667px + 40px);
+  margin-left: 48px;
+  margin-left: calc(-1.66667% - 47.2px + 96px);
 }
 
 @media screen and (max-width: 767px) {
   .test .a {
-    width: calc(25% - 25px);
+    width: calc(25% - 60px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
   }
 }
 
 .test .b,
 .test .c {
-  width: calc(50% - 30px);
+  width: calc(50% - 72px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 
 .test .d,
 .test .e,
 .test .f,
 .test .g {
-  width: calc(33.33333% - 26.66667px);
+  width: calc(33.33333% - 64px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 
 .main-articles {
@@ -2057,32 +2059,32 @@ a:not(.button):hover {
 }
 
 .main-articles article.span {
-  width: calc(50% - 30px);
+  width: calc(50% - 72px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 
 @media screen and (max-width: 767px) {
   .main-articles article.span {
-    width: calc(50% - 30px);
+    width: calc(50% - 72px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
   }
 }
 
 .main-articles article.shift {
-  width: calc(100% - 40px);
+  width: calc(100% - 96px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 
 @media screen and (max-width: 767px) {
   .main-articles article.shift {
-    left: calc(0% - 20px + 20px);
+    left: calc(0% - 48px + 48px);
     position: relative;
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
   }
 }
 
@@ -2361,34 +2363,34 @@ a:not(.button):hover {
 }
 
 .main-articles article.span {
-  width: calc(50% - 30px);
+  width: calc(50% - 72px);
   float: left;
-  margin-left: 20px;
+  margin-left: 48px;
 }
 
 @media screen and (max-width: 767px) {
   .main-articles article.span {
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
   }
 }
 
 .main-articles article.shift {
-  width: calc(50% - 30px);
+  width: calc(50% - 72px);
   float: left;
-  margin-left: 20px;
-  left: calc(25% - 25px + 20px);
+  margin-left: 48px;
+  left: calc(25% - 60px + 48px);
   position: relative;
 }
 
 @media screen and (max-width: 767px) {
   .main-articles article.shift {
-    left: calc(0% - 20px + 20px);
+    left: calc(0% - 48px + 48px);
     position: relative;
-    width: calc(100% - 40px);
+    width: calc(100% - 96px);
     float: left;
-    margin-left: 20px;
+    margin-left: 48px;
   }
 }
 
