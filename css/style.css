@@ -335,36 +335,6 @@ h1 {
   height: 1em;
 }
 
-.header .header-logo {
-  float: left;
-}
-
-.header .header-logo img {
-  width: 105px;
-  position: relative;
-  top: -4px;
-  margin-left: 24px;
-}
-
-@media screen and (max-width: 650px) {
-  .header .header-logo {
-    float: none;
-    width: 17px;
-    height: 18px;
-    background-color: #008EDA;
-    border-top-left-radius: 50%;
-    border-top-right-radius: 50%;
-    margin: 0 auto;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 20px;
-  }
-  .header .header-logo img {
-    display: none;
-  }
-}
-
 .header .navbar-item {
   position: relative;
   top: -2px;
@@ -749,6 +719,58 @@ h1 {
 
 .side-menu .main-menu {
   font-size: 26px;
+}
+
+.header-logo {
+  position: absolute;
+  left: 48px;
+  top: 18px;
+}
+
+@media screen and (max-width: 650px) {
+  .header-logo {
+    left: 50%;
+    transform: translateX(-19%);
+    top: 17px;
+  }
+}
+
+.novoLogo > .novoLogo-text {
+  transition: transform .2s ease-in-out;
+  transform-origin: 3% 50%;
+  transform: scaleX(0);
+}
+
+.shrink > .novoLogo-text {
+  transform: scaleX(1);
+}
+
+@media screen and (max-width: 650px) {
+  .shrink > .novoLogo-text {
+    transform: scaleX(0);
+  }
+}
+
+.novoLogo > .novoLogo-letters {
+  transition: transform .2s ease-in-out;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+}
+
+.shrink > .novoLogo-letters {
+  transform: scale(0);
+}
+
+@media screen and (max-width: 650px) {
+  .shrink > .novoLogo-letters {
+    transform: scaleX(1);
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .novoLogo {
+    height: 29px;
+  }
 }
 
 .footer {
@@ -1300,11 +1322,76 @@ a:not(.button):hover {
   color: #008EDA;
 }
 
+/* Keyframes for the fade-in */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  opacity: 1 \9;
+  /*just in case ie*/
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1.0s;
+  -moz-animation-duration: 1.0s;
+  animation-duration: 1.0s;
+}
+
+.fade-in.container {
+  -webkit-animation-delay: 0.1s;
+  -moz-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+}
+
+.container-normal-locals {
+  margin-top: 64px;
+  background-color: white;
+  margin-bottom: 0px;
+}
+
+@media screen and (max-width: 650px) {
+  .container-normal-locals {
+    margin-top: 56px;
+  }
+}
+
 .inner-container {
   z-index: 1;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .herocontentmeet {
@@ -1357,8 +1444,8 @@ a:not(.button):hover {
   color: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   pointer-events: none;
-  bottom: -118px;
-  left: -40%;
+  bottom: -158px;
+  left: -66%;
   z-index: -10;
 }
 
@@ -1493,7 +1580,7 @@ a:not(.button):hover {
 
 .madness-container1 .madness-background1 .madness-quote1 {
   font-family: 'muli';
-  margin: 24px;
+  margin: 24px 24px 24px 48px;
   font-weight: bold;
   font-size: 37px;
   color: #fff;
