@@ -54,14 +54,21 @@
                         a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0018/0890.js?"+Math.floor(new Date().getTime()/3600000);
                         a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                     </script> -->
-    <script>document.addEventListener("DOMContentLoaded", function(event) { 
-        var logo = document.getElementById('novoLogo');
-        window.onscroll = function(){
-            updateClass();
-        };
-        function updateClass(){
+    <script>document.addEventListener("DOMContentLoaded", function(event) {     
+        if(!detectIE() ){
+            var logo = document.getElementById('novoLogo');
+            window.onscroll = function(){updateClass();};
+            function updateClass(){
             window.scrollY <= 0 ? logo.classList.remove('shrink') : logo.classList.add('shrink');
+            }
+        }else{
+            var logo = document.getElementById('novoLogo-text');
+            logo.style.fill='transparent';  
         }
+        function detectIE() {
+            var ua = window.navigator.userAgent;
+            return ua.indexOf('MSIE ') > 0 || ua.indexOf('Trident/') > 0 || ua.indexOf('Edge/') > 0;
+        }    
         });
     </script>
 

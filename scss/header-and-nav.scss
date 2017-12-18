@@ -405,7 +405,7 @@ $grey-hover: #B3B3B3;
   }
 }
 
-//////***** LOGO CSS ******//////
+//////* animated logo styles *//////
 .header-logo {
   position: absolute;
   left: 48px;
@@ -413,38 +413,46 @@ $grey-hover: #B3B3B3;
   @media screen and (max-width: $menu-small-width) {
     left: 50%;
     transform: translateX(-19%);
-    top: 16px;
+    top: 18px;
   }
 }
 
 .novoLogo > .novoLogo-text {
-  transition: transform .2s ease-in-out;
+  transition: .2s ease-in-out;
+  transition-property: transform, opacity;
   transform-origin: 3% 50%;
   transform: scaleX(0);
+  opacity: 0;
 }
 
 .shrink > .novoLogo-text {
   transform: scaleX(1);
-  @media screen and (max-width: $menu-small-width) {
+  opacity: 1;
+  @media screen and (max-width: 650px) {
     transform: scaleX(0);
+    opacity: 0;
   }
 }
 
 .novoLogo > .novoLogo-letters {
-  transition: transform .2s ease-in-out;
+  transition: .2s ease-in-out;
+  transition-property: transform, opacity;
   transform-origin: 50% 50%;
   transform: scale(1);
+  opacity: 1;
 }
 
 .shrink > .novoLogo-letters {
   transform: scale(0);
-  @media screen and (max-width: $menu-small-width) {
+  opacity: 0;
+  @media screen and (max-width: 650px) {
     transform: scaleX(1);
+    opacity: 1;
   }
 }
-
-@media screen and (max-width: $menu-small-width) {
-  .novoLogo {
-    height: 29px;
+.novoLogo {
+  @media screen and (max-width: 650px) {
+    height: 24px;
+    padding-right: 24px;
   }
 }
