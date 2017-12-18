@@ -18,9 +18,14 @@
   transition: all 0.3s ease-in-out;
 }
 
-.herocontentmeet {
+.herocontentmeet,
+h1 {
   padding: 148px 148px 135px 48px;
   color: #1c1c1c;
+  @media only screen and (max-width: 768px) {
+    font-size: 37px;
+    padding: 148px 148px 135px 48px;
+  }
 }
 
 .extraordinary1 {
@@ -124,6 +129,10 @@
     max-width: 860px;
     float: left;
     width: 100%;
+    @media only screen and (max-width: 768px) {
+      padding: 48px;
+      margin-bottom: 8px;
+    }
   }
 
   .quote {
@@ -134,6 +143,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     display: inline;
+    @media only screen and (max-width: 768px) {
+      font-size: 26px;
+    }
   }
 
   .hellotrigger {
@@ -147,6 +159,10 @@
     display: inline;
     border-bottom: 4px solid #2496d4;
     transition: all 0.3s ease-in-out;
+    @media only screen and (max-width: 768px) {
+      font-size: 26px;
+      border-bottom: 2px solid #2496d4;
+    }
   }
 
   .hellotrigger:hover {
@@ -161,6 +177,10 @@
   display: inline-block;
   margin-bottom: 220px;
   padding: 96px;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 24px;
+    padding: 48px;
+  }
 }
 
 .downblackarrow {

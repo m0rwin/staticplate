@@ -1394,9 +1394,18 @@ a:not(.button):hover {
   transition: all 0.3s ease-in-out;
 }
 
-.herocontentmeet {
+.herocontentmeet,
+h1 {
   padding: 148px 148px 135px 48px;
   color: #1c1c1c;
+}
+
+@media only screen and (max-width: 768px) {
+  .herocontentmeet,
+  h1 {
+    font-size: 37px;
+    padding: 148px 148px 135px 48px;
+  }
 }
 
 .extraordinary1 {
@@ -1505,6 +1514,13 @@ a:not(.button):hover {
   width: 100%;
 }
 
+@media only screen and (max-width: 768px) {
+  .meetquotecontainer .quotecontainer {
+    padding: 48px;
+    margin-bottom: 8px;
+  }
+}
+
 .meetquotecontainer .quote {
   font-family: 'muli';
   font-weight: bold;
@@ -1513,6 +1529,12 @@ a:not(.button):hover {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: inline;
+}
+
+@media only screen and (max-width: 768px) {
+  .meetquotecontainer .quote {
+    font-size: 26px;
+  }
 }
 
 .meetquotecontainer .hellotrigger {
@@ -1528,6 +1550,13 @@ a:not(.button):hover {
   transition: all 0.3s ease-in-out;
 }
 
+@media only screen and (max-width: 768px) {
+  .meetquotecontainer .hellotrigger {
+    font-size: 26px;
+    border-bottom: 2px solid #2496d4;
+  }
+}
+
 .meetquotecontainer .hellotrigger:hover {
   border-color: #fff;
   transition: all 0.3s ease-in-out;
@@ -1539,6 +1568,13 @@ a:not(.button):hover {
   display: inline-block;
   margin-bottom: 220px;
   padding: 96px;
+}
+
+@media only screen and (max-width: 768px) {
+  .downsection {
+    margin-bottom: 24px;
+    padding: 48px;
+  }
 }
 
 .downblackarrow {
