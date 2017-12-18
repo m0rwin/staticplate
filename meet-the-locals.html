@@ -65,7 +65,7 @@
         }
         });
     </script>
-    
+
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300|Cabin:600,400,400italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -240,7 +240,7 @@
             </div>
             <div class="downsection">
                     <svg class="downblackarrow rellax" data-rellax-speed="2" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                        <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
+                        <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="3" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
                     </svg>
             <div class="thelocals1 rellax" data-rellax-speed="-4">Yourself</div>
             </div>
@@ -259,7 +259,7 @@
                 </div>
                 <div class="downmad">
                     <svg class="downwhitarrowmad" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                        <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
+                        <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="3" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
                     </svg>
                 </div>
             </div>
@@ -473,36 +473,44 @@
                 <script src="/scripts/rellax.js"></script>
                 <script>
                 // Center all the things!
+                var windowWidth = $(window).width();
+                if(windowWidth >= 1200)
+                {
                 var rellax = new Rellax('.rellax', {
                     center: true
                 });
+                }
                 </script>
                 <script type="text/javascript">
-        $(window).one('mousemove wheel', function () {
-            $('footer.footer').footerReveal({ shadow: false });
-            $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
-        });
-        </script>
-    <script>
-        $(".downblackarrow").click(function() {
-            $('html,body').animate({
-                scrollTop: $(".madness-container1").offset().top -250},
-                'slow');
-        });
-        $(".downwhitarrowmad").click(function() {
-            $('html,body').animate({
-                scrollTop: $(".localsgrid").offset().top -100},
-                'slow');
-        });
-    </script>
-    <script>
-        var APP_ID = "biiewbsz";
-        
-        window.intercomSettings = {
-            app_id: APP_ID
-        };
-        </script>
-    <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
-    
+                var windowWidth = $(window).width();
+                if(windowWidth >= 768)
+                {
+                $(window).one('mousemove wheel', function () {
+                $('footer.footer').footerReveal({ shadow: false });
+                $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
+                    });
+                }
+                </script>
+                <script>
+                    $(".downblackarrow").click(function() {
+                        $('html,body').animate({
+                            scrollTop: $(".madness-container1").offset().top -272},
+                            'slow');
+                    });
+                    $(".downwhitarrowmad").click(function() {
+                        $('html,body').animate({
+                            scrollTop: $(".localsgrid").offset().top -100},
+                            'slow');
+                    });
+                </script>
+                <script>
+                    var APP_ID = "biiewbsz";
+                    
+                    window.intercomSettings = {
+                        app_id: APP_ID
+                    };
+                    </script>
+                <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
+                
 </body>
 </html>

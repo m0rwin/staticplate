@@ -174,14 +174,18 @@
   display: inline-block;
   cursor: pointer;
   padding: 24px 48px 48px 96px;
-  @media only screen and (max-width: 650px) {
-    padding: 12px 24px 24px 24px;
+  @media only screen and (max-width: 768px) {
+    padding: 0px 24px 48px 48px;
   }
 }
 
 .downwhitarrowmad {
   float: left;
   cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 /* responsive video section */
@@ -196,7 +200,7 @@
     background-color: #1c1c1c;
     .madness-quote1 {
       font-family: 'muli';
-      margin: 24px 24px 24px 48px;
+      margin: 24px 24px 24px 96px;
       font-weight: bold;
       font-size: 37px;
       color: #fff;
@@ -204,11 +208,11 @@
       display: inline-block;
       bottom: 0;
       left: 0;
-      padding: 24px 24px 24px 48px;
       width: 100%;
       -webkit-font-smoothing: antialiased;
-      @media only screen and (max-width: 650px) {
+      @media only screen and (max-width: 768px) {
         font-size: 26px;
+        margin: 24px;
         padding: 24px;
       }
     }
@@ -226,7 +230,18 @@
   width: 100%;
   float: right;
   margin-top: -200px;
-  margin-bottom: 48px;
+  margin-right: 48px;
+  padding-left: 96px;
+  padding-bottom: 48px;
+}
+
+.vimeocontainer {
+  @media only screen and (max-width: 768px) {
+    margin-right: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-bottom: 24px;
+  }
 }
 
 .vimeoembed {
@@ -235,7 +250,11 @@
   height: 0;
   overflow: hidden;
 }
-
+.vimeoembed {
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 56.25%;
+  }
+}
 .vimeoembed iframe,
 .vimeoembed embed,
 .vimeoembed object {

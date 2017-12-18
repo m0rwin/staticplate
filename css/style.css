@@ -1554,15 +1554,22 @@ a:not(.button):hover {
   padding: 24px 48px 48px 96px;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   .downmad {
-    padding: 12px 24px 24px 24px;
+    padding: 0px 24px 48px 48px;
   }
 }
 
 .downwhitarrowmad {
   float: left;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  .downwhitarrowmad {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 /* responsive video section */
@@ -1580,7 +1587,7 @@ a:not(.button):hover {
 
 .madness-container1 .madness-background1 .madness-quote1 {
   font-family: 'muli';
-  margin: 24px 24px 24px 48px;
+  margin: 24px 24px 24px 96px;
   font-weight: bold;
   font-size: 37px;
   color: #fff;
@@ -1588,14 +1595,14 @@ a:not(.button):hover {
   display: inline-block;
   bottom: 0;
   left: 0;
-  padding: 24px 24px 24px 48px;
   width: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 768px) {
   .madness-container1 .madness-background1 .madness-quote1 {
     font-size: 26px;
+    margin: 24px;
     padding: 24px;
   }
 }
@@ -1611,7 +1618,18 @@ a:not(.button):hover {
   width: 100%;
   float: right;
   margin-top: -200px;
-  margin-bottom: 48px;
+  margin-right: 48px;
+  padding-left: 96px;
+  padding-bottom: 48px;
+}
+
+@media only screen and (max-width: 768px) {
+  .vimeocontainer {
+    margin-right: 0px;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-bottom: 24px;
+  }
 }
 
 .vimeoembed {
@@ -1619,6 +1637,12 @@ a:not(.button):hover {
   padding-bottom: 51.25%;
   height: 0;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .vimeoembed {
+    padding-bottom: 56.25%;
+  }
 }
 
 .vimeoembed iframe,
