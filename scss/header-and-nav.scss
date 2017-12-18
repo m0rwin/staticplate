@@ -409,7 +409,7 @@ $grey-hover: #B3B3B3;
 .header-logo {
   position: absolute;
   left: 48px;
-  top: 18px;
+  top: 16px;
   @media screen and (max-width: $menu-small-width) {
     left: 50%;
     transform: translateX(-19%);
