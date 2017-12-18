@@ -39,6 +39,9 @@ $break-sidebar: 'max-width: 1120px';
 
     label {
       @include grid-column(map-get($neat-grid, 'columns')/2);
+      @media screen and (max-width: 840px) {
+        @include grid-column(map-get($neat-grid, 'columns'));
+      }
       display: block;
       font-weight: bold;
       font-size: 19px;

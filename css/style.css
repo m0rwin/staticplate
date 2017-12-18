@@ -3238,6 +3238,14 @@ a:not(.button):hover {
   white-space: nowrap;
 }
 
+@media screen and (max-width: 840px) {
+  .job-spec form label {
+    width: calc(100% - 96px);
+    float: left;
+    margin-left: 48px;
+  }
+}
+
 .job-spec form label.large {
   width: calc(100% - 96px);
   float: left;
