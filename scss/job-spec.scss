@@ -18,6 +18,108 @@ $break-sidebar: 'max-width: 1120px';
   padding: 0 123px;
   margin-top: 78px;
 
+  h1,
+  h2 {
+    font-family: $muli-font;
+  }
+
+  form {
+    margin-top: 100px;
+    margin-bottom: 64px;
+
+    @include grid-container;
+    @include grid-collapse;
+
+    h1,
+    h2 {
+      @include grid-column(map-get($neat-grid, 'columns'));
+      font-size: 37px;
+      margin-bottom: 57px;
+    }
+
+    label {
+      @include grid-column(map-get($neat-grid, 'columns')/2);
+      display: block;
+      font-weight: bold;
+      font-size: 19px;
+      overflow: visible;
+      white-space: nowrap;
+      &.large {
+        @include grid-column(map-get($neat-grid, 'columns'));
+      }
+
+      *::-webkit-input-placeholder {
+        color: $placeholder-gray;
+        opacity: 1;
+      }
+
+      *::-moz-placeholder {
+        color: $placeholder-gray;
+        opacity: 1;
+      }
+
+      *:-moz-placeholder {
+        color: $placeholder-gray;
+        opacity: 1;
+      }
+
+      *:-ms-input-placeholder {
+        opacity: 1;
+        color: $placeholder-gray;
+      }
+
+      *::placeholder {
+        opacity: 1;
+        color: $placeholder-gray;
+      }
+
+      sup {
+        top: -0.25em;
+      }
+
+      textarea {
+        font-weight: normal;
+        display: block;
+        border: 2px solid $shark-black;
+        width: 100%;
+        resize: vertical;
+        padding: 16px;
+        outline: none;
+        font-size: 16px;
+        margin-top: 13px;
+      }
+
+
+      input[type=text],
+      input[type=tel],
+      input[type=url],
+      input[type=email] {
+        font-weight: normal;
+        border: none;
+        border-bottom: 2px solid $shark-black;
+        display: block;
+        width: 100%;
+        padding-left: 16px;
+        outline: none;
+        line-height: 2;
+        margin: 18px 0 38px;
+      }
+    }
+
+    button {
+      @include grid-column(map-get($neat-grid, 'columns'));
+      display: inline-block;
+      width: 33%;
+      margin-top: 25px;
+      font-size: 16px;
+      background: $cerulean-blue;
+      border: none;
+      height: 48px;
+      text-align: center;
+      color: $white;
+    }
+  }
+
   @media screen and (max-width: 650px) {
     padding: 0 25px;
   }
@@ -130,7 +232,6 @@ $break-sidebar: 'max-width: 1120px';
 
     h1,
     h2 {
-      font-family: $muli-font;
       color: $white;
       line-height: 1.23;
       margin: 0 0 23px 0;
@@ -155,7 +256,6 @@ $break-sidebar: 'max-width: 1120px';
       content: '\2022';
     }
     ul {
-
       font-size: 16px;
       margin-bottom: 2em;
     }

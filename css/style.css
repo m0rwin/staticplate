@@ -3348,6 +3348,122 @@ a:not(.button):hover {
   margin-top: 78px;
 }
 
+.job-spec h1,
+.job-spec h2 {
+  font-family: "Muli", Helvetica, Arial, sans-serif;
+}
+
+.job-spec form {
+  margin-top: 100px;
+  margin-bottom: 64px;
+  margin-left: -48px;
+  margin-right: -48px;
+  width: calc(100% + 96px);
+}
+
+.job-spec form::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.job-spec form h1,
+.job-spec form h2 {
+  width: calc(100% - 96px);
+  float: left;
+  margin-left: 48px;
+  font-size: 37px;
+  margin-bottom: 57px;
+}
+
+.job-spec form label {
+  width: calc(50% - 72px);
+  float: left;
+  margin-left: 48px;
+  display: block;
+  font-weight: bold;
+  font-size: 19px;
+  overflow: visible;
+  white-space: nowrap;
+}
+
+.job-spec form label.large {
+  width: calc(100% - 96px);
+  float: left;
+  margin-left: 48px;
+}
+
+.job-spec form label *::-webkit-input-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+
+.job-spec form label *::-moz-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+
+.job-spec form label *:-moz-placeholder {
+  color: #b6b6b6;
+  opacity: 1;
+}
+
+.job-spec form label *:-ms-input-placeholder {
+  opacity: 1;
+  color: #b6b6b6;
+}
+
+.job-spec form label *::placeholder {
+  opacity: 1;
+  color: #b6b6b6;
+}
+
+.job-spec form label sup {
+  top: -0.25em;
+}
+
+.job-spec form label textarea {
+  font-weight: normal;
+  display: block;
+  border: 2px solid #191b1d;
+  width: 100%;
+  resize: vertical;
+  padding: 16px;
+  outline: none;
+  font-size: 16px;
+  margin-top: 13px;
+}
+
+.job-spec form label input[type=text],
+.job-spec form label input[type=tel],
+.job-spec form label input[type=url],
+.job-spec form label input[type=email] {
+  font-weight: normal;
+  border: none;
+  border-bottom: 2px solid #191b1d;
+  display: block;
+  width: 100%;
+  padding-left: 16px;
+  outline: none;
+  line-height: 2;
+  margin: 18px 0 38px;
+}
+
+.job-spec form button {
+  width: calc(100% - 96px);
+  float: left;
+  margin-left: 48px;
+  display: inline-block;
+  width: 33%;
+  margin-top: 25px;
+  font-size: 16px;
+  background: #008EDA;
+  border: none;
+  height: 48px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
 @media screen and (max-width: 650px) {
   .job-spec {
     padding: 0 25px;
@@ -3480,7 +3596,6 @@ a:not(.button):hover {
 
 .job-spec .side-box h1,
 .job-spec .side-box h2 {
-  font-family: "Muli", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   line-height: 1.23;
   margin: 0 0 23px 0;

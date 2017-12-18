@@ -276,6 +276,48 @@
                 <p>We are very passionate, detailed and precise with what we do here at Novo so please be assured that you are
                     in safe hands.</p>
 
+                <form>
+                    <h2>Apply for this role here</h2>
+                    <label>
+                        First name
+                        <sup>*</sup>
+                        <input required type="text" name="fname" placeholder="Johnny" />
+                    </label>
+
+                    <label>
+                        Surname
+                        <sup>*</sup>
+                        <input required type="text" name="sname" placeholder="Silvini" />
+                    </label>
+                    <label>
+                        Email address
+                        <sup>*</sup>
+                        <input required type="email" name="sname" placeholder="j.silvini@emails.co.uk" />
+                    </label>
+                    <label>
+                        Telephone
+                        <sup>*</sup>
+                        <!-- number from https://fakenumber.org/generator/mobile. Should be unused. -->
+                        <input required type="tel" name="sname" placeholder="07700 900914" />
+                    </label>
+                    <label>
+                        Include your linked in URL or attach your CV
+                        <sup>*</sup>
+                        <input type="url" name="sname" placeholder="https://www.linkedin.com/in/JohnSilvini" />
+                    </label>
+
+                    <fieldset>
+                        <input type="file" name="file" />
+                        <button type="button" onclick="Dropbox.choose({});" ></button>
+                    </fieldset>
+
+                    <label class="large">
+                        Cover letter
+                        <textarea name="cover" placeholder="Your cover letter or comments" rows="6"></textarea>
+                    </label>
+
+                    <button type="submit">SUBMIT</button>
+                </form>
             </article>
             <aside>
                 <div class="key-contact">
@@ -296,9 +338,7 @@
                 <div class="side-box">
                     <h2>Not what you're looking for?</h2>
                     <p>
-                        If you can't find the right job for you
-                        then send us your CV and we will find 
-                        a job for you!
+                        If you can't find the right job for you then send us your CV and we will find a job for you!
                     </p>
                     <a href="#" class="cta">Send your CV</a>
                 </div>
@@ -311,7 +351,7 @@
                         <li>Property and Maintenance</li>
                         <li>Permanant</li>
                     </ul>
-                     <a href="#" class="cta">View job details</a>
+                    <a href="#" class="cta">View job details</a>
                 </div>
 
             </aside>
@@ -378,6 +418,9 @@
         };
     </script>
     <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
+
+
+    <script src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="82667srdyswku97"></script>
 
 </body>
 
