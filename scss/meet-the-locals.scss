@@ -1,9 +1,8 @@
-.container-normal {
-  overflow: hidden;
-}
 .inner-container {
   z-index: 1;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .herocontentmeet {
@@ -11,18 +10,56 @@
   color: #1c1c1c;
 }
 
-/* background words */
-.rellax {
-  overflow: hidden;
-}
-.yourself1 {
+.extraordinary1 {
   font-family: Impact;
+  position: absolute;
   font-size: 380px;
-  color: #2e74de;
+  color: #f0f0f0;
   -webkit-font-smoothing: antialiased;
   pointer-events: none;
-  z-index: -99999999;
+  top: 8%;
+  left: 18%;
+  z-index: -10;
 }
+
+.thelocals1 {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  top: 22%;
+  left: 0%;
+  z-index: -10;
+}
+
+.thelocals3 {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  top: 43%;
+  left: 15%;
+  z-index: -10;
+}
+
+.extra1 {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  bottom: -118px;
+  left: -356px;
+  z-index: -10;
+}
+
 /* Extraodinary block */
 .valuescontainer {
   height: 284px;
@@ -69,7 +106,7 @@
     background-color: #1c1c1c;
     padding: 48px 48px 48px 108px;
     position: relative;
-    margin-bottom: 128px;
+    margin-bottom: 56px;
     z-index: 1;
     max-width: 860px;
     float: left;
@@ -109,13 +146,13 @@
 .downsection {
   width: 100%;
   display: inline-block;
-  margin-bottom: 450px;
+  margin-bottom: 220px;
   padding: 96px;
-  cursor: pointer;
 }
 
 .downblackarrow {
   float: left;
+  cursor: pointer;
 }
 
 /* down arrow section white */
@@ -131,6 +168,7 @@
 
 .downwhitarrowmad {
   float: left;
+  cursor: pointer;
 }
 
 /* responsive video section */
@@ -217,7 +255,7 @@ $neat-mobile: (
 
 .consultanttiles {
   @include grid-container;
-  padding-bottom: 304px;
+  padding-bottom: 48px;
 }
 
 .tile_z,
@@ -270,7 +308,7 @@ $neat-mobile: (
 .tile_z:hover {
   -ms-transform: scale(1.05,1.05); /* IE 9 */
   -webkit-transform: scale(1.05,1.05); /* Safari */
-  transition: scale(1.05,1.05); /* Standard syntax */
+  transform: scale(1.05,1.05); /* Standard syntax */
   transition: all 0.5s;
 }
 

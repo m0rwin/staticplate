@@ -185,11 +185,14 @@
     
     <main class="container-normal">
         <div class="inner-container">
+            <div class="extraordinary1">
+                <div class="rellax" data-rellax-speed="1">Extraordinary</div>
+            </div>
         <div class="topsectionmeet">
             <div class="herocontentmeet">
                 <h1>Meet the locals</h1>
             </div>
-            <div class="valuescontainer">
+            <div class="valuescontainer rellax" data-rellax-speed="3">
                 <div class="newscontainer">
                     <div class="betextracopy">
                         Be
@@ -200,11 +203,8 @@
                 </div>
             </div>
         </div>
-        <div class="yourself1">
-            <div class="rellax" data-rellax-speed="1">Yourself</div>
-        </div>
         <div class="meetquotecontainer">
-            <div class="quotecontainer">
+            <div class="quotecontainer rellax "data-rellax-speed="2">
                 <div class="quote">
                     We encourage individuality.<br>
                     We employ the extraordinary.<br>
@@ -216,15 +216,15 @@
                     </div>
                 </a>
             </div>
+            <div class="thelocals1">
+                    <div class="rellax" data-rellax-speed="1">Yourself</div>
+                </div>
             <div class="downsection">
                 <svg class="downblackarrow" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                     <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="2" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
                 </svg>
             </div>
         </div>
-        <div class="yourself1">
-                <div class="rellax" data-rellax-speed="8">Yourself</div>
-            </div>
         <section class="madness-container1">
             <div class="vidouter">
             <div class="vimeocontainer">
@@ -244,7 +244,9 @@
                 </div>
             </div>
         </section>
-
+        <div class="thelocals3">
+            <div class="rellax" data-rellax-speed="2">The_locals</div>
+        </div>
         <section class="localsgrid">
             <section class="consultanttiles">
                     <a class="tile_z" href="#">
@@ -403,10 +405,8 @@
                         </a>
                 </section>
             </section>
+            <div class="extra1">Extraordinary</div>
         </div>
-        <div class="yourself1">
-                <div class="rellax" data-rellax-speed="1">Yourself</div>
-            </div> 
     </main> 
                 <footer class="footer">
                     <a href="/contact" class="contact-footer">
@@ -453,7 +453,10 @@
                 <script src="/scripts/jquery.vide.min.js"></script>
                 <script src="/scripts/rellax.js"></script>
                 <script>
-                    var rellax = new Rellax();
+                // Center all the things!
+                var rellax = new Rellax('.rellax', {
+                    center: true
+                });
                 </script>
                 <script type="text/javascript">
         $(window).one('mousemove wheel', function () {
