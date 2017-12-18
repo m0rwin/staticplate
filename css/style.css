@@ -2526,56 +2526,6 @@ a:not(.button):hover {
   }
 }
 
-/*
-.consultantsection {
-  @include grid-container;
-  .consultantheader {
-    @include grid-column(5);
-    @include grid-push(-0.2);
-    /* styling 
-    background-color: #1c1c1c;
-    position: relative;
-    height: 152px;
-    margin-bottom: 128px;
-    z-index: 1;
-    /* mobile rules 
-  }
-  .consultants {
-    margin-left: 96px;
-    padding: 48px;
-    position: absolute;
-    font-family: 'muli' sans-serif;
-    font-size: 37px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #fff;
-  }
-}
-
-.consultanttiles {
-  @include grid-container(8);
-
-  .tile_a,
-   {
-    @include grid-column(4);
-    @include grid-push();
-    height: 450px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-  }
-
-  .tile_b,
-   {
-    @include grid-column(4);
-    @include grid-push(0);
-    height: 450px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-  }
-}
- */
 .job-board-home {
   width: 1264px;
   margin: 0 auto;
