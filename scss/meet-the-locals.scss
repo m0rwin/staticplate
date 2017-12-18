@@ -177,7 +177,7 @@
   margin-bottom: 220px;
   padding: 96px;
   @media only screen and (max-width: 768px) {
-    margin-bottom: 24px;
+    margin-bottom: 24px 0px 48px 0px;
     padding: 48px;
   }
 }
@@ -185,6 +185,10 @@
 .downblackarrow {
   float: left;
   cursor: pointer;
+  @media only screen and (max-width: 768px) {
+    height: 24px;
+    width: 24px;
+  }
 }
 
 /* down arrow section white */
@@ -213,6 +217,9 @@
   width: 100%;
   margin-bottom: 340px;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 240px;
+  }
 
   .madness-background1 {
     width: 100%;
@@ -330,7 +337,7 @@ $neat-mobile: (
   @include grid-media($neat-mobile) {
     @include grid-column(1);
     margin-bottom: 24px;
-    height: 450px;
+    height: 350px;
     position: relative;
   }
 
