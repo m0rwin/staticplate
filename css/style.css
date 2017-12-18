@@ -3483,7 +3483,7 @@ a:not(.button):hover {
   margin: 18px 0 38px;
 }
 
-.job-spec form button {
+.job-spec form button[type=submit] {
   width: calc(100% - 96px);
   float: left;
   margin-left: 48px;
@@ -3496,6 +3496,100 @@ a:not(.button):hover {
   height: 48px;
   text-align: center;
   color: #FFFFFF;
+}
+
+.job-spec form .cv,
+.job-spec form .summary {
+  width: calc(100% - 96px);
+  float: left;
+  margin-left: 48px;
+  margin-bottom: 30px;
+}
+
+.job-spec form .summary,
+.job-spec form .cv.hidden {
+  display: none;
+}
+
+.job-spec form .cv.hidden ~ .summary {
+  display: block;
+}
+
+.job-spec form .summary {
+  font-size: 16px;
+}
+
+.job-spec form .summary button {
+  border: none;
+  background: none;
+  border-radius: 3px;
+}
+
+.job-spec form .summary button:hover {
+  background-color: #c9ced1;
+  text-decoration: line-through;
+}
+
+.job-spec form .summary button i {
+  font-size: 16px;
+  line-height: 0.7;
+}
+
+.job-spec form .cv .file-wrapper,
+.job-spec form .cv button {
+  vertical-align: top;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  border-radius: 3px;
+  background-color: #FFFFFF;
+  overflow: hidden;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  margin-right: 25px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 2px solid #FFFFFF;
+}
+
+.job-spec form .cv .file-wrapper ::-webkit-file-upload-button,
+.job-spec form .cv button ::-webkit-file-upload-button {
+  cursor: pointer;
+}
+
+.job-spec form .cv .file-wrapper:hover, .job-spec form .cv .file-wrapper:focus, .job-spec form .cv .file-wrapper:focus-within,
+.job-spec form .cv button:hover,
+.job-spec form .cv button:focus,
+.job-spec form .cv button:focus-within {
+  border: 2px solid #191b1d;
+}
+
+.job-spec form .cv .file-wrapper input,
+.job-spec form .cv button input {
+  cursor: pointer;
+  opacity: 0;
+  font-size: 100px;
+}
+
+.job-spec form .cv .file-wrapper {
+  background-image: url("/assets/upload_file_normal.svg");
+}
+
+.job-spec form .cv .dropbox {
+  background-image: url("/assets/dropbox_upload_normal.svg");
+}
+
+.job-spec form .cv .gdrive {
+  background-image: url("/assets/google_drive_normal.svg");
+}
+
+.job-spec form .error {
+  border-color: red !important;
+}
+
+.job-spec form label.error {
+  display: none !important;
 }
 
 @media screen and (max-width: 650px) {
