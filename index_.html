@@ -54,7 +54,17 @@
                         a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0018/0890.js?"+Math.floor(new Date().getTime()/3600000);
                         a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
                     </script> -->
-
+    <script>document.addEventListener("DOMContentLoaded", function(event) { 
+        var logo = document.getElementById('novoLogo');
+        window.onscroll = function(){
+            updateClass();
+        };
+        function updateClass(){
+            window.scrollY <= 0 ? logo.classList.remove('shrink') : logo.classList.add('shrink');
+        }
+        });
+    </script>
+    
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,300|Cabin:600,400,400italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
