@@ -298,14 +298,10 @@
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
     <script type="text/javascript">
-        var windowWidth = $(window).width();
-        if(windowWidth >= 768)
-        {
         $(window).one('mousemove wheel', function () {
-        $('footer.footer').footerReveal({ shadow: false });
-        $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
-            });
-        }
+            $('footer.footer').footerReveal({ shadow: false });
+            $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
+        });
     </script>
     <script>
         var APP_ID = "biiewbsz";
