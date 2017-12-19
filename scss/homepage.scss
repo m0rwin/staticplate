@@ -210,16 +210,18 @@
 }
 
 .original {
+  position: relative;
   font-family: Impact;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
   -webkit-font-smoothing: antialiased;
-  top: -730px;
-  left: 30%;
+  left: 20%;
   z-index: 0 !important;
   z-index: -10;
   pointer-events: none;
+  overflow: visible;
+  height: 0;
 }
 
 .extraoridinary {

@@ -77,6 +77,10 @@
     background-image: radial-gradient(rgba(0, 0, 0, 0.3) 100%, rgba(0, 0, 0, 0.8) 70%);
   }
 }
+main {
+  position: relative;
+  overflow: hidden;
+}
 
 .copy {
   h1,
