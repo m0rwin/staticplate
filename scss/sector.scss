@@ -164,89 +164,101 @@
   }
 }
 
-/* consultant grid */
-$neat-mobile: (
-  columns: 1,
-  media: 'screen and (max-width: 767px)',
-  margin-bottom: 24px,
-  padding: 24px
+/* Team section grid */
+
+$neat-grid: (
+  columns: 12,
+  gutter: 48px,
+  margin-bottom: 48px
 );
 
 $neat-tablet: (
+  columns: 2,
+  media: 'screen and (max-width: 1422px)',
+  gutter: 48px
+);
+
+$neat-mobile: (
   columns: 1,
-  media: 'screen and (max-width: 1024px)',
-  margin-bottom: 24px,
-  padding: 24px
+  media: 'screen and (max-width: 768px)',
+  gutter: 24px
 );
 
 .consultanttiles {
   @include grid-container;
-  padding-bottom: 304px;
+  padding-bottom: 48px;
 }
 
-.tile_a,
+.tile_z,
  {
   @include grid-column(4);
   height: 450px;
-  background-color: #2b2b2b;
   color: white;
-  padding: 48px;
+  margin-bottom: 48px;
   position: relative;
-  @include grid-media($neat-mobile) {
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
+
+  @include grid-media($neat-tablet) {
     @include grid-column(1);
-    margin-bottom: 240px;
     position: relative;
   }
   @include grid-media($neat-mobile) {
     @include grid-column(1);
     margin-bottom: 24px;
+    height: 350px;
     position: relative;
-  }
-}
-
-.tile_b,
- {
-  @include grid-column(4);
-  height: 450px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 48px;
-  position: relative;
-  @include grid-media($neat-mobile) {
-    @include grid-column(1);
-    margin-bottom: 24px;
-  }
-
-  .tile_c,
-   {
-    @include grid-column(4);
-    height: 45px;
-    background-color: #2b2b2b;
-    color: white;
-    padding: 48px;
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 24px;
-      position: relative;
-    }
   }
 
   .copycontainer {
     color: #fff;
     font-size: 26px;
-    font-weight: 400;
+    font-weight: 300;
     font-family: 'muli' sans-serif;
-    padding: 24px;
+    padding: 48px;
     left: 0;
     bottom: 0;
     position: absolute;
+    -webkit-font-smoothing: antialiased;
+    .name {
+      margin-bottom: 8px;
+    }
+    .viewprofile {
+      font-size: 19px;
+      font-weight: bold;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+    }
   }
+}
 
-  .copy {
-    left: 0;
-    bottom: 0;
-    position: absolute;
-  }
+.tile_z:hover {
+  -ms-transform: scale(1.05,1.05); /* IE 9 */
+  -webkit-transform: scale(1.05,1.05); /* Safari */
+  transform: scale(1.05,1.05); /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.tile_z .tile_z-overlay {
+  background: rgba(0, 145, 218, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.tile_z:hover .tile_z-overlay {
+  opacity: 1;
 }
 
 

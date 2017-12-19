@@ -1978,9 +1978,9 @@ a:not(.button):hover {
   }
 }
 
-/* consultant grid */
+/* Team section grid */
 .consultanttiles {
-  padding-bottom: 304px;
+  padding-bottom: 48px;
 }
 
 .consultanttiles::after {
@@ -1989,92 +1989,91 @@ a:not(.button):hover {
   display: block;
 }
 
-.tile_a {
+.tile_z {
   width: calc(33.33333% - 64px);
   float: left;
   margin-left: 48px;
   height: 450px;
-  background-color: #2b2b2b;
   color: white;
-  padding: 48px;
+  margin-bottom: 48px;
   position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("..//assets/Benjamin-Gatt_greyscale_small.jpg");
 }
 
-@media screen and (max-width: 767px) {
-  .tile_a {
-    width: calc(100% - 96px);
+@media screen and (max-width: 1422px) {
+  .tile_z {
+    width: calc(50% - 72px);
     float: left;
     margin-left: 48px;
-    margin-bottom: 240px;
     position: relative;
   }
 }
 
-@media screen and (max-width: 767px) {
-  .tile_a {
-    width: calc(100% - 96px);
+@media screen and (max-width: 768px) {
+  .tile_z {
+    width: calc(100% - 48px);
     float: left;
-    margin-left: 48px;
+    margin-left: 24px;
     margin-bottom: 24px;
+    height: 350px;
     position: relative;
   }
 }
 
-.tile_b {
-  width: calc(33.33333% - 64px);
-  float: left;
-  margin-left: 48px;
-  height: 450px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 48px;
-  position: relative;
-}
-
-@media screen and (max-width: 767px) {
-  .tile_b {
-    width: calc(100% - 96px);
-    float: left;
-    margin-left: 48px;
-    margin-bottom: 24px;
-  }
-}
-
-.tile_b .tile_c {
-  width: calc(33.33333% - 64px);
-  float: left;
-  margin-left: 48px;
-  height: 45px;
-  background-color: #2b2b2b;
-  color: white;
-  padding: 48px;
-}
-
-@media screen and (max-width: 767px) {
-  .tile_b .tile_c {
-    width: calc(100% - 96px);
-    float: left;
-    margin-left: 48px;
-    margin-bottom: 24px;
-    position: relative;
-  }
-}
-
-.tile_b .copycontainer {
+.tile_z .copycontainer {
   color: #fff;
   font-size: 26px;
-  font-weight: 400;
+  font-weight: 300;
   font-family: 'muli' sans-serif;
-  padding: 24px;
+  padding: 48px;
   left: 0;
   bottom: 0;
   position: absolute;
+  -webkit-font-smoothing: antialiased;
 }
 
-.tile_b .copy {
+.tile_z .copycontainer .name {
+  margin-bottom: 8px;
+}
+
+.tile_z .copycontainer .viewprofile {
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tile_z:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transform: scale(1.05, 1.05);
+  /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.tile_z .tile_z-overlay {
+  background: rgba(0, 145, 218, 0.5);
+  height: 100%;
+  width: 100%;
   left: 0;
+  top: 0;
   bottom: 0;
-  position: absolute;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.tile_z:hover .tile_z-overlay {
+  opacity: 1;
 }
 
 /* section header (news) */
