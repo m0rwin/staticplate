@@ -2138,7 +2138,7 @@ a:not(.button):hover {
   display: block;
 }
 
-.large {
+.largetile {
   width: calc(33.33333% - 64px);
   float: left;
   margin-left: 48px;
@@ -2155,7 +2155,7 @@ a:not(.button):hover {
 }
 
 @media screen and (max-width: 1422px) {
-  .large {
+  .largetile {
     width: calc(50% - 72px);
     float: left;
     margin-left: 48px;
@@ -2164,7 +2164,7 @@ a:not(.button):hover {
 }
 
 @media screen and (max-width: 768px) {
-  .large {
+  .largetile {
     width: calc(100% - 48px);
     float: left;
     margin-left: 24px;
@@ -2174,7 +2174,7 @@ a:not(.button):hover {
   }
 }
 
-.large .rolecopycontainer {
+.largetile .rolecopycontainer {
   color: #fff;
   font-size: 26px;
   font-weight: 300;
@@ -2186,11 +2186,11 @@ a:not(.button):hover {
   -webkit-font-smoothing: antialiased;
 }
 
-.large .rolecopycontainer .job_details {
+.largetile .rolecopycontainer .job_details {
   margin-bottom: 8px;
 }
 
-.large .rolecopycontainer .viewprofile {
+.largetile .rolecopycontainer .viewprofile {
   font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
