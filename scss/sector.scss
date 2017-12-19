@@ -279,7 +279,7 @@ $neat-mobile: (
 ////////////* LATEST NEWS HEADER *////////////
 .newssection {
   width: 100%;
-  height: 60%;
+  height: 290px;
   .newscontainer {
     background-color: #1c1c1c;
     padding: 48px;
@@ -298,7 +298,6 @@ $neat-mobile: (
       width: 100%;
       padding: 0px;
     }
-
 
     .newscopy {
       margin-left: 24px;
@@ -337,12 +336,12 @@ $neat-mobile: (
   gutter: 24px
 );
 
-.consultanttiles {
+.newstiles {
   @include grid-container;
   padding-bottom: 48px;
 }
 
-.tile_z,
+.large,
  {
   @include grid-column(4);
   height: 450px;
@@ -425,6 +424,7 @@ $neat-mobile: (
 
 ////////////* 3. LATEST ROLES HEADER *////////////
 .rolesection {
+  width: 100%;
   .rolecontainer {
     background-color: #1c1c1c;
     padding: 48px;
@@ -511,36 +511,56 @@ $neat-mobile: (
   }
 
   .rolecopycontainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .rolecopycontainer {
     color: #fff;
     font-size: 26px;
-    font-weight: 300;
+    font-weight: bold;
     font-family: 'muli' sans-serif;
     padding: 48px;
     left: 0;
     top: 0;
     position: absolute;
     -webkit-font-smoothing: antialiased;
-    .job_details {
-      list-style-type: circle;
-      margin: 24px;
-      padding-bottom: 8px;
+  }
+  .job_details {
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'muli' sans-serif;
+    margin: 48px 24px 24px 68px;
+    left: 0;
+    padding-bottom: 24px;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    list-style-type: disc;
+    li {
+      margin-bottom: 16px;
     }
   }
   .viewjob {
-    bottom: 0;
+    color: #fff;
     font-size: 19px;
     font-weight: bold;
+    font-family: 'muli' sans-serif;
     text-transform: uppercase;
+    padding: 48px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
     -webkit-font-smoothing: antialiased;
   }
 }
-
 
 .role_z:hover {
   -ms-transform: scale(1.05,1.05); /* IE 9 */
   -webkit-transform: scale(1.05,1.05); /* Safari */
   transform: scale(1.05,1.05); /* Standard syntax */
   transition: all 0.5s;
+  -webkit-transform: translateZ(0px);
 }
 
 .role_z .role_z-overlay {
@@ -587,31 +607,32 @@ $neat-mobile: (
   }
 
   .rolecopycontainer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .rolecopycontainer {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
     font-family: 'muli' sans-serif;
     padding: 48px;
-    position: relative;
+    left: 0;
+    top: 0;
+    position: absolute;
     -webkit-font-smoothing: antialiased;
-    .rolecopycontainer {
-      color: #fff;
-      font-size: 26px;
-      font-weight: 300;
-      font-family: 'muli' sans-serif;
-      padding: 48px;
-      left: 0;
-      top: 0;
-      position: absolute;
-      -webkit-font-smoothing: antialiased;
-    }
-    .viewprofile {
-      color: #fff;
-      font-size: 26px;
-      font-weight: 300;
-      font-family: 'muli' sans-serif;
-      padding: 48px;
-      right: 0;
-      bottom: 0;
-      -webkit-font-smoothing: antialiased;
-    }
+  }
+  .viewprofile {
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'muli' sans-serif;
+    text-transform: uppercase;
+    padding: 48px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
   }
 }
 
@@ -620,6 +641,7 @@ $neat-mobile: (
   -webkit-transform: scale(1.05,1.05); /* Safari */
   transform: scale(1.05,1.05); /* Standard syntax */
   transition: all 0.5s;
+  -webkit-transform: translateZ(0px);
 }
 
 .role_sector_search .role_sector_search-overlay {
