@@ -1816,7 +1816,7 @@ a:not(.button):hover {
   opacity: 1;
 }
 
-/* mian CTA global button style */
+/* main CTA global button style */
 .sectorbutton {
   background-color: #1897D4;
   border: none;
@@ -1946,7 +1946,6 @@ a:not(.button):hover {
   }
 }
 
-/* section header (consultants)*/
 .consultantsection .consultantcontainer {
   background-color: #1c1c1c;
   padding: 48px;
@@ -1986,7 +1985,6 @@ a:not(.button):hover {
   }
 }
 
-/* Team section grid */
 .consultanttiles {
   padding-bottom: 48px;
 }
@@ -2084,11 +2082,15 @@ a:not(.button):hover {
   opacity: 1;
 }
 
-/* section header (news) */
+.newssection {
+  width: 100%;
+  height: 60%;
+}
+
 .newssection .newscontainer {
   background-color: #1c1c1c;
   padding: 48px;
-  position: absolute;
+  position: relative;
   height: 152px;
   margin-bottom: 128px;
   z-index: 1;
@@ -2124,6 +2126,336 @@ a:not(.button):hover {
     text-align: center;
     padding: 39px 0px 39px 0px;
   }
+}
+
+.consultanttiles {
+  padding-bottom: 48px;
+}
+
+.consultanttiles::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.tile_z {
+  width: calc(33.33333% - 64px);
+  float: left;
+  margin-left: 48px;
+  height: 450px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("..//assets/Benjamin-Gatt_greyscale_small.jpg");
+}
+
+@media screen and (max-width: 1422px) {
+  .tile_z {
+    width: calc(50% - 72px);
+    float: left;
+    margin-left: 48px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tile_z {
+    width: calc(100% - 48px);
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    height: 350px;
+    position: relative;
+  }
+}
+
+.tile_z .rolecopycontainer {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: 'muli' sans-serif;
+  padding: 48px;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tile_z .rolecopycontainer .job_details {
+  margin-bottom: 8px;
+}
+
+.tile_z .rolecopycontainer .viewprofile {
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.tile_z:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transform: scale(1.05, 1.05);
+  /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.tile_z .tile_z-overlay {
+  background: rgba(0, 145, 218, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.tile_z:hover .tile_z-overlay {
+  opacity: 1;
+}
+
+.rolesection .rolecontainer {
+  background-color: #1c1c1c;
+  padding: 48px;
+  height: 152px;
+  margin-bottom: 128px;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  /* mobile rules */
+}
+
+@media screen and (max-width: 768px) {
+  .rolesection .rolecontainer {
+    height: 116px;
+    margin-bottom: 96px;
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.rolesection .rolecontainer .rolescopy {
+  margin-left: 24px;
+  position: absolute;
+  font-family: 'muli' sans-serif;
+  font-size: 37px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  /* mobile rules */
+}
+
+@media screen and (max-width: 768px) {
+  .rolesection .rolecontainer .rolescopy {
+    font-size: 26px;
+    text-align: center;
+    padding: 39px 0px 39px 0px;
+  }
+}
+
+.rolestiles {
+  padding-bottom: 48px;
+}
+
+.rolestiles::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.role_z {
+  width: calc(33.33333% - 64px);
+  float: left;
+  margin-left: 48px;
+  height: 450px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #1c1c1c;
+}
+
+@media screen and (max-width: 1422px) {
+  .role_z {
+    width: calc(50% - 72px);
+    float: left;
+    margin-left: 48px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .role_z {
+    width: calc(100% - 48px);
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    height: 350px;
+    position: relative;
+  }
+}
+
+.role_z .rolecopycontainer {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: 'muli' sans-serif;
+  padding: 48px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+}
+
+.role_z .rolecopycontainer .job_details {
+  list-style-type: circle;
+  margin: 24px;
+  padding-bottom: 8px;
+}
+
+.role_z .viewjob {
+  bottom: 0;
+  font-size: 19px;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+}
+
+.role_z:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transform: scale(1.05, 1.05);
+  /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.role_z .role_z-overlay {
+  background: #0091da;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.role_z:hover .role_z-overlay {
+  opacity: 1;
+}
+
+.role_sector_search {
+  width: calc(33.33333% - 64px);
+  float: left;
+  margin-left: 48px;
+  height: 450px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #1c1c1c;
+}
+
+@media screen and (max-width: 1422px) {
+  .role_sector_search {
+    width: calc(50% - 72px);
+    float: left;
+    margin-left: 48px;
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .role_sector_search {
+    width: calc(100% - 48px);
+    float: left;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    height: 350px;
+    position: relative;
+  }
+}
+
+.role_sector_search .rolecopycontainer {
+  font-family: 'muli' sans-serif;
+  padding: 48px;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.role_sector_search .rolecopycontainer .rolecopycontainer {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: 'muli' sans-serif;
+  padding: 48px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  -webkit-font-smoothing: antialiased;
+}
+
+.role_sector_search .rolecopycontainer .viewprofile {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  font-family: 'muli' sans-serif;
+  padding: 48px;
+  right: 0;
+  bottom: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+.role_sector_search:hover {
+  -ms-transform: scale(1.05, 1.05);
+  /* IE 9 */
+  -webkit-transform: scale(1.05, 1.05);
+  /* Safari */
+  transform: scale(1.05, 1.05);
+  /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.role_sector_search .role_sector_search-overlay {
+  background: #0091da;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.role_sector_search:hover .role_sector_search-overlay {
+  opacity: 1;
 }
 
 /* neat grid*/
