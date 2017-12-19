@@ -2139,7 +2139,7 @@ a:not(.button):hover {
 }
 
 .largetile {
-  width: calc(33.33333% - 64px);
+  width: calc(100% - 96px);
   float: left;
   margin-left: 48px;
   height: 450px;
@@ -2223,6 +2223,55 @@ a:not(.button):hover {
 
 .tile_z:hover .tile_z-overlay {
   opacity: 1;
+}
+
+.sidebar-layout {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.sidebar-layout::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.sidebar-layout__sidebar {
+  width: calc(66.66667% - 80px);
+  float: left;
+  margin-left: 48px;
+  height: 648px;
+}
+
+.sidebar-layout__main {
+  width: calc(33.33333% - 64px);
+  float: left;
+  margin-left: 48px;
+}
+
+.product-gallery {
+  margin-left: -48px;
+  margin-right: -48px;
+  width: calc(100% + 96px);
+}
+
+.product-gallery::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.product-gallery__item {
+  width: calc(100% - 96px);
+  float: left;
+  margin-left: 48px;
+  margin-bottom: 1rem;
+  height: 300px;
+  margin-bottom: 48px;
+}
+
+.example__column--fancy {
+  background-color: #1c1c1c;
 }
 
 .rolesection {

@@ -319,7 +319,7 @@ $neat-mobile: (
 
 ////////////* LATEST NEWS GRID *////////////
 $neat-grid: (
-  columns: 12,
+  columns: 4,
   gutter: 48px,
   margin-bottom: 48px
 );
@@ -416,6 +416,65 @@ $neat-mobile: (
 
 
 
+
+
+
+
+///////// TEST GRID NESTING //////////
+
+
+$sidebar-layout-tablet: (
+  columns: 1,
+  gutter: 48px,
+  media: 'screen and (max-width: 768px)'
+);
+
+$product-gallery: (
+  columns: 1,
+  gutter: 48px,
+  media: 'screen and (max-width: 768px)'
+);
+
+$sidebar-layout: (
+  columns: 3,
+  gutter: 48px,
+);
+
+$product-gallery: (
+  columns: 1,
+  gutter: 48px,
+);
+
+.sidebar-layout {
+  @include grid-container;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.sidebar-layout__sidebar {
+  @include grid-column(2, $sidebar-layout);
+  height: 648px;
+}
+
+.sidebar-layout__main {
+  @include grid-column(1, $sidebar-layout);
+}
+
+.product-gallery {
+  @include grid-collapse($product-gallery);
+  @include grid-container;
+}
+
+.product-gallery__item {
+  @include grid-column(1, $product-gallery);
+  margin-bottom: 1rem;
+  height: 300px;
+  margin-bottom: 48px;
+}
+
+.example__column--fancy {
+  background-color: #1c1c1c;
+}
 
 
 
