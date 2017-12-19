@@ -245,6 +245,84 @@
                                     <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
                                     <span class="material-icons after">search</span>
                                 </div>
+
+                                <div class="location-box-home">
+                                    <select id="main-location-field">
+                                        <option>Avon</option>
+                                        <option>Bedfordshire</option>
+                                        <option>Berkshire</option>
+                                        <option>Borders</option>
+                                        <option>Buckinghamshire</option>
+                                        <option>Cambridgeshire</option>
+                                        <option>Central</option>
+                                        <option>Cheshire</option>
+                                        <option>Cleveland</option>
+                                        <option>Clwyd</option>
+                                        <option>Cornwall</option>
+                                        <option>County Antrim</option>
+                                        <option>County Armagh</option>
+                                        <option>County Down</option>
+                                        <option>County Fermanagh</option>
+                                        <option>County Londonderry</option>
+                                        <option>County Tyrone</option>
+                                        <option>Cumbria</option>
+                                        <option>Derbyshire</option>
+                                        <option>Devon</option>
+                                        <option>Dorset</option>
+                                        <option>Dumfries and Galloway</option>
+                                        <option>Durham</option>
+                                        <option>Dyfed</option>
+                                        <option>East Sussex</option>
+                                        <option>Essex</option>
+                                        <option>Fife</option>
+                                        <option>Gloucestershire</option>
+                                        <option>Grampian</option>
+                                        <option>Greater Manchester</option>
+                                        <option>Gwent</option>
+                                        <option>Gwynedd County</option>
+                                        <option>Hampshire</option>
+                                        <option>Herefordshire</option>
+                                        <option>Hertfordshire</option>
+                                        <option>Highlands and Islands</option>
+                                        <option>Humberside</option>
+                                        <option>Isle of Wight</option>
+                                        <option>Kent</option>
+                                        <option>Lancashire</option>
+                                        <option>Leicestershire</option>
+                                        <option>Lincolnshire</option>
+                                        <option>London</option>
+                                        <option>Lothian</option>
+                                        <option>Merseyside</option>
+                                        <option>Mid Glamorgan</option>
+                                        <option>Norfolk</option>
+                                        <option>North Yorkshire</option>
+                                        <option>Northamptonshire</option>
+                                        <option>Northumberland</option>
+                                        <option>Nottinghamshire</option>
+                                        <option>Oxfordshire</option>
+                                        <option>Powys</option>
+                                        <option>Rutland</option>
+                                        <option>Shropshire</option>
+                                        <option>Somerset</option>
+                                        <option>South Glamorgan</option>
+                                        <option>South Yorkshire</option>
+                                        <option>Staffordshire</option>
+                                        <option>Strathclyde</option>
+                                        <option>Suffolk</option>
+                                        <option>Surrey</option>
+                                        <option>Tayside</option>
+                                        <option>Tyne and Wear</option>
+                                        <option>Warwickshire</option>
+                                        <option>West Glamorgan</option>
+                                        <option>West Midlands</option>
+                                        <option>West Sussex</option>
+                                        <option>West Yorkshire</option>
+                                        <option>Wiltshire</option>
+                                        <option>Worcestershire</option>
+                                        <option>Glasgow</option>
+                                        <option>City of London</option>                                            
+                                    </select>
+                                </div>
                                 <input type="hidden" name="pagesize" value="10">
                                 <button class="material-icons submit" type="submit"></button>
                             </div>
@@ -365,10 +443,16 @@
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
+    <script src="/scripts/select2.min.js"></script>
     <script type="text/javascript">
         $(window).one('mousemove wheel', function () {
             $('footer.footer').footerReveal({ shadow: false });
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
+        });
+
+        $('#main-location-field').select2({
+            placeholder: 'Location',
+            width: null
         });
     </script>
     <script>

@@ -1,3 +1,5 @@
+$break-sidebar: 'max-width: 1120px';
+
 .jumbo {
   position: relative;
   h1 { font-size: 51px; }
@@ -9,14 +11,21 @@
     padding-left: 4em;
     padding-right: 4em;
   }
+  @media screen and ($break-sidebar) {
+    padding-left: 48px;
+  }
 }
 
-$break-sidebar: 'max-width: 1120px';
 
 .job-spec {
   position: relative;
-  padding: 0 123px;
+  padding: 0 96px;
   margin-top: 78px;
+
+  @media screen and ($break-sidebar) {
+    padding: 0 48px;
+  }
+
 
   h1,
   h2 {
@@ -170,7 +179,7 @@ $break-sidebar: 'max-width: 1120px';
         cursor: pointer;
         border: none;
         padding: 0;
-        margin-right: 25px;
+        margin-right: 24px;
         ::-webkit-file-upload-button { cursor: pointer; }
         background-repeat: no-repeat;
         background-position: center center;
@@ -208,13 +217,13 @@ $break-sidebar: 'max-width: 1120px';
   }
 
   @media screen and (max-width: 650px) {
-    padding: 0 25px;
+    padding: 0 24px;
   }
 
   aside {
     position: absolute;
     top: 27px;
-    right: 123px;
+    right: 96px;
     width: 337px;
 
     @media screen and ($break-sidebar) {
@@ -266,7 +275,10 @@ $break-sidebar: 'max-width: 1120px';
       margin-bottom: 48px;
     }
 
-    @media screen and (max-width: 919px) {
+    @media screen and (max-width: 817px) {
+      & > div {
+        clear: both;
+      }
       & > div:nth-child(even) {
         float: right;
         margin-right: 48px;

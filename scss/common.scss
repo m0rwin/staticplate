@@ -16,11 +16,11 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  padding: 94px 123px;
+  padding: 94px 96px;
   color: white;
 
   @media screen and (max-width: $menu-small-width) {
-    padding: 54px 25px;
+    padding: 54px 24px;
   }
 
   .content {
@@ -137,7 +137,8 @@
 .herocontent {
   position: absolute;
   color: #ffffff;
-  top: 50%;
+  top: 68%;
+  transform: translateY(-50%);
   padding: 0px 96px 0px 96px;
 }
 
@@ -145,8 +146,9 @@
   .herocontent {
     position: absolute;
     color: #ffffff;
-    top: 50%;
+    top: 20%;
     padding: 0px 48px 0px 48px;
+    transform: none;
   }
 }
 
@@ -154,8 +156,9 @@
   .herocontent {
     position: absolute;
     color: #ffffff;
-    top: 50%;
+    top: 20%;
     padding: 0px 48px 0px 48px;
+    transform: none;
   }
 }
 
@@ -195,7 +198,12 @@
     font-weight: 900;
     font-size: 75px;
     color: #ffffff;
-    line-height: 61px;
+    line-height: 1.2;
+  }
+  .herocontent p.hero-subtitle {
+    position: relative;
+    top: -15px;
+    left: 2px;
   }
 }
 
