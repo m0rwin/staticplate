@@ -10,7 +10,9 @@ function makeCss(config) {
         // - or -
         includePaths: bourbon.includePaths.concat(neat.includePaths),
         importer: require('compass-importer'),
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
+        sourceMap: true,
+        sourceMapEmbed: true
       },
       function(error, result) { // node-style callback from v3.0.0 onwards
           if(!error){

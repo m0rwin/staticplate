@@ -20,16 +20,26 @@ $break-sidebar: 'max-width: 1120px';
 .job-spec {
   position: relative;
   padding: 0 96px;
-  margin-top: 78px;
+
+  header ~ & {
+    margin-top: 78px;
+  }
+  overflow: auto;
 
   @media screen and ($break-sidebar) {
     padding: 0 48px;
   }
 
 
-  h1,
   h2 {
     font-family: $muli-font;
+  }
+
+  h1 {
+    font-family: 'Impact', sans-serif;
+    margin-top: 125px;
+    margin-bottom: 46px;
+    font-size: 75px;
   }
 
   form {

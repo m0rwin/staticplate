@@ -136,6 +136,14 @@ $jobboard-collapse2: 799px;
   }
 
   .submit {
+    @media screen and (max-width: 1024px) {
+      float: right;
+    }
+    @media screen and (max-width: 500px) {
+      width: 100%;
+      display: block;
+      float: none;
+    }
     &::before {
       font-family: $muli-font;
       content: 'search jobs';
@@ -152,15 +160,5 @@ $jobboard-collapse2: 799px;
     //   border-bottom-left-radius: 0;
     //   border-top-left-radius: 0;
     // }
-
-    @media screen and (max-width: $jobboard-collapse2) {
-      &::before {
-        font-family: 'Material Icons';
-        content: 'search';
-        text-transform: none;
-      }
-
-      min-width: 49px;
-    }
   }
 }
