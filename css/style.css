@@ -1985,18 +1985,20 @@ a:not(.button):hover {
   }
 }
 
-.consultanttiles {
+.consultanttiles-sectors {
   padding-bottom: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.consultanttiles::after {
+.consultanttiles-sectors::after {
   clear: both;
   content: "";
   display: block;
 }
 
-.tile_z {
-  width: calc(33.33333% - 64px);
+.tile_s {
+  width: calc(50% - 72px);
   float: left;
   margin-left: 48px;
   height: 450px;
@@ -2012,7 +2014,7 @@ a:not(.button):hover {
 }
 
 @media screen and (max-width: 1422px) {
-  .tile_z {
+  .tile_s {
     width: calc(50% - 72px);
     float: left;
     margin-left: 48px;
@@ -2021,7 +2023,7 @@ a:not(.button):hover {
 }
 
 @media screen and (max-width: 768px) {
-  .tile_z {
+  .tile_s {
     width: calc(100% - 48px);
     float: left;
     margin-left: 24px;
@@ -2031,7 +2033,7 @@ a:not(.button):hover {
   }
 }
 
-.tile_z .copycontainer {
+.tile_s .copycontainer {
   color: #fff;
   font-size: 26px;
   font-weight: 300;
@@ -2043,18 +2045,18 @@ a:not(.button):hover {
   -webkit-font-smoothing: antialiased;
 }
 
-.tile_z .copycontainer .name {
+.tile_s .copycontainer .name {
   margin-bottom: 8px;
 }
 
-.tile_z .copycontainer .viewprofile {
+.tile_s .copycontainer .viewprofile {
   font-size: 19px;
   font-weight: bold;
   text-transform: uppercase;
   -webkit-font-smoothing: antialiased;
 }
 
-.tile_z:hover {
+.tile_s:hover {
   -ms-transform: scale(1.05, 1.05);
   /* IE 9 */
   -webkit-transform: scale(1.05, 1.05);
@@ -2064,7 +2066,7 @@ a:not(.button):hover {
   transition: all 0.5s;
 }
 
-.tile_z .tile_z-overlay {
+.tile_s .tile_s-overlay {
   background: rgba(0, 145, 218, 0.5);
   height: 100%;
   width: 100%;
@@ -2078,7 +2080,7 @@ a:not(.button):hover {
   transition: all 0.4s ease-in-out 0s;
 }
 
-.tile_z:hover .tile_z-overlay {
+.tile_s:hover .tile_s-overlay {
   opacity: 1;
 }
 
@@ -2226,7 +2228,7 @@ a:not(.button):hover {
 }
 
 .sidebar-layout {
-  max-width: 1320px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -2241,6 +2243,15 @@ a:not(.button):hover {
   float: left;
   margin-left: 48px;
   height: 648px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("http://lorempixel.com/800/800");
 }
 
 .sidebar-layout__main {
@@ -2267,11 +2278,23 @@ a:not(.button):hover {
   margin-left: 48px;
   margin-bottom: 1rem;
   height: 300px;
+  color: white;
   margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("http://lorempixel.com/600/600");
 }
 
 .example__column--fancy {
   background-color: #1c1c1c;
+}
+
+.example {
+  margin-bottom: 160px;
 }
 
 .rolesection {
@@ -2319,6 +2342,8 @@ a:not(.button):hover {
 
 .rolestiles {
   padding-bottom: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .rolestiles::after {
@@ -2331,7 +2356,7 @@ a:not(.button):hover {
   width: calc(33.33333% - 64px);
   float: left;
   margin-left: 48px;
-  height: 450px;
+  height: 320px;
   color: white;
   margin-bottom: 48px;
   position: relative;
@@ -2371,7 +2396,7 @@ a:not(.button):hover {
 
 .role_z .rolecopycontainer {
   color: #fff;
-  font-size: 26px;
+  font-size: 19px;
   font-weight: bold;
   font-family: 'muli' sans-serif;
   padding: 48px;
@@ -2383,24 +2408,24 @@ a:not(.button):hover {
 
 .role_z .job_details {
   color: #fff;
-  font-size: 19px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: normal;
   font-family: 'muli' sans-serif;
-  margin: 48px 24px 24px 68px;
+  margin: 24px 24px 24px 68px;
   left: 0;
-  padding-bottom: 24px;
+  padding-bottom: 8px;
   position: absolute;
   -webkit-font-smoothing: antialiased;
   list-style-type: disc;
 }
 
 .role_z .job_details li {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .role_z .viewjob {
   color: #fff;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'muli' sans-serif;
   text-transform: uppercase;
@@ -2444,7 +2469,7 @@ a:not(.button):hover {
   width: calc(33.33333% - 64px);
   float: left;
   margin-left: 48px;
-  height: 450px;
+  height: 320px;
   color: white;
   margin-bottom: 48px;
   position: relative;
@@ -2484,7 +2509,7 @@ a:not(.button):hover {
 
 .role_sector_search .rolecopycontainer {
   color: #fff;
-  font-size: 26px;
+  font-size: 19px;
   font-weight: bold;
   font-family: 'muli' sans-serif;
   padding: 48px;
@@ -2496,7 +2521,7 @@ a:not(.button):hover {
 
 .role_sector_search .viewprofile {
   color: #fff;
-  font-size: 19px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'muli' sans-serif;
   text-transform: uppercase;

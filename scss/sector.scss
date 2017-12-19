@@ -188,14 +188,16 @@ $neat-mobile: (
   gutter: 24px
 );
 
-.consultanttiles {
+.consultanttiles-sectors {
   @include grid-container;
   padding-bottom: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.tile_z,
+.tile_s,
  {
-  @include grid-column(4);
+  @include grid-column(6);
   height: 450px;
   color: white;
   margin-bottom: 48px;
@@ -240,14 +242,14 @@ $neat-mobile: (
   }
 }
 
-.tile_z:hover {
+.tile_s:hover {
   -ms-transform: scale(1.05,1.05); /* IE 9 */
   -webkit-transform: scale(1.05,1.05); /* Safari */
   transform: scale(1.05,1.05); /* Standard syntax */
   transition: all 0.5s;
 }
 
-.tile_z .tile_z-overlay {
+.tile_s .tile_s-overlay {
   background: rgba(0, 145, 218, 0.5);
   height: 100%;
   width: 100%;
@@ -261,7 +263,7 @@ $neat-mobile: (
   transition: all 0.4s ease-in-out 0s;
 }
 
-.tile_z:hover .tile_z-overlay {
+.tile_s:hover .tile_s-overlay {
   opacity: 1;
 }
 
@@ -447,13 +449,22 @@ $product-gallery: (
 
 .sidebar-layout {
   @include grid-container;
-  max-width: 1320px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
 .sidebar-layout__sidebar {
   @include grid-column(2, $sidebar-layout);
   height: 648px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url("http://lorempixel.com/800/800");
 }
 
 .sidebar-layout__main {
@@ -469,11 +480,23 @@ $product-gallery: (
   @include grid-column(1, $product-gallery);
   margin-bottom: 1rem;
   height: 300px;
+  color: white;
   margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url('http://lorempixel.com/600/600');
 }
 
 .example__column--fancy {
   background-color: #1c1c1c;
+}
+
+.example {
+  margin-bottom: 160px;
 }
 
 
@@ -542,12 +565,14 @@ $neat-mobile: (
 .rolestiles {
   @include grid-container;
   padding-bottom: 48px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
 .role_z,
  {
   @include grid-column(4);
-  height: 450px;
+  height: 320px;
   color: white;
   margin-bottom: 48px;
   position: relative;
@@ -576,7 +601,7 @@ $neat-mobile: (
   }
   .rolecopycontainer {
     color: #fff;
-    font-size: 26px;
+    font-size: 19px;
     font-weight: bold;
     font-family: 'muli' sans-serif;
     padding: 48px;
@@ -587,22 +612,22 @@ $neat-mobile: (
   }
   .job_details {
     color: #fff;
-    font-size: 19px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: normal;
     font-family: 'muli' sans-serif;
-    margin: 48px 24px 24px 68px;
+    margin: 24px 24px 24px 68px;
     left: 0;
-    padding-bottom: 24px;
+    padding-bottom: 8px;
     position: absolute;
     -webkit-font-smoothing: antialiased;
     list-style-type: disc;
     li {
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
   .viewjob {
     color: #fff;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
     font-family: 'muli' sans-serif;
     text-transform: uppercase;
@@ -643,7 +668,7 @@ $neat-mobile: (
 .role_sector_search,
  {
   @include grid-column(4);
-  height: 450px;
+  height: 320px;
   color: white;
   margin-bottom: 48px;
   position: relative;
@@ -672,7 +697,7 @@ $neat-mobile: (
   }
   .rolecopycontainer {
     color: #fff;
-    font-size: 26px;
+    font-size: 19px;
     font-weight: bold;
     font-family: 'muli' sans-serif;
     padding: 48px;
@@ -683,7 +708,7 @@ $neat-mobile: (
   }
   .viewprofile {
     color: #fff;
-    font-size: 19px;
+    font-size: 16px;
     font-weight: bold;
     font-family: 'muli' sans-serif;
     text-transform: uppercase;
