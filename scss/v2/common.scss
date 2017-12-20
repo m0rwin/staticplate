@@ -1,4 +1,4 @@
-@import '../collapse-js.scss';
+@import 'collapse-js.scss';
 @import 'header-and-nav.scss';
 
 %max-width {
@@ -12,27 +12,57 @@
   }
 }
 
-%max-width-inner {
-  padding-left: calc((100vw - 1300px)/2);
-  padding-right: calc((100vw - 1300px)/2);
 
-  @media screen and (max-width: 1386px) {
+%max-width-inner-l {
+  padding-left: calc((100vw - 1300px)/2);
+
+  @media screen and (max-width: 1396px) {
     padding-left: 48px;
-    padding-right: 48px;
   }
 
   @media screen and (max-width: 768px) {
     padding-left: 24px;
+  }
+}
+
+
+%max-width-inner-r {
+  padding-right: calc((100vw - 1300px)/2);
+
+  @media screen and (max-width: 1396px) {
+    padding-right: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
     padding-right: 24px;
   }
 }
 
 %stretch-over-max-width-l {
-  margin-left: - 48px;
+  margin-left: calc((1300px - 100vw)/2);
+  @media screen and (max-width: 1396px) {
+    margin-left: -48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: -24px;
+  }
 }
 
 %stretch-over-max-width-r {
-  margin-right: - 48px;
+  margin-right: calc((1300px - 100vw)/2);
+  @media screen and (max-width: 1396px) {
+    margin-right: -48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-left: -24px;
+  }
+}
+
+%max-width-inner {
+  @extend %max-width-inner-l;
+  @extend %max-width-inner-r;
 }
 
 %stretch-over-max-width {
@@ -59,59 +89,9 @@ body > main {
   padding: 8px 16px;
 }
 
-.hero-full {
-  background-color: $shark-black;
-  z-index: 0;
-  min-height: calc(100vh - #{$menu-height});
-  @media screen and (max-width: $menu-small-brkpnt) {
-    min-height: calc(100vh - #{$menu-small-height});
-  }
-  padding: 96px 48px;
-  @media screen and (max-width: 768px) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
-  position: relative;
-  text-align: center;
-
-  div:nth-child(1) {
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-    -webkit-transition: all 1s ease-in-out;
-    -moz-transition: all 1s ease-in-out;
-    -o-transition: all 1s ease-in-out;
-    transition: all 1s ease-in-out;
-  }
-
-  &:before {
-    content: '';
-    display: inline-block;
-    height: calc(100vh - #{$menu-height} - 96px - 96px);
-    @media screen and (max-width: $menu-small-brkpnt) {
-      height: calc(100vh - #{$menu-small-height} - 96px - 96px);
-    }
-    vertical-align: middle;
-  }
-
-  .herocontent {
-    text-align: left;
-    @extend %max-width;
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-
-    color: white;
-
-    h1,
-    h2,
-    h3 {
-      font-family: $font-impact;
-    }
-  }
-}
-
 .list-inline li {
   display: inline-block;
 }
 
+@import 'headers.scss';
 @import 'footer.scss';

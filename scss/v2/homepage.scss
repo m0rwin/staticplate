@@ -4,13 +4,16 @@
   margin-bottom: 360px;
 }
 .outer-div {
+  @extend %stretch-over-max-width-r;
+  @extend %max-width-inner-r;
   height: 270px;
-  margin: 0px 0px 128px 28%;
+  margin-bottom: 128px;
+  margin-left: 28%;
   background-color: #2b2b2b;
   position: relative;
 
-  width: calc(1300px - 28% + (100vw - 1300px)/2);
-  padding-right: calc((100vw - 1300px)/2);
+//   width: calc(1300px - 28% + (100vw - 1300px)/2);
+//   padding-right: calc((100vw - 1300px)/2);
 }
 .copyouter {
   position: relative;
@@ -74,14 +77,17 @@
   margin-bottom: 240px;
 }
 .block-div {
+  @extend %stretch-over-max-width-l;
+  @extend %max-width-inner-l;
   height: 260px;
-  margin: 0px 32% 128px 0px;
+  margin-right: 32%;
+  margin-bottom: 128px;
   background-color: #2b2b2b;
   position: relative;
 
-  width: calc(1300px - 32% + (100vw - 1300px)/2);
-  left: calc((1300px - 100vw)/2 - 1px);
-  padding-left: calc((100vw - 1300px)/2);
+//   width: calc(1300px - 32% + (100vw - 1300px)/2);
+//   left: calc((1300px - 100vw)/2 - 1px);
+//   padding-left: calc((100vw - 1300px)/2);
 }
 #copyouter {
   position: relative;
@@ -159,7 +165,7 @@
 }
 
 #novodefined {
-  width: 100%;
+  @extend %stretch-over-max-width;
   background-color: #ffffff;
   margin-bottom: 240px;
 
