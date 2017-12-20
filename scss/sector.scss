@@ -268,16 +268,6 @@ $neat-mobile: (
 }
 
 
-
-
-
-
-
-
-
-
-
-
 ////////////* LATEST NEWS HEADER *////////////
 .newssection {
   width: 100%;
@@ -418,33 +408,41 @@ $neat-mobile: (
 
 
 
-
-
-
-
-///////// TEST GRID NESTING //////////
-
-
-$sidebar-layout-tablet: (
-  columns: 1,
-  gutter: 48px,
-  media: 'screen and (max-width: 768px)'
-);
-
-$product-gallery: (
-  columns: 1,
-  gutter: 48px,
-  media: 'screen and (max-width: 768px)'
-);
-
+///////// 2. LATEST NEWS GRID //////////
 $sidebar-layout: (
   columns: 3,
   gutter: 48px,
 );
 
+$sidebar-layout-tablet: (
+  columns: 4,
+  gutter: 24px,
+  media: 'screen and (max-width: 1024px)'
+);
+
+$sidebar-layout-mobile: (
+  columns: 1,
+  gutter: 24px,
+  media: 'screen and (max-width: 768px)'
+);
+
+//////////////////////////////////////////
+
 $product-gallery: (
   columns: 1,
   gutter: 48px,
+);
+
+$product-gallery-tablet: (
+  columns: 4,
+  gutter: 24px,
+  media: 'screen and (max-width: 1024px)'
+);
+
+$product-gallery-mobile: (
+  columns: 1,
+  gutter: 24px,
+  media: 'screen and (max-width: 768px)'
 );
 
 .sidebar-layout {
@@ -464,19 +462,55 @@ $product-gallery: (
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url("http://lorempixel.com/800/800");
+  background-image: url("..//assets/sanding.jpg");
+  .news-tile-content {
+    margin: 68px;
+    .sector-lable {
+      font-family: Muli;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #a0a8ac;
+      padding-bottom: 16px;
+    }
+    .article-title {
+      font-family: Muli;
+      color: #fff;
+      font-size: 19px;
+      line-height: 1.6;
+      padding-bottom: 16px;
+    }
+    .read-news-cta {
+      color: #fff;
+      font-size: 16px;
+      position: absolute;
+      text-transform: uppercase;
+      bottom: 48px;
+    }
+  }
+  @include grid-media($sidebar-layout-tablet) {
+    @include grid-column(4);
+    position: relative;
+    height: 300px;
+  }
+  @include grid-media($sidebar-layout-mobile) {
+    @include grid-column(1);
+    position: relative;
+    height: 300px;
+  }
 }
 
 .sidebar-layout__main {
   @include grid-column(1, $sidebar-layout);
 }
 
-.product-gallery {
+.small-tiles-right {
   @include grid-collapse($product-gallery);
   @include grid-container;
 }
 
-.product-gallery__item {
+.small-tiles-right__item {
   @include grid-column(1, $product-gallery);
   margin-bottom: 1rem;
   height: 300px;
@@ -488,7 +522,41 @@ $product-gallery: (
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url('http://lorempixel.com/600/600');
+  background-image: url('..//assets/sanding.jpg');
+  .news-tile-content {
+    margin: 48px;
+    .sector-lable {
+      font-family: Muli;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-transform: uppercase;
+      color: #a0a8ac;
+      padding-bottom: 16px;
+    }
+    .article-title {
+      font-family: Muli;
+      color: #fff;
+      font-size: 19px;
+      line-height: 1.6;
+      padding-bottom: 16px;
+    }
+    .read-news-cta {
+      color: #fff;
+      position: absolute;
+      text-transform: uppercase;
+      font-size: 16px;
+      bottom: 48px;
+    }
+  }
+  @include grid-media($sidebar-layout-tablet) {
+    @include grid-column(5);
+    position: relative;
+  }
+  @include grid-media($sidebar-layout-mobile) {
+    @include grid-column(2);
+    position: relative;
+  }
 }
 
 .example__column--fancy {
@@ -498,8 +566,6 @@ $product-gallery: (
 .example {
   margin-bottom: 160px;
 }
-
-
 
 
 
@@ -745,15 +811,3 @@ $neat-mobile: (
 .role_sector_search:hover .role_sector_search-overlay {
   opacity: 1;
 }
-
-
-
-
-
-
-
-
-
-
-
-
