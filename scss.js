@@ -41,3 +41,9 @@ makeCss({
     scss: './scss/our-world-styles.scss',
     css: './css/our-world.css'
 });
+
+
+makeCss({
+    scss: './scss/v2/main.scss',
+    css: './css/main.css'
+});

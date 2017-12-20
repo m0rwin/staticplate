@@ -1,0 +1,117 @@
+@import '../collapse-js.scss';
+@import 'header-and-nav.scss';
+
+%max-width {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 96px);
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 48px);
+  }
+}
+
+%max-width-inner {
+  padding-left: calc((100vw - 1300px)/2);
+  padding-right: calc((100vw - 1300px)/2);
+
+  @media screen and (max-width: 1386px) {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+%stretch-over-max-width-l {
+  margin-left: - 48px;
+}
+
+%stretch-over-max-width-r {
+  margin-right: - 48px;
+}
+
+%stretch-over-max-width {
+  @extend %stretch-over-max-width-l;
+  @extend %stretch-over-max-width-r;
+}
+
+
+
+
+body > main {
+  .container {
+    @extend %max-width;
+  }
+  @extend %margin-under-header;
+  overflow: hidden;
+  background-color: white;
+}
+
+.button {
+  min-width: 180px;
+  border-radius: $radius;
+  height: 48px;
+  padding: 8px 16px;
+}
+
+.hero-full {
+  background-color: $shark-black;
+  z-index: 0;
+  min-height: calc(100vh - #{$menu-height});
+  @media screen and (max-width: $menu-small-brkpnt) {
+    min-height: calc(100vh - #{$menu-small-height});
+  }
+  padding: 96px 48px;
+  @media screen and (max-width: 768px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  position: relative;
+  text-align: center;
+
+  div:nth-child(1) {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+
+  &:before {
+    content: '';
+    display: inline-block;
+    height: calc(100vh - #{$menu-height} - 96px - 96px);
+    @media screen and (max-width: $menu-small-brkpnt) {
+      height: calc(100vh - #{$menu-small-height} - 96px - 96px);
+    }
+    vertical-align: middle;
+  }
+
+  .herocontent {
+    text-align: left;
+    @extend %max-width;
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+
+    color: white;
+
+    h1,
+    h2,
+    h3 {
+      font-family: $font-impact;
+    }
+  }
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+@import 'footer.scss';
