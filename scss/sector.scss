@@ -415,8 +415,6 @@ $neat-mobile: (
     @include grid-column(8); // where 12 is the number of columns total.
     @include grid-media($sector-blog-tablet) {
       @include grid-column(12); //full width
-      height: 200px;
-      color: black;
     }
     @include grid-media($sector-blog-mobile) {
       @include grid-column(12); //full width
