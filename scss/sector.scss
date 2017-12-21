@@ -410,7 +410,6 @@ $neat-mobile: (
 $neat-grid: (
   columns: 12,
   gutter: 48px,
-  margin-bottom: 48px
 );
 
 $neat-tablet: (
@@ -422,7 +421,7 @@ $neat-tablet: (
 $neat-mobile: (
   columns: 12,
   media: 'screen and (max-width: 768px)',
-  gutter: 24px
+  gutter: 24px,
 );
 
 .sector-blog-grid {
@@ -434,11 +433,13 @@ $neat-mobile: (
     }
     @include grid-media($neat-mobile) {
       @include grid-column(12); //full width
+      margin-bottom: 28px;
     }
 
-    min-height: 200px;
+    min-height: 648px;
     border: 1px solid black;
     background-color: aqua;
+    margin-bottom: 48px;
   }
   .second {
     @include grid-column(4);
@@ -467,10 +468,12 @@ $neat-mobile: (
       }
       @include grid-media($neat-mobile) {
         @include grid-column(12); //full again
+        margin-bottom: 28px;
       }
-      min-height: 200px;
+      min-height: 300px;
       border: 1px solid black;
       background-color: aquamarine;
+      margin-bottom: 48px;
     }
   }
 }
