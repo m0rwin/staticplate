@@ -54,6 +54,8 @@
     .hero-subtitle {
       position: relative;
       top: -2em;
+      height: 0;
+      overflow: visible;
       &.gray {
         color: $sub-gray;
       }
