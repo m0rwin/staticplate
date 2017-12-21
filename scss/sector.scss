@@ -406,7 +406,58 @@ $neat-mobile: (
 }
 
 
+// 2.0 LATEST NEWS GRID //
 
+
+.sector-blog-grid {
+  @include grid-container;
+  .first {
+    @include grid-column(8); // where 12 is the number of columns total.
+    @include grid-media($sector-blog-tablet) {
+      @include grid-column(12); //full width
+      height: 200px;
+      color: black;
+    }
+    @include grid-media($sector-blog-mobile) {
+      @include grid-column(12); //full width
+    }
+  }
+  .second {
+    @include grid-column(4);
+    @include grid-container;
+    @include grid-collapse; // this is to make sure you don't get double padding
+    @include grid-media($tablet) {
+      @include grid-column(12); //full width
+      @include grid-container; // <- not sure if this
+      @include grid-collapse; // <- and this line is necessary
+    }
+    @include grid-media($mobile) {
+      @include grid-column(12); //full width
+      @include grid-container; // <- not sure if this
+      @include grid-collapse; // <- and this line is necessary
+    }
+    .nest_first,
+    .nest_second {
+      @include grid-column(12);
+      @include grid-media($tablet) {
+        @include grid-column(6); //half
+      }
+      @include grid-media($mobile) {
+        @include grid-column(12); //full again
+      }
+    }
+  }
+}
+
+.first {
+  background-color: black;
+  height: 400px;
+}
+
+.second {
+  background-color: rgb(44, 182, 224);
+  height: 400px;
+}
 
 ///////// 2. LATEST NEWS GRID //////////
 $sidebar-layout: (
