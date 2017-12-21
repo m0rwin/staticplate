@@ -1,17 +1,26 @@
 .hero-full,
 .hero-flex {
+  z-index: 0;
   background-color: $shark-black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 96px 48px;
-  @media screen and (max-width: 768px) {
+  @media screen and (#{$media-sm}) {
     padding-left: 24px;
     padding-right: 24px;
   }
 
   // for video
-  & > div:nth-child(1):not(.herocontent) {
+  & > div:nth-child(1):not(.hero-content) {
+    &.overlay {
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
     position: relative;
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
@@ -30,7 +39,7 @@
     }
   }
 
-  .herocontent {
+  .hero-content {
     @extend %max-width;
     text-align: left;
     width: 100%;
@@ -45,12 +54,29 @@
     .hero-subtitle {
       position: relative;
       top: -2em;
+      &.gray {
+        color: $sub-gray;
+      }
+    }
+
+    dl {
+      list-style: none;
+      dt {
+        display: none;
+      }
+      dd {
+        display: inline-block;
+        margin-right: 2em;
+        @media screen and (#{$media-sm}) {
+          display: block;
+          margin-right: initial;
+        }
+      }
     }
   }
 }
 
 .hero-full {
-  z-index: 0;
   min-height: calc(100vh - #{$menu-height});
   @media screen and (max-width: $menu-small-brkpnt) {
     min-height: calc(100vh - #{$menu-small-height});
@@ -70,8 +96,21 @@
     vertical-align: middle;
   }
 
-  .herocontent {
+  .hero-content {
     display: inline-block;
     vertical-align: middle;
+  }
+}
+
+.hero-flex {
+  position: relative;
+  margin-bottom: 48px;
+  .cta {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    padding-left: 4em;
+    padding-right: 4em;
   }
 }

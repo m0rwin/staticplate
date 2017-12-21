@@ -253,7 +253,7 @@ $grey-hover: #B3B3B3;
     .overlay-menu {
       right: -396px;
 
-      @media (max-width: 768px) {
+      @media (#{$media-sm}) {
         right: -100%;
       }
 
