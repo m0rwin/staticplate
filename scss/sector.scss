@@ -126,9 +126,45 @@
   }
 }
 
+////////////* BACKGROUND WORDS-PARALLAX *////////////
+.words-consultants {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  left: 25%;
+  margin-top: 100px;
+  z-index: -10;
+}
 
 
+.words-latestnews {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  white-space: nowrap;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  margin-top: -20px;
+  left: -2%;
+  z-index: -10;
+}
 
+.words-jobs {
+  font-family: Impact;
+  position: absolute;
+  font-size: 380px;
+  color: #f0f0f0;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  line-height: 0.9;
+  margin-top: 130px;
+  left: 55%;
+  z-index: -10;
+}
 
 
 ////////////* 1. CONSULTANTS HEADER *////////////
@@ -555,12 +591,13 @@ $neat-mobile: (
   }
 }
 
-//hover state//
-.first:hover {
-  -webkit-transform: scale(1.05,1.05); /* Safari */
-  transform: scale(1.05,1.05); /* Standard syntax */
+//hover state//*/
+
+/*.first:hover {
+  -webkit-transform: scale(1.05,1.05);
+  transform: scale(1.05,1.05);
   transition: all 0.5s;
-}
+}*/
 
 .first .first-overlay {
   background: rgba(0, 145, 218, 0.5);
@@ -579,6 +616,7 @@ $neat-mobile: (
 .first:hover .first-overlay {
   opacity: 1;
 }
+
 
 
 ///////// 2. LATEST NEWS GRID //////////
