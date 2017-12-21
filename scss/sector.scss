@@ -30,7 +30,7 @@
 .herosectors {
   position: relative;
   z-index: 1;
-  padding-bottom: 128px;
+  padding-bottom: 172px;
 }
 
 .videocontainersectors {
@@ -138,7 +138,7 @@
     padding: 48px;
     position: relative;
     height: 152px;
-    margin-bottom: 128px;
+    margin-bottom: 136px;
     z-index: 1;
     max-width: 700px;
 
@@ -190,7 +190,7 @@ $neat-mobile: (
 
 .consultanttiles-sectors {
   @include grid-container;
-  padding-bottom: 48px;
+  padding-bottom: 172px;
   max-width: 1300px;
   margin: 0 auto;
 }
@@ -271,13 +271,13 @@ $neat-mobile: (
 ////////////* LATEST NEWS HEADER *////////////
 .newssection {
   width: 100%;
-  height: 290px;
+  margin-bottom: 172px;
   .newscontainer {
     background-color: #1c1c1c;
     padding: 48px;
     position: relative;
     height: 152px;
-    margin-bottom: 128px;
+    margin-bottom: 136px;
     z-index: 1;
     max-width: 700px;
     float: right;
@@ -435,10 +435,15 @@ $neat-mobile: (
       @include grid-column(12); //full width
       margin-bottom: 28px;
     }
-
+    transition: all 0.5s;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
     min-height: 648px;
-    border: 1px solid black;
-    background-color: aqua;
+    color: #fff;
+    background-color: #1c1c1c;
     margin-bottom: 48px;
   }
   .second {
@@ -470,13 +475,111 @@ $neat-mobile: (
         @include grid-column(12); //full again
         margin-bottom: 28px;
       }
+      transition: all 0.5s;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
       min-height: 300px;
-      border: 1px solid black;
-      background-color: aquamarine;
+      position: relative;
+      color: #fff;
+      background-color: #1c1c1c;
       margin-bottom: 48px;
     }
   }
 }
+
+// article tile content styling //
+.news-content-container {
+  padding: 48px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .sector-lable {
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #a0a8ac;
+    padding-bottom: 16px;
+  }
+  .article-title {
+    font-family: Muli;
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.4;
+    padding-bottom: 16px;
+  }
+
+  .read-news-cta {
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 0;
+  }
+}
+
+// article tile content styling for link to all article in that sector//
+
+// article tile content styling //
+.news-content-container {
+  padding: 48px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  .sector-lable {
+    font-family: Muli;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: #a0a8ac;
+    padding-bottom: 16px;
+  }
+  .article-title {
+    font-family: Muli;
+    color: #fff;
+    font-size: 19px;
+    line-height: 1.4;
+    padding-bottom: 16px;
+  }
+
+  .read-news-cta {
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    text-transform: uppercase;
+    bottom: 48px;
+  }
+}
+
+//hover state//
+.first:hover {
+  -webkit-transform: scale(1.05,1.05); /* Safari */
+  transform: scale(1.05,1.05); /* Standard syntax */
+  transition: all 0.5s;
+}
+
+.first .first-overlay {
+  background: rgba(0, 145, 218, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.first:hover .first-overlay {
+  opacity: 1;
+}
+
 
 ///////// 2. LATEST NEWS GRID //////////
 $sidebar-layout: (
@@ -700,7 +803,7 @@ $neat-mobile: (
 
 .rolestiles {
   @include grid-container;
-  padding-bottom: 48px;
+  padding-bottom: 172px;
   max-width: 1300px;
   margin: 0 auto;
 }
