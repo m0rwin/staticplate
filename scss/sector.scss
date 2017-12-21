@@ -407,54 +407,72 @@ $neat-mobile: (
 
 
 // 2.0 LATEST NEWS GRID //
+$neat-grid: (
+  columns: 12,
+  gutter: 48px,
+  margin-bottom: 48px
+);
 
+$neat-tablet: (
+  columns: 12,
+  media: 'screen and (max-width: 1422px)',
+  gutter: 48px
+);
+
+$neat-mobile: (
+  columns: 12,
+  media: 'screen and (max-width: 768px)',
+  gutter: 24px
+);
 
 .sector-blog-grid {
   @include grid-container;
   .first {
     @include grid-column(8); // where 12 is the number of columns total.
-    @include grid-media($sector-blog-tablet) {
+    @include grid-media($neat-tablet) {
       @include grid-column(12); //full width
     }
-    @include grid-media($sector-blog-mobile) {
+    @include grid-media($neat-mobile) {
       @include grid-column(12); //full width
     }
+
+    min-height: 200px;
+    border: 1px solid black;
+    background-color: aqua;
   }
   .second {
     @include grid-column(4);
-    @include grid-container;
-    @include grid-collapse; // this is to make sure you don't get double padding
-    @include grid-media($tablet) {
+    @include grid-media($neat-tablet) {
       @include grid-column(12); //full width
-      @include grid-container; // <- not sure if this
-      @include grid-collapse; // <- and this line is necessary
     }
-    @include grid-media($mobile) {
+    @include grid-media($neat-mobile) {
       @include grid-column(12); //full width
-      @include grid-container; // <- not sure if this
-      @include grid-collapse; // <- and this line is necessary
     }
+
+    .grid-collapse {
+      @include grid-collapse; // this is to make sure you don't get double padding
+      @include grid-media($neat-tablet) {
+        @include grid-collapse; // this is to make sure you don't get double padding
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-collapse; // this is to make sure you don't get double padding          
+      }
+    }
+
     .nest_first,
     .nest_second {
       @include grid-column(12);
-      @include grid-media($tablet) {
+      @include grid-media($neat-tablet) {
         @include grid-column(6); //half
       }
-      @include grid-media($mobile) {
+      @include grid-media($neat-mobile) {
         @include grid-column(12); //full again
       }
+      min-height: 200px;
+      border: 1px solid black;
+      background-color: aquamarine;
     }
   }
-}
-
-.first {
-  background-color: black;
-  height: 400px;
-}
-
-.second {
-  background-color: rgb(44, 182, 224);
-  height: 400px;
 }
 
 ///////// 2. LATEST NEWS GRID //////////
