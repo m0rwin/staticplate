@@ -225,154 +225,180 @@
         <header class="hero-flex" style="background-image: url('/assets/cranebg-gray.png')">
             <div class="overlay"></div>
             <div class="hero-content">
-                <h1>Site Manager</h1>
-                <p class="hero-subtitle gray">Job Reference: HQ00003469</p>
-                <dl>
-                    <dt>Location</dt>
-                    <dd>West Midlands</dd>
-
-                    <dt>Salary</dt>
-                    <dd>£50000 - £55000 per annum</dd>
-
-                    <dt>Sector</dt>
-                    <dd>Resedential</dd>
-
-                    <dt>Contract Type</dt>
-                    <dd>Permanent</dd>
-                </dl>
+                <h1>Job search</h1>
             </div>
-            <a href="#application-form" class="button hanging">Apply Now</a>
         </header>
-        <section class="container job-spec">
-            <nav class="back">
-                Back to jobs
-            </nav>
-            <article class="copy">
-                <h2>Job Overview</h2>
-
-                <p>
-                    <strong>Who you'll be working for:</strong>
-                </p>
-                <p>The business has been established since the 1980's and is an award winning developer with an impressive portfolio
-                    of completed developments across the UK &amp; Ireland.</p>
-                <p>If you're looking to work for a well-respected, 250 unit per annum house builder, then I would be very interested
-                    in speaking with you regarding this Site Manager role I'm currently recruiting for.</p>
-                <p>
-                    <strong>Some of your responsibilities:</strong>
-                </p>
-                <ul>
-                    <li>Supervising and overseeing the direction of the project</li>
-                    <li>Running a 20-unit site as a standalone site manager</li>
-                    <li>Liaising with the client and other construction professionals</li>
-                    <li>Directing and supervising workers onsite</li>
-                    <li>There is also potentially a 2nd phase being built, giving 2 years' worth of work in the same location</li>
-                </ul>
-                <p>
-                    <strong>You:</strong>
-                </p>
-                <ul>
-                    <li>Must have steady and stable work experience (educated or trade background)</li>
-                    <li>3 Years' experience in the role as a minimum</li>
-                    <li>Must have a driving license</li>
-                    <li>Must have experience with housing associations (preferred)</li>
-                </ul>
-                <p>
-                    <strong>Do you want to discuss this exciting opportunity in more detail?</strong>
-                </p>
-                <p>If you feel your experience is relevant to this position, or there are other positions you would like to
-                    discuss, please call Jon Marsden on 01442 767 808.</p>
-                <p>We are very passionate, detailed and precise with what we do here at Novo so please be assured that you are
-                    in safe hands.</p>
-
-                <form id="apply-form">
-                    <h2>Apply for this role here</h2>
-                    <label>
-                        First name
-                        <sup>*</sup>
-                        <input required type="text" name="fname" placeholder="Johnny" />
-                    </label>
-
-                    <label>
-                        Surname
-                        <sup>*</sup>
-                        <input required type="text" name="sname" placeholder="Silvini" />
-                    </label>
-                    <label>
-                        Email address
-                        <sup>*</sup>
-                        <input required type="email" name="sname" placeholder="j.silvini@emails.co.uk" />
-                    </label>
-                    <label>
-                        Telephone
-                        <sup>*</sup>
-                        <!-- number from https://fakenumber.org/generator/mobile. Should be unused. -->
-                        <input required type="tel" name="sname" placeholder="07700 900914" />
-                    </label>
-                    <label>
-                        Include your linked in URL or attach your CV
-                        <sup>*</sup>
-                        <input type="url" name="sname" placeholder="https://www.linkedin.com/in/JohnSilvini" />
-                    </label>
-
-                    <fieldset class="cv">
-                        <div class="file-wrapper" title="upload from your computer">
-                            <input type="file" name="file" onchange="loadFile(this)" />
+        <section class="container job-board">
+            <form class="main-search">
+                <fieldset>
+                        <legend class="sr-only">Search Jobs</legend>
+                        <div class="job-search-grid">
+                            <div class="search-box">
+                                <input id="main-search-field" type="search" name="search" placeholder="Job role or keywords" maxlength="50">
+                                <span class="after material-icons">search</span>
+                            </div>
+                            <input type="hidden" name="pagesize" value="10">
+                            <button class="button submit material-icons" type="submit"></button>
                         </div>
-                        <button type="button" class="dropbox" onclick="loadDropbox()" title="upload from Dropbox"></button>
-                        <button type="button" class="gdrive" onclick="loadGDrive()" title="upload from Google Drive"></button>
                     </fieldset>
-
-                    <div class="summary">
-                        <button type="button" class="remove" title="cancel file selection" onclick="setFile()">
-                            <i class="material-icons">close</i>
-                            <span>C:/Windows/System32/etc/hosts</span>
-                        </button>
-                    </div>
-
-                    <label class="large">
-                        Cover letter
-                        <textarea name="cover" placeholder="Your cover letter or comments" rows="6"></textarea>
-                    </label>
-
-                    <button type="submit">SUBMIT</button>
-                </form>
-            </article>
-            <aside>
-                <div class="key-contact">
-                    <h2>Your key contact</h2>
-                    <img src="/assets/Benjamin-Gatt_greyscale_small.jpg" alt="Name" width="100%" />
-                    <div class="side-box">
-                        <h3>Kerry O&rsquo;Donovan</h3>
-                        <p class="sector">Property &amp; Maintenance</p>
-                        <ul class="details">
-                            <li>07964 477594</li>
-                            <li>Kerry.O'Donovan@novouk.com</li>
+            </form>
+            <aside class="filters">
+                <a class="anchor" id="filters"></a>
+                <strong class="wide-only">Refine search</strong>
+                <div class="side-box">
+                        <ul class="filter-pills">
+                            <li>
+                                <a href="#">Permanent</a>
+                            </li>
+                            <li>
+                                <a href="#">Temporary</a>
+                            </li>
+                            <li>
+                                <a href="#">Buckinghamshire</a>
+                            </li>
+                            <li>
+                                <a href="#">Cambridgeshire</a>
+                            </li>
+                            <li>
+                                <a href="#">Groundworks and Frames</a>
+                            </li>
                         </ul>
-
-                        <a class="cta" href="#">Visit my profile</a>
+                        <a class="clear-btn" href="#results">Clear All</a>
+                        <ul class="accordian">
+                            <li>
+                                <a data-toggle="collapse" data-target="#filters-main-1842" class="collapsed">
+                                    Type
+                                    <span class="material-icons icon-dropdown-down-up"></span>
+                                </a>
+                                <div class="sub-menu collapse" id="filters-main-1842">
+                                    <ul class="sub-menu-ul">
+                                        <li>
+                                            <a href="?hello=world1#filters" class="pseudo-checkbox active">Permanent</a>
+                                        </li>
+                                        <li>
+                                            <a href="?hello=world2#filters" class="pseudo-checkbox">Contract</a>
+                                        </li>
+                                        <li>
+                                            <a href="?hello=world3#filters" class="pseudo-checkbox">Temporary</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" data-target="#filters-main-1873" class="collapsed">
+                                    Location
+                                    <span class="material-icons icon-dropdown-down-up"></span>
+                                </a>
+                                <div class="sub-menu collapse" id="filters-main-1873">
+                                    <div class="loc-search">
+                                        <div class="icon material-icons">place</div>
+                                        <input type="search" placeholder="eg: London" data-search="#filters-main-1873 .sub-menu-ul" />
+                                    </div>
+                                    <ul class="sub-menu-ul fixed-height">
+                                            <li><a class="pseudo-checkbox active" href="?hello=Avon#filters">Avon</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Bedfordshire#filters">Bedfordshire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Berkshire#filters">Berkshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Borders#filters">Borders</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Buckinghamshire#filters">Buckinghamshire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Cambridgeshire#filters">Cambridgeshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Central#filters">Central</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Cheshire#filters">Cheshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Cleveland#filters">Cleveland</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Clwyd#filters">Clwyd</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Cornwall#filters">Cornwall</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Antrim#filters">County Antrim</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Armagh#filters">County Armagh</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Down#filters">County Down</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Fermanagh#filters">County Fermanagh</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Londonderry#filters">County Londonderry</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=County+Tyrone#filters">County Tyrone</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Cumbria#filters">Cumbria</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Derbyshire#filters">Derbyshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Devon#filters">Devon</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Dorset#filters">Dorset</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Dumfries and Galloway#filters">Dumfries and Galloway</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Durham#filters">Durham</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Dyfed#filters">Dyfed</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=East+Sussex#filters">East Sussex</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Essex#filters">Essex</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Fife#filters">Fife</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Gloucestershire#filters">Gloucestershire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Grampian#filters">Grampian</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Greater+Manchester#filters">Greater Manchester</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Gwent#filters">Gwent</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Gwynedd+County#filters">Gwynedd County</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Hampshire#filters">Hampshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Herefordshire#filters">Herefordshire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Hertfordshire#filters">Hertfordshire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Highlands+and+Islands#filters">Highlands and Islands</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Humberside#filters">Humberside</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Isle+of+Wight#filters">Isle of Wight</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Kent#filters">Kent</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Lancashire#filters">Lancashire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Leicestershire#filters">Leicestershire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Lincolnshire#filters">Lincolnshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=London#filters">London</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Lothian#filters">Lothian</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Merseyside#filters">Merseyside</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Mid Glamorgan#filters">Mid Glamorgan</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Norfolk#filters">Norfolk</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=North Yorkshire#filters">North Yorkshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Northamptonshire#filters">Northamptonshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Northumberland#filters">Northumberland</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Nottinghamshire#filters">Nottinghamshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Oxfordshire#filters">Oxfordshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Powys#filters">Powys</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Rutland#filters">Rutland</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Shropshire#filters">Shropshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Somerset#filters">Somerset</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=South Glamorgan#filters">South Glamorgan</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=South Yorkshire#filters">South Yorkshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Staffordshire#filters">Staffordshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Strathclyde#filters">Strathclyde</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Suffolk#filters">Suffolk</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Surrey#filters">Surrey</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Tayside#filters">Tayside</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Tyne and Wear#filters">Tyne and Wear</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Warwickshire#filters">Warwickshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=West Glamorgan#filters">West Glamorgan</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=West Midlands#filters">West Midlands</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=West Sussex#filters">West Sussex</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=West Yorkshire#filters">West Yorkshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Wiltshire#filters">Wiltshire</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=Worcestershire#filters">Worcestershire</a></li>
+                                            <li><a class="pseudo-checkbox active" href="?hello=Glasgow#filters">Glasgow</a></li>
+                                            <li><a class="pseudo-checkbox" href="?hello=City of London#filters">City of London</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <a data-toggle="collapse" data-target="#filters-main-3222" class="collapsed">
+                                    Sector
+                                    <span class="material-icons icon-dropdown-down-up"></span>
+                                </a>
+                                <div class="sub-menu collapse" id="filters-main-3222">
+                                    <ul class="sub-menu-ul">
+                                        <li>
+                                            <a class="pseudo-checkbox active" href="?hello=worldc#filters">Our world</a>
+                                        </li>
+                                        <li>
+                                            <a class="pseudo-checkbox" href="?hello=worldd#filters">Join the locals</a>
+                                        </li>
+                                        <li>
+                                            <a class="pseudo-checkbox" href="?hello=worlde#filters">Meet the Locals</a>
+                                        </li>
+                                        <li>
+                                            <a class="pseudo-checkbox" href="?hello=worldf#filters">Local Community</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
-
-                <div class="side-box">
-                    <h2>Not what you're looking for?</h2>
-                    <p>
-                        If you can't find the right job for you then send us your CV and we will find a job for you!
-                    </p>
-                    <a href="#" class="cta">Send your CV</a>
-                </div>
-
-                <div class="side-box">
-                    <h2>Apprentice Learning &amp; Development Manager</h2>
-                    <ul>
-                        <li>Hampshire</li>
-                        <li>&pound;55,000 - &pound;60,000 annually</li>
-                        <li>Property and Maintenance</li>
-                        <li>Permanant</li>
-                    </ul>
-                    <a href="#" class="cta">View job details</a>
-                </div>
-
             </aside>
+            <section>
+
+            </section>
         </section>
     </main>
 

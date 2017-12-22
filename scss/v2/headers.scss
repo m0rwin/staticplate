@@ -1,15 +1,33 @@
 .hero-full,
+.hero-flex,
+.hero-clear {
+  padding: 96px 48px;
+  @media screen and (#{$media-sm}) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  margin-bottom: 48px;
+
+  .hero-content {
+    @extend %max-width;
+    width: 100%;
+    text-align: left;
+
+    h1,
+    h2,
+    h3 {
+      font-family: $font-impact;
+    }
+  }
+}
+
+.hero-full,
 .hero-flex {
   z-index: 0;
   background-color: $shark-black;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 96px 48px;
-  @media screen and (#{$media-sm}) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 
   // for video
   & > div:nth-child(1):not(.hero-content) {
@@ -40,22 +58,14 @@
   }
 
   .hero-content {
-    @extend %max-width;
-    text-align: left;
-    width: 100%;
     color: white;
-
-    h1,
-    h2,
-    h3 {
-      font-family: $font-impact;
-    }
 
     .hero-subtitle {
       position: relative;
       top: -2em;
       height: 0;
       overflow: visible;
+      font-size: 19px;
       &.gray {
         color: $sub-gray;
       }
@@ -67,6 +77,7 @@
         display: none;
       }
       dd {
+        font-size: 16px;
         display: inline-block;
         margin-right: 2em;
         @media screen and (#{$media-sm}) {
@@ -102,17 +113,27 @@
     display: inline-block;
     vertical-align: middle;
   }
+
+  .max-width {
+    width: 100%;
+  }
 }
 
 .hero-flex {
   position: relative;
-  margin-bottom: 48px;
-  .cta {
+  .button.hanging {
     position: absolute;
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 50%);
     padding-left: 4em;
     padding-right: 4em;
+  }
+}
+
+.hero-clear {
+  background-color: white;
+  .hero-content {
+    color: #333;
   }
 }

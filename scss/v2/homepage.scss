@@ -1,3 +1,5 @@
+@import 'homepage/home_header_search.scss';
+
 /* old school section novo main*/
 #novotop {
   margin-top: 480px;
@@ -59,7 +61,7 @@
 }
 
 #novo-type {
-  font-family: Impact;
+  font-family: $font-impact;
   font-size: 180px;
   line-height: 1.25;
   text-align: left;
@@ -98,7 +100,7 @@
 }
 
 #quote {
-  font-family: Impact;
+  font-family: $font-impact;
   letter-spacing: 1px;
   font-size: 37px;
   font-weight: bold;
@@ -121,7 +123,7 @@
 
 .original {
   position: relative;
-  font-family: Impact;
+  font-family: $font-impact;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
@@ -135,7 +137,7 @@
 }
 
 .extraoridinary {
-  font-family: Impact;
+  font-family: $font-impact;
   font-size: 380px;
   line-height: 1;
   color: #F7F7F7;
@@ -146,7 +148,7 @@
 }
 
 .yourself {
-  font-family: Impact;
+  font-family: $font-impact;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;

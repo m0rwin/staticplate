@@ -1,0 +1,224 @@
+$neat-grid: (
+    grid-gap: 47px
+);
+
+.job-board {
+  .main-search {
+    background-color: $shark-black;
+    border-radius: $radius;
+    padding: 24px 48px;
+    margin-bottom: 48px;
+
+    .job-search-grid {
+      @include grid-container;
+
+      .search-box {
+        position: relative;
+        @include grid-column(8.76);
+
+        .after {
+          font-family: 'Material Icons';
+          position: absolute;
+          right: 25px;
+          top: 16px;
+          font-size: 19px;
+          color: $shark-black;
+          pointer-events: none;
+
+          @media screen and (#{$media-sm}) {
+            display: none;
+          }
+        }
+      }
+      .submit {
+        @include grid-column(3.24);
+        &::before {
+          font-family: $font-muli;
+          content: 'search';
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .filters {
+    float: right;
+    width: 290px;
+    margin-bottom: 48px;
+
+    .filter-pills {
+      list-style: none;
+      font-size: 12px;
+      line-height: 1.17;
+      margin: -8px -8px 0 -8px;
+      padding: 0;
+      max-height: 155px;
+      overflow-y: auto;
+
+      li {
+        a {
+          display: inline-block;
+          color: white;
+          text-decoration: none;
+          border: 1px solid white;
+          padding: 7px 26px 7px 10px;
+          border-radius: 2px;
+          position: relative;
+        }
+
+        a::after {
+          content: "x";
+          display: block;
+          position: absolute;
+          top: 9px;
+          right: 12px;
+          margin-left: 10px;
+          font-size: 0.8em;
+          vertical-align: top;
+        }
+
+        display: inline-block;
+  
+                  // margin-right: 16px;
+        margin: 8px;
+      }
+    }
+
+    .side-box {
+      margin-top: 14px;
+      padding-bottom: 19px;
+    }
+    .side-box > ul.accordian > li {
+      margin-bottom: 27px;
+
+      .sub-menu {
+        .sub-menu-ul {
+          max-height: 216px;
+          overflow: auto;
+          &.fixed-height {
+            height: 216px;
+          }
+        }
+
+        & > ul > li,
+        input[type=search] {
+          margin-top: 15px;
+          font-size: 16px;
+          line-height: 2;
+        }
+
+        .loc-search {
+          position: relative;
+          .icon {
+            content: 'place';
+            font-family: 'Material Icons';
+            position: absolute;
+            left: 0;
+            bottom: 1.6em;
+            display: inline-block;
+            height: 0;
+            overflow: visible;
+          }
+          input[type=search] {
+            background: $shark-black;
+            color: $white;
+            border: none;
+            border-bottom: 1px solid $white;
+            padding-left: 35px;
+            width: 100%;
+            outline: none;
+
+
+            &::-webkit-input-placeholder {
+              color: white;
+              opacity: 1;
+            }
+
+            &::-moz-placeholder {
+              color: white;
+              opacity: 1;
+            }
+
+            &:-moz-placeholder {
+              color: white;
+              opacity: 1;
+            }
+
+            &:-ms-input-placeholder {
+              opacity: 1;
+              color: white;
+            }
+
+            &::placeholder {
+              opacity: 1;
+              color: white;
+            }
+          }
+        }
+      }
+
+      a {
+        display: block;
+
+        .icon-dropdown-down-up {
+          float: right;
+        }
+      }
+    }
+
+    .pseudo-checkbox {
+      cursor: pointer;
+
+      &::before {
+        font-family: 'Material Icons';
+        content: 'check';
+        color: $shark-black;
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        margin-right: 13px;
+        background-color: $shark-black;
+        border: 2px solid white;
+        border-radius: 3px;
+        width: 18px;
+        height: 18px;
+        line-height: 0.9;
+        text-indent: -1px;
+        font-size: 16px;
+      }
+
+      &:hover::before {
+        border-color: $cerulean-blue;
+      }
+      &.active {
+        font-weight: bold;
+        &::before {
+          background-color: $cerulean-blue;
+          border-color: $cerulean-blue;
+        }
+        &:hover::before {
+          border-color: lighten($cerulean-blue, 13);
+        }
+      }
+
+
+      input[type=checkbox] {
+        visibility: hidden;
+      }
+    }
+
+    a.clear-btn {
+      color: white;
+      text-transform: uppercase;
+      font-size: 12px;
+      line-height: 4;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      padding-bottom: 20px;
+      display: block;
+    }
+  }
+}

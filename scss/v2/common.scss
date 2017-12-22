@@ -70,8 +70,9 @@
   @extend %stretch-over-max-width-r;
 }
 
-
-
+.sr-only {
+  display: none;
+}
 
 body > main {
   .container {
@@ -83,8 +84,10 @@ body > main {
 }
 
 .button {
+  display: inline-block;
   color: white;
   min-width: 180px;
+  border: none;
   border-radius: $radius;
   height: 48px;
   padding: 0 16px;
@@ -92,15 +95,74 @@ body > main {
   border-radius: $radius;
   font-size: 16px;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  -o-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
   line-height: 48px;
 
 
   &:hover {
     background-color: #0e577c;
+  }
+}
+
+.max-width {
+  @extend %max-width;
+  text-align: left;
+  position: relative;
+}
+
+.scroll-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255,255,255,0);
+  display: inline-block;
+  text-align: left;
+  outline: none;
+  border: none;
+}
+
+.side-box {
+  background-color: $shark-black;
+  padding: 48px;
+  color: white;
+}
+
+@import '../select2/core.scss';
+
+input,
+select {
+  outline: none;
+  height: 48px;
+  border: none;
+  border-radius: $radius;
+  padding: 0 24px;
+  width: 100%;
+}
+
+sup {
+  position: static;
+  vertical-align: super;
+}
+
+.white-mode {
+  input {
+    border-radius: 0;
+    border-bottom: 2px solid $shark-black;
+  }
+
+  label input {
+    margin: 18px 0 38px;
+  }
+
+  textarea {
+    border-radius: $radius;
+    border: 2px solid $shark-black;
+    width: 100%;
+    resize: vertical;
+    outline: none;
   }
 }
 

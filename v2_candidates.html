@@ -222,26 +222,19 @@
     </nav>
 
     <main>
-        <header class="hero-flex" style="background-image: url('/assets/cranebg-gray.png')">
-            <div class="overlay"></div>
+        <header class="hero-full hero-clear">
             <div class="hero-content">
-                <h1>Site Manager</h1>
-                <p class="hero-subtitle gray">Job Reference: HQ00003469</p>
-                <dl>
-                    <dt>Location</dt>
-                    <dd>West Midlands</dd>
-
-                    <dt>Salary</dt>
-                    <dd>£50000 - £55000 per annum</dd>
-
-                    <dt>Sector</dt>
-                    <dd>Resedential</dd>
-
-                    <dt>Contract Type</dt>
-                    <dd>Permanent</dd>
-                </dl>
+                <h1>Candidates</h1>
+                <p>&ldquo;Recruitment is pretty black and white as far as we see things. <br />
+                    We just add a bit of colour&rdquo;</p>
             </div>
-            <a href="#application-form" class="button hanging">Apply Now</a>
+            <div class="max-width">
+                <button class="scroll-button" data-scroll-past="header.hero-full">
+                    <svg class="downblackarrow rellax" data-rellax-speed="2" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" style="transform: translate3d(0px, 2px, 0px);">
+                        <path fill="none" fill-rule="evenodd" stroke="#191B1D" stroke-width="3" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"></path>
+                    </svg>
+                </button>
+            </div>
         </header>
         <section class="container job-spec">
             <nav class="back">
@@ -425,6 +418,18 @@
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
         $('#apply-form').validate();
+
+        $('.scroll-button').on('click', function() {
+            var selector = $(this).attr('data-scroll-past');
+            var position = (
+                $(selector).offset().top + 
+                $(selector).outerHeight() - 
+                $('header.header').outerHeight());
+
+            $('html, body').animate({
+                scrollTop: position
+            }, 700);
+        });
         function loadFile(el) {
             setFile(el.files[0].name);
         }

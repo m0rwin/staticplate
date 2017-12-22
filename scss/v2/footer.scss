@@ -24,14 +24,14 @@
     }
 
     h3 {
-      font-family: "impact", sans-serif;
+      font-family: $font-impact;
       font-size: 53px;
       letter-spacing: 1px;
       font-weight: normal;
     }
 
     p {
-      font-family: $muli-font;
+      font-family: $font-muli;
       font-size: 26px;
       font-weight: bold;
       letter-spacing: 01px;
