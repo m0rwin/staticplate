@@ -98,6 +98,7 @@
   padding-bottom: 96px;
   position: relative;
   text-align: center;
+  font-size: 0;
 
   &:before {
     content: '';
@@ -107,7 +108,10 @@
       height: calc(100vh - #{$menu-small-height} - 96px - 96px);
     }
     vertical-align: middle;
+    margin-left: 0.25em;
   }
+
+  & > * { font-size: 1rem; }
 
   .hero-content {
     display: inline-block;
