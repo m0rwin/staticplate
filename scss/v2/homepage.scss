@@ -3,7 +3,7 @@
 /* old school section novo main*/
 #novotop {
   margin-top: 480px;
-  margin-bottom: 360px;
+  margin-bottom: 300px;
 }
 .outer-div {
   @extend %stretch-over-max-width-r;
@@ -80,7 +80,7 @@
   @extend %max-width-inner-l;
   height: 260px;
   margin-right: 32%;
-  margin-bottom: 128px;
+  margin-bottom: 96px;
   background-color: #2b2b2b;
   position: relative;
 }
@@ -107,7 +107,7 @@
   line-height: 1.22;
   color: #2b2b2b;
   position: absolute;
-  padding: 76px 108px 48px 98px;
+  padding: 76px 76px 48px 76px;
   float: left;
   -webkit-font-smoothing: antialiased;
   z-index: 1;
@@ -137,26 +137,37 @@
 }
 
 .extraoridinary {
-  font-family: $font-impact;
-  font-size: 380px;
-  line-height: 1;
-  color: #F7F7F7;
-  -webkit-font-smoothing: antialiased;
-  position: absolute;
-  z-index: -10;
-  pointer-events: none;
-}
-
-.yourself {
+  position: relative;
   font-family: $font-impact;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
   -webkit-font-smoothing: antialiased;
-  top: -430px;
-  left: 30%;
+  left: -5%;
+  top: -570px;
+  z-index: 0 !important;
   z-index: -10;
   pointer-events: none;
+  overflow: visible;
+  height: 0;
+}
+
+
+
+.yourself {
+  position: relative;
+  font-family: $font-impact;
+  font-size: 380px;
+  line-height: 1;
+  color: #f5f4f4;
+  -webkit-font-smoothing: antialiased;
+
+  z-index: 0 !important;
+  z-index: -10;
+  pointer-events: none;
+  overflow: visible;
+  bottom: 0;
+  height: 0;
 }
 
 #novodefined {
@@ -175,7 +186,7 @@
             /* grid-auto-rows:100px; */
     grid-auto-rows: 350px;
     @media screen and (max-width: 1024px) {
-      grid-template-columns: 2fr 2fr;
+      grid-template-columns: 2fr 2fr 2fr;
     }
 
     @media screen and (max-width: 650px) {
