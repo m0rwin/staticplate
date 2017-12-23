@@ -345,6 +345,14 @@ $media-job-md-px: 1170px;
       margin-right: auto;
     }
 
+    .anchor {
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .anchor:hover {
+      text-decoration: underline;
+    }
+
     .job-results-grid {
       margin-top: 14px;
 
