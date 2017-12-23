@@ -18,6 +18,12 @@
     h3 {
       font-family: $font-impact;
     }
+
+    @media screen and (#{$media-sm}) {
+      h1 {
+        font-size: 2.789em;
+      }
+    }
   }
 }
 
@@ -68,6 +74,12 @@
       font-size: 19px;
       &.gray {
         color: $sub-gray;
+      }
+    }
+
+    @media screen and (#{$media-sm}) {
+      .hero-subtitle {
+        top: -1.2em;
       }
     }
 

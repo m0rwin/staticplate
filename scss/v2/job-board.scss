@@ -8,9 +8,13 @@ $neat-grid: (
     border-radius: $radius;
     padding: 24px 48px;
     margin-bottom: 48px;
+    @media screen and (#{$media-md}) {
+      margin-bottom: 0;
+    }
 
     .job-search-grid {
       @include grid-container;
+      @include grid-collapse;
 
       .search-box {
         position: relative;
@@ -24,10 +28,6 @@ $neat-grid: (
           font-size: 19px;
           color: $shark-black;
           pointer-events: none;
-
-          @media screen and (#{$media-sm}) {
-            display: none;
-          }
         }
       }
       .submit {
@@ -38,6 +38,32 @@ $neat-grid: (
           text-transform: uppercase;
         }
       }
+
+      @media screen and (max-width: 880px) {
+        .search-box {
+          width: calc(100% - 48px - 20px);
+          .after {
+            display: none;
+          }
+          input {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
+        .submit {
+          &::before {
+            font-family: 'Material Icons';
+            text-decoration: none;
+            text-transform: none;
+          }
+
+          margin: 0;
+          width: 48px;
+          min-width: auto;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
     }
   }
 
@@ -45,6 +71,12 @@ $neat-grid: (
     float: right;
     width: 290px;
     margin-bottom: 48px;
+
+    @media screen and (#{$media-md}) {
+      width: 100%;
+      float: none;
+      .wide-only { display: none; }
+    }
 
     .filter-pills {
       list-style: none;
@@ -84,9 +116,46 @@ $neat-grid: (
       }
     }
 
+    .filter-toggle {
+      display: none;
+      background: $shark-black;
+      color: white;
+      border: none;
+      font-size: 16px;
+      font-weight: normal;
+      text-align: center;
+      width: 100%;
+      padding-bottom: 24px;
+
+      &::after {
+        content: 'expand_less';
+        margin-left: 0.5em;
+        font-family: 'Material Icons';
+        vertical-align: middle;
+      }
+
+      &.more::after {
+        content: 'expand_more';
+      }
+
+      &:hover span {
+        text-decoration: underline;
+      }
+    }
+    @media screen and (#{$media-md}) {
+      .filter-toggle {
+        display: block;
+      }
+    }
+
     .side-box {
       margin-top: 14px;
       padding-bottom: 19px;
+
+      @media screen and (#{$media-md}) {
+        margin-top: 0;
+        padding-top: 0;
+      }
     }
     .side-box > ul.accordian > li {
       margin-bottom: 27px;
