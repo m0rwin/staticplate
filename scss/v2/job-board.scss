@@ -1,24 +1,54 @@
 $neat-grid: (
-    grid-gap: 47px
+    gutter: 48px
 );
 
+$neat-grid-sm: (
+    gutter: 24px
+);
+
+$media-job-md: 'max-width: 1170px';
+$media-job-md-px: 1170px;
+
 .job-board {
+  @include grid-container; // ensure sidebar doesn't float outside its container.
+  @media screen and (#{$media-job-md}) {
+    margin-top: -48px;
+  }
   .main-search {
+    @extend %stretch-over-max-width;
+    @media screen and (min-width: $media-job-md-px + 1) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     background-color: $shark-black;
     border-radius: $radius;
     padding: 24px 48px;
     margin-bottom: 48px;
-    @media screen and (#{$media-md}) {
+    @media screen and (#{$media-job-md}) {
       margin-bottom: 0;
+    }
+    @media screen and (#{$media-sm}) {
+      padding: 24px 24px;
     }
 
     .job-search-grid {
       @include grid-container;
       @include grid-collapse;
 
+      @media screen and (#{$media-job-md}) {
+        @include grid-collapse((gutter: 0px));
+      }
+
       .search-box {
         position: relative;
         @include grid-column(8.76);
+        @media screen and (#{$media-job-md}) {
+          @include grid-column(8.76, (gutter: 0px));
+          input {
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+          }
+        }
 
         .after {
           font-family: 'Material Icons';
@@ -32,6 +62,12 @@ $neat-grid: (
       }
       .submit {
         @include grid-column(3.24);
+        @media screen and (#{$media-job-md}) {
+          @include grid-column(3.24, (gutter: 0px));
+
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
         &::before {
           font-family: $font-muli;
           content: 'search';
@@ -41,13 +77,9 @@ $neat-grid: (
 
       @media screen and (max-width: 880px) {
         .search-box {
-          width: calc(100% - 48px - 20px);
+          width: calc(100% - 48px);
           .after {
             display: none;
-          }
-          input {
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
           }
         }
         .submit {
@@ -60,20 +92,23 @@ $neat-grid: (
           margin: 0;
           width: 48px;
           min-width: auto;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
         }
       }
     }
   }
 
   .filters {
+    @extend %stretch-over-max-width;
+    @media screen and (min-width: $media-job-md-px + 1) {
+      margin-left: 0;
+      margin-right: 0;
+    }
     float: right;
     width: 290px;
     margin-bottom: 48px;
 
-    @media screen and (#{$media-md}) {
-      width: 100%;
+    @media screen and (#{$media-job-md}) {
+      width: auto;
       float: none;
       .wide-only { display: none; }
     }
@@ -127,6 +162,10 @@ $neat-grid: (
       width: 100%;
       padding-bottom: 24px;
 
+      &::before {
+        content: 'Hide filters';
+      }
+
       &::after {
         content: 'expand_less';
         margin-left: 0.5em;
@@ -134,15 +173,18 @@ $neat-grid: (
         vertical-align: middle;
       }
 
-      &.more::after {
+      &.collapsed::before {
+        content: 'Show filters';
+      }
+      &.collapsed::after {
         content: 'expand_more';
       }
 
-      &:hover span {
+      &:hover::before {
         text-decoration: underline;
       }
     }
-    @media screen and (#{$media-md}) {
+    @media screen and (#{$media-job-md}) {
       .filter-toggle {
         display: block;
       }
@@ -152,7 +194,13 @@ $neat-grid: (
       margin-top: 14px;
       padding-bottom: 19px;
 
-      @media screen and (#{$media-md}) {
+      @media screen and (min-width: $media-job-md-px) {
+        &.collapse {
+          display: block;
+        }
+      }
+
+      @media screen and (#{$media-job-md}) {
         margin-top: 0;
         padding-top: 0;
       }
@@ -288,6 +336,123 @@ $neat-grid: (
 
       padding-bottom: 20px;
       display: block;
+    }
+  }
+
+  .results {
+    margin-right: 338px;
+    @media screen and (#{$media-job-md}) {
+      margin-right: auto;
+    }
+
+    .job-results-grid {
+      margin-top: 14px;
+
+      .side-box {
+        @extend %stretch-over-max-width;
+        @media screen and (min-width: $media-job-md-px + 1) {
+          margin-left: 0;
+          margin-right: 0;
+        }
+
+        overflow: hidden;
+        margin-bottom: 48px;
+        @include grid-container;
+        padding: 48px;
+        padding-left: 0;
+        padding-right: 0;
+
+        @media screen and (#{$media-sm}) {
+          margin-bottom: 24px;
+          @include grid-collapse((gutter: 24px));
+        }
+
+
+        h3 {
+          @include grid-column(8);
+          @media screen and (#{$media-sm}) {
+            @include grid-column(12, (gutter: 24px));
+          }
+          margin-top: 0;
+          font-size: 26px;
+          font-weight: bold;
+        }
+
+        .content {
+          @include grid-column(8);
+
+          font-size: 16px;
+          overflow: hidden;
+          line-height: 1.7;
+          padding-bottom: 50px;
+
+          @media screen and (#{$media-sm}) {
+            display: none;
+          }
+        }
+
+        ul {
+          @include grid-column(4);
+          float: right;
+          margin-right: 48px;
+          line-height: 1.4;
+
+          li {
+            margin-bottom: 0.8em;
+          }
+
+          @media screen and (#{$media-sm}) {
+            @include grid-column(12, (gutter: 24px));
+          }
+        }
+
+        .forbutton {
+          clear: both;
+          margin-left: 48px;
+          @media screen and (#{$media-sm}) {
+            margin-left: 24px;
+          }
+        }
+      }
+    }
+
+    .pagination {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      overflow-x: auto;
+      white-space: nowrap;
+      margin: 48px 0;
+
+      @media screen and (#{$media-sm}) {
+        margin: 24px 0;
+      }
+
+      li {
+        background-color: $iron;
+        display: inline-block;
+        margin-right: 12px;
+        & > a,
+        & > span {
+          display: block;
+          width: 36px;
+          height: 36px;
+          font-size: 16px;
+          padding: 7px 0;
+          text-align: center;
+        }
+        &.active,
+        & a:hover {
+          background: $shark-black;
+          color: white;
+          a { color: white; }
+        }
+
+        &.next {
+          background-color: $cerulean-blue;
+          a { color: white; }
+        }
+      }
     }
   }
 }

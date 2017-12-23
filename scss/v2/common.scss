@@ -81,9 +81,15 @@ body > main {
   @extend %margin-under-header;
   overflow: hidden;
   background-color: white;
+  padding-bottom: 48px;
+
+  @media screen and (#{$media-sm}) {
+    padding-bottom: 24px;
+  }
 }
 
 .button {
+  text-align: center;
   display: inline-block;
   color: white;
   min-width: 180px;
@@ -101,9 +107,23 @@ body > main {
   transition: background 0.3s ease-in-out;
   line-height: 48px;
 
-
   &:hover {
     background-color: #0e577c;
+  }
+
+  &.white {
+    color: black;
+    border: 1px solid #191b1d;
+    background: white;
+
+    -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
+    &:hover {
+      background-color: white;
+      text-decoration: underline;
+    }
   }
 }
 
@@ -128,6 +148,10 @@ body > main {
   background-color: $shark-black;
   padding: 48px;
   color: white;
+
+  @media screen and (#{$media-sm}) {
+    padding: 24px;
+  }
 }
 
 @import '../select2/core.scss';
