@@ -403,6 +403,8 @@ $media-job-md-px: 1170px;
 
           @media screen and (#{$media-sm}) {
             @include grid-column(12, (gutter: 24px));
+            margin-top: 0.8em;
+            margin-bottom: 24px;
           }
         }
 
