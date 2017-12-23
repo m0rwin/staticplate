@@ -231,8 +231,8 @@
                 <p>Please note - if you apply via LinkedIn this will not show up on your news feed.</p>
             </div>
         </header>
-        <section class="container">
-            <form id="apply-form" class="white-mode">
+        <section class="container job-spec">
+            <form id="cv-form" class="white-mode">
                 <label>
                     First name
                     <sup>*</sup>
@@ -350,12 +350,12 @@
         function setFile(name) {
             if (!name) {
                 console.log('remove hidden class');
-                $('#apply-form .cv').removeClass('hidden');
+                $('#cv-form .cv').removeClass('hidden');
             } else {
                 console.log('add hidden class');
-                $('#apply-form .summary .remove span').text(name);
-                $('#apply-form .cv').addClass('hidden');
-                var input = $('#apply-form .cv input[type=file]');
+                $('#cv-form .summary .remove span').text(name);
+                $('#cv-form .cv').addClass('hidden');
+                var input = $('#cv-form .cv input[type=file]');
                 input.replaceWith(input.val('').clone(true));
             }
         }

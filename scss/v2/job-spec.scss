@@ -5,19 +5,14 @@ $break-sidebar: 'max-width: 1120px';
     &::before {
       font-family: 'Material Icons';
       content: 'chevron_left';
-      vertical-align: middle;
+      vertical-align: top;
     }
   }
   position: relative;
-  padding: 0 96px 0 0;
+  overflow: visible;
 
   header ~ & {
     margin-top: 78px;
-  }
-  overflow: auto;
-
-  @media screen and ($break-sidebar) {
-    padding: 0 48px;
   }
 
   h1 {
@@ -114,16 +109,11 @@ $break-sidebar: 'max-width: 1120px';
     }
 
     button[type=submit] {
+      @extend .button;
       @include grid-column(12);
       display: inline-block;
-      width: 33%;
+      width: auto;
       margin-top: 25px;
-      font-size: 16px;
-      background: $cerulean-blue;
-      border: none;
-      height: 48px;
-      text-align: center;
-      color: $white;
     }
 
     .cv,
@@ -211,14 +201,10 @@ $break-sidebar: 'max-width: 1120px';
     }
   }
 
-  @media screen and (max-width: 650px) {
-    padding: 0 24px;
-  }
-
   aside {
     position: absolute;
     top: 27px;
-    right: 96px;
+    right: 0;
     width: 337px;
 
     @media screen and ($break-sidebar) {
@@ -305,7 +291,7 @@ $break-sidebar: 'max-width: 1120px';
       & > div.key-contact,
       & > div.side-box {
         max-width: none;
-        width: auto;
+        width: 100%;
         float: left;
         margin-left: 0;
         margin-right: 0;
@@ -314,7 +300,7 @@ $break-sidebar: 'max-width: 1120px';
   }
 
   .copy {
-    margin-right: 417px;
+    margin-right: 385px;
     @media screen and ($break-sidebar) {
       margin-right: 0;
     }

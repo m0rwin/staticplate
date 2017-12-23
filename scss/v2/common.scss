@@ -194,5 +194,42 @@ sup {
   display: inline-block;
 }
 
+.anchor {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.copy {
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-bottom: 1em;
+
+    strong { font-size: inherit; }
+  }
+
+  strong {
+    font-size: 1.3em;
+    line-height: 1em;
+  }
+
+  ul li {
+    list-style-type: none;
+    line-height: 2;
+  }
+
+  ul li:before {
+    color: $cerulean-blue;
+    float: left;
+    width: 1em;
+    content: '\2022';
+  }
+  ul {
+    margin-bottom: 2em;
+  }
+}
+
+
 @import 'headers.scss';
 @import 'footer.scss';
