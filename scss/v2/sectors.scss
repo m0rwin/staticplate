@@ -25,61 +25,9 @@
   -webkit-transition-duration: 0.5s; /* Safari */
   transition-duration: 0.5s;
 }
-  
-  /* Hero video styles */
-.herosectors {
-  position: relative;
-  z-index: 1;
-  padding-bottom: 172px;
-}
-
-.videocontainersectors {
-  background-color: $shark-black;
-  height: 70%;
-  -webkit-filter: grayscale(100%);
-  filter: grayscale(100%);
-  -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  -o-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  position: relative;
-}
-
-
-.videocontainersectors::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: radial-gradient(transparent 30%, rgba(0, 0, 0, 0.5) 70%);
-}
-.herocontentsectors {
-  position: absolute;
-  color: #ffffff;
-  top: 25%;
-  padding: 0px 96px 0px 96px;
-}
-
-@media screen and (max-width: 1024px) and (min-width: 650px) {
-  .herocontentsectors {
-    position: absolute;
-    color: #ffffff;
-    padding: 0px 48px 0px 48px;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .herocontentsectors {
-    position: absolute;
-    color: #ffffff;
-    padding: 0px 48px 0px 48px;
-  }
-}
 
 .hero-quote {
-  font-family: 'muli' sans-serif;
+  font-family: $font-muli;
   font-size: 37px;
   max-width: 710px;
   color: #fff;
@@ -101,28 +49,6 @@
     font-size: 26px;
     margin-bottom: 24px;
     color: #fff;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-  .herocontent h1 {
-    font-family: 'Impact', sans-serif;
-    font-weight: 900;
-    font-size: 75px;
-    color: #ffffff;
-    line-height: 61px;
-    letter-spacing: 1px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .herocontent h1 {
-    font-family: 'Impact', sans-serif;
-    font-weight: 900;
-    font-size: 53px;
-    color: #ffffff;
-    line-height: 61px;
-    letter-spacing: 1;
   }
 }
   
@@ -169,14 +95,19 @@
   
   ////////////* 1. CONSULTANTS HEADER *////////////
 .consultantsection {
+
   .consultantcontainer {
+    @extend %stretch-over-max-width-l;
+    @extend %max-width-inner-l;
     background-color: #1c1c1c;
-    padding: 48px;
+    padding-top: 48px;
+    padding-right: 48px;
+    padding-bottom: 48px;
     position: relative;
     height: 152px;
     margin-bottom: 136px;
     z-index: 1;
-    max-width: 700px;
+    display: inline-block;
   
       /* mobile rules */
     @media screen and (max-width: 768px) {
@@ -189,8 +120,6 @@
 
   .consultantscopy {
     margin-left: 24px;
-    position: absolute;
-    font-family: 'muli' sans-serif;
     font-size: 37px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -198,7 +127,6 @@
         /* mobile rules */
     @media screen and (max-width: 768px) {
       font-size: 26px;
-      text-align: center;
       padding: 39px 0px 39px 0px;
     }
   }
@@ -226,9 +154,8 @@ $neat-mobile: (
 
 .consultanttiles-sectors {
   @include grid-container;
+  @include grid-collapse;
   padding-bottom: 172px;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
 .tile_s,
@@ -306,18 +233,20 @@ $neat-mobile: (
   
   ////////////* LATEST NEWS HEADER *////////////
 .newssection {
-  width: 100%;
   margin-bottom: 172px;
   .newscontainer {
+    @extend %stretch-over-max-width-r;
+    @extend %max-width-inner-r;
+
     background-color: #1c1c1c;
-    padding: 48px;
+    padding-left: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     position: relative;
     height: 152px;
     margin-bottom: 136px;
     z-index: 1;
-    max-width: 700px;
     float: right;
-    width: 100%;
   
       /* mobile rules */
     @media screen and (max-width: 768px) {
@@ -328,9 +257,7 @@ $neat-mobile: (
     }
 
     .newscopy {
-      margin-left: 24px;
-      position: absolute;
-      font-family: 'muli' sans-serif;
+      margin-right: 24px;
       font-size: 37px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
@@ -338,7 +265,6 @@ $neat-mobile: (
         /* mobile rules */
       @media screen and (max-width: 768px) {
         font-size: 26px;
-        text-align: center;
         padding: 39px 0px 39px 0px;
       }
     }
@@ -462,6 +388,7 @@ $neat-mobile: (
 
 .sector-blog-grid {
   @include grid-container;
+  @include grid-collapse;
   .first {
     @include grid-column(8); // where 12 is the number of columns total.
     @include grid-media($neat-tablet) {
@@ -785,27 +712,27 @@ $product-gallery-mobile: (
 .rolesection {
   width: 100%;
   .rolecontainer {
+    @extend %stretch-over-max-width-l;
+    @extend %max-width-inner-l;
+    display: inline-block;
     background-color: #1c1c1c;
-    padding: 48px;
+    padding-right: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
     height: 152px;
     margin-bottom: 128px;
     z-index: 1;
-    max-width: 700px;
-    width: 100%;
   
       /* mobile rules */
     @media screen and (max-width: 768px) {
       height: 116px;
       margin-bottom: 96px;
-      width: 100%;
       padding: 0px;
     }
 
 
     .rolescopy {
       margin-left: 24px;
-      position: absolute;
-      font-family: 'muli' sans-serif;
       font-size: 37px;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
