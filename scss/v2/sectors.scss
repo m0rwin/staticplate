@@ -1,3 +1,82 @@
+.block-header-r {
+  @extend %stretch-over-max-width-r;
+  @extend %max-width-inner-r;
+  background-color: #1c1c1c;
+  padding-left: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+  float: right;
+  margin-bottom: 128px;
+  z-index: 1;
+
+  
+    /* mobile rules */
+  @media screen and (max-width: 768px) {
+      //height: 116px;
+    margin-bottom: 96px;
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.copy-r {
+  min-width: 600px;
+  @media screen and (#{$media-md}) {
+    min-width: 50vw;
+  }
+  margin-right: 24px;
+  font-size: 37px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+        /* mobile rules */
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+    padding: 36px 0px 36px 36px;
+  }
+}
+
+
+.block-header-l {
+  @extend %stretch-over-max-width-l;
+  @extend %max-width-inner-l;
+  background-color: #1c1c1c;
+  padding-right: 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 128px;
+  z-index: 1;
+
+      /* mobile rules */
+  @media screen and (max-width: 768px) {
+        //height: 116px;
+    margin-bottom: 96px;
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+.copy-l {
+  min-width: 600px;
+  @media screen and (#{$media-md}) {
+    min-width: 50vw;
+  }
+  margin-left: 24px;
+  font-size: 37px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+          /* mobile rules */
+  @media screen and (max-width: 768px) {
+    font-size: 26px;
+    padding: 36px 36px 36px 0px;
+  }
+}
+  
+
 /* main CTA global button style */
 
 .sectorbutton {
@@ -97,38 +176,12 @@
 .consultantsection {
 
   .consultantcontainer {
-    @extend %stretch-over-max-width-l;
-    @extend %max-width-inner-l;
-    background-color: #1c1c1c;
-    padding-top: 48px;
-    padding-right: 48px;
-    padding-bottom: 48px;
-    position: relative;
-    height: 152px;
-    margin-bottom: 136px;
-    z-index: 1;
-    display: inline-block;
-  
-      /* mobile rules */
-    @media screen and (max-width: 768px) {
-      height: 116px;
-      margin-bottom: 96px;
-      width: 100%;
-      padding: 0px;
-    }
+    @extend .block-header-l;
+    margin-top: 134px;
   }
 
   .consultantscopy {
-    margin-left: 24px;
-    font-size: 37px;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #fff;
-        /* mobile rules */
-    @media screen and (max-width: 768px) {
-      font-size: 26px;
-      padding: 39px 0px 39px 0px;
-    }
+    @extend .copy-l;
   }
 }
   
@@ -229,44 +282,14 @@ $neat-mobile: (
 .tile_s:hover .tile_s-overlay {
   opacity: 1;
 }
-  
-  
+
   ////////////* LATEST NEWS HEADER *////////////
 .newssection {
   margin-bottom: 172px;
   .newscontainer {
-    @extend %stretch-over-max-width-r;
-    @extend %max-width-inner-r;
-
-    background-color: #1c1c1c;
-    padding-left: 48px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    position: relative;
-    height: 152px;
-    margin-bottom: 136px;
-    z-index: 1;
-    float: right;
-  
-      /* mobile rules */
-    @media screen and (max-width: 768px) {
-      height: 116px;
-      margin-bottom: 96px;
-      width: 100%;
-      padding: 0px;
-    }
-
+    @extend .block-header-r;
     .newscopy {
-      margin-right: 24px;
-      font-size: 37px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #fff;
-        /* mobile rules */
-      @media screen and (max-width: 768px) {
-        font-size: 26px;
-        padding: 39px 0px 39px 0px;
-      }
+      @extend .copy-r;
     }
   }
 }
@@ -712,37 +735,9 @@ $product-gallery-mobile: (
 .rolesection {
   width: 100%;
   .rolecontainer {
-    @extend %stretch-over-max-width-l;
-    @extend %max-width-inner-l;
-    display: inline-block;
-    background-color: #1c1c1c;
-    padding-right: 48px;
-    padding-top: 48px;
-    padding-bottom: 48px;
-    height: 152px;
-    margin-bottom: 128px;
-    z-index: 1;
-  
-      /* mobile rules */
-    @media screen and (max-width: 768px) {
-      height: 116px;
-      margin-bottom: 96px;
-      padding: 0px;
-    }
-
-
+    @extend .block-header-l;
     .rolescopy {
-      margin-left: 24px;
-      font-size: 37px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      color: #fff;
-        /* mobile rules */
-      @media screen and (max-width: 768px) {
-        font-size: 26px;
-        text-align: center;
-        padding: 39px 0px 39px 0px;
-      }
+      @extend .copy-l;
     }
   }
 }
