@@ -8,8 +8,8 @@
 
   .contact-footer {
     @extend %max-width-inner;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 24px;
+    padding-bottom: 24px;
     display: block;
     color: $shark-black;
     background: #fff;
@@ -51,8 +51,8 @@
     }
 
     @media screen and (max-width: 1440px) {
-      padding-top: 65px;
-      padding-bottom: 65px;
+      padding-top: 48px;
+      padding-bottom: 48px;
     }
 
     @media screen and (max-width: 720px) {
@@ -94,7 +94,8 @@
 
       .list-share-icons {
         float: none;
-        margin-bottom: 13px;
+        margin-bottom: 12px;
+        margin-top: 24px;
       }
 
       line-height: 2;
