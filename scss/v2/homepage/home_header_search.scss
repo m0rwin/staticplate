@@ -4,8 +4,7 @@ $neat-grid: (
 
 .home_header_search {
   border-radius: 2px;
-  padding: 19px;
-  background-color: rgba(255, 255, 255, 0.1);
+  padding: 48px 0px 19px 0px;
 
   .job-search-grid-home {
     @include grid-container;
