@@ -64,7 +64,6 @@
   @media screen and (#{$media-md}) {
     min-width: 50vw;
   }
-  margin-left: 24px;
   font-size: 37px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -72,6 +71,7 @@
           /* mobile rules */
   @media screen and (max-width: 768px) {
     font-size: 26px;
+    margin-left: 48px;
     padding: 36px 36px 36px 0px;
   }
 }
@@ -141,7 +141,6 @@
   pointer-events: none;
   left: 25%;
   margin-top: 100px;
-  z-index: -10;
 }
 
 
@@ -153,9 +152,8 @@
   white-space: nowrap;
   -webkit-font-smoothing: antialiased;
   pointer-events: none;
-  margin-top: -20px;
+  margin-top: -300px;
   left: -2%;
-  z-index: -10;
 }
 
 .words-jobs {
@@ -166,9 +164,8 @@
   -webkit-font-smoothing: antialiased;
   pointer-events: none;
   line-height: 0.9;
-  margin-top: 130px;
+  margin-top: 0px;
   left: 55%;
-  z-index: -10;
 }
   
   
@@ -416,10 +413,12 @@ $neat-mobile: (
     @include grid-column(8); // where 12 is the number of columns total.
     @include grid-media($neat-tablet) {
       @include grid-column(12); //full width
+      min-height: 350px;
     }
     @include grid-media($neat-mobile) {
       @include grid-column(12); //full width
       margin-bottom: 28px;
+      min-height: 350px;
     }
     transition: all 0.5s;
     overflow: hidden;
@@ -764,7 +763,6 @@ $neat-mobile: (
 .rolestiles {
   @include grid-container;
   padding-bottom: 172px;
-  max-width: 1300px;
   margin: 0 auto;
 }
 
