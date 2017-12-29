@@ -361,16 +361,24 @@
     }
   }
 }
-.qa {
-  position: relative;
-  float: left;
-  margin-left: 48px;
-  margin-bottom: 48px;
-}
 
-.no {
-  background-color: #fff !important;
-  color: #2b2b2b !important;
+.qabuttons {
+  margin-bottom: 48px;
+  position: relative;
+  .yes {
+    float: left;
+    margin-left: 24px;
+  }
+
+  .no {
+    float: left;
+    margin-left: 24px;
+    background-color: #fff;
+    color: #2b2b2b;
+    .no:hover {
+      background-color: #fff;
+    }
+  }
 }
 
 
