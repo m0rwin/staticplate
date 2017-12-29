@@ -318,7 +318,7 @@
   .tile_z,
    {
     @include grid-column(4);
-    height: 450px;
+    height: 380px;
     color: white;
     margin-bottom: 48px;
     position: relative;
@@ -331,6 +331,7 @@
 
     @include grid-media($neat-tablet) {
       @include grid-column(1);
+      height: 340px;
       position: relative;
     }
     @include grid-media($neat-mobile) {
