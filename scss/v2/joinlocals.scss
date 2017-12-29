@@ -51,14 +51,14 @@
     z-index: 0;
   }
 
-  .lll {
+  .join_orig {
     font-family: Impact;
     position: absolute;
     font-size: 380px;
-    color: #e00e0e;
+    color: #f0f0f0;
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
-    top: 29%;
+    top: 35%;
     left: 45%;
     z-index: 0;
   }
@@ -92,7 +92,7 @@
       float: right;
     }
 
-    .betextracopy {
+    .beyourtextracopy {
       margin-left: -246px;
       position: absolute;
       font-family: 'impact';
@@ -103,7 +103,7 @@
       color: #2b2b2b;
     }
 
-    .meetextracopy {
+    .meetyourselfcopy {
       font-family: 'impact';
       letter-spacing: 2px;
       font-size: 146px;
@@ -213,12 +213,12 @@
     }
   }
 
-/* responsive video section */
+/* dna section */
   .dna-container {
     width: 100%;
-    margin-bottom: 240px;
     position: relative;
     z-index: 1;
+    margin-bottom: 128px;
     @media only screen and (max-width: 768px) {
       margin-bottom: 140px;
     }
@@ -296,6 +296,87 @@
     left: 0;
   }
 
+
+  .wise-head {
+    font-family: Muli;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.21;
+    text-align: left;
+    padding: 48px 0px 48px 0px;
+    margin-bottom: 280px;
+  }
+
+
+//novo q&a section //
+  .qa-head {
+    font-family: Muli;
+    font-size: 37px;
+    font-weight: bold;
+    line-height: 1.21;
+    text-align: left;
+    padding: 48px 0px 48px 0px;
+    margin-bottom: 96px;
+  }
+
+/* responsive video section */
+  .dna-container {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 128px;
+    @media only screen and (max-width: 768px) {
+      margin-bottom: 140px;
+    }
+
+    .qa-background {
+      @extend %max-width-inner;
+      @extend %max-width-inner;
+      background-color: #1c1c1c;
+      .qa-head {
+        font-family: Muli;
+        font-size: 37px;
+        font-weight: normal;
+        line-height: 1.21;
+        text-align: left;
+        padding: 48px 0px 48px 0px;
+        margin-bottom: 96px;
+        color: #fff;
+        position: relative;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        -webkit-font-smoothing: antialiased;
+        text-align: left;
+        @media only screen and (max-width: 768px) {
+          font-size: 26px;
+          margin: 24px;
+          margin-left: 0;
+          padding: 24px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+  .qa {
+    position: relative;
+    float: left;
+    margin-left: 48px;
+    margin-bottom: 48px;
+  }
+  .no {
+    background-color: #fff !important;
+    color: #2b2b2b !important;
+  }
+
+
+// progress bar //
+  #progressbar {
+    height: 24px;
+    color: #008eda;
+    background-color: #f0f0f0;
+  }
 /* Team section grid */
 
   $neat-grid: (

@@ -233,10 +233,10 @@
                             <div class="extraordinary1">Yourself</div>
                             <div class="valuescontainer rellax" data-rellax-speed="3">
                                 <div class="newscontainer">
-                                    <div class="betextracopy">
+                                    <div class="beyourtextracopy">
                                         Be
                                     </div>
-                                    <div class="meetextracopy">
+                                    <div class="meetyourselfcopy">
                                         Yourself
                                     </div>
                                 </div>
@@ -309,7 +309,7 @@
                                 <div class="madness-quote1">
                                         We do what we do. We do it our way. <br>
                                         We will not be everybody’s cup of tea. <br>
-                                        If you like what you see come and join us.<br>
+                                        If you like what you see come and join us.<br><br>
                                         We’d love to hear from you.
                                 </div>
                                 <div class="downmad scroll-button" data-scroll-past=".madness-background1">
@@ -320,10 +320,27 @@
                             </div>
                         </section>
 
-                        <div class="lll">
-                            <div class="rellax" data-rellax-speed="-2">Original</div>
+                        <div class="join_orig">
+                            <div class="rellax" data-rellax-speed="-2">Three</div>
                         </div>
                         
+                        <section class="novoqa">
+                            <div class="qa-head">
+                                Are you built for Novo?
+                            </div>
+                            <div class="dna-container">
+                                <div id="progressbar"></div>
+                                <div class="qa-background">
+                                    <div class="qa-head">
+                                        Do you hate stereotypical recuiters?
+                                    </div>
+                                    <button class="qa button yes"> yes
+                                    </div>
+                                    <button class="qa button no"> No
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
                         <!-- 2. news section -->
                         <section class="newssection">                                    
                             <div class="sector-blog-grid">
@@ -393,6 +410,13 @@
         direction: 'vertical',
         toggleClass: 'onScreen',
         });
+    </script>
+    <script>
+        $( function() {
+            $( "#progressbar" ).progressbar({
+            value: 10
+            });
+        } );
     </script>
     <script src="/scripts/scrollreveal.js"></script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
