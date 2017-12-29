@@ -248,16 +248,14 @@
                                     We encourage individuality.<br>
                                     We employ the extraordinary.<br>
                                     Why not say 
+                                    <a href="#">
+                                        <div class="hellotrigger">
+                                            hello.
+                                        </div>
+                                    </a>    
                                 </div>
-                                <a href="#">
-                                    <div class="hellotrigger">
-                                        hello.
-                                    </div>
-                                </a>
                             </div>
-                            <div class="downsection">
                             <div class="thelocals1 rellax" data-rellax-speed="-4">Yourself</div>
-                            </div>
                         </div>
                         <section class="madness-container1">
                             <div class="vidouter">
@@ -271,7 +269,7 @@
                                 <div class="madness-quote1">
                                     “Strength lies in the differences,<br>not in the similarities”
                                 </div>
-                                <div class="downmad">
+                                <div class="downmad scroll-button" data-scroll-past=".madness-background1">
                                     <svg class="downwhitarrowmad" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
                                         <path fill="none" fill-rule="evenodd" stroke="#FFF" stroke-width="3" d="M4 14l19.067 19.402a2 2 0 0 0 2.89-.039L44 14"/>
                                     </svg>
@@ -439,7 +437,7 @@
                                         </a>
                                 </section>
                             </section>
-                            <div class="extra1 rellax" data-rellax-speed="-2">">Extraordinary</div>
+                            <div class="extra1 rellax" data-rellax-speed="-2">Extraordinary</div>
         </section>
     </main>
 
@@ -500,6 +498,18 @@
         $('#main-location-field').select2({
             placeholder: 'Location',
             width: null
+        });
+
+        $('.scroll-button').on('click', function() {
+            var selector = $(this).attr('data-scroll-past');
+            var position = (
+                $(selector).offset().top + 
+                $(selector).outerHeight() - 
+                $('header.header').outerHeight());
+
+            $('html, body').animate({
+                scrollTop: position
+            }, 700);
         });
     </script>
     <script>
