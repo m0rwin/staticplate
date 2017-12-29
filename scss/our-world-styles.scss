@@ -27,6 +27,7 @@ a {
   margin-top: 96px;
   margin-left: 24px;
   color: #2d2d2d;
+  z-index: 2;
 }
 
 h1 {
@@ -142,9 +143,9 @@ img {
 
 .sectors {
   height: 50%;
-  width: 50%;
+  width: 36%;
   top: 42% !important;
-  left: 60% !important;
+  left: 67% !important;
 }
 
 .sectorscale {
@@ -180,6 +181,7 @@ img {
   Left: 50%;
   position: absolute;
   opacity: 0.3;
+  pointer-events: none;
 }
 
 /*floating infinate animation for each element */
