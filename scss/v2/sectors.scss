@@ -205,6 +205,12 @@ $neat-mobile: (
 .consultanttiles-sectors {
   @include grid-container;
   @include grid-collapse;
+  @include grid-media($neat-tablet) {
+    @include grid-collapse;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-collapse;
+  }
   padding-bottom: 172px;
 }
 
@@ -409,6 +415,12 @@ $neat-mobile: (
 .sector-blog-grid {
   @include grid-container;
   @include grid-collapse;
+  @include grid-media($neat-tablet) {
+    @include grid-collapse;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-collapse;
+  }
   .first {
     @include grid-column(8); // where 12 is the number of columns total.
     @include grid-media($neat-tablet) {
@@ -762,6 +774,14 @@ $neat-mobile: (
 
 .rolestiles {
   @include grid-container;
+  @include grid-collapse;
+
+  @include grid-media($neat-tablet) {
+    @include grid-collapse;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-collapse;
+  }
   padding-bottom: 172px;
   margin: 0 auto;
 }
