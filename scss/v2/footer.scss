@@ -71,9 +71,7 @@
   }
 
   .footer-bottom {
-    @extend %max-width-inner;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    padding: 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right";
@@ -83,8 +81,7 @@
     @media screen and (max-width: 900px) {
       grid-template-columns: 1fr;
       grid-template-areas: "right"  "left";
-      padding-top: 26px;
-      padding-bottom: 26px;
+      padding: 24px;
       text-align: center;
 
       .footer-img {
