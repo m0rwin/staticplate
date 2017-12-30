@@ -17,6 +17,16 @@
     h2,
     h3 {
       font-family: $font-impact;
+      &.blue {
+        font-family: $font-muli;
+        color: $cerulean-blue;
+        font-size: 36px;
+        font-weight: normal;
+        margin: 0;
+      }
+      &.short {
+        margin-bottom: 0.1em;
+      }
     }
 
     @media screen and (#{$media-sm}) {
@@ -39,6 +49,17 @@
         font-weight: normal;
         max-width: 850px;
       }
+    }
+
+    &.black {
+      @extend %stretch-over-max-width-l;
+      @extend %max-width-inner-l;
+      background-color: $shark-black;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-right: 48px;
+      display: inline-block;
+      width: auto;
     }
   }
 }
@@ -146,6 +167,16 @@
   .hero-content {
     display: inline-block;
     vertical-align: middle;
+  }
+
+  &.no-center {
+    &::before {
+      content: none;
+    }
+    text-align: left;
+    .hero-content {
+      vertical-align: top;
+    }
   }
 
   .max-width {
