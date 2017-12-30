@@ -16,7 +16,7 @@
 %max-width-inner-l {
   padding-left: calc((100vw - #{$max-width})/2);
 
-  @media screen and (max-width: $max-width) {
+  @media screen and (max-width: $max-width + 48) {
     padding-left: 48px;
   }
 
@@ -29,7 +29,7 @@
 %max-width-inner-r {
   padding-right: calc((100vw - #{$max-width})/2);
 
-  @media screen and (max-width: 1396px) {
+  @media screen and (max-width: $max-width + 48) {
     padding-right: 48px;
   }
 

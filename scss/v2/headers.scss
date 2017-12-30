@@ -52,7 +52,14 @@
     }
 
     &.black {
-      @extend %stretch-over-max-width-l;
+      margin-left: -48px;
+      @media screen and (#{$media-md}) {
+        margin-left: -48px;
+      }
+
+      @media screen and (#{$media-sm}) {
+        margin-left: -24px;
+      }
       @extend %max-width-inner-l;
       background-color: $shark-black;
       padding-top: 48px;
