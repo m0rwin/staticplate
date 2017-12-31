@@ -1,0 +1,34 @@
+.hero-full.landscape {
+  @media screen and (max-aspect-ratio: 1/1), screen and (#{$media-sm}) {
+    background-position-x: 78%;
+    .hero-content.black {
+      margin-top: 53vh;
+    }
+  }
+}
+
+.container.local-profile {
+  .profile-grid {
+    @include grid-container;
+    @include grid-collapse;
+
+    font-weight: normal;
+
+    $gutter: map-get($neat-grid, 'gutter');
+
+    & > div {
+      @include grid-column(3);
+      height: 20vw;
+      margin-bottom: $gutter;
+      padding: 48px;
+      color: white;
+      background-color: $shark-black;
+    }
+
+    .quote-big {
+      height: calc(40vw + #{$gutter} - 1px);
+      @include grid-column(6);
+      font-size: 2em;
+    }
+  }
+}
