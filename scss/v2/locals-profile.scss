@@ -7,28 +7,187 @@
   }
 }
 
+$grid-profile: (
+  'gutter': 24px,
+  'media': 'all'
+);
+$grid-profile-md: (
+  'gutter': 24px,
+  'media': '(' + $media-md + ')'
+);
+
+$grid-profile-sm: (
+  'gutter': 24px,
+  'media': '(' + $media-sm + ')'
+);
+$grid-profile-gutter: 24px;
 .container.local-profile {
   .profile-grid {
     @include grid-container;
-    @include grid-collapse;
+    @include grid-media($grid-profile) {
+      @include grid-collapse;
+      > div {
+        @include grid-column(3);
+        height: calc(((1300px - (3 * #{$grid-profile-gutter})) / 4));
+      }
+
+      .quote-big {
+        height: calc(((1300px - (3 * #{$grid-profile-gutter})) / 2 + #{$grid-profile-gutter}) - 0.1px);
+        @include grid-column(6);
+      }
+    }
+
+    @include grid-media($grid-profile-md) {
+      > div {
+        @include grid-column(4);
+        height: calc(((100vw - (2 * #{$grid-profile-gutter}) - 96px) / 3));
+      }
+
+      .quote-big {
+        @include grid-column(8);
+        height: calc(((100vw - (2 * #{$grid-profile-gutter}) - 96px) * 2 / 3 + #{$grid-profile-gutter}) - 0.1px);
+      }
+    }
+
+    @include grid-media($grid-profile-sm) {
+      > div {
+        @include grid-column(6);
+        height: calc((100vw - #{$grid-profile-gutter} - 48px) / 2);
+      }
+
+      .quote-big {
+        @include grid-column(12);
+        height: calc(((100vw - (#{$grid-profile-gutter}) - 48px) + #{$grid-profile-gutter}) - 0.1px);
+      }
+    }
 
     font-weight: normal;
 
-    $gutter: map-get($neat-grid, 'gutter');
 
-    & > div {
-      @include grid-column(3);
-      height: 20vw;
-      margin-bottom: $gutter;
-      padding: 48px;
+    > div {
+      margin-bottom: $grid-profile-gutter;
+      padding: 24px 48px;
       color: white;
       background-color: $shark-black;
+      font-size: 16px;
+
+      h4 {
+        margin: 0;
+        margin-bottom: 1.3em;
+      }
+
+      .anchor {
+        margin-top: 1.3em;
+        display: inline-block;
+        font-size: 1em;
+        text-transform: uppercase;
+      }
     }
 
     .quote-big {
-      height: calc(40vw + #{$gutter} - 1px);
-      @include grid-column(6);
-      font-size: 2em;
+      font-size: 3em;
+    }
+
+    .social {
+      padding: 24px;
+      li {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-bottom: 10px;
+      }
+
+      a::before {
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-size: 2em;
+        vertical-align: middle;
+        margin-right: 0.4em;
+      }
+
+      .mail::before {
+        content: 'email';
+      }
+
+      .tel::before {
+        content: 'phone';
+      }
+
+      .twitter::before {
+        font-family: 'Socicon';
+        content: '\e08d';
+        font-size: 1.7em;
+        line-height: 2em;
+        margin: 0 0.5em 0 0.1em;
+        font-weight: 100;
+      }
+
+      .linkedin::before {
+        font-family: 'Socicon';
+        content: '\e04c';
+        font-size: 1.7em;
+        line-height: 2em;
+        margin: 0 0.7em 0 0.1em;
+        font-weight: 100;
+      }
+    }
+
+    .job {
+      position: relative;
+      dl {
+        line-height: 1em;
+        dt {
+          display: none;
+        }
+        dd {
+          margin-bottom: 1em;
+        }
+      }
+    }
+
+    .spotify {
+      padding: 0;
+    }
+
+    .quote-book {
+      &::before {
+        font-family: 'Material Icons';
+        content: 'book';
+        display: block;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      font-size: 1.2em;
+    }
+
+    .quote {
+      font-size: 1.2em;
+    }
+
+    .image {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      .caption {
+        position: absolute;
+        background: rgba(25, 27, 29, 0.8);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 24px;
+      }
+
+
+      @media (hover) {
+        .caption {
+          display: none;
+        }
+
+        &:hover {
+          .caption { display: block; }
+        }
+      }
     }
   }
 }
