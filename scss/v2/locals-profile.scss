@@ -11,6 +11,7 @@ $grid-profile: (
   'gutter': 24px,
   'media': 'all'
 );
+
 $grid-profile-md: (
   'gutter': 24px,
   'media': '(' + $media-md + ')'
@@ -18,15 +19,24 @@ $grid-profile-md: (
 
 $grid-profile-sm: (
   'gutter': 24px,
-  'media': '(' + $media-sm + ')'
+  'media': '(max-width: 1075px)'
 );
+$grid-profile-sm2: (
+  'gutter': 24px,
+  'media': '(max-width: 1024px)'
+);
+// $grid-profile-sm: (
+//   'gutter': 24px,
+//   'media': '(' + $media-sm + ')'
+// );
 $grid-profile-gutter: 24px;
 .container.local-profile {
   .profile-grid {
     @include grid-container;
     @include grid-media($grid-profile) {
       @include grid-collapse;
-      > div {
+      > div,
+      a.block {
         @include grid-column(3);
         height: calc(((1300px - (3 * #{$grid-profile-gutter})) / 4));
       }
@@ -38,7 +48,8 @@ $grid-profile-gutter: 24px;
     }
 
     @include grid-media($grid-profile-md) {
-      > div {
+      > div,
+      a.block {
         @include grid-column(4);
         height: calc(((100vw - (2 * #{$grid-profile-gutter}) - 96px) / 3));
       }
@@ -50,23 +61,37 @@ $grid-profile-gutter: 24px;
     }
 
     @include grid-media($grid-profile-sm) {
-      > div {
+      > div,
+      a.block {
         @include grid-column(6);
-        height: calc((100vw - #{$grid-profile-gutter} - 48px) / 2);
       }
 
       .quote-big {
         @include grid-column(12);
-        height: calc(((100vw - (#{$grid-profile-gutter}) - 48px) + #{$grid-profile-gutter}) - 0.1px);
+      }
+    }
+
+    @include grid-media($grid-profile-sm2) {
+      > div,
+      a.block {
+        @include grid-column(12);
+        min-height: 300px;
+      }
+
+      .quote-big {
+        @include grid-column(12);
+        min-height: 512px;
+        height: auto;
       }
     }
 
     font-weight: normal;
 
 
-    > div {
+    > div,
+    a.block {
       margin-bottom: $grid-profile-gutter;
-      padding: 24px 48px;
+      padding: 36px 48px;
       color: white;
       background-color: $shark-black;
       font-size: 16px;
@@ -82,6 +107,10 @@ $grid-profile-gutter: 24px;
         font-size: 1em;
         text-transform: uppercase;
       }
+    }
+
+    > a.block:hover {
+      background-color: $cerulean-blue;
     }
 
     .quote-big {
@@ -103,6 +132,10 @@ $grid-profile-gutter: 24px;
         font-size: 2em;
         vertical-align: middle;
         margin-right: 0.4em;
+      }
+
+      a:hover {
+        color: $curious-blue;
       }
 
       .mail::before {
@@ -165,6 +198,15 @@ $grid-profile-gutter: 24px;
       font-size: 1.2em;
     }
 
+    .sector,
+    .job {
+      position: relative;
+      .anchor {
+        position: absolute;
+        bottom: 36px;
+      }
+    }
+
     .image {
       position: relative;
       background-size: cover;
@@ -181,13 +223,34 @@ $grid-profile-gutter: 24px;
 
       @media (hover) {
         .caption {
-          display: none;
+          opacity: 0;
+          transition: opacity 0.3s;
         }
 
         &:hover {
-          .caption { display: block; }
+          .caption {
+            opacity: 1;
+          }
         }
       }
+    }
+  }
+
+  .back {
+    padding: 24px;
+    color: white;
+    text-transform: uppercase;
+    @media screen and (#{$media-sm}) {
+      padding: 24px;
+    }
+
+    background-color: $shark-black;
+    &::before {
+      font-family: 'Material Icons';
+      content: 'arrow_back';
+      vertical-align: top;
+      text-transform: none;
+      margin-right: 1em;
     }
   }
 }
