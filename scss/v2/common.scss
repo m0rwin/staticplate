@@ -16,7 +16,7 @@
 %max-width-inner-l {
   padding-left: calc((100vw - #{$max-width})/2);
 
-  @media screen and (max-width: $max-width + 48) {
+  @media screen and (max-width: $max-width + 96) {
     padding-left: 48px;
   }
 
@@ -29,7 +29,7 @@
 %max-width-inner-r {
   padding-right: calc((100vw - #{$max-width})/2);
 
-  @media screen and (max-width: $max-width + 48) {
+  @media screen and (max-width: $max-width + 96) {
     padding-right: 48px;
   }
 
@@ -74,9 +74,58 @@
   display: none;
 }
 
+.right-block {
+  @extend %stretch-over-max-width-r;
+  background-color: $shark-black;
+  color: white;
+  float: right;
+  clear: both;
+
+  .block-contents {
+    @extend %max-width-inner-r;
+    padding-left: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-width: 55vw;
+  }
+}
+
+.left-block {
+  @extend %stretch-over-max-width-l;
+  background-color: $shark-black;
+  color: white;
+  float: left;
+  clear: both;
+
+  .block-contents {
+    @extend %max-width-inner-l;
+    padding-right: 48px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    min-width: 55vw;
+
+    form {
+      margin: 0 auto;
+      max-width: 550px;
+    }
+  }
+}
+
+.left-block + .right-block,
+.left-block + .left-block,
+.right-block + .left-block,
+.right-block + .right-block {
+  margin-top: 192px;
+}
+
 body > main {
   .container {
     @extend %max-width;
+    &::after {
+      clear: both;
+      content: "";
+      display: block;
+    }
   }
   @extend %margin-under-header;
   overflow: hidden;

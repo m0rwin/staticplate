@@ -261,10 +261,12 @@ $break-sidebar: 'max-width: 1120px';
     }
 
     @media screen and (max-width: 817px) {
-      & > div {
+      & > div,
+      & > a {
         clear: both;
       }
-      & > div:nth-child(even) {
+      & > div:nth-child(even),
+      & > a:nth-child(even) {
         float: right;
         margin-right: 48px;
         margin-left: 0;
@@ -289,7 +291,7 @@ $break-sidebar: 'max-width: 1120px';
       margin: 0;
       width: auto;
       & > div.key-contact,
-      & > div.side-box {
+      & > .side-box {
         max-width: none;
         width: 100%;
         float: left;
@@ -348,7 +350,6 @@ $break-sidebar: 'max-width: 1120px';
     padding: 24px;
     color: $white;
     .cta { color: $white; }
-    .cta:hover { color: $cerulean-blue; }
     .cta {
       text-transform: uppercase;
       font-size: 16px;

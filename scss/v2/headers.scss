@@ -9,6 +9,8 @@
   margin-bottom: 48px;
 
   .hero-content {
+    @extend %max-width;
+
     width: 100%;
     text-align: left;
 
@@ -51,6 +53,8 @@
     }
 
     &.black {
+      @extend %max-width-inner-l;
+      max-width: none;
       margin-left: -48px;
       @media screen and (#{$media-md}) {
         margin-left: -48px;
@@ -59,7 +63,6 @@
       @media screen and (#{$media-sm}) {
         margin-left: -24px;
       }
-      @extend %max-width-inner-l;
       background-color: $shark-black;
       padding-top: 48px;
       padding-bottom: 48px;
