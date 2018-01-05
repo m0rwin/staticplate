@@ -87,12 +87,14 @@
       .footer-img {
         float: none;
         margin-bottom: 39px;
+        padding-right: 0px;
       }
 
       .list-share-icons {
         float: none;
         margin-bottom: 12px;
         margin-top: 24px;
+        margin-right: 30px;
       }
 
       line-height: 2;
@@ -169,6 +171,7 @@
   .footer-img {
     float: right;
     clear: both;
+    padding-right: 78px;
   }
 }
 
