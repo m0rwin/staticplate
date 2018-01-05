@@ -1,0 +1,79 @@
+.container.contact {
+  .contact-details {
+    dt {
+      font-weight: normal;
+      margin-bottom: 24px;
+    }
+    dd {
+      font-size: 1.37em;
+      margin-bottom: 36px;
+      a {
+        display: inline-block;
+        border-bottom: 2px solid $curious-blue;
+      }
+    }
+  }
+
+  #contact-form {
+    margin: 0 auto;
+    max-width: 600px;
+
+    p {
+      font-size: 1.37em;
+    }
+
+    fieldset {
+      font-size: 1.37em;
+      font-weight: bold;
+      margin-bottom: 75px;
+    }
+
+
+    .dropdown {
+      position: relative;
+      &::after {
+        font-size: 1.3em;
+        content: 'expand_more';
+        font-family: 'Material Icons';
+        display: block;
+        color: black;
+        position: absolute;
+        right: 18px;
+        top: -3px;
+        pointer-events: none;
+      }
+
+      select {
+        padding-right: 48px;
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      margin-bottom: 24px;
+      border-radius: $radius;
+      width: 90%;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 10em;
+    }
+
+
+    .error { border-color: red !important; }
+    label.error {
+      display: none !important;
+    }
+  }
+
+  .hello1 {
+    left: -10px;
+  }
+
+  .hello2 {
+    bottom: 100px;
+    right: -10px;
+  }
+}

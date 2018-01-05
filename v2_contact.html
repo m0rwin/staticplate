@@ -231,8 +231,10 @@
             </div>
         </header>
         <section class="container contact">
+            <div class="hello1 bg-parallax rellax" data-rellax-speed="-4">HELLO</div>
+
             <div class="right-block">
-                <div class="block-contents">
+                <div class="block-contents contact-details">
                     <dl>
                         <dt>Phone</dt>
                         <dd>
@@ -241,7 +243,7 @@
 
                         <dt>Email</dt>
                         <dd>
-                            <a href="tel:01442767808">01442 767808</a>
+                            <a href="mailto:info@novouk.co">info@novouk.com</a>
                         </dd>
 
                         <dt>Head Office</dt>
@@ -255,41 +257,44 @@
 
             <div class="left-block">
                 <div class="block-contents">
-                    <form>
+                    <form id="contact-form">
                         <p>Novo UK is based in the little-known Hertfordshire Riviera town of Hemel Hempstead.
                         </p>
                         <fieldset>Talk to us, we are very good at chatting.</fieldset>
                         <label>
                             <span class="sr-only">Name</span>
-                            <input type="text" placeholder="Your name please&#42;" />
+                            <input required type="text" placeholder="Your name please&#42;" />
                         </label>
 
                         <label>
                             <span class="sr-only">Email</span>
-                            <input type="text" placeholder="A contact email&#42;" />
+                            <input required type="email" placeholder="A contact email&#42;" />
                         </label>
 
-                        <label>
+                        <label class="dropdown">
                             <span class="sr-only">Recipient</span>
-                            <select>
+                            <select required>
                                 <option hidden>Let's get you through to the right person</option>
-                                <option>Ask us a question</option>
-                                <option>Register a vacancy</option>
-                                <option>Request a call back</option>
-                                <option>Opportunities at Novo</option>
-                                <option>Other</option>
+                                <option value="a">Ask us a question</option>
+                                <option value="b">Register a vacancy</option>
+                                <option value="c">Request a call back</option>
+                                <option value="d">Opportunities at Novo</option>
+                                <option value="e">Other</option>
                             </select>
                         </label>
 
                         <label>
                             <span class="sr-only">Message</span>
-                            <textarea placeholder="How can we help you?&#42;"></textarea>
+                            <textarea required placeholder="How can we help you?&#42;"></textarea>
                         </label>
 
                         <input type="submit" class="button" value="SEND" />
                     </form>
                 </div>
             </div>
+
+            <div class="hello2 bg-parallax rellax" data-rellax-speed="-4">HELLO</div>
+
         </section>
     </main>
 
@@ -333,15 +338,17 @@
     </footer>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="/scripts/jquery-3.2.1.min.js"></script>
+    <script src="/scripts/rellax.js"></script>
+    <script>
+        var rellax = new Rellax();
+    </script>
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
-    <script src="/scripts/jquery.validate.min.js"></script>
     <script type="text/javascript">
         $(window).one('mousemove wheel', function () {
             $('footer.footer').footerReveal({ shadow: false });
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
-        $('#apply-form').validate();
 
         $('.scroll-button').on('click', function () {
             var selector = $(this).attr('data-scroll-past');

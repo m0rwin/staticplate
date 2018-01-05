@@ -80,6 +80,8 @@
   color: white;
   float: right;
   clear: both;
+  position: relative;
+  z-index: 1;
 
   .block-contents {
     @extend %max-width-inner-r;
@@ -96,6 +98,8 @@
   color: white;
   float: left;
   clear: both;
+  position: relative;
+  z-index: 1;
 
   .block-contents {
     @extend %max-width-inner-l;
@@ -103,11 +107,6 @@
     padding-top: 48px;
     padding-bottom: 48px;
     min-width: 55vw;
-
-    form {
-      margin: 0 auto;
-      max-width: 550px;
-    }
   }
 }
 
@@ -132,9 +131,20 @@ body > main {
   background-color: white;
   padding-bottom: 48px;
 
+  position: relative;
+
   @media screen and (#{$media-sm}) {
     padding-bottom: 24px;
   }
+}
+
+.bg-parallax {
+  font-family: Impact;
+  font-size: 500px;
+  color: $parallax-grey;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  position: absolute;
 }
 
 .button {
@@ -155,6 +165,7 @@ body > main {
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   line-height: 48px;
+  cursor: pointer;
 
   &:hover {
     background-color: #0e577c;
@@ -213,6 +224,11 @@ select {
   border-radius: $radius;
   padding: 0 24px;
   width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 sup {

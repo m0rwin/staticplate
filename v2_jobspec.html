@@ -418,13 +418,11 @@
     <script src="/scripts/jquery-3.2.1.min.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
     <script src="/scripts/footer-reveal.min.js"></script>
-    <script src="/scripts/jquery.validate.min.js"></script>
     <script type="text/javascript">
         $(window).one('mousemove wheel', function () {
             $('footer.footer').footerReveal({ shadow: false });
             $(window).trigger('footerRevealResize'); // forces the margin-bottom on the main container.
         });
-        $('#apply-form').validate();
         function loadFile(el) {
             setFile(el.files[0].name);
         }
