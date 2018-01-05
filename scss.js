@@ -33,11 +33,6 @@ function makeCss(config) {
 }
 
 makeCss({
-    scss: './scss/style.scss',
-    css: './css/style.css'
-});
-
-makeCss({
     scss: './scss/our-world-styles.scss',
     css: './css/our-world.css'
 });
