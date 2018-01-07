@@ -96,7 +96,7 @@
   /* old school section novo main 2*/
 
 #novobot {
-  margin-bottom: 240px;
+  margin-bottom: 120px;
 }
 .block-div {
   @extend %stretch-over-max-width-l;
@@ -182,15 +182,15 @@
 
 
 
-.yourself {
+.yourself-home {
   position: relative;
   font-family: $font-impact;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
   -webkit-font-smoothing: antialiased;
-
   z-index: 0;
+  left: -400;
   pointer-events: none;
   overflow: visible;
   bottom: 0;
