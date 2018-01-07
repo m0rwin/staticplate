@@ -163,6 +163,10 @@
   pointer-events: none;
   overflow: visible;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+    left: 5%;
+  }
 }
 
 .extraoridinary {
@@ -178,6 +182,9 @@
   pointer-events: none;
   overflow: visible;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+  }
 }
 
 
@@ -195,6 +202,11 @@
   overflow: visible;
   bottom: 0;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+    bottom: -1410px;
+    left: -110px;
+  }
 }
 
 #novodefined {
