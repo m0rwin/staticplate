@@ -35,6 +35,9 @@ h1 {
   font-weight: 900;
   font-size: 75px;
   color: #2d2d2d;
+  @media screen and (max-width: $menu-small-width) {
+    font-size: 52px;
+  }
 }
 
 h4 {
