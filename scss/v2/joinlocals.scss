@@ -225,7 +225,10 @@
       @extend %stretch-over-max-width;
       @extend %max-width-inner;
       background-color: #1c1c1c;
-      margin-bottom: 128px;
+      margin-bottom: 256px;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 128px;
+      }
       .dna-head {
         font-family: 'muli';
         margin: 128px 24px 0px 0px;
@@ -309,6 +312,10 @@
   text-align: left;
   padding: 48px 0px 48px 0px;
   margin-bottom: 280px;
+  @media only screen and (max-width: 768px) {
+    font-size: 37px;
+    margin-bottom: 48px;
+  }
 }
 
 // DNA seconsd markup grid for copy section //
@@ -418,7 +425,7 @@ $neat-mobile: (
   margin-bottom: 96px;
 }
 
-/* responsive video section */
+// qa section //
 .dna-container {
   width: 100%;
   position: relative;
@@ -429,6 +436,7 @@ $neat-mobile: (
   .qa-background {
     padding: 48px;
     background-color: #1c1c1c;
+    margin-bottom: 256px;
     .qa-head {
       font-family: Muli;
       font-size: 37px;
