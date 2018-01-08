@@ -218,15 +218,14 @@
     width: 100%;
     position: relative;
     z-index: 1;
-    margin-bottom: 128px;
     @media only screen and (max-width: 768px) {
-      margin-bottom: 140px;
     }
 
     .dna-background {
       @extend %stretch-over-max-width;
       @extend %max-width-inner;
       background-color: #1c1c1c;
+      margin-bottom: 128px;
       .dna-head {
         font-family: 'muli';
         margin: 128px 24px 0px 0px;
@@ -241,11 +240,10 @@
         -webkit-font-smoothing: antialiased;
         text-align: center;
         @media only screen and (max-width: 768px) {
-          font-size: 26px;
-          margin: 24px;
+          font-size: 37px;
+          margin: 48px 24px 24px 24px;
           margin-left: 0;
-          padding: 24px;
-          padding-left: 0;
+          padding: 48px;
         }
       }
     }
@@ -253,6 +251,9 @@
 }
 .dna-section {
   margin-top: -60px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .vidouter {
   width: 100%;
@@ -320,7 +321,7 @@ $neat-grid: (
   );
 
 $neat-tablet: (
-    columns: 2,
+    columns: 3,
     media: 'screen and (max-width: 1422px)',
     gutter: 48px
   );
@@ -341,8 +342,10 @@ $neat-mobile: (
   @include grid-media($neat-mobile) {
     @include grid-collapse;
   }
-  padding-bottom: 172px;
-  margin: 0 auto;
+  padding-bottom: 96px;
+  @media only screen and (max-width: 1024px) {
+    padding-bottom: 0px;
+  }
 }
 
 .dna-item,
@@ -352,13 +355,6 @@ $neat-mobile: (
   color: white;
   margin-bottom: 48px;
   position: relative;
-  transition: all 0.5s;
-  overflow: hidden;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-color: #1c1c1c;
-
   @include grid-media($neat-tablet) {
     @include grid-column(1);
     position: relative;
@@ -366,7 +362,7 @@ $neat-mobile: (
   @include grid-media($neat-mobile) {
     @include grid-column(1);
     margin-bottom: 24px;
-    height: 350px;
+    height: 260px;
     position: relative;
   }
 
@@ -376,29 +372,37 @@ $neat-mobile: (
     position: relative;
   }
   .dna-copy-container {
-    color: #fff;
-    font-size: 19px;
-    font-weight: bold;
-    font-family: 'muli' sans-serif;
-    padding: 48px;
-    left: 0;
-    top: 0;
-    position: absolute;
     -webkit-font-smoothing: antialiased;
   }
-  .job_details {
+  .dna-number {
     color: #fff;
-    font-size: 16px;
+    font-size: 130px;
+    font-weight: normal;
+    font-family: $font-impact;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    @media only screen and (max-width: 1024px) {
+      font-size: 75px;
+    }
+  }
+  .dna-description {
+    color: #fff;
+    font-size: 26px;
     font-weight: normal;
     font-family: 'muli' sans-serif;
-    margin: 24px 24px 24px 68px;
-    left: 0;
+    text-align: center;
     padding-bottom: 8px;
-    position: absolute;
     -webkit-font-smoothing: antialiased;
-    list-style-type: disc;
-    li {
-      margin-bottom: 8px;
+    @media only screen and (max-width: 1024px) {
+      font-size: 19px;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin: 0 auto;
     }
   }
 }
@@ -419,9 +423,7 @@ $neat-mobile: (
   width: 100%;
   position: relative;
   z-index: 1;
-  margin-bottom: 128px;
   @media only screen and (max-width: 768px) {
-    margin-bottom: 140px;
   }
 
   .qa-background {
@@ -486,7 +488,7 @@ $neat-mobile: (
 // dna animation section //
 .dna {
   svg {
-    margin: 48px;
+    margin: 48px 0px 48px 0px;
   }
 
   path[class^="path"] {
@@ -507,10 +509,6 @@ $neat-mobile: (
       stroke-dashoffset: 0;
     }
   }
-}
-
-.dna {
-  padding-bottom: 128px;
 }
 
 // copy for video override
