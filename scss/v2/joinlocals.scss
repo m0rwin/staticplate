@@ -310,8 +310,100 @@
   margin-bottom: 280px;
 }
 
+// DNA seconsd markup grid for copy section //
 
-//novo q&a section //
+  ////////////* DNA *////////////
+$neat-grid: (
+    columns: 12,
+    gutter: 48px,
+    margin-bottom: 48px
+  );
+
+$neat-tablet: (
+    columns: 2,
+    media: 'screen and (max-width: 1422px)',
+    gutter: 48px
+  );
+
+$neat-mobile: (
+    columns: 1,
+    media: 'screen and (max-width: 768px)',
+    gutter: 24px
+  );
+
+.dna-grid {
+  @include grid-container;
+  @include grid-collapse;
+
+  @include grid-media($neat-tablet) {
+    @include grid-collapse;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-collapse;
+  }
+  padding-bottom: 172px;
+  margin: 0 auto;
+}
+
+.dna-item,
+ {
+  @include grid-column(4);
+  height: 320px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  transition: all 0.5s;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #1c1c1c;
+
+  @include grid-media($neat-tablet) {
+    @include grid-column(1);
+    position: relative;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-column(1);
+    margin-bottom: 24px;
+    height: 350px;
+    position: relative;
+  }
+
+  .dna-copy-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .dna-copy-container {
+    color: #fff;
+    font-size: 19px;
+    font-weight: bold;
+    font-family: 'muli' sans-serif;
+    padding: 48px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+  }
+  .job_details {
+    color: #fff;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'muli' sans-serif;
+    margin: 24px 24px 24px 68px;
+    left: 0;
+    padding-bottom: 8px;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    list-style-type: disc;
+    li {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+//novo q&a section ///
 .qa-head {
   font-family: Muli;
   font-size: 37px;
