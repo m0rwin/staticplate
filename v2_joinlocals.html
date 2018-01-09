@@ -274,7 +274,7 @@
                                   </div>
                                 <div class="dna-grid">
                                     <div class="dna-item">
-                                        <div class="dna-copy-container">
+                                        <div class="dna-copy-container foo">
                                             <div class="dna-number">
                                                 1
                                             </div>
@@ -284,7 +284,7 @@
                                         </div>
                                     </div>
                                     <div class="dna-item">
-                                        <div class="dna-copy-container">
+                                        <div class="dna-copy-container bar">
                                             <div class="dna-number">
                                                 2
                                             </div>
@@ -465,6 +465,9 @@
             $(".pathEnd").addClass("pathSecond");
         } 
         });
+
+        window.sr = ScrollReveal();
+            sr.reveal('.foo');
     </script>
     <script>
         var APP_ID = "biiewbsz";
