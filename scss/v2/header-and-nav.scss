@@ -184,19 +184,19 @@ $grey-hover: #B3B3B3;
 
       &::before,
       &::after {
-        background-color: #1c1c1c;
+        background-color: $grey-hover;
       }
 
       &::before {
         top: 0;
         transform: rotate(45deg);
-        background-color: #1c1c1c;
+        background-color: $grey-hover;
       }
 
       &::after {
         bottom: 0;
         transform: rotate(-45deg);
-        background-color: #1c1c1c;
+        background-color: $grey-hover;
       }
     }
   }
