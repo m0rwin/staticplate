@@ -75,6 +75,19 @@
     float: left;
     z-index: 0;
   }
+
+  .join_novo {
+    font-family: Impact;
+    position: absolute;
+    font-size: 380px;
+    color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+    left: 50%;
+    margin-top: 600px;
+    z-index: 0;
+  }
+
   .extra1 {
     font-family: Impact;
     position: absolute;
