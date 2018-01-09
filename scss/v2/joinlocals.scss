@@ -51,18 +51,30 @@
     z-index: 0;
   }
 
-  .join_orig {
+  .join_wise {
     font-family: Impact;
     position: absolute;
     font-size: 380px;
     color: #f0f0f0;
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
-    top: 35%;
-    left: 45%;
+    right: -20%;
+    top: 40%;
     z-index: 0;
   }
 
+  .join_wise2 {
+    @extend %stretch-over-max-width-l;
+    font-family: Impact;
+    position: absolute;
+    font-size: 380px;
+    color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+    top: 48%;
+    float: left;
+    z-index: 0;
+  }
   .extra1 {
     font-family: Impact;
     position: absolute;
@@ -415,6 +427,38 @@ $neat-mobile: (
   }
 }
 
+// dna animation section //
+#animate {
+  position: relative;
+  svg {
+    margin-bottom: 24px;
+  }
+
+  path[class^="path"] {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  .pathFirst {
+    animation: grow 7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .pathSecond {
+    animation: grow 4s ease-out forwards 0.4s;
+    animation-delay: 2.9s;
+  }
+
+  @keyframes grow {
+    to {
+      stroke-dashoffset: 0.4;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
 // Q&A ///
 .qa-head {
   font-family: Muli;
@@ -494,39 +538,6 @@ $neat-mobile: (
   background-color: #cccfd0;
 }
 
-
-
-// dna animation section //
-#animate {
-  position: relative;
-  svg {
-    margin-bottom: 48px;
-  }
-
-  path[class^="path"] {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-  }
-
-  .pathFirst {
-    animation: grow 9s ease-in-out forwards;
-    animation-delay: 1s;
-  }
-
-  .pathSecond {
-    animation: grow 10s ease-out forwards 2.4s;
-    animation-delay: 3.4s;
-  }
-
-  @keyframes grow {
-    to {
-      stroke-dashoffset: 0.4;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    display: none;
-  }
-}
 
 // copy for video override
 .join {
