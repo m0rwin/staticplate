@@ -7,10 +7,11 @@
 }
 
 @font-face {
-  font-family: 'impact';
+  font-family: 'impact' sans-serif;
   src: url("/fonts/impact.ttf?xcuwvx");
-  font-weight: normal;
+  font-weight: normal !important;
   font-style: normal;
+  -webkit-font-smoothing: antialiased;
 }
 
 %max-width {
