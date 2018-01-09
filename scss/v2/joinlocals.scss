@@ -417,12 +417,15 @@ $neat-mobile: (
 //novo q&a section ///
 .qa-head {
   font-family: Muli;
-  font-size: 37px;
+  font-size: 53px;
   font-weight: bold;
   line-height: 1.21;
   text-align: left;
   padding: 48px 0px 48px 0px;
   margin-bottom: 96px;
+  @media only screen and (max-width: 768px) {
+    font-size: 37px;
+  }
 }
 
 // qa section //
