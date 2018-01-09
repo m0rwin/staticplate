@@ -242,6 +242,7 @@
         width: 100%;
         -webkit-font-smoothing: antialiased;
         text-align: center;
+        padding-bottom: 72px;
         @media only screen and (max-width: 768px) {
           font-size: 37px;
           margin: 48px 24px 24px 24px;
@@ -499,7 +500,7 @@ $neat-mobile: (
 #animate {
   position: relative;
   svg {
-    margin: 48px 0px 48px 0px;
+    margin-bottom: 48px;
   }
 
   path[class^="path"] {
@@ -508,11 +509,13 @@ $neat-mobile: (
   }
 
   .pathFirst {
-    animation: grow 6s ease-in-out forwards;
+    animation: grow 9s ease-in-out forwards;
+    animation-delay: 1s;
   }
 
   .pathSecond {
-    animation: grow 5s ease-out forwards 1.6s;
+    animation: grow 10s ease-out forwards 2.4s;
+    animation-delay: 3.4s;
   }
 
   @keyframes grow {
