@@ -198,7 +198,7 @@
     position: static;
     display: inline-block;
     cursor: pointer;
-    padding: 24px 48px 48px 0;
+    padding: 24px 48px 96px 0;
     @media only screen and (max-width: 768px) {
       padding: 0px 24px 48px 0;
     }
@@ -414,7 +414,7 @@ $neat-mobile: (
   }
 }
 
-//novo q&a section ///
+// Q&A ///
 .qa-head {
   font-family: Muli;
   font-size: 53px;
@@ -429,7 +429,7 @@ $neat-mobile: (
 }
 
 // qa section //
-.dna-container {
+.qa-container {
   width: 100%;
   position: relative;
   z-index: 1;
@@ -437,6 +437,7 @@ $neat-mobile: (
   }
 
   .qa-background {
+    @extend %stretch-over-max-width-r;
     padding: 48px;
     background-color: #1c1c1c;
     margin-bottom: 256px;
@@ -447,7 +448,7 @@ $neat-mobile: (
       line-height: 1.21;
       text-align: left;
       padding: 24px 24px 24px 24px;
-      margin-bottom: 96px;
+      margin-bottom: 48px;
       color: #fff;
       position: relative;
       display: inline-block;
@@ -471,12 +472,10 @@ $neat-mobile: (
   margin-bottom: 48px;
   position: relative;
   .yes {
-    float: left;
     margin-left: 24px;
   }
 
   .no {
-    float: left;
     margin-left: 24px;
     background-color: #fff;
     color: #2b2b2b;
@@ -491,13 +490,14 @@ $neat-mobile: (
 #progressbar {
   height: 24px;
   color: #008eda;
-  background-color: #f0f0f0;
+  background-color: #cccfd0;
 }
 
 
 
 // dna animation section //
-.dna {
+#animate {
+  position: relative;
   svg {
     margin: 48px 0px 48px 0px;
   }
@@ -508,17 +508,20 @@ $neat-mobile: (
   }
 
   .pathFirst {
-    animation: grow 3s ease-in-out forwards;
+    animation: grow 6s ease-in-out forwards;
   }
 
   .pathSecond {
-    animation: grow 2.5s ease-out forwards .8s;
+    animation: grow 5s ease-out forwards 1.6s;
   }
 
   @keyframes grow {
     to {
-      stroke-dashoffset: 0;
+      stroke-dashoffset: 0.4;
     }
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
   }
 }
 
@@ -546,18 +549,19 @@ $neat-mobile: (
   font-weight: bold;
   color: #fff;
   font-size: 26px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: inline;
   transition: all 0.3s ease-in-out;
-  border-bottom: 3px solid #2496d4;
+  padding-bottom: 4px;
   @media only screen and (max-width: 768px) {
     font-size: 26px;
-    border-bottom: 2px solid #2496d4;
   }
 }
 .jointrigger:hover {
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  border-bottom: 3px solid #ffffff;
+  color: #2496d4;
+  @media only screen and (max-width: 768px) {
+    font-size: 26px;
+    color: #2496d4;
+  }
 }

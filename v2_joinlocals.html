@@ -254,26 +254,24 @@
                                 <div class="dna-head">
                                     Our DNA
                                 </div>
-                                <div class="dna-section">
-                                    <div class="dna">
-                                        <svg viewBox="0 0 752 100" xmlns="http://www.w3.org/2000/svg">
-                                            <g fill="none" fill-rule="evenodd">
-                                                <g stroke="#E5E5E5" stroke-width="4">
-                                                    <path d="M375.2 45.3v26.5H251v25.7"/>
-                                                    <path d="M376 45.3v26.5h124.3v25.7"/>
-                                                    <path d="M252.7 71.8H2.8v24"/>
-                                                    <path d="M500 71.8h249.9v24"/>
-                                                </g>
-                                                <g stroke="#3290D5" stroke-width="4">
-                                                    <path class="pathFirst" d="M375.2 45.3v26.5H251v25.7"/>
-                                                    <path class="pathFirst" d="M376 45.3v26.5h124.3v25.7"/>
-                                                    <path class="pathSecond" d="M252.7 71.8H2.8v24"/>
-                                                    <path class="pathSecond" d="M500 71.8h249.9v24"/>
-                                                </g>
-                                            </g>
-                                        </svg>
-                                    </div>
-                                </div>
+                                <div id="animate">
+                                    <svg viewBox="0 0 752 100" xmlns="http://www.w3.org/2000/svg">
+                                      <g fill="none" fill-rule="evenodd">
+                                        <g stroke="#E5E5E5" stroke-width="4">
+                                          <path d="M375.2 45.3v26.5H251v25.7"/>
+                                          <path d="M376 45.3v26.5h124.3v25.7"/>
+                                          <path d="M252.7 71.8H2.8v24"/>
+                                          <path d="M500 71.8h249.9v24"/>
+                                        </g>
+                                        <g stroke="#1897D4" stroke-width="4">
+                                          <path class="pathBeginning" id="first" d="M375.2 45.3v26.5H251v25.7"/>
+                                          <path class="pathBeginning" id="first"d="M376 45.3v26.5h124.3v25.7"/>
+                                          <path class="pathEnd" id="second" d="M252.7 71.8H2.8v24"/>
+                                          <path class="pathEnd" id="second" d="M500 71.8h249.9v24"/>
+                                        </g>
+                                      </g>
+                                    </svg>
+                                  </div>
                                 <div class="dna-grid">
                                     <div class="dna-item">
                                         <div class="dna-copy-container">
@@ -320,14 +318,13 @@
                             </div>
                             <div class="madness-background1">
                                 <div class="madness-quote1 join">
-                                    We do what we do. We do it our way. <br>
+                                    We do what we do. <br>We do it our way. <br>
                                     We will not be everybody’s cup of tea. <br>
-                                    If you like what you see come and join us.<br><br>
+                                    If you like what you see come and 
                                     <a href="#">
-                                        <div class="jointrigger">
-                                            We’d love to hear from you.
-                                        </div>
-                                    </a>  
+                                        <div class="jointrigger">join us.</div>
+                                    </a><br><br>
+                                    We’d love to hear from you.
                                 </div>
                                 <div class="downmad scroll-button" data-scroll-past=".madness-background1">
                                     <svg class="downwhitarrowmad" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
@@ -345,17 +342,16 @@
                             <div class="qa-head">
                                 Are you built for Novo?
                             </div>
-                            <div class="dna-container">
+                            <div class="qa-container">
                                 <div id="progressbar"></div>
                                 <div class="qa-background">
-                                    <div class="qa-head">
-                                        Do you believe recruitment should be more service led than sales led?
+                                    <div class="qa-head"> Do you believe recruitment should be more service led than sales led?
                                     </div>
                                     <div class="qabuttons">
-                                        <div class="qa button yes"> yes
-                                        </div>
-                                        <div class="qa button no"> No
-                                        </div>
+                                        <button class="button yes"> yes
+                                        </button>
+                                        <button class="button no"> No
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -456,6 +452,14 @@
             $('html, body').animate({
                 scrollTop: position
             }, 700);
+        });
+
+        $(window).scroll(function() {
+        if (!$(".pathBeginning").hasClass("pathFirst") && $(this).scrollTop() > $('#animate').offset().top + ($(window).height() * -.8)) {
+            console.log("started")
+            $(".pathBeginning").addClass("pathFirst");
+            $(".pathEnd").addClass("pathSecond");
+        } 
         });
     </script>
     <script>
