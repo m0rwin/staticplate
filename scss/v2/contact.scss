@@ -53,12 +53,13 @@
     textarea {
       margin-bottom: 24px;
       border-radius: $radius;
-      width: 90%;
+      width: 100%;
     }
 
     textarea {
       resize: vertical;
       height: 10em;
+      padding: 12px 24px;
     }
 
 
@@ -75,5 +76,15 @@
   .hello2 {
     bottom: 100px;
     right: -10px;
+  }
+}
+
+.left-block {
+  margin-bottom: 128px;
+  .block-contents {
+    padding-right: 48px;
+    padding-top: 96px;
+    padding-bottom: 96px;
+    min-width: 55vw;
   }
 }
