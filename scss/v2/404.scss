@@ -1,0 +1,194 @@
+@import "./variables.scss";
+@import "./reset.scss";
+@import "./common.scss";
+@import "./collapse-js.scss";
+
+
+.four-container {
+  margin: 44px;
+
+
+  body {
+    width: 100%;
+    width: 100%;
+    background: rgb(255, 255, 255);
+    font-family: $font-muli;
+    font-size: 19px;
+    margin: 0;
+    color: #2d2d2d;
+  }
+
+  a {
+    color: #2d2d2d;
+    text-decoration: none;
+  }
+
+  #title1 {
+    margin: 96px 24px 24px 24px;
+    color: #2d2d2d;
+    z-index: 2;
+    @media screen and (max-width: 650px) {
+      margin: 96px 12px 12px 12px;
+    }
+  }
+
+  h1 {
+    font-family: $font-impact;
+    font-weight: normal;
+    font-size: 75px;
+    color: #2d2d2d;
+    @media screen and (max-width: $menu-small-width) {
+      font-size: 52px;
+    }
+  }
+
+  h4 {
+    font-family: $font-muli;
+    font-weight: 600;
+    color: #2d2d2d;
+    @media screen and (max-width: $menu-small-width) {
+      font-size: 26px;
+      font-weight: bold;
+    }
+  }
+
+  .backgound-copy1 {
+    font-family: $font-impact;
+    font-size: 300px;
+    letter-spacing: 4px;
+    line-height: 0px;
+    margin: 0;
+    color: #c91e1e;
+    position: fixed;
+    left: 0%;
+    top: -5%;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    margin-top: 60px;
+
+    button {
+      background: #2d2d2d;
+      border: 1px solid #2d2d2d;
+      color: #fff;
+      cursor: pointer;
+      display: block;
+      font-family: $font-muli;
+      font-size: 14px;
+      height: 34px;
+      line-height: 16px;
+      margin: 0;
+      outline: none;
+      padding: 12px;
+      text-align: center;
+      border-radius: 2px;
+      font-weight: 600 !important;
+      box-shadow: none;
+      -webkit-font-smoothing: antialiased;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #2d2d2d;
+      border: 1px solid #fff;
+      font-weight: 400;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  .scene {
+
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+  }
+
+  @media screen and (max-width: 1224px) {
+    .container {
+      margin: 0 auto;
+      width: 100vw;
+
+      margin-top: 270px;
+    }
+  }
+
+/*media queries for each element*/
+
+  @media screen and (max-width: 768px) and (min-width: 480px) {
+    .container {
+      margin: 0 auto;
+      width: 100vw;
+
+      margin-top: 330px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+  }
+    
+    /* Keyframes for the fade-in */
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    opacity: 1 \9; /*just in case ie*/
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.0s;
+    -moz-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+  }
+
+  .fade-in.container {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+}
+@import "./header-and-nav.scss";
