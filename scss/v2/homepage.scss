@@ -129,7 +129,7 @@
   font-family: $font-impact;
   letter-spacing: 1px;
   font-size: 37px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.22;
   color: #2b2b2b;
   position: absolute;
@@ -187,11 +187,10 @@
   }
 }
 
-
-
 .yourself-home {
   position: relative;
   font-family: $font-impact;
+  font-weight: normal;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
