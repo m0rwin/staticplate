@@ -369,10 +369,17 @@ $neat-mobile: (
 }
 
 .tile_z:hover {
-  -ms-transform: scale(1.05,1.05); /* IE 9 */
-  -webkit-transform: scale(1.05,1.05); /* Safari */
-  transform: scale(1.05,1.05); /* Standard syntax */
-  transition: all 0.5s;
+  background: rgba(0, 145, 218, 0.5);
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
 }
 
 .tile_z .tile_z-overlay {
@@ -694,7 +701,7 @@ $product-gallery-mobile: (
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
-  background-image: url('..//assets/sanding.jpg');
+  background-image: url('..//assets/fitout.jpg');
   .news-tile-content {
     margin: 48px;
     .sector-lable {
@@ -857,11 +864,7 @@ $neat-mobile: (
 }
 
 .role_z:hover {
-  -ms-transform: scale(1.05,1.05); /* IE 9 */
-  -webkit-transform: scale(1.05,1.05); /* Safari */
-  transform: scale(1.05,1.05); /* Standard syntax */
-  transition: all 0.5s;
-  -webkit-transform: translateZ(0px);
+  transition: 1s;
 }
 
 .role_z .role_z-overlay {
@@ -935,14 +938,6 @@ $neat-mobile: (
     position: absolute;
     -webkit-font-smoothing: antialiased;
   }
-}
-
-.role_sector_search:hover {
-  -ms-transform: scale(1.05,1.05); /* IE 9 */
-  -webkit-transform: scale(1.05,1.05); /* Safari */
-  transform: scale(1.05,1.05); /* Standard syntax */
-  transition: all 0.5s;
-  -webkit-transform: translateZ(0px);
 }
 
 .role_sector_search .role_sector_search-overlay {
