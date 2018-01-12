@@ -4,6 +4,8 @@
 #novotop {
   margin-top: 480px;
   margin-bottom: 300px;
+  @media screen {
+  }
 }
 .outer-div {
   @extend %stretch-over-max-width-r;

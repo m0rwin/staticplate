@@ -408,6 +408,7 @@ $neat-mobile: (
   }
   .article-title {
     font-family: $font-muli;
+    font-weight: bold;
     color: #fff;
     font-size: 19px;
     line-height: 1.4;
@@ -416,6 +417,7 @@ $neat-mobile: (
 
   .read-news-cta {
     color: #fff;
+    font-weight: bold;
     font-size: 16px;
     position: absolute;
     text-transform: uppercase;
