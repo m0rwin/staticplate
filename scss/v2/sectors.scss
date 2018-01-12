@@ -429,6 +429,8 @@ $neat-mobile: (
   height: 100%;
   width: 100%;
   position: absolute;
+  transition: all 0.5s ease-in-out;
+
   .sector-lable {
     font-family: Muli;
     font-size: 16px;
@@ -454,17 +456,19 @@ $neat-mobile: (
     bottom: 48px;
   }
 }
-  
-  //hover state//*/
-  
+
+.nest_second
+.news-content-container:hover {
+  background-color: $curious-blue;
+  transition: all 0.5s ease-in-out;
+}
+
+//hover state//*/
   /*.first:hover {
     -webkit-transform: scale(1.05,1.05);
     transform: scale(1.05,1.05);
     transition: all 0.5s;
   }*/  
-
-  
-
 
   ////////////* 3. LATEST ROLES HEADER *////////////
 .rolesection {
