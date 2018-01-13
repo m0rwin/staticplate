@@ -1,5 +1,4 @@
 .fourzerofour {
-//  margin: 44px;
   padding-bottom: 0;
   background-color: white;
 
@@ -9,7 +8,18 @@
     position: relative;
     background: transparent;
   }
-
+  .button {
+    margin: 60px 24px 24px 24px;
+    @media screen and (max-width: 650px) {
+      margin: 24px 24px 0px 24px;
+    }
+  }
+  .tag {
+    @media screen and (max-width: 650px) {
+      margin-bottom: 48px;
+      font-size: 19px;
+    }
+  }
   .scene {
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -23,22 +33,29 @@
       letter-spacing: 4px;
       line-height: 0px;
       margin: 0;
-      color: #c91e1e;
+      color: #f5f4f4;
       position: fixed;
+      @media screen and (max-width: 650px) {
+        font-size: 180px;
+      }
 
       &:nth-child(1) {
-        left: 10%;
-        top: -5%;
+        left: 10% !important;
+        top: -630px !important;
       }
 
       &:nth-child(2) {
-        left: 40%;
-        top: -25%;
+        left: 24% !important;
+        top: -110px !important;
       }
 
       &:nth-child(3) {
-        left: 0%;
-        top: -105%;
+        left: 64% !important;
+        top: -410px !important;
+        @media screen and (max-width: 650px) {
+          left: 64% !important;
+          top: -310px !important;
+        }
       }
     }
   }
