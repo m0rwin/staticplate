@@ -74,6 +74,12 @@
   display: none;
 }
 
+.not-xsm {
+  @media screen and (#{$media-xsm}) {
+    display: none;
+  }
+}
+
 .right-block {
   @extend %stretch-over-max-width-r;
   background-color: $shark-black;
@@ -109,11 +115,17 @@
     min-width: 55vw;
   }
 }
-
+/* potential solution 1.
 .left-block + .right-block,
 .left-block + .left-block,
 .right-block + .left-block,
 .right-block + .right-block {
+  margin-top: 192px;
+}
+*/
+
+.left-block ~ .right-block,
+.right-block ~ .left-block {
   margin-top: 192px;
 }
 
