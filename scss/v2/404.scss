@@ -1,0 +1,118 @@
+.fourzerofour {
+  padding-bottom: 0;
+  background-color: white;
+
+  .hero-full {
+    margin-bottom: 0;
+    z-index: 1;
+    position: relative;
+    background: transparent;
+  }
+  .button {
+    margin: 60px 24px 24px 24px;
+    @media screen and (max-width: 650px) {
+      margin: 24px 24px 0px 24px;
+    }
+  }
+  .tag {
+    @media screen and (max-width: 650px) {
+      margin-bottom: 48px;
+      font-size: 19px;
+    }
+  }
+  .scene {
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    z-index: 0;
+    .backgound-copy1 {
+      @extend .bg-parallax;
+      font-family: $font-impact;
+      font-size: 300px;
+      letter-spacing: 4px;
+      line-height: 0px;
+      margin: 0;
+      color: #f5f4f4;
+      position: fixed;
+      @media screen and (max-width: 650px) {
+        font-size: 180px;
+      }
+
+      &:nth-child(1) {
+        left: 10% !important;
+        top: -630px !important;
+      }
+
+      &:nth-child(2) {
+        left: 24% !important;
+        top: -110px !important;
+      }
+
+      &:nth-child(3) {
+        left: 64% !important;
+        top: -410px !important;
+        @media screen and (max-width: 650px) {
+          left: 64% !important;
+          top: -310px !important;
+        }
+      }
+    }
+  }
+
+/*media queries for each element*/
+
+  @media screen and (max-width: 480px) {
+  }
+    
+    /* Keyframes for the fade-in */
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @-moz-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    opacity: 1 \9; /*just in case ie*/
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1.0s;
+    -moz-animation-duration: 1.0s;
+    animation-duration: 1.0s;
+  }
+
+  .fade-in.container {
+    -webkit-animation-delay: 0.1s;
+    -moz-animation-delay: 0.1s;
+    animation-delay: 0.1s;
+  }
+}

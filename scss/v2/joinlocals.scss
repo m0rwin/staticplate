@@ -51,15 +51,40 @@
     z-index: 0;
   }
 
-  .join_orig {
+  .join_wise {
     font-family: Impact;
     position: absolute;
     font-size: 380px;
     color: #f0f0f0;
     -webkit-font-smoothing: antialiased;
     pointer-events: none;
-    top: 35%;
-    left: 45%;
+    right: -20%;
+    top: 40%;
+    z-index: 0;
+  }
+
+  .join_wise2 {
+    @extend %stretch-over-max-width-l;
+    font-family: Impact;
+    position: absolute;
+    font-size: 380px;
+    color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+    top: 48%;
+    float: left;
+    z-index: 0;
+  }
+
+  .join_novo {
+    font-family: Impact;
+    position: absolute;
+    font-size: 380px;
+    color: #f0f0f0;
+    -webkit-font-smoothing: antialiased;
+    pointer-events: none;
+    left: 50%;
+    margin-top: 600px;
     z-index: 0;
   }
 
@@ -101,6 +126,17 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #2b2b2b;
+      @media only screen and (max-width: 1024px) {
+        margin-left: -166px;
+        position: absolute;
+        font-size: 75px;
+      }
+      @media only screen and (max-width: 768px) {
+        color: #fff !important;
+        font-size: 53px;
+        position: inherit;
+        margin-left: 0px;
+      }
     }
 
     .meetyourselfcopy {
@@ -111,6 +147,14 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      @media only screen and (max-width: 1024px) {
+        font-size: 75px;
+        position: inherit;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 53px;
+        width: 80vw;
+      }
     }
   }
 
@@ -198,7 +242,7 @@
     position: static;
     display: inline-block;
     cursor: pointer;
-    padding: 24px 48px 48px 0;
+    padding: 24px 48px 96px 0;
     @media only screen and (max-width: 768px) {
       padding: 0px 24px 48px 0;
     }
@@ -218,15 +262,17 @@
     width: 100%;
     position: relative;
     z-index: 1;
-    margin-bottom: 128px;
     @media only screen and (max-width: 768px) {
-      margin-bottom: 140px;
     }
 
     .dna-background {
       @extend %stretch-over-max-width;
       @extend %max-width-inner;
       background-color: #1c1c1c;
+      margin-bottom: 256px;
+      @media only screen and (max-width: 768px) {
+        margin-bottom: 128px;
+      }
       .dna-head {
         font-family: 'muli';
         margin: 128px 24px 0px 0px;
@@ -240,12 +286,12 @@
         width: 100%;
         -webkit-font-smoothing: antialiased;
         text-align: center;
+        padding-bottom: 72px;
         @media only screen and (max-width: 768px) {
-          font-size: 26px;
-          margin: 24px;
+          font-size: 37px;
+          margin: 48px 24px 24px 24px;
           margin-left: 0;
-          padding: 24px;
-          padding-left: 0;
+          padding: 48px;
         }
       }
     }
@@ -253,6 +299,9 @@
 }
 .dna-section {
   margin-top: -60px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 }
 .vidouter {
   width: 100%;
@@ -308,33 +357,167 @@
   text-align: left;
   padding: 48px 0px 48px 0px;
   margin-bottom: 280px;
+  @media only screen and (max-width: 768px) {
+    font-size: 37px;
+    margin-bottom: 48px;
+  }
 }
 
+// DNA seconsd markup grid for copy section //
 
-//novo q&a section //
+  ////////////* DNA *////////////
+$neat-grid: (
+    columns: 12,
+    gutter: 48px,
+    margin-bottom: 48px
+  );
+
+$neat-tablet: (
+    columns: 3,
+    media: 'screen and (max-width: 1422px)',
+    gutter: 48px
+  );
+
+$neat-mobile: (
+    columns: 1,
+    media: 'screen and (max-width: 768px)',
+    gutter: 24px
+  );
+
+.dna-grid {
+  @include grid-container;
+  @include grid-collapse;
+
+  @include grid-media($neat-tablet) {
+    @include grid-collapse;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-collapse;
+  }
+  padding-bottom: 96px;
+  @media only screen and (max-width: 1024px) {
+    padding-bottom: 0px;
+  }
+}
+
+.dna-item,
+ {
+  @include grid-column(4);
+  height: 320px;
+  color: white;
+  margin-bottom: 48px;
+  position: relative;
+  @include grid-media($neat-tablet) {
+    @include grid-column(1);
+    position: relative;
+  }
+  @include grid-media($neat-mobile) {
+    @include grid-column(1);
+    margin-bottom: 24px;
+    height: 260px;
+    position: relative;
+  }
+
+  .dna-copy-container {
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .dna-copy-container {
+    -webkit-font-smoothing: antialiased;
+  }
+  .dna-number {
+    color: #fff;
+    font-size: 130px;
+    font-weight: normal;
+    font-family: $font-impact;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    @media only screen and (max-width: 1024px) {
+      font-size: 75px;
+    }
+  }
+  .dna-description {
+    color: #fff;
+    font-size: 26px;
+    font-weight: normal;
+    font-family: 'muli' sans-serif;
+    text-align: center;
+    padding-bottom: 8px;
+    -webkit-font-smoothing: antialiased;
+    @media only screen and (max-width: 1024px) {
+      font-size: 19px;
+    }
+    @media only screen and (max-width: 768px) {
+      width: 80%;
+      margin: 0 auto;
+    }
+    @media only screen and (max-width: 480px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+// dna animation section //
+#animate {
+  position: relative;
+  svg {
+    margin-bottom: 24px;
+  }
+
+  path[class^="path"] {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
+  .pathFirst {
+    animation: grow 7s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  .pathSecond {
+    animation: grow 4s ease-out forwards 0.4s;
+    animation-delay: 2.9s;
+  }
+
+  @keyframes grow {
+    to {
+      stroke-dashoffset: 0.4;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
+}
+
+// Q&A ///
 .qa-head {
   font-family: Muli;
-  font-size: 37px;
+  font-size: 53px;
   font-weight: bold;
   line-height: 1.21;
   text-align: left;
   padding: 48px 0px 48px 0px;
   margin-bottom: 96px;
+  @media only screen and (max-width: 768px) {
+    font-size: 37px;
+  }
 }
 
-/* responsive video section */
-.dna-container {
+// qa section //
+.qa-container {
   width: 100%;
   position: relative;
   z-index: 1;
-  margin-bottom: 128px;
   @media only screen and (max-width: 768px) {
-    margin-bottom: 140px;
   }
 
   .qa-background {
+    @extend %stretch-over-max-width-r;
     padding: 48px;
     background-color: #1c1c1c;
+    margin-bottom: 256px;
     .qa-head {
       font-family: Muli;
       font-size: 37px;
@@ -342,7 +525,7 @@
       line-height: 1.21;
       text-align: left;
       padding: 24px 24px 24px 24px;
-      margin-bottom: 96px;
+      margin-bottom: 48px;
       color: #fff;
       position: relative;
       display: inline-block;
@@ -366,12 +549,10 @@
   margin-bottom: 48px;
   position: relative;
   .yes {
-    float: left;
     margin-left: 24px;
   }
 
   .no {
-    float: left;
     margin-left: 24px;
     background-color: #fff;
     color: #2b2b2b;
@@ -386,40 +567,9 @@
 #progressbar {
   height: 24px;
   color: #008eda;
-  background-color: #f0f0f0;
+  background-color: #cccfd0;
 }
 
-
-
-// dna animation section //
-.dna {
-  svg {
-    margin: 48px;
-  }
-
-  path[class^="path"] {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-  }
-
-  .pathFirst {
-    animation: grow 3s ease-in-out forwards;
-  }
-
-  .pathSecond {
-    animation: grow 2.5s ease-out forwards .8s;
-  }
-
-  @keyframes grow {
-    to {
-      stroke-dashoffset: 0;
-    }
-  }
-}
-
-.dna {
-  padding-bottom: 128px;
-}
 
 // copy for video override
 .join {
@@ -445,18 +595,19 @@
   font-weight: bold;
   color: #fff;
   font-size: 26px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   display: inline;
   transition: all 0.3s ease-in-out;
-  border-bottom: 3px solid #2496d4;
+  padding-bottom: 4px;
   @media only screen and (max-width: 768px) {
     font-size: 26px;
-    border-bottom: 2px solid #2496d4;
   }
 }
 .jointrigger:hover {
   font-weight: bold;
   transition: all 0.3s ease-in-out;
-  border-bottom: 3px solid #ffffff;
+  color: #2496d4;
+  @media only screen and (max-width: 768px) {
+    font-size: 26px;
+    color: #2496d4;
+  }
 }

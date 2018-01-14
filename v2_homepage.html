@@ -223,7 +223,7 @@
         </div>
     </nav>
     <main>
-        <header class="hero-full" data-vide-bg="http://zealous-swanson-e0d9de.netlify.com/video/digger" data-vide-options="loop: true, muted: true, position: 0% 0%">
+        <header class="hero-full" data-vide-bg="http://zealous-swanson-e0d9de.netlify.com/video/digger" data-vide-options="posterType: jpg, loop: true, muted: true, position: 0% 0%">
             <div class="hero-content">
                 <h1>Construction Recruitment</h1>
                 <p class="hero-subtitle">But not as you know it</p>
@@ -360,49 +360,48 @@
                     <div class="copyouter">
                     </div>
             </section>
-
+            <div class="yourself-home">
+                <div class="rellax" data-rellax-speed="-4">Yourself</div>
+            </div>
             <section id="novodefined">
                 <div class="wrapper">
-                    <div class="sector" style="background-image: url('/assets/carpentry.jpg')">
+                    <div class="sector" style="background-image: url('/assets/main_contractor.jpg')">
                         <a class="sectorcopy" href="sectors/main-contractor">Main contractor</a>
                     </div>
-                    <div class="sector" style="background-image: url('/assets/cottage.jpg')">
-                        <a class="sectorcopy" href="sectors/property-maintenenace">Property &amp; Maintenance</a>
+                    <div class="sector" style="background-image: url('/assets/residential&housing.jpg')">
+                        <a class="sectorcopy" href="sectors/property-maintenenace">Residential &amp; Housing</a>
                     </div>
-                    <div class="sector" style="background-image: url('/assets/digger.jpg')">
-                        <a class="sectorcopy" href="sectors/building-services">Building Services</a>
-                    </div>
-                    <div class="sector" style="background-image: url('/assets/interiorlights.jpg')">
+                    <div class="sector" style="background-image: url('/assets/fitout.jpg')">
                         <a class="sectorcopy" href="sectors/fit-out-interiors">Fit out &amp; Interiors</a>
                     </div>
-                    <div class="sector" style="background-image: url('/assets/sanding.jpg')">
-                        <a class="sectorcopy" href="sectors/residential-housing">Residential &amp; Housing</a>
+                    <div class="sector" style="background-image: url('/assets/building_services.jpg')">
+                        <a class="sectorcopy" href="sectors/building-services">Building Services</a>
+                    </div>
+                    <div class="sector" style="background-image: url('/assets/tools.jpg')">
+                        <a class="sectorcopy" href="sectors/residential-housing">Property &amp; Maintenance</a>
+                    </div>
+                    <div class="sector" style="background-image: url('/assets/consultancy.jpg')">
+                        <a class="sectorcopy" href="sectors/residential-housing">Consultancy</a>
                     </div>
                     <div class="sector" style="background-image: url('/assets/welding.jpg')">
                         <a class="sectorcopy" href="sectors/groundwords-and-frames">Groundworks &amp; Frames</a>
                     </div>
-                    <div class="sector" style="background-image: url('/assets/sanding.jpg')">
-                        <a class="sectorcopy" href="sectors/residential-housing">Consultancy</a>
+                    <div class="sector" style="background-image: url('/assets/clients.jpg')">
+                        <a class="sectorcopy" href="sectors/clients">Clients</a>
                     </div>
-                    <div class="sector" style="background-image: url('/assets/sanding.jpg')">
-                        <a class="sectorcopy" href="sectors/groundwords-and-frames">All freelance roles</a>
-                    </div>
-                    <div class="sector" style="background-image: url('/assets/sanding.jpg')">
-                        <a class="sectorcopy" href="sectors/groundwords-and-frames">All perminant roles</a>
+                    <div class="sector" style="background-image: url('/assets/candidates.jpg')">
+                        <a class="sectorcopy" href="sectors/candidates">Candidates</a>
                     </div>
                 </div>
             </section>
-            <div class="yourself">
-                    <div class="rellax" data-rellax-speed="-3">Yourself</div>
-                </div>
         </section>
     </main>
 
     <footer class="footer">
         <a href="/contact" class="contact-footer">
             <div class="contact-message">
-                <h3 class="text-left">We are ready...</h3>
-                <p class="text-right">Let&rsquo;s talk</p>
+                <h3 class="text-left">This is our world...</h3>
+                <p class="text-right">Talk to the locals</p>
             </div>
         </a>
 
@@ -457,17 +456,20 @@
             width: null
         });
     </script>
-    <script>
-        var APP_ID = "biiewbsz";
-
-        window.intercomSettings = {
-            app_id: "biiewbsz",
-            alignment: 'right',     
+        <script>
+            window.intercomSettings = {
             horizontal_padding: 48, 
-            vertical_padding: 24
-        };
-    </script>
-    <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
-</body>
+            vertical_padding: 48,
+            created_at: 1234567890,
+            app_id: "biiewbsz",
+            alignment: 'right',
+            hide_default_launcher: true
+            };
+            setTimeout(function(){
+            Intercom('update', {hide_default_launcher: false})
+            },6000);
+        </script>
+        <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
+    </body>
 
 </html>

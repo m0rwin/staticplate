@@ -74,12 +74,20 @@
   display: none;
 }
 
+.not-xsm {
+  @media screen and (#{$media-xsm}) {
+    display: none;
+  }
+}
+
 .right-block {
   @extend %stretch-over-max-width-r;
   background-color: $shark-black;
   color: white;
   float: right;
   clear: both;
+  position: relative;
+  z-index: 1;
 
   .block-contents {
     @extend %max-width-inner-r;
@@ -96,6 +104,8 @@
   color: white;
   float: left;
   clear: both;
+  position: relative;
+  z-index: 1;
 
   .block-contents {
     @extend %max-width-inner-l;
@@ -103,18 +113,19 @@
     padding-top: 48px;
     padding-bottom: 48px;
     min-width: 55vw;
-
-    form {
-      margin: 0 auto;
-      max-width: 550px;
-    }
   }
 }
-
+/* potential solution 1.
 .left-block + .right-block,
 .left-block + .left-block,
 .right-block + .left-block,
 .right-block + .right-block {
+  margin-top: 192px;
+}
+*/
+
+.left-block ~ .right-block,
+.right-block ~ .left-block {
   margin-top: 192px;
 }
 
@@ -132,16 +143,27 @@ body > main {
   background-color: white;
   padding-bottom: 48px;
 
+  position: relative;
+
   @media screen and (#{$media-sm}) {
     padding-bottom: 24px;
   }
+}
+
+.bg-parallax {
+  font-family: Impact;
+  font-size: 500px;
+  color: $parallax-grey;
+  -webkit-font-smoothing: antialiased;
+  pointer-events: none;
+  position: absolute;
 }
 
 .button {
   text-align: center;
   display: inline-block;
   color: white;
-  min-width: 180px;
+  min-width: 224px;
   border: none;
   border-radius: $radius;
   height: 48px;
@@ -149,12 +171,14 @@ body > main {
   background-color: $curious-blue;
   border-radius: $radius;
   font-size: 16px;
+  font-weight: bold;
   text-transform: uppercase;
   -webkit-transition: background 0.3s ease-in-out;
   -moz-transition: background 0.3s ease-in-out;
   -o-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
   line-height: 48px;
+  cursor: pointer;
 
   &:hover {
     background-color: #0e577c;
@@ -213,6 +237,11 @@ select {
   border-radius: $radius;
   padding: 0 24px;
   width: 100%;
+}
+
+select {
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 sup {

@@ -4,6 +4,8 @@
 #novotop {
   margin-top: 480px;
   margin-bottom: 300px;
+  @media screen {
+  }
 }
 .outer-div {
   @extend %stretch-over-max-width-r;
@@ -96,7 +98,7 @@
   /* old school section novo main 2*/
 
 #novobot {
-  margin-bottom: 240px;
+  margin-bottom: 120px;
 }
 .block-div {
   @extend %stretch-over-max-width-l;
@@ -129,7 +131,7 @@
   font-family: $font-impact;
   letter-spacing: 1px;
   font-size: 37px;
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.22;
   color: #2b2b2b;
   position: absolute;
@@ -163,6 +165,10 @@
   pointer-events: none;
   overflow: visible;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+    left: 5%;
+  }
 }
 
 .extraoridinary {
@@ -178,29 +184,35 @@
   pointer-events: none;
   overflow: visible;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+  }
 }
 
-
-
-.yourself {
+.yourself-home {
   position: relative;
   font-family: $font-impact;
+  font-weight: normal;
   font-size: 380px;
   line-height: 1;
   color: #f5f4f4;
   -webkit-font-smoothing: antialiased;
-
   z-index: 0;
+  left: -400;
   pointer-events: none;
   overflow: visible;
   bottom: 0;
   height: 0;
+  @media screen and (#{$media-sm}) {
+    font-size: 300px;
+    bottom: -1410px;
+    left: -110px;
+  }
 }
 
 #novodefined {
   @extend %stretch-over-max-width;
   position: relative;
-  background-color: #ffffff;
   margin-bottom: 240px;
 
   .wrapper {
@@ -212,9 +224,9 @@
     
             /*grid-template-columns:repeat(3, 1fr);*/
             /* grid-auto-rows:100px; */
-    grid-auto-rows: 350px;
+    grid-auto-rows: 380px;
     @media screen and (max-width: 1024px) {
-      grid-template-columns: 2fr 2fr 2fr;
+      grid-template-columns: 2fr 2fr;
     }
 
     @media screen and (max-width: 650px) {
@@ -228,6 +240,7 @@
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
+
 
     a {
       display: flex;
@@ -276,7 +289,7 @@
   }
 
   .sectorcopy {
-    font-weight: 400;
+    font-weight: bold;
     text-transform: uppercase;
     color: rgb(255, 255, 255) !important;
     align-self: center;
