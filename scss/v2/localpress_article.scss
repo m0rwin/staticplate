@@ -1,0 +1,58 @@
+.localpress_article {
+  p {
+    // margin: 2em 0;
+  }
+
+  .quote {
+    font-size: 26px;
+    font-style: italic;
+    color: #000;
+    border-left: 6px solid #008eda;
+    display: block;
+    padding-left: 0.8em;
+  }
+
+  .article-img {
+    width: 80%;
+    margin:0 auto;
+    min-height: 500px;
+  }
+
+  ol, ul, p {
+    margin: 2em 0;
+  }
+
+  ol {
+    li {
+      counter-increment: li;
+      font-weight: bold;
+      
+      &:before {
+        color: #008eda;
+        content: counter(li) ".";
+        margin-right: 0.5em; 
+        text-align: right;
+        font-weight: bold;
+      }
+    }
+  }
+
+  ul {
+    li {
+      font-weight: bold;
+      
+      &:before {
+        color: #008eda;
+        content: "\2022";
+        margin-right: 0.5em; 
+        text-align: right;
+      }
+    }
+  }
+}
+
+.content-container {
+  width: 50%;
+  margin: 2em auto 0 auto;
+}
+
