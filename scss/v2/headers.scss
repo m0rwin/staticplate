@@ -54,7 +54,7 @@
         top: 0;
         height: auto;
         font-size: 1.999em;
-        font-weight: normal;
+        font-weight: bold;
         max-width: 850px;
       }
     }
@@ -127,6 +127,7 @@
       font-size: 19px;
       &.gray {
         color: $sub-gray;
+        font-weight: bold;
       }
     }
 
@@ -144,6 +145,7 @@
       dd {
         line-height: 1.2;
         font-size: 16px;
+        font-weight: bold;
         display: inline-block;
         margin-right: 2em;
         @media screen and (#{$media-sm}) {
