@@ -261,9 +261,8 @@
 
         // Nothing new here...it's all in the CSS!
         // And don't forget to activate the pointerEvents option
-
-        var scene = document.getElementById('scene');
-        var parallax = new Parallax(scene);
+        var scene = $('#scene').get(0);
+        var parallaxInstance = new Parallax(scene);
 
     </script>
 </body>
