@@ -10,11 +10,13 @@
 
   .article-img {
     width: 80%;
-    margin:0 auto;
+    margin: 0 auto;
     min-height: 500px;
   }
 
-  ol, ul, p {
+  ol,
+  ul,
+  p {
     margin: 2em 0;
   }
 
@@ -22,11 +24,11 @@
     li {
       counter-increment: li;
       font-weight: bold;
-      
+
       &:before {
         color: #008eda;
         content: counter(li) ".";
-        margin-right: 0.5em; 
+        margin-right: 0.5em;
         text-align: right;
         font-weight: bold;
       }
@@ -36,11 +38,11 @@
   ul {
     li {
       font-weight: bold;
-      
+
       &:before {
         color: #008eda;
         content: "\2022";
-        margin-right: 0.5em; 
+        margin-right: 0.5em;
         text-align: right;
       }
     }
