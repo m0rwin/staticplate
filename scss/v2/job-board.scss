@@ -26,9 +26,11 @@ $media-job-md-px: 1170px;
     margin-bottom: 48px;
     @media screen and (#{$media-job-md}) {
       margin-bottom: 0;
+      border-radius: 0px;
     }
     @media screen and (#{$media-sm}) {
       padding: 24px 24px;
+      border-radius: 0px;
     }
 
     .job-search-grid {
