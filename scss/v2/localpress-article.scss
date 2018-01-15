@@ -1,4 +1,5 @@
 .localpress_article {
+  blockquote,
   .quote {
     font-size: 26px;
     font-style: italic;
@@ -9,8 +10,8 @@
   }
 
   .article-img {
-    width: 80%;
-    margin: 0 auto;
+    //width: 80%;
+    //margin: 0 auto;
     min-height: 500px;
   }
 
@@ -50,7 +51,33 @@
 }
 
 .content-container {
-  width: 50%;
+  width: 100%;
+  max-width: 650px;
+    //  width: 50%;
   margin: 2em auto 0 auto;
-}
 
+  .article-img {
+    width: $max-width;
+    border: 5px solid red;
+    margin-left: calc((650px - #{$max-width})/2);
+    margin-right: calc((650px - #{$max-width})/2);
+    @media screen and (#{$media-md}) {
+      width: calc(100vw - 96px);
+      margin-left: calc((96px + 650px - 100vw)/2);
+      margin-right: calc((96px + 650px - 100vw)/2);
+    }
+
+    @media screen and (#{$media-sm}) {
+      width: calc(100vw - 48px);
+      margin-left: calc((48px + 650px - 100vw)/2);
+      margin-right: calc((48px + 650px - 100vw)/2);
+    }
+
+
+    @media screen and (max-width: 698px) {
+      width: 100vw;
+      margin-left: -24px;
+      margin-right: -24px;
+    }
+  }
+}
