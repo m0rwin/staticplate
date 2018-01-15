@@ -325,6 +325,9 @@ a.block {
   }
 }
 
+.left-side a:hover {
+  text-decoration: underline;
+}
 
 @import 'headers.scss';
 @import 'footer.scss';

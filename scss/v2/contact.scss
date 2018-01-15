@@ -9,9 +9,15 @@
     dd {
       font-size: 1.37em;
       margin-bottom: 36px;
+      transition: all 0.5s ease-in-out !important;
       a {
         display: inline-block;
         border-bottom: 2px solid $curious-blue;
+        transition: all 0.5s ease-in-out !important;
+        &:hover {
+          border-bottom: 2px solid $white;
+          transition: all 0.5s ease-in-out !important;
+        }
       }
     }
   }
