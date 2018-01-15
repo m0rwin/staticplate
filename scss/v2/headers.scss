@@ -1,8 +1,14 @@
 .hero-full,
 .hero-flex,
 .hero-clear {
-  padding: 96px 48px;
+  padding: 144px 48px;
+  @media screen and (#{$media-md}) {
+    padding: 96px 48px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   @media screen and (#{$media-sm}) {
+    padding: 48px 48px;
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -55,7 +61,7 @@
         top: 0;
         height: auto;
         font-size: 1.999em;
-        font-weight: bold;
+        font-weight: normal;
         max-width: 850px;
         @media screen and (#{$media-sm}) {
           font-size: 26px;
