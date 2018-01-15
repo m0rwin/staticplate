@@ -48,6 +48,7 @@
       h2,
       h3 {
         font-size: 2.289em;
+        letter-spacing: 1px;
       }
 
       .hero-subtitle {
@@ -56,6 +57,9 @@
         font-size: 1.999em;
         font-weight: bold;
         max-width: 850px;
+        @media screen and (#{$media-sm}) {
+          font-size: 26px;
+        }
       }
     }
 
