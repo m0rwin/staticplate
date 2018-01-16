@@ -12,21 +12,39 @@
   .section2,
   .section3 {
     width: 100%;
-    margin-bottom: 678px;
+    margin-bottom: 578px;
     @media screen and (#{$media-sm}) {
       margin-bottom: 339px;
     }
     .one {
       left: -60px;
-      top: 22%;
+      top: 20%;
+      letter-spacing: 10px;
+      @media screen and (#{$media-sm}) {
+        top: 18%;
+      }
     }
     .two {
       left: 50%;
       top: 37%;
+      letter-spacing: 10px;
+      @media screen and (#{$media-sm}) {
+        left: 14%;
+        top: 32%;
+      }
     }
     .three {
       left: 0;
-      top: 54%;
+      top: 53%;
+      letter-spacing: 10px;
+      @media screen and (#{$media-md}) {
+        left: 0;
+        top: 50%;
+        @media screen and (#{$media-sm}) {
+          left: -18%;
+          top: 46%;
+        }
+      }
     }
 
     .question-one {
@@ -39,19 +57,24 @@
     .question-two {
       font-size: 37px;
       font-weight: bold;
+      padding: 0px 0px 0px 50%;
       @media screen and (#{$media-sm}) {
+        padding: 0px 0px 0px 0px;
         font-size: 26px;
       }
     }
     .question-three {
       font-size: 37px;
       font-weight: bold;
+      width: 50%;
       @media screen and (#{$media-sm}) {
         font-size: 26px;
+        width: 100%;
       }
     }
     .right-block .block-contents {
       padding: 48px;
+      min-width: 60vw;
       @media screen and (#{$media-sm}) {
         padding: 24px;
       }
@@ -75,12 +98,24 @@
       }
       .answer1 {
         color: $cerulean-blue;
+        @media screen and (#{$media-sm}) {
+          margin: 24px;
+        }
       }
       .answer2 {
         color: $perfect-pink;
+        padding: 0px 24px 48px 0px;
+        float: right;
+        @media screen and (#{$media-sm}) {
+          font-size: 52px;
+          padding: 0px 24px 24px 0px;
+        }
       }
       .answer3 {
         color: $chill-blue;
+        @media screen and (#{$media-sm}) {
+          margin: 24px;
+        }
       }
     }
   }
@@ -97,6 +132,8 @@
     text-align: center;
     @media screen and (#{$media-sm}) {
       text-align: left;
+      font-size: 19px;
+      padding: 96px 0px 96px 0px;
     }
   }
 }
@@ -110,11 +147,8 @@
   font-size: 26px;
   @media screen and (#{$media-sm}) {
     text-align: left;
+    font-size: 19px;
+    padding: 96px 0px 96px 0px;
   }
 }
-.downblackarrow {
-  @media only screen and ($media-xsm) {
-    height: 24px;
-    width: 24px;
-  }
-}
+
