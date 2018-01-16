@@ -20,7 +20,6 @@
     h1,
     h2,
     h3 {
-      font-family: $font-impact;
       font-weight: normal;
       letter-spacing: 1;
       -webkit-font-smoothing: antialiased;
@@ -40,6 +39,28 @@
     @media screen and (#{$media-sm}) {
       h1 {
         font-size: 2.789em;
+      }
+    }
+
+    &.mini {
+      h1,
+      h2,
+      h3 {
+        font-family: $font-muli;
+        font-size: 1em;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .hero-subtitle {
+        top: 0;
+        height: auto;
+        font-size: 1.999em;
+        font-weight: normal;
+        max-width: 850px;
+        @media screen and (#{$media-sm}) {
+          font-size: 26px;
+        }
       }
     }
 
