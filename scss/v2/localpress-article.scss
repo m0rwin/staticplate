@@ -2,17 +2,26 @@
   blockquote,
   .quote {
     font-size: 26px;
+    font-weight: bold;
     font-style: italic;
     color: #000;
     border-left: 6px solid #008eda;
     display: block;
     padding-left: 0.8em;
+    
+    &::before {
+      content: open-quote
+    }  
+    &::after {
+      content: close-quote
+    }  
+    
   }
+  
 
-  .article-img {
-    //width: 80%;
-    //margin: 0 auto;
-    min-height: 500px;
+  blockquote,
+  q {
+    quotes: "“" "”";
   }
 
   ol,
@@ -31,7 +40,6 @@
         content: counter(li) ".";
         margin-right: 0.5em;
         text-align: right;
-        font-weight: bold;
       }
     }
   }
@@ -53,12 +61,10 @@
 .content-container {
   width: 100%;
   max-width: 650px;
-    //  width: 50%;
   margin: 2em auto 0 auto;
 
-  .article-img {
+  img {
     width: $max-width;
-    border: 5px solid red;
     margin-left: calc((650px - #{$max-width})/2);
     margin-right: calc((650px - #{$max-width})/2);
     @media screen and (#{$media-md}) {
