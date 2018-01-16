@@ -5275,7 +5275,7 @@ header ~ .job-spec {
 
 .container.candidates .right-block,
 .container.candidates .left-block {
-  background-color: rgba(0, 142, 218, 0.8);
+  background-color: rgba(0, 142, 218, 0.9);
   padding: -100px;
 }
 
