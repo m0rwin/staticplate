@@ -1,27 +1,120 @@
 .container.clients {
   h2 {
     font-size: 1.37em;
+    margin-top: 256px;
+    margin-bottom: 128px;
+    @media screen and (#{$media-sm}) {
+      margin-top: 128px;
+      margin-bottom: 64px;
+    }
   }
+  .section1,
+  .section2,
+  .section3 {
+    width: 100%;
+    margin-bottom: 678px;
+    @media screen and (#{$media-sm}) {
+      margin-bottom: 339px;
+    }
+    .one {
+      left: -60px;
+      top: 22%;
+    }
+    .two {
+      left: 50%;
+      top: 37%;
+    }
+    .three {
+      left: 0;
+      top: 54%;
+    }
 
-  .block-contents {
-    font-family: $font-impact;
-    font-size: 56px;
+    .question-one {
+      font-size: 37px;
+      font-weight: bold;
+      @media screen and (#{$media-sm}) {
+        font-size: 26px;
+      }
+    }
+    .question-two {
+      font-size: 37px;
+      font-weight: bold;
+      @media screen and (#{$media-sm}) {
+        font-size: 26px;
+      }
+    }
+    .question-three {
+      font-size: 37px;
+      font-weight: bold;
+      @media screen and (#{$media-sm}) {
+        font-size: 26px;
+      }
+    }
+    .right-block .block-contents {
+      padding: 48px;
+      @media screen and (#{$media-sm}) {
+        padding: 24px;
+      }
+    }
+
+    .left-block .block-contents {
+      padding-top: 48px;
+      padding-bottom: 48px;
+      min-width: 55vw;
+      @media screen and (#{$media-sm}) {
+        padding: 24px;
+      }
+    }
+    .block-contents {
+      font-family: $font-impact;
+      font-weight: normal;
+      letter-spacing: 1px;
+      font-size: 75px;
+      @media screen and (#{$media-sm}) {
+        font-size: 52px;
+      }
+      .answer1 {
+        color: $cerulean-blue;
+      }
+      .answer2 {
+        color: $perfect-pink;
+      }
+      .answer3 {
+        color: $chill-blue;
+      }
+    }
   }
-
   .client-content {
     @extend %stretch-over-max-width;
+    @extend %max-width-inner;
     background-color: $shark-black;
-    padding: 96px;
-    margin-top: 1200px;
   }
   .block-one {
     color: $white;
-    @extend %max-width-inner;
-  }
-  .block-two {
-    margin: 96px;
-    color: $shark-black;
-    @extend %max-width;
+    font-weight: bold;
+    padding: 128px 0px 128px 0px;
+    font-size: 26px;
+    text-align: center;
+    @media screen and (#{$media-sm}) {
+      text-align: left;
+    }
   }
 }
-
+.client-content2 {
+  background-color: $white;
+}
+.block-two {
+  color: $shark-black;
+  text-align: center;
+  padding: 128px 0px 128px 0px;
+  font-size: 26px;
+  @media screen and (#{$media-sm}) {
+    text-align: left;
+  }
+}
+.downblackarrow {
+  @media only screen and ($media-xsm) {
+    height: 24px;
+    width: 24px;
+  }
+}
