@@ -50,6 +50,7 @@
     .question-one {
       font-size: 37px;
       font-weight: bold;
+      position: relative;
       @media screen and (#{$media-sm}) {
         font-size: 26px;
       }
@@ -57,6 +58,7 @@
     .question-two {
       font-size: 37px;
       font-weight: bold;
+      position: relative;
       padding: 0px 0px 0px 50%;
       @media screen and (#{$media-sm}) {
         padding: 0px 0px 0px 0px;
@@ -67,6 +69,7 @@
       font-size: 37px;
       font-weight: bold;
       width: 50%;
+      position: relative;
       @media screen and (#{$media-sm}) {
         font-size: 26px;
         width: 100%;

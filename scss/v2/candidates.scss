@@ -21,7 +21,9 @@
   }
   .can-img {
     height: 520px;
+    background-repeat: no-repeat;
     background-image: cover;
+    background-size: 100%;
     background-position: center center;
   }
 }
