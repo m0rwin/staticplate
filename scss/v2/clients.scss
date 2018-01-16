@@ -2,4 +2,26 @@
   h2 {
     font-size: 1.37em;
   }
+
+  .block-contents {
+    font-family: $font-impact;
+    font-size: 56px;
+  }
+
+  .client-content {
+    @extend %stretch-over-max-width;
+    background-color: $shark-black;
+    padding: 96px;
+    margin-top: 1200px;
+  }
+  .block-one {
+    color: $white;
+    @extend %max-width-inner;
+  }
+  .block-two {
+    margin: 96px;
+    color: $shark-black;
+    @extend %max-width;
+  }
 }
+
