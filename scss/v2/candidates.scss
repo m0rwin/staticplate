@@ -47,7 +47,7 @@
     .br3 {
       margin-top: -48px;
       width: 80vw;
-      background-color: rgba(231, 115, 151, 0.8);
+      background-color: rgba(132, 195, 234, 0.8);
       @media screen and (#{$media-sm}) {
         margin-top: -24px;
         width: 100%;
@@ -57,13 +57,18 @@
     .bl2 {
       margin-top: -48px;
       width: 80vw;
-      background-color: rgba(132, 195, 234, 0.8);
+      background-color: rgba(231, 115, 151, 0.8);
       @media screen and (#{$media-sm}) {
         margin-top: -24px;
         width: 100%;
       }
     }
+
+    .can-standard {
+      background-color: $shark-black;
+    }
   }
+
   .can-img {
     min-height: 520px;
     background-repeat: no-repeat;
