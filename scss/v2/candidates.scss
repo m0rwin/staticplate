@@ -47,9 +47,9 @@
     min-height: 520px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right center;
+    background-position: right;
     @media screen and (#{$media-sm}) {
-      background-position: right !important;
+      background-position: right;
     }
   }
 }
