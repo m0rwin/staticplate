@@ -1,46 +1,67 @@
 .container.candidates {
   h2 {
     font-size: 1.37em;
-    margin-top: 96px;
+    margin-top: 120px;
     margin-bottom: 128px;
     @media screen and (#{$media-xsm}) {
-      margin-top: 128px;
+      margin-top: 96px;
       margin-bottom: 64px;
     }
   }
-  .right-block,
-  .left-block {
-    background-color: rgba(0, 142, 218, 0.8);
-    padding: -100px;
+  .can-section {
+    margin-top: 256px;
+    margin-bottom: 256px;
+    .right-block,
+    .left-block {
+      background-color: rgba(0, 142, 218, 0.8);
+      padding: -100px;
 
-    .block-contents {
-      @extend %max-width;
-      min-height: 480px;
-      font-weight: normal;
-      color: $white;
-      .can-head {
-        font-size: 37px;
-        margin-bottom: 48px;
+      .block-contents {
+        @extend %max-width;
+        min-height: 514px;
+        font-weight: normal;
+        color: $white;
         @media screen and (#{$media-xsm}) {
-          font-size: 26px;
-          margin-bottom: 24px;
+          padding-left: 24px;
+          padding-top: 48px;
+          padding-bottom: 48px;
         }
-      }
-      .can-copy {
-        font-size: 26px;
-        @media screen and (#{$media-xsm}) {
-          font-size: 19px;
+        .can-head {
+          font-size: 37px;
+          margin-bottom: 48px;
+          @media screen and (#{$media-xsm}) {
+            font-size: 26px;
+            margin-bottom: 24px;
+          }
+        }
+        .can-copy {
+          font-size: 26px;
+          @media screen and (#{$media-xsm}) {
+            font-size: 19px;
+          }
         }
       }
     }
-  }
 
-  .right-block {
-    margin-top: -48px;
-    width: 80vw;
-    @media screen and (#{$media-sm}) {
-      margin-top: -28px;
-      width: 100%;
+    .right-block,
+    .br3 {
+      margin-top: -48px;
+      width: 80vw;
+      background-color: rgba(231, 115, 151, 0.8);
+      @media screen and (#{$media-sm}) {
+        margin-top: -24px;
+        width: 100%;
+      }
+    }
+    .left-block,
+    .bl2 {
+      margin-top: -48px;
+      width: 80vw;
+      background-color: rgba(132, 195, 234, 0.8);
+      @media screen and (#{$media-sm}) {
+        margin-top: -24px;
+        width: 100%;
+      }
     }
   }
   .can-img {
@@ -50,6 +71,7 @@
     background-position: right;
     @media screen and (#{$media-sm}) {
       background-position: right;
+      min-height: 520px;
     }
   }
 }
