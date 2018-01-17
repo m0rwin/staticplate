@@ -3,7 +3,7 @@
     font-size: 1.37em;
     margin-top: 96px;
     margin-bottom: 128px;
-    @media screen and (#{$media-sm}) {
+    @media screen and (#{$media-xsm}) {
       margin-top: 128px;
       margin-bottom: 64px;
     }
@@ -15,26 +15,40 @@
 
     .block-contents {
       @extend %max-width;
+      min-height: 480px;
       font-weight: normal;
       color: $white;
       .can-head {
         font-size: 37px;
         margin-bottom: 48px;
+        @media screen and (#{$media-xsm}) {
+          font-size: 26px;
+          margin-bottom: 24px;
+        }
       }
       .can-copy {
         font-size: 26px;
+        @media screen and (#{$media-xsm}) {
+          font-size: 19px;
+        }
       }
     }
   }
+
   .right-block {
     margin-top: -48px;
     width: 80vw;
+    @media screen and (#{$media-sm}) {
+      margin-top: -28px;
+    }
   }
   .can-img {
-    height: 520px;
+    min-height: 520px;
     background-repeat: no-repeat;
-    background-image: cover;
-    background-size: 100%;
+    background-size: cover;
     background-position: center center;
+    @media screen and (#{$media-sm}) {
+      width: 100%;
+    }
   }
 }
