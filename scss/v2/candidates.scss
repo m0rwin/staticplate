@@ -10,7 +10,7 @@
   }
   .right-block,
   .left-block {
-    background-color: rgba(0, 142, 218, 0.9);
+    background-color: rgba(0, 142, 218, 0.8);
     padding: -100px;
 
     .block-contents {
@@ -47,9 +47,9 @@
     min-height: 520px;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    background-position: right center;
     @media screen and (#{$media-sm}) {
-      width: 100vw;
+      background-position: right !important;
     }
   }
 }
