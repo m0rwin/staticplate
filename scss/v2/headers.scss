@@ -147,10 +147,10 @@
 
     .hero-subtitle {
       position: relative;
-      top: -2em;
+      top: -1em;
       height: 0;
       overflow: visible;
-      font-size: 19px;
+      font-size: 26px;
       &.gray {
         color: $sub-gray;
         font-weight: bold;
@@ -159,7 +159,8 @@
 
     @media screen and (#{$media-sm}) {
       .hero-subtitle {
-        top: -1.2em;
+        top: -24px;
+        font-size: 19px;
       }
     }
 
