@@ -288,6 +288,7 @@ $media-job-md-px: 1170px;
 
     .pseudo-checkbox {
       cursor: pointer;
+      padding-left: 31px;
 
       &::before {
         font-family: 'Material Icons';
@@ -305,6 +306,7 @@ $media-job-md-px: 1170px;
         line-height: 0.9;
         text-indent: -1px;
         font-size: 16px;
+        margin-left: -31px;
       }
 
       &:hover::before {
@@ -453,7 +455,8 @@ $media-job-md-px: 1170px;
           a { color: white; }
         }
 
-        &.next {
+        &.next,
+        &.prev {
           background-color: $cerulean-blue;
           a { color: white; }
         }

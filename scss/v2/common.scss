@@ -240,6 +240,10 @@ select {
   border-radius: $radius;
   padding: 0 24px;
   width: 100%;
+
+  &:disabled {
+    background-color: lightgrey;
+  }
 }
 
 select {
@@ -284,6 +288,17 @@ sup {
   }
 }
 
+.scroll-anchor {
+  display: block;
+  height: 0;
+  visibility: hidden;
+  position: relative;
+  top: -$menu-height;
+  @media screen and (max-width: $menu-small-brkpnt) {
+    top: -$menu-small-height;
+  }
+}
+
 a.block {
   transition: background 0.3s;
   display: block;
@@ -312,6 +327,7 @@ a.block {
   ul li {
     list-style-type: none;
     line-height: 2;
+    text-indent: -1em;
   }
 
   ul li:before {
@@ -322,6 +338,7 @@ a.block {
   }
   ul {
     margin-bottom: 2em;
+    margin-left: 1em;
   }
 }
 
