@@ -10,6 +10,9 @@
   .can-section {
     margin-top: 128px;
     margin-bottom: 384px;
+    &.last-can-section {
+      margin-bottom: 24px;
+    }
     .right-block,
     .left-block {
       min-height: 514px;
@@ -142,23 +145,22 @@
         text-decoration: none;
       }
     }
+
 // below section
     .can-standard {
       background-color: $shark-black;
-      @extend %stretch-over-max-width;
+      @extend %stretch-over-max-width-r;
       @extend %max-width-inner;
       margin-bottom: 128px;
 
       .right-contents {
         padding: 128px 0;
         color: $white;
-        text-align: center;
       }
     }
     .wearenot {
       font-size: 37px;
       font-weight: bold;
-      margin-bottom: 24px;
       padding-left: 48px;
       @media screen and (#{$media-sm}) {
         padding-left: 24px;
