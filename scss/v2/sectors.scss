@@ -321,6 +321,7 @@
   );
 
   .sector-blog-grid {
+    clear: both;
     @include grid-container;
     @include grid-collapse;
     @include grid-media($neat-tablet) {
