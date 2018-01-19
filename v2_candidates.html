@@ -239,7 +239,7 @@
         <section class="container candidates">
 
             <div class="can-section">
-                <div class="can-img" style="background-image: url('/assets/can-one.jpg')">
+                <div class="can-img can-image-right" style="background-image: url('/assets/can-one.jpg')">
                     <div class="right-block block-first">
                         <div class="block-contents">
                             <h2 class="can-head">We give a damn
@@ -266,7 +266,7 @@
                 </div>
             </div>
             <div class="can-section">
-                    <div class="can-img" style="background-image: url('/assets/can-three.jpg')">
+                    <div class="can-img can-image-right" style="background-image: url('/assets/can-three.jpg')">
                         <div class="right-block block-third">
                             <div class="block-contents">
                                 <h2 class="can-head">We are actually pretty good at what we do</h2>
@@ -277,12 +277,12 @@
                     </div>
                 </div>
     
-                <div class="can-section last-can-section">
+                <div class="can-section link-section">
                     <div class="can-img" style="background-image: url('/assets/can-four.jpg')">
                         <div class="left-block block-fourth">
                             <div class="block-contents">
                                 <h2 class="can-head">We won’t ignore you</h2>
-                                <p class="can-copy">If you can’t reach a consultant, our customer care team is here to help. <br>There is always a voice at the end of the phone or via <a class="candidates-pop-trigger" href="#">our instant messenger</a> service if you can’t talk
+                                <p class="can-copy">If you can’t reach a consultant, our customer care team is here to help. <br>There is always a voice at the end of the phone or via <a class="candidates-pop-trigger">our instant messenger</a> service if you can’t talk
                                 </p>
                             </div>
                         </div>
@@ -290,7 +290,7 @@
                 </div>
 
     
-    <div class="can-section last-can-section">
+    <div class="can-section link-section">
         <h2 class="wearenot">We are not like everybody else</h2>
         <h4 class="canyoutell">Can you tell?</h4>
         <div class="can-standard">
@@ -300,8 +300,8 @@
         </div>
     </div>
     </div></div>
-    <section class="can-section last-can-section">
-        <div class="link-section">
+    <section class="can-section link-section2">
+        <div class="link-section2">
             <h2 class="wearenot">Where to?</h2>
         </div>
         </section>
@@ -422,9 +422,14 @@
             horizontal_padding: 48,
             vertical_padding: 24
         };
-    </script>
-    <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/APP_ID'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
 
+        window.Intercom('boot', {
+            app_id: 'biiewbsz',
+            custom_launcher_selector: 'candidates-pop-trigger' 
+        });
+    </script>
+    <script>(function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/biiewbsz'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()</script>
+</script>
 
     <script src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="82667srdyswku97"></script>
 

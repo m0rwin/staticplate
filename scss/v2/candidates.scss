@@ -1,5 +1,5 @@
 .container.candidates {
-  margin-bottom: 256px;
+  margin-bottom: 56px;
   h2 {
     font-size: 1.37em;
     @media screen and (#{$media-xsm}) {
@@ -9,9 +9,17 @@
   }
   .can-section {
     margin-top: 128px;
-    margin-bottom: 384px;
+    margin-bottom: 336px;
+    @media screen and (#{$media-xsm}) {
+      margin-top: 128px;
+      margin-bottom: 128px;
+    }
     &.last-can-section {
-      margin-bottom: 24px;
+      margin-bottom: 240px;
+      @media screen and (#{$media-xsm}) {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
     }
     .right-block,
     .left-block {
@@ -40,6 +48,7 @@
           }
         }
       }
+
       &.block-third {
         background-color: rgba(132, 195, 234, 0.7);
         margin-top: 96px;
@@ -58,6 +67,7 @@
           }
         }
       }
+
       &.block-second {
         background-color: rgba(231, 115, 151, 0.7);
         margin-top: 96px;
@@ -128,14 +138,17 @@
       }
     }
     .can-img {
-      min-height: 514px;
+      min-height: 690px;
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: right;
+      background-position: center center;
       position: relative;
-      @media screen and (#{$media-sm}) {
+      @media screen and (#{$media-xsm}) {
         background-position: right;
         min-height: 520px;
+        &.can-image-right {
+          background-position: left;
+        }
       }
     }
 
@@ -149,29 +162,53 @@
 // below section
     .can-standard {
       background-color: $shark-black;
-      @extend %stretch-over-max-width-r;
+      @extend %stretch-over-max-width;
       @extend %max-width-inner;
       margin-bottom: 128px;
 
       .right-contents {
         padding: 128px 0;
         color: $white;
+        @media screen and (#{$media-xsm}) {
+          padding: 96px 0;
+          font-size: 19px;
+          line-height: 27px;
+        }
       }
     }
     .wearenot {
       font-size: 37px;
       font-weight: bold;
-      padding-left: 48px;
-      @media screen and (#{$media-sm}) {
-        padding-left: 24px;
+      @media screen and (#{$media-xsm}) {
+        padding-left: 0px;
+        font-size: 26px;
       }
     }
     .canyoutell {
-      padding-bottom: 96px;
-      padding-left: 48px;
-      @media screen and (#{$media-sm}) {
-        padding-left: 24px;
+      padding-bottom: 48px;
+      margin-bottom: 48px;
+      @media screen and (#{$media-xsm}) {
+        padding-left: 0;
+        padding-bottom: 0;
+        margin-bottom: 48px;
+        font-size: 19px;
       }
+    }
+  }
+
+  .link-section {
+    margin-bottom: 256px;
+    @media screen and (#{$media-xsm}) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .link-section2 {
+    margin-bottom: 96px;
+    margin-top: -48px;
+    @media screen and (#{$media-xsm}) {
+      margin-bottom: 48px;
+      margin-top: 96px;
     }
   }
 
