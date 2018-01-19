@@ -1,6 +1,12 @@
 @import 'collapse-js.scss';
 @import 'header-and-nav.scss';
 
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 %max-width {
   max-width: $max-width;
   margin-left: auto;
