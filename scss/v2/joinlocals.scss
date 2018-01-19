@@ -548,16 +548,20 @@ $neat-mobile: (
 .qabuttons {
   margin-bottom: 48px;
   position: relative;
+
   .yes {
     margin-left: 24px;
+    @media screen and (#{$media-sm}) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 24px;
+    }
   }
-
   .no {
     margin-left: 24px;
-    background-color: #fff;
-    color: #2b2b2b;
-    .no:hover {
-      background-color: #fff;
+    @media screen and (#{$media-sm}) {
+      width: 100%;
+      margin-left: 0;
     }
   }
 }
@@ -609,5 +613,106 @@ $neat-mobile: (
   @media only screen and (max-width: 768px) {
     font-size: 26px;
     color: #2496d4;
+  }
+}
+
+.gallerysection {
+  margin-bottom: 172px;
+  .newscontainer {
+    @extend .block-header-r;
+    .newscopy {
+      @extend .copy-r;
+    }
+  }
+  // Image gallery at the bottom //
+  $neat-grid: (
+  columns: 12,
+  gutter: 48px,
+);
+
+  $neat-tablet: (
+  columns: 12,
+  media: 'screen and (max-width: 1422px)',
+  gutter: 48px
+);
+
+  $neat-mobile: (
+  columns: 12,
+  media: 'screen and (max-width: 768px)',
+  gutter: 24px,
+);
+
+  .sector-blog-grid {
+    @include grid-container;
+    @include grid-collapse;
+    @include grid-media($neat-tablet) {
+      @include grid-collapse;
+    }
+    @include grid-media($neat-mobile) {
+      @include grid-collapse;
+    }
+    .first {
+      @include grid-column(8); // where 12 is the number of columns total.
+      @include grid-media($neat-tablet) {
+        @include grid-column(12); //full width
+        min-height: 550px;
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-column(12); //full width
+        margin-bottom: 28px;
+        min-height: 350px;
+      }
+      transition: all 0.5s;
+      overflow: hidden;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+      min-height: 688px;
+      color: #fff;
+      background-color: #1c1c1c;
+      margin-bottom: 48px;
+    }
+    .second {
+      @include grid-column(4);
+      @include grid-media($neat-tablet) {
+        @include grid-column(12); //full width
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-column(12); //full width
+      }
+
+      .grid-collapse {
+        @include grid-collapse; // this is to make sure you don't get double padding
+        @include grid-media($neat-tablet) {
+          @include grid-collapse; // this is to make sure you don't get double padding
+        }
+        @include grid-media($neat-mobile) {
+          @include grid-collapse; // this is to make sure you don't get double padding          
+        }
+      }
+
+      .nest_first,
+      .nest_second {
+        @include grid-column(12);
+        @include grid-media($neat-tablet) {
+          @include grid-column(6); //half
+        }
+        @include grid-media($neat-mobile) {
+          @include grid-column(12); //full again
+          margin-bottom: 28px;
+        }
+        transition: all 0.5s;
+        overflow: hidden;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 320px;
+        position: relative;
+        color: #fff;
+        background-color: #1c1c1c;
+        margin-bottom: 48px;
+      }
+    }
   }
 }
