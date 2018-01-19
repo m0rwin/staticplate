@@ -1,4 +1,15 @@
-.hero-full.landscape {
+.hero-full {
+  min-height: calc(90vh - 64px);
+  @media screen and (max-width:825px) {
+    min-height: calc(90vh - 64px) !important;
+    margin-bottom: 48px;
+    position: relative;
+    text-align: center;
+    padding: 24px;
+    font-size: 0;
+  }
+}
+.landscape {
   @media screen and (max-aspect-ratio: 1/1), screen and (#{$media-sm}) {
     background-position-x: 78%;
     .hero-content.black {
@@ -23,7 +34,7 @@ $grid-profile-sm: (
 );
 $grid-profile-sm2: (
   'gutter': 24px,
-  'media': '(max-width: 1024px)'
+  'media': '(max-width: 768px)'
 );
 // $grid-profile-sm: (
 //   'gutter': 24px,
@@ -45,6 +56,7 @@ $grid-profile-gutter: 24px;
       .quote-big {
         height: calc(((1300px - (3 * #{$grid-profile-gutter})) / 2 + #{$grid-profile-gutter}) - 0.1px);
         @include grid-column(6);
+        font-size: 53px !important;
       }
     }
 
@@ -52,13 +64,13 @@ $grid-profile-gutter: 24px;
       > div,
       a.block {
         @include grid-column(4);
-        height: calc(((100vw - (2 * #{$grid-profile-gutter}) - 96px) / 3));
+        min-height: 300px;
       }
 
       .quote-big {
         @include grid-column(4);
-        height: calc(((52.5vw - (2 * #{$grid-profile-gutter}) - 96px) * 2 / 3 + #{$grid-profile-gutter}) - 0.1px);
-        font-size: 37px !important;
+        height: 307px;
+        font-size: 26px !important;
       }
     }
 
@@ -66,10 +78,12 @@ $grid-profile-gutter: 24px;
       > div,
       a.block {
         @include grid-column(6);
+        min-height: 300px;
       }
 
       .quote-big {
         @include grid-column(6);
+        min-height: 300px;
       }
     }
 
@@ -97,6 +111,10 @@ $grid-profile-gutter: 24px;
       color: white;
       background-color: $shark-black;
       font-size: 16px;
+      @media screen and (max-width:825px) {
+        padding: 24px;
+      }
+
 
       h4 {
         margin: 0;
@@ -120,57 +138,74 @@ $grid-profile-gutter: 24px;
     }
 
     .social {
-      padding: 24px;
-      li {
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        margin-bottom: 10px;
-      }
+      padding: 0;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        font-weight: bold;
+        background-color: $shark-black;
+        vertical-align: unset;
+        li a {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          height: 25%;
+          display: block;
+          color: $white;
+          padding: 12px 18px 0px 38px;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+        }
 
-      a::before {
-        font-family: 'Material Icons';
-        font-weight: normal;
-        font-size: 2em;
-        vertical-align: middle;
-        margin-right: 0.4em;
-      }
+        a::before {
+          font-family: 'Material Icons';
+          font-weight: normal;
+          font-size: 2em;
+          vertical-align: middle;
+          margin-right: 0.4em;
+        }
 
-      a:hover {
-        color: $curious-blue;
-      }
+        li:hover {
+          transition: all 0.3s ease-in-out;
+          color: $white;
+          background-color: $curious-blue;
+        }
 
-      .mail::before {
-        content: 'email';
-      }
+        .mail::before {
+          content: 'email';
+        }
 
-      .tel::before {
-        content: 'phone';
-      }
+        .tel::before {
+          content: 'phone';
+        }
 
-      .twitter::before {
-        font-family: 'Socicon';
-        content: '\e08d';
-        font-size: 1.7em;
-        line-height: 2em;
-        margin: 0 0.5em 0 0.1em;
-        font-weight: 100;
-      }
+        .twitter::before {
+          font-family: 'Socicon';
+          content: '\e08d';
+          font-size: 1.7em;
+          line-height: 2em;
+          margin: 0 0.5em 0 0.1em;
+          font-weight: 100;
+        }
 
-      .linkedin::before {
-        font-family: 'Socicon';
-        content: '\e04c';
-        font-size: 1.7em;
-        line-height: 2em;
-        margin: 0 0.7em 0 0.1em;
-        font-weight: 100;
+        .linkedin::before {
+          font-family: 'Socicon';
+          content: '\e04c';
+          font-size: 1.7em;
+          line-height: 2em;
+          margin: 0 0.7em 0 0.1em;
+          font-weight: 100;
+        }
       }
     }
 
     .job {
       position: relative;
       dl {
-        line-height: 1em;
+        line-height: 1.2em;
+        font-weight: bold;
         dt {
           display: none;
         }
@@ -189,20 +224,24 @@ $grid-profile-gutter: 24px;
         font-family: 'Material Icons';
         content: 'book';
         display: block;
-        font-size: 2em;
+        font-size: 26px;
         margin-bottom: 0.5em;
+        position: relative;
+        background-size: cover;
+        background-position: center;
       }
 
       font-size: 1.2em;
     }
 
     .quote {
-      font-size: 1.2em;
+      font-size: 23px;
     }
 
     .sector,
     .job {
       position: relative;
+      font-size: 23px;
       .anchor {
         position: absolute;
         bottom: 36px;
