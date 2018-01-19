@@ -1,0 +1,200 @@
+$container-max-width: 738px;
+$container-max-width-mq: #{$container-max-width} + 48px;
+
+.community_article {
+  .hero-subtitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 75px !important;
+    max-width: initial !important;
+    letter-spacing: 1px;
+    margin: 0;
+    color: #fff;
+  }
+
+  blockquote,
+  .quote {
+    font-size: 26px;
+    font-weight: bold;
+    font-style: italic;
+    color: #000;
+    border-left: 6px solid #008eda;
+    display: block;
+    padding-left: 0.8em;
+    
+    &::before {
+      content: open-quote
+    }  
+    &::after {
+      content: close-quote
+    }  
+    
+  }
+  .content-container {
+    
+    .lead {
+      color: #272727;
+    }
+
+    blockquote,
+    q {
+      quotes: "“" "”";
+    }
+
+    a {
+      color: #1897d4;
+      font-weight: bold;
+    }
+
+    ol, ul {
+      color:  #272727;
+    }
+
+    p {
+      color: #596064;
+    }
+
+    ol,
+    ul,
+    p {
+      margin: 2em 0;
+    }
+
+    ol {
+      li {
+        counter-increment: li;
+        font-weight: bold;
+
+        &:before {
+          color: #008eda;
+          content: counter(li) ".";
+          margin-right: 0.5em;
+          text-align: right;
+        }
+      }
+    }
+
+    ul {
+      li {
+        font-weight: bold;
+
+        &:before {
+          color: #008eda;
+          content: "\2022";
+          margin-right: 0.5em;
+          text-align: right;
+        }
+      }
+    }
+
+    width: 100%;
+    max-width: $container-max-width;
+    margin: 2em auto 0 auto;
+
+    img {
+      width: $max-width;
+      margin-left: calc((#{$container-max-width} - #{$max-width})/2);
+      margin-right: calc((#{$container-max-width} - #{$max-width})/2);
+      
+      @media screen and (#{$media-md}) {
+        width: calc(100vw - 96px);
+        margin-left: calc((96px + #{$container-max-width} - 100vw)/2);
+        margin-right: calc((96px + #{$container-max-width} - 100vw)/2);
+      }
+
+      @media screen and (#{$media-sm}) {
+        width: calc(100vw - 48px);
+        margin-left: calc((48px + #{$container-max-width} - 100vw)/2);
+        margin-right: calc((48px + #{$container-max-width} - 100vw)/2);
+      }
+
+
+      @media screen and (max-width: $container-max-width-mq) {
+        width: 100vw;
+        margin-left: -24px;
+        margin-right: -24px;
+      }
+    }
+  }
+
+  .community-articles-grid {
+    .articles {
+      @include grid-container;
+      @include grid-collapse;
+      @include grid-media($neat-tablet) {
+        @include grid-collapse;
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-collapse;
+      }
+      padding-bottom: 48px;
+    }
+
+    .tile_z,
+     {
+      @include grid-column(6);
+      z-index: 1;
+      height: 420px;
+      color: white;
+      margin-bottom: 48px;
+      position: relative;
+      transition: all 0.5s;
+      overflow: hidden;
+      background-color: $shark-black;
+      
+      @include grid-media($neat-mobile) {
+        @include grid-column(1);
+        margin-bottom: 24px;
+        height: 350px;
+        position: relative;
+      }
+
+      .copycontainer {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 300;
+        font-family: 'muli' sans-serif;
+        padding: 48px;
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        -webkit-font-smoothing: antialiased;
+        .name {
+          margin-bottom: 8px;
+        }
+        .tile-title {
+          font-size: 19px;
+          font-weight: bold;
+          text-transform: uppercase;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+    }
+
+    .tile_z:hover {
+      transition: all 0.5s;
+    }
+
+    .tile_z .tile_z-overlay {
+      background: rgba(0, 145, 218, 1);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
+
+    .tile_z:hover .tile_z-overlay {
+      opacity: 1;
+    }
+
+    .localsgrid {
+      z-index: 1;
+    }
+  }
+
+}
