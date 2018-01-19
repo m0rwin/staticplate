@@ -159,6 +159,13 @@
       }
     }
 
+    .tel {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
 // below section
     .can-standard {
       background-color: $shark-black;
