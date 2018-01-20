@@ -21,7 +21,7 @@
       top: 20%;
       letter-spacing: 10px;
       @media screen and (#{$media-sm}) {
-        top: 18%;
+        top: 23%;
       }
     }
     .two {
@@ -30,7 +30,7 @@
       letter-spacing: 10px;
       @media screen and (#{$media-sm}) {
         left: 14%;
-        top: 32%;
+        top: 36%;
       }
     }
     .three {
@@ -39,10 +39,10 @@
       letter-spacing: 10px;
       @media screen and (#{$media-md}) {
         left: 0;
-        top: 50%;
+        top: 49%;
         @media screen and (#{$media-sm}) {
           left: -18%;
-          top: 46%;
+          top: 49%;
         }
       }
     }
