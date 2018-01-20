@@ -6326,7 +6326,7 @@ header ~ .job-spec {
   display: block;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .blog-grid {
     margin-left: -48px;
     margin-right: -48px;
@@ -6358,7 +6358,7 @@ header ~ .job-spec {
   margin-bottom: 48px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .blog-grid .first {
     width: calc(100% - 96px);
     float: left;
@@ -6392,7 +6392,7 @@ header ~ .job-spec {
   margin-left: 48px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .blog-grid .second {
     width: calc(100% - 96px);
     float: left;
@@ -6414,7 +6414,7 @@ header ~ .job-spec {
   width: calc(100% + 96px);
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .blog-grid .second .grid-collapse {
     margin-left: -48px;
     margin-right: -48px;
@@ -6447,7 +6447,7 @@ header ~ .job-spec {
   margin-bottom: 48px;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .blog-grid .second .nest_first,
   .container-normal-local-press .blog-container .blog-grid .second .nest_second {
     width: calc(50% - 72px);
@@ -6512,7 +6512,7 @@ header ~ .job-spec {
   position: absolute;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1170px) {
   .container-normal-local-press .blog-container .tile_z {
     width: calc(100% - 96px);
     float: left;
