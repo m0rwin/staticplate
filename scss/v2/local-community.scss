@@ -36,6 +36,7 @@
         position: absolute;
       }
       .block-contents {
+        @extend %max-width;
         font-weight: normal;
         color: $white;
         position: inherit;
@@ -83,8 +84,8 @@
     gutter: 24px
   );
 
-  .communitygrid {
-    .candidates {
+  .local-community-grid {
+    .articles {
       @include grid-container;
       @include grid-collapse;
       @include grid-media($neat-tablet) {
@@ -100,18 +101,17 @@
      {
       @include grid-column(4);
       z-index: 1;
-      height: 386px;
+      height: 360px;
       color: white;
       margin-bottom: 48px;
       position: relative;
       transition: all 0.5s;
       overflow: hidden;
       background-color: $shark-black;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
 
-      @include grid-media($neat-tablet) {
-        @include grid-column(1);
-        position: relative;
-      }
       @include grid-media($neat-mobile) {
         @include grid-column(1);
         margin-bottom: 24px;
@@ -139,6 +139,17 @@
           -webkit-font-smoothing: antialiased;
         }
       }
+
+      &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+      }
     }
 
     .tile_z:hover {
@@ -146,7 +157,7 @@
     }
 
     .tile_z .tile_z-overlay {
-      background: rgba(0, 145, 218, 1);
+      background: rgba(0, 145, 218, 0.6);
       height: 100%;
       width: 100%;
       left: 0;
