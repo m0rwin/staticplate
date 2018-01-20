@@ -85,7 +85,8 @@ $container-max-width-mq: #{$container-max-width} + 48px;
     max-width: $container-max-width;
     margin: 2em auto 0 auto;
 
-    img {
+    img:not([width]):not([height]) {
+      height: auto;
       width: $max-width;
       margin-left: calc((#{$container-max-width} - #{$max-width})/2);
       margin-right: calc((#{$container-max-width} - #{$max-width})/2);
