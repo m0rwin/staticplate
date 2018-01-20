@@ -33,6 +33,7 @@ $container-max-width-mq: #{$container-max-width} + 48px;
     margin-bottom: 128px !important;
     .lead {
       color: #272727;
+      font-size: 23px;
     }
 
     blockquote,
@@ -185,7 +186,7 @@ $container-max-width-mq: #{$container-max-width} + 48px;
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.6);
+        background: rgba(0, 0, 0, 0.3);
       }
     }
 
