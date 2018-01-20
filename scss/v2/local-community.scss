@@ -7,109 +7,31 @@
       margin-bottom: 24px;
     }
   }
-  .can-section {
-    margin-top: 128px;
-    margin-bottom: 336px;
-    @media screen and (#{$media-xsm}) {
-      margin-top: 128px;
-      margin-bottom: 128px;
+  .opening-copy {
+    max-width: 70%;
+    @media screen and ($media-sm) {
+      max-width: 100%;
     }
-    &.last-can-section {
-      margin-bottom: 240px;
-      @media screen and (#{$media-xsm}) {
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
+    .top-copy {
+      margin-bottom: 96px;
     }
-    .right-block,
-    .left-block {
-      min-height: 514px;
-      @media screen and (max-width: 825px) {
-        min-height: 0px;
-        padding-bottom: 48px;
-        position: relative;
+  }
+  .image-section {
+    margin-bottom: 256px;
+    .main-img {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      position: relative;
+      margin-left: 96px;
+      @media screen and (#{$media-sm}) {
+        min-height: 520px;
+        margin-left: 0px;
       }
-
-      &.block-first {
-        background-color: rgba(0, 142, 218, 0.7);
-        margin-top: 96px;
-        margin-left: 96px;
-        padding-right: 96px;
-        @media screen and (max-width: 825px) {
-          margin-top: 24px;
-          margin-left: 24px;
-          padding-right: 48px;
-          margin-bottom: 48px;
-          width: 100%;
-          @media screen and (#{$media-xsm}) {
-            margin-top: 24px;
-            margin-left: 24px;
-            padding-right: 0px;
-          }
-        }
-      }
-
-      &.block-third {
-        background-color: rgba(132, 195, 234, 0.7);
-        margin-top: 96px;
-        margin-left: 96px;
-        padding-right: 96px;
-        @media screen and (max-width: 825px) {
-          margin-top: 24px;
-          margin-left: 24px;
-          padding-right: 48px;
-          margin-bottom: 48px;
-          width: 100%;
-          @media screen and (#{$media-xsm}) {
-            margin-top: 24px;
-            margin-left: 24px;
-            padding-right: 0px;
-          }
-        }
-      }
-
-      &.block-second {
-        background-color: rgba(231, 115, 151, 0.7);
-        margin-top: 96px;
-        margin-right: 96px;
-        padding-left: calc((100vw - 1300px)/2);
-        @media screen and (max-width: 825px) {
-          margin-top: 24px;
-          margin-right: 24px;
-          padding-left: 48px;
-          width: 100%;
-          @media screen and (#{$media-xsm}) {
-            margin-top: 24px;
-            margin-right: 0px;
-            padding-left: 24px;
-          }
-        }
-      }
-
-      &.block-fourth {
-        background-color: rgba(231, 115, 151, 0.7);
-        margin-top: 96px;
-        margin-right: 96px;
-        padding-left: calc((100vw - 1300px)/2);
-        @media screen and (max-width: 825px) {
-          margin-top: 24px;
-          margin-right: 24px;
-          padding-left: 48px;
-          width: 100%;
-          @media screen and (#{$media-xsm}) {
-            margin-top: 24px;
-            margin-right: 0px;
-            padding-left: 24px;
-          }
-        }
-      }
-
       .block-contents {
         font-weight: normal;
         color: $white;
-        padding-left: 96px;
-        padding-top: 96px;
-        padding-bottom: 96px;
+        padding: 96px;
         @media screen and (max-width: 825px) {
           padding-right: 48px;
           padding-left: 48px;
@@ -137,92 +59,13 @@
         }
       }
     }
-    .can-img {
-      min-height: 690px;
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center center;
-      position: relative;
-      @media screen and (#{$media-xsm}) {
-        background-position: right;
-        min-height: 520px;
-        &.can-image-right {
-          background-position: left;
-        }
-      }
-    }
-
-    .candidates-pop-trigger {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-    .tel {
-      text-decoration: underline;
-      &:hover {
-        text-decoration: none;
-      }
-    }
-
-// below section
-    .can-standard {
-      background-color: $shark-black;
-      @extend %stretch-over-max-width;
-      @extend %max-width-inner;
-      margin-bottom: 128px;
-
-      .right-contents {
-        padding: 128px 0;
-        color: $white;
-        @media screen and (#{$media-xsm}) {
-          padding: 96px 0;
-          font-size: 19px;
-          line-height: 27px;
-        }
-      }
-    }
-    .wearenot {
-      font-size: 37px;
-      font-weight: bold;
-      @media screen and (#{$media-xsm}) {
-        padding-left: 0px;
-        font-size: 26px;
-      }
-    }
-    .canyoutell {
-      padding-bottom: 48px;
-      margin-bottom: 48px;
-      @media screen and (#{$media-xsm}) {
-        padding-left: 0;
-        padding-bottom: 0;
-        margin-bottom: 48px;
-        font-size: 19px;
-      }
-    }
   }
-
-  .link-section {
-    margin-bottom: 256px;
-    @media screen and (#{$media-xsm}) {
-      margin-bottom: 24px;
-    }
-  }
-
-  .link-section2 {
-    margin-bottom: 96px;
-    margin-top: -48px;
-    @media screen and (#{$media-xsm}) {
-      margin-bottom: 48px;
-      margin-top: 96px;
-    }
-  }
+  
 
   /* Link grid */
 
   $neat-grid: (
-    columns: 2,
+    columns: 3,
     gutter: 48px,
     margin-bottom: 48px
   );
@@ -239,7 +82,7 @@
     gutter: 24px
   );
 
-  .candidatesgrid {
+  .communitygrid {
     .candidates {
       @include grid-container;
       @include grid-collapse;
@@ -254,9 +97,9 @@
 
     .tile_z,
      {
-      @include grid-column(6);
+      @include grid-column(4);
       z-index: 1;
-      height: 420px;
+      height: 386px;
       color: white;
       margin-bottom: 48px;
       position: relative;
