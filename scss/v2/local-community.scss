@@ -7,6 +7,7 @@
       margin-bottom: 24px;
     }
   }
+
   .opening-copy {
     max-width: 70%;
     @media screen and ($media-sm) {
@@ -17,38 +18,40 @@
     }
   }
   .image-section {
-    margin-bottom: 256px;
+    position: relative;
+    margin-bottom: 128px;
     .main-img {
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
       position: relative;
-      margin-left: 96px;
-      @media screen and (#{$media-sm}) {
-        min-height: 520px;
-        margin-left: 0px;
+      width: 100%;
+
+      &:before {
+        background-color: rgba(0, 0, 0, 0.4);
+        content: '';
+        height: 100%;
+        left: 0;
+        width: 100%;
+        position: absolute;
       }
       .block-contents {
         font-weight: normal;
         color: $white;
+        position: inherit;
         padding: 96px;
         @media screen and (max-width: 825px) {
-          padding-right: 48px;
-          padding-left: 48px;
-          padding-bottom: 48px;
-          width: 100%;
+          padding: 48px;
           @media screen and (#{$media-xsm}) {
-            padding-right: 48px;
-            padding-left: 24px;
-            padding-bottom: 24px;
+            padding: 24px;
           }
         }
         .can-head {
-          font-size: 37px;
           margin-bottom: 48px;
+          font-size: 37px;
           @media screen and (#{$media-xsm}) {
-            font-size: 26px;
             margin-bottom: 24px;
+            font-size: 26px;
           }
         }
         .can-copy {
@@ -61,9 +64,7 @@
     }
   }
   
-
   /* Link grid */
-
   $neat-grid: (
     columns: 3,
     gutter: 48px,
