@@ -6,57 +6,104 @@
   background-color: white;
   margin-bottom: 0px;
 
+  /* Top section */
   .blog-container {
-    .sectors {
-/* Top section */
   // LATEST NEWS GRID //
-      $neat-grid: (
+    $neat-grid: (
     columns: 12,
     gutter: 48px,
   );
 
-      $neat-tablet: (
+    $neat-tablet: (
     columns: 12,
     media: 'screen and (max-width: 1422px)',
     gutter: 48px
   );
 
-      $neat-mobile: (
+    $neat-mobile: (
     columns: 12,
     media: 'screen and (max-width: 768px)',
     gutter: 24px,
   );
 
-      .sector-blog-grid {
-        clear: both;
-        @include grid-container;
+    .blog-grid {
+      clear: both;
+      @include grid-container;
+      @include grid-collapse;
+      @include grid-media($neat-tablet) {
         @include grid-collapse;
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-collapse;
+      }
+      .first {
+        @include grid-column(8); // where 12 is the number of columns total.
         @include grid-media($neat-tablet) {
-          @include grid-collapse;
+          @include grid-column(12); //full width
+          min-height: 350px;
         }
         @include grid-media($neat-mobile) {
-          @include grid-collapse;
+          @include grid-column(12); //full width
+          margin-bottom: 28px;
+          min-height: 350px;
         }
-        .first {
-          @include grid-column(8); // where 12 is the number of columns total.
+        transition: all 0.5s;
+        overflow: hidden;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top center;
+        min-height: 688px;
+        color: #fff;
+        background-color: $shark-black;
+        margin-bottom: 48px;
+        &:before {
+          background-color: rgba(0, 0, 0, 0.6);
+          content: '';
+          height: 100%;
+          left: 0;
+          width: 100%;
+          position: absolute;
+        }
+      }
+      .second {
+        @include grid-column(4);
+        @include grid-media($neat-tablet) {
+          @include grid-column(12); //full width
+        }
+        @include grid-media($neat-mobile) {
+          @include grid-column(12); //full width
+        }
+
+        .grid-collapse {
+          @include grid-collapse; // this is to make sure you don't get double padding
           @include grid-media($neat-tablet) {
-            @include grid-column(12); //full width
-            min-height: 350px;
+            @include grid-collapse; // this is to make sure you don't get double padding
           }
           @include grid-media($neat-mobile) {
-            @include grid-column(12); //full width
+            @include grid-collapse; // this is to make sure you don't get double padding          
+          }
+        }
+
+        .nest_first,
+        .nest_second {
+          @include grid-column(12);
+          @include grid-media($neat-tablet) {
+            @include grid-column(6); //half
+          }
+          @include grid-media($neat-mobile) {
+            @include grid-column(12); //full again
             margin-bottom: 28px;
-            min-height: 350px;
           }
           transition: all 0.5s;
           overflow: hidden;
-          position: relative;
           background-size: cover;
           background-repeat: no-repeat;
           background-position: top center;
-          min-height: 688px;
+          min-height: 320px;
+          position: relative;
           color: #fff;
-          background-color: $shark-black;
+          background-color: #1c1c1c;
           margin-bottom: 48px;
           &:before {
             background-color: rgba(0, 0, 0, 0.6);
@@ -67,89 +114,40 @@
             position: absolute;
           }
         }
-        .second {
-          @include grid-column(4);
-          @include grid-media($neat-tablet) {
-            @include grid-column(12); //full width
-          }
-          @include grid-media($neat-mobile) {
-            @include grid-column(12); //full width
-          }
-
-          .grid-collapse {
-            @include grid-collapse; // this is to make sure you don't get double padding
-            @include grid-media($neat-tablet) {
-              @include grid-collapse; // this is to make sure you don't get double padding
-            }
-            @include grid-media($neat-mobile) {
-              @include grid-collapse; // this is to make sure you don't get double padding          
-            }
-          }
-
-          .nest_first,
-          .nest_second {
-            @include grid-column(12);
-            @include grid-media($neat-tablet) {
-              @include grid-column(6); //half
-            }
-            @include grid-media($neat-mobile) {
-              @include grid-column(12); //full again
-              margin-bottom: 28px;
-            }
-            transition: all 0.5s;
-            overflow: hidden;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: top center;
-            min-height: 320px;
-            position: relative;
-            color: #fff;
-            background-color: #1c1c1c;
-            margin-bottom: 48px;
-            &:before {
-              background-color: rgba(0, 0, 0, 0.6);
-              content: '';
-              height: 100%;
-              left: 0;
-              width: 100%;
-              position: absolute;
-            }
-          }
-        }
       }
+    }
   
   // article tile content styling //
-      .news-content-container {
-        padding: 48px;
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        .sector-lable {
-          font-family: $font-muli;
-          font-size: 16px;
-          font-weight: bold;
-          line-height: 1.4;
-          text-transform: uppercase;
-          color: #a0a8ac;
-          padding-bottom: 16px;
-        }
-        .article-title {
-          font-family: $font-muli;
-          font-weight: bold;
-          color: #fff;
-          font-size: 19px;
-          line-height: 1.4;
-          padding-bottom: 16px;
-        }
+    .news-content-container {
+      padding: 48px;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      .sector-lable {
+        font-family: $font-muli;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.4;
+        text-transform: uppercase;
+        color: #a0a8ac;
+        padding-bottom: 16px;
+      }
+      .article-title {
+        font-family: $font-muli;
+        font-weight: bold;
+        color: #fff;
+        font-size: 19px;
+        line-height: 1.4;
+        padding-bottom: 16px;
+      }
 
-        .read-news-cta {
-          color: #fff;
-          font-weight: bold;
-          font-size: 16px;
-          position: absolute;
-          text-transform: uppercase;
-          bottom: 0;
-        }
+      .read-news-cta {
+        color: #fff;
+        font-weight: bold;
+        font-size: 16px;
+        position: absolute;
+        text-transform: uppercase;
+        bottom: 48px;
       }
     }
   }
