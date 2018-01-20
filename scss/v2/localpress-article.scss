@@ -160,10 +160,12 @@ $container-max-width-mq: #{$container-max-width} + 48px;
     }
 
     .icon-linkedin,
-    .icon-twitter {
+    .icon-twitter,
+    .icon-facebook,
+    .icon-pinterest {
       display: inline-block;
-      width: 37px;
-      height: 37px;
+      width: 36px;
+      height: 36px;
       background-color: $cape-cod;
       background-repeat: no-repeat;
       background-position: center center;
@@ -178,19 +180,29 @@ $container-max-width-mq: #{$container-max-width} + 48px;
     }
 
     .icon-linkedin {
-      background-image: url(/assets/linked-in.svg);
+      background-image: url(/assets/blog-linkedin.svg);
     }
 
     .icon-twitter {
-      background-image: url(/assets/twitter.svg);
+      background-image: url(/assets/blog-twitter.svg);
+    }
+
+    .icon-facebook {
+      background-image: url(/assets/facebook.svg);
+    }
+
+    .icon-pinterest {
+      background-image: url(/assets/pinterest.svg);
     }
 
 
     .icon-linkedin:hover,
-    .icon-twitter:hover {
+    .icon-twitter:hover,
+    .icon-pinterest:hover,
+    .icon-facebook:hover {
       display: inline-block;
-      width: 37px;
-      height: 37px;
+      width: 36px;
+      height: 36px;
       background-color: #fff;
       background-repeat: no-repeat;
       background-position: center center;
@@ -205,11 +217,19 @@ $container-max-width-mq: #{$container-max-width} + 48px;
     }
 
     .icon-linkedin:hover {
-      background-image: url(/assets/linked-in-hover.svg);
+      background-image: url(/assets/blog-linkedin-hover.svg);
     }
 
     .icon-twitter:hover {
-      background-image: url(/assets/twitter-hover.svg);
+      background-image: url(/assets/blog-twitter-hover.svg);
+    }
+
+    .icon-pinterest:hover {
+      background-image: url(/assets/pinterest-hover.svg);
+    }
+
+    .icon-facebook:hover {
+      background-image: url(/assets/facebook-hover.svg);
     }
   }
 }
