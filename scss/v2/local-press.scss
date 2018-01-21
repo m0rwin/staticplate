@@ -154,6 +154,7 @@
           position: absolute;
         }
       }
+
       .second {
         @include grid-column(4);
         @include grid-media($neat-tablet) {
