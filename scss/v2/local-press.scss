@@ -231,6 +231,7 @@
 
     .tile_z {
       @include grid-column(4);
+      z-index: 1;
       height: 350px;
       color: white;
       margin-bottom: 48px;
@@ -244,11 +245,13 @@
       -webkit-backface-visibility: hidden;
       background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
       &:before {
-        background-color: rgba(0, 0, 0, 0.6);
         content: '';
-        height: 100%;
+        z-index: -1;
+        background: rgba(0, 0, 0, 0.6);
+        top: 0;
         left: 0;
-        width: 100%;
+        right: 0;
+        bottom: 0;
         position: absolute;
       }
 
@@ -277,6 +280,9 @@
       right: 0;
       opacity: 0;
       -webkit-backface-visibility: hidden;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
     }
 
     .tile_z:hover .tile_z-overlay {
@@ -290,6 +296,7 @@
     padding: 48px;
     height: 100%;
     width: 100%;
+    top: 0;
     position: absolute;
     .sector-lable {
       font-family: $font-muli;
