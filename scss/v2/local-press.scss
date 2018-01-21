@@ -152,6 +152,7 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: top center;
+      -webkit-backface-visibility: hidden;
       background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
       &:before {
         background-color: rgba(0, 0, 0, 0.6);
@@ -161,6 +162,7 @@
         width: 100%;
         position: absolute;
       }
+
 
       @include grid-media($neat-tablet) {
         @include grid-column(1);
@@ -174,32 +176,27 @@
         margin-left: 24px;
         position: relative;
       }
+    }
 
-      .copycontainer {
-        color: #fff;
-        font-size: 26px;
-        font-weight: 300;
-        font-family: 'muli' sans-serif;
-        padding: 48px;
-        left: 0;
-        bottom: 0;
-        position: absolute;
-        -webkit-font-smoothing: antialiased;
-        .name {
-          margin-bottom: 8px;
-        }
-        .viewprofile {
-          font-size: 19px;
-          font-weight: bold;
-          text-transform: uppercase;
-          -webkit-font-smoothing: antialiased;
-        }
-      }
+    .tile_z .tile_z-overlay {
+      background: rgba(0, 145, 218, 0.3);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-backface-visibility: hidden;
+    }
+
+    .tile_z:hover .tile_z-overlay {
+      transition: all 0.5s;
+      opacity: 1;
     }
   }
 
   // ARTICLE CONETNT STYLES //
-
   .news-content-container {
     padding: 48px;
     height: 100%;
@@ -232,7 +229,8 @@
       bottom: 48px;
     }
   }
-  // SMALL GRID RESPONSIVE //
+  
+  // SMALL GRID RESPONSIVE MARGING//
   .margin-small-grid {
     margin-left: -48px;
     margin-right: -48px;
@@ -241,25 +239,4 @@
       margin-right: -24px;
     }
   }
-}
-
-.tile_z:hover {
-  transition: all 0.5s;
-}
-
-.tile_z .tile_z-overlay {
-  background: rgba(0, 145, 218, 0.5);
-  height: 100%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  z-index: 0;
-}
-
-.tile_z:hover .tile_z-overlay {
-  transition: all 0.5s;
-  opacity: 1;
 }
