@@ -446,11 +446,11 @@
       bottom: 0;
     }
   }
-  
+
   .nest_second {
-    .news-content-container:hover {		
-      background-color: $curious-blue;		
-      transition: all 0.5s ease-in-out;		
+    .news-content-container:hover {
+      background-color: $curious-blue;
+      transition: all 0.5s ease-in-out;
     }
   }
 // Link to blog cat styles//
@@ -485,11 +485,7 @@
       text-transform: uppercase;
       bottom: 48px;
     }
-
-    
-    
-  
-}
+  }
 
 
 //hover state//*/
@@ -612,7 +608,7 @@
     }
   }
 
-  
+
 
   .role_z:hover {
     transition: 1s;
