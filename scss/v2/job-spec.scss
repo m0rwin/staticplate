@@ -213,7 +213,6 @@ $break-sidebar: 'max-width: 1120px';
       width: 100%;
 
       & > * {
-        max-width: 337px;
         width: 100%;
         float: left;
       }
@@ -264,12 +263,6 @@ $break-sidebar: 'max-width: 1120px';
       & > div,
       & > a {
         clear: both;
-      }
-      & > div:nth-child(even),
-      & > a:nth-child(even) {
-        float: right;
-        margin-right: 48px;
-        margin-left: 0;
       }
     }
   }
