@@ -43,6 +43,8 @@ $media-job-md-px: 1170px;
 
       .search-box {
         position: relative;
+        -webkit-appearance: none;
+        border-radius: 0;
         @include grid-column(8.76);
         @media screen and (#{$media-job-md}) {
           @include grid-column(8.76, (gutter: 0px));
