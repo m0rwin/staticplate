@@ -47,7 +47,7 @@
             padding: 24px;
           }
         }
-        .can-head {
+        h2 {
           margin-bottom: 48px;
           font-size: 37px;
           @media screen and (#{$media-xsm}) {
@@ -55,7 +55,7 @@
             font-size: 26px;
           }
         }
-        .can-copy {
+        p {
           font-size: 26px;
           @media screen and (#{$media-xsm}) {
             font-size: 19px;
