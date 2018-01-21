@@ -340,7 +340,17 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
-    background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
+    background-image: url('..//assets/joinlocals_bot_r.jpg');
+    &:before {
+      content: '';
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
 
     @include grid-media($neat-tablet) {
       @include grid-column(1);
