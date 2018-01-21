@@ -254,6 +254,10 @@ select {
   }
 }
 
+[type=search] {
+  -webkit-appearance: none;
+}
+
 select {
   -webkit-appearance: none;
   cursor: pointer;
