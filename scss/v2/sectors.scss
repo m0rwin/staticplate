@@ -417,6 +417,8 @@
     height: 100%;
     width: 100%;
     position: absolute;
+    top: 0;
+
     .sector-lable {
       font-family: $font-muli;
       font-size: 16px;
@@ -479,11 +481,7 @@
     }
   }
 
-  .nest_second
-.news-content-container:hover {
-    background-color: $curious-blue;
-    transition: all 0.5s ease-in-out;
-  }
+
 
 //hover state//*/
   /*.first:hover {
@@ -697,6 +695,66 @@
   }
 
   .role_sector_search:hover .role_sector_search-overlay {
+    opacity: 1;
+  }
+
+  .tile_z {
+    @include grid-column(4);
+    z-index: 1;
+    height: 320px;
+    color: white;
+    margin-bottom: 48px;
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+    background-color: $shark-black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    -webkit-backface-visibility: hidden;
+    &:before {
+      content: '';
+      z-index: -1;
+      background: rgba(0, 0, 0, 0.6);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+    }
+
+
+    @include grid-media($neat-tablet) {
+      @include grid-column(1);
+      height: 340px;
+      position: relative;
+    }
+    @include grid-media($neat-mobile) {
+      @include grid-column(1);
+      margin-bottom: 24px;
+      height: 350px;
+      margin-left: 24px;
+      position: relative;
+    }
+  }
+
+  .tile_z .tile_z-overlay {
+    background: rgba(0, 145, 218, 0.3);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+  }
+
+  .tile_z:hover .tile_z-overlay {
+    transition: all 0.5s;
     opacity: 1;
   }
 }
