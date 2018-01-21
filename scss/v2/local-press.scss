@@ -22,6 +22,9 @@
       width: 24px;
       height: 30px;
       margin-top: 10px;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 
@@ -31,6 +34,9 @@
     transition: all 0.5s ease-in-out;
     left: 0;
     font-size: 0;
+    @media screen and (max-width: 1024px) {
+      margin-left: 0;
+    }
   }
 
   .btn-next,
@@ -39,6 +45,9 @@
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   .btn-previous {
