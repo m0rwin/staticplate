@@ -101,6 +101,17 @@
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       color: #2b2b2b;
+      @media only screen and (max-width: 1024px) {
+        margin-left: -166px;
+        position: absolute;
+        font-size: 75px;
+      }
+      @media only screen and (max-width: 768px) {
+        color: #fff !important;
+        font-size: 53px;
+        position: inherit;
+        margin-left: 0px;
+      }
     }
 
     .meetextracopy {
@@ -111,6 +122,14 @@
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      @media only screen and (max-width: 1024px) {
+        font-size: 75px;
+        position: inherit;
+      }
+      @media only screen and (max-width: 768px) {
+        font-size: 53px;
+        width: 80vw;
+      }
     }
   }
 
