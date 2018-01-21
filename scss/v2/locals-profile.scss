@@ -1,4 +1,4 @@
-.hero-full {
+.hero-full.landscape {
   min-height: calc(90vh - 64px);
   @media screen and (max-width:825px) {
     min-height: calc(90vh - 64px) !important;
@@ -8,8 +8,6 @@
     padding: 24px;
     font-size: 0;
   }
-}
-.landscape {
   @media screen and (max-aspect-ratio: 1/1), screen and (#{$media-sm}) {
     background-position-x: 78%;
     .hero-content.black {

@@ -17,6 +17,7 @@ $neat-grid: (
 
     button.button {
       @include grid-column(3);
+      min-width: auto;
     }
 
     @media screen and (max-width: 925px) {
