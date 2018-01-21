@@ -17,9 +17,9 @@
     margin-bottom: 56px;
 
     .downwhitarrowmad {
-      width: 22px;
-      height: 16px;
-      margin-top: 19px;
+      width: 24px;
+      height: 30px;
+      margin-top: 10px;
     }
   }
 
@@ -67,14 +67,20 @@
   .btn-category {
     text-align: center;
     display: inline-block;
-    color: #232323;
+    color: #ffffff;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 14px;
     text-transform: uppercase;
-    border: 2px solid #596064;
-    border-radius: 4px;
+    background-color: #333333;
+    border-radius: 2px;
     padding: 14px 24px;
     margin-right: 24px;
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: $cerulean-blue;
+      transition: all 0.4s;
+    }
   }
 
   .blog-container {
