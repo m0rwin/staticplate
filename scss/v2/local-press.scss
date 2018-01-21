@@ -6,25 +6,21 @@
   background-color: white;
   margin-bottom: 0px;
 
-  .roller-menu-border {
-    // border: 1px solid #000; // for testing
-    overflow: hidden;
-  }
-
   .roller-container {
     position: relative;
     height: 58px;
     margin-bottom: 56px;
-    overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+      overflow-x: scroll;
+    }
 
     .downwhitarrowmad {
       width: 24px;
       height: 30px;
       margin-top: 10px;
-      @media screen and (max-width: 1024px) {
-        display: none;
-      }
     }
   }
 
@@ -34,7 +30,7 @@
     transition: all 0.5s ease-in-out;
     left: 0;
     font-size: 0;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
       margin-left: 0;
     }
   }
@@ -45,7 +41,7 @@
     top: 50%;
     transform: translateY(-50%);
     height: 100%;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
       display: none;
     }
   }
