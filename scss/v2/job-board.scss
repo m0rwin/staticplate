@@ -65,6 +65,7 @@ $media-job-md-px: 1170px;
         }
       }
       .submit {
+        min-width: auto;
         @include grid-column(3.24);
         @media screen and (#{$media-job-md}) {
           @include grid-column(3.24, (gutter: 0px));
