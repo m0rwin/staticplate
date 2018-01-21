@@ -248,6 +248,7 @@ select {
   border-radius: $radius;
   padding: 0 24px;
   width: 100%;
+  background-color: #ffffff;
 
   &:disabled {
     background-color: lightgrey;
@@ -261,6 +262,7 @@ select {
 select {
   -webkit-appearance: none;
   cursor: pointer;
+  background-color: #ffffff;
 }
 
 sup {
