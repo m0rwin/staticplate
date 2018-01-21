@@ -54,11 +54,12 @@
       }
 
       .hero-subtitle {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         top: 0;
         height: auto;
-        font-size: 1.999em;
+        font-size: 75px;
         font-weight: normal;
-        max-width: 850px;
+        max-width: initial;
         @media screen and (#{$media-sm}) {
           font-size: 26px;
         }
