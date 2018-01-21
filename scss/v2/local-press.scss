@@ -9,13 +9,13 @@
   .roller-menu-border {
     // border: 1px solid #000; // for testing
     overflow: hidden;
-    overflow-x: scroll;
   }
 
   .roller-container {
     position: relative;
     height: 58px;
     margin-bottom: 56px;
+    overflow-x: scroll;
 
     .downwhitarrowmad {
       width: 24px;
