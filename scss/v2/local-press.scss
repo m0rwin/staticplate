@@ -13,7 +13,7 @@
 
   .roller-container {
     position: relative;
-    height:58px;
+    height: 58px;
     margin-bottom: 56px;
 
     .downwhitarrowmad {
@@ -43,11 +43,11 @@
     left: 0;
     width: 50px;
     z-index: 50;
-    background: #fff; 
-    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1) 50%); 
+    background: #fff;
+    background: linear-gradient(to left, rgba(255,255,255,0), rgba(255,255,255,1) 50%);
 
     .downwhitarrowmad {
-      transform: rotate(90deg)
+      transform: rotate(90deg);
     }
   }
 
@@ -56,15 +56,15 @@
     width: 50px;
     z-index: 50;
     text-align: right;
-    background: #fff; 
-    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 50%); 
+    background: #fff;
+    background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 50%);
 
     .downwhitarrowmad {
-      transform: rotate(-90deg)
+      transform: rotate(-90deg);
     }
   }
 
-  .btn-category{
+  .btn-category {
     text-align: center;
     display: inline-block;
     color: #232323;
