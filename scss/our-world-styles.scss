@@ -30,7 +30,7 @@ a {
 #title1 {
   position: relative;
   max-height: 330px;
-  overflow: scroll;
+  overflow: auto;
   margin: 120px 24px 24px 48px !important;
   @media screen and (min-width: 1024px) {
     position: absolute;
@@ -102,7 +102,7 @@ img {
     min-height: 1000px;
   }
 
-  button {
+  .button2 {
     background: #2d2d2d;
     border: 1px solid #2d2d2d;
     color: #fff;
@@ -111,7 +111,7 @@ img {
     font-family: $font-muli;
     font-size: 14px;
     height: 34px;
-    line-height: 16px;
+    line-height: 24px;
     margin: 0;
     outline: none;
     padding: 12px;
@@ -127,7 +127,7 @@ img {
     cursor: pointer;
   }
 
-  button:hover {
+  .button2:hover {
     background: #fff;
     color: #2d2d2d;
     border: 1px solid #fff;
@@ -150,7 +150,7 @@ img {
   margin-top: 48px;
 }
 
-.scene button {
+.scene .button2 {
   top: 234px;
   height: 48px;
   min-width: 180px;
