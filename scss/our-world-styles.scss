@@ -106,15 +106,12 @@ img {
     background: #2d2d2d;
     border: 1px solid #2d2d2d;
     color: #fff;
-    cursor: pointer;
     display: block;
     font-family: $font-muli;
     font-size: 14px;
-    height: 34px;
-    line-height: 24px;
     margin: 0;
     outline: none;
-    padding: 12px 44px;
+    padding: 14px 29px;
     text-align: center;
     border-radius: 2px;
     font-weight: 600 !important;
@@ -152,15 +149,11 @@ img {
 
 .scene .button2 {
   top: 234px;
-  height: 48px;
+  height: auto;
+  min-width: 220px;
   position: absolute;
   @media screen and (max-width: 768px) {
-    margin-top: 24px;
-    position: initial;
-  }
-  @media screen and (max-width: 480px) {
-    height: 48px;
-    position: initial;
+    margin-top: 48px;
   }
 }
 
