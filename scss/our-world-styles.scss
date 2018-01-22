@@ -9,7 +9,6 @@
 }
 
 #world-container {
-  padding: 24px;
   min-height: 100vh;
 }
 
@@ -32,7 +31,8 @@ a {
   position: relative;
   max-height: 330px;
   overflow: scroll;
-  @media screen and (min-width: 1020px) {
+  margin: 120px 24px 24px 48px !important;
+  @media screen and (min-width: 1024px) {
     position: absolute;
   }
   margin: 96px 24px 24px 24px;
@@ -95,10 +95,12 @@ img {
 .container {
   margin: 0 auto;
   width: 100vw;
-  height: calc(100vh - 60px - 48px);
+  height: calc(100vh - 60px);
   position: absolute;
-  min-height: 780px;
   margin-top: 60px;
+  @media screen and (max-width: 480px) {
+    min-height: 1000px;
+  }
 
   button {
     background: #2d2d2d;
@@ -145,6 +147,7 @@ img {
   -moz-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  margin-top: 48px;
 }
 
 .scene button {
@@ -152,7 +155,16 @@ img {
   height: 48px;
   min-width: 180px;
   position: absolute;
+  @media screen and (max-width: 768px) {
+    margin-top: 24px;
+    position: initial;
+  }
+  @media screen and (max-width: 480px) {
+    height: 48px;
+    position: initial;
+  }
 }
+
 
 .fill {
   bottom: 5%;
@@ -163,46 +175,42 @@ img {
 }
 
 .sectors {
-  height: 50%;
-  width: 36%;
-  top: 42% !important;
+  height: 59%;
+  width: 21%;
+  top: 51% !important;
   left: 67% !important;
 }
 
-.sectorscale {
-  height: 80%;
-  width: 80%;
-}
 
 .community {
   height: 16%;
   width: 16%;
-  top: -4% !important;
-  left: 76% !important;
-  margin-right: 50px;
+  top: -6% !important;
+  left: 79% !important;
 }
 
 .meet {
   height: 30%;
   width: 30%;
-  top: 14% !important;
-  left: 32% !important;
-  margin-right: 50px;
+  top: 16% !important;
+  left: 33% !important;
+  margin-right: 80px;
 }
 
 .join {
   height: 27%;
-  width: 27%;
-  top: 42% !important;
+  width: 23%;
+  top: 48% !important;
   left: 0% !important;
 }
 
 .rocks1 {
-  top: 60%;
-  left: 50%;
-  position: absolute;
+  top: 10% !important;
   opacity: 0.3;
   pointer-events: none;
+  @media screen and (max-width: 1360px) {
+    display: none !important;
+  }
 }
 
 /*floating infinate animation for each element */
@@ -222,7 +230,7 @@ img {
   }
 
   65% {
-    transform: translate(0, 5px);
+    transform: translate(0, 10px);
   }
 
   to {
@@ -246,7 +254,7 @@ img {
   }
 
   65% {
-    transform: translate(0, 5px);
+    transform: translate(0, 10px);
   }
 
   to {
@@ -268,7 +276,7 @@ img {
   }
 
   65% {
-    transform: translate(2px, 15px);
+    transform: translate(9px, 22px);
   }
 
   to {
@@ -292,7 +300,7 @@ img {
   }
 
   65% {
-    transform: translate(-2px, 15px);
+    transform: translate(7px, 20px);
   }
 
   to {
@@ -316,7 +324,7 @@ img {
   }
 
   65% {
-    transform: translate(2px, 15px);
+    transform: translate(10px, 15px);
   }
 
   to {
@@ -340,7 +348,7 @@ img {
   }
 
   65% {
-    transform: translate(-4px, 15px);
+    transform: translate(2px, 18px);
   }
 
   to {
@@ -348,16 +356,8 @@ img {
   }
 }
 
-@media screen and (max-width: 1224px) {
-  .container {
-    margin: 0 auto;
-    width: 100vw;
-    position: absolute;
-  }
-}
-
 /*media queries for each element*/
-@media screen and (max-width: 1224px) and (min-width: 1020px) {
+@media screen and (max-width: 1360px) {
   .container {
     margin: 0 auto;
     width: 100vw;
@@ -366,17 +366,17 @@ img {
   }
 
   .sectors {
-    width: 75%;
-    height: 75%;
-    top: 150% !important;
-    left: 35% !important;
+    width: 41%;
+    height: 50%;
+    top: 240% !important;
+    left: 7% !important;
   }
 
   .community {
-    height: 40%;
-    width: 40%;
-    top: 230% !important;
-    left: 4% !important;
+    height: 50%;
+    width: 34%;
+    top: 158% !important;
+    left: 54% !important;
   }
 
   .meet {
@@ -388,12 +388,21 @@ img {
   .join {
     height: 50%;
     width: 50%;
-    top: 80% !important;
+    top: 97% !important;
     left: 5% !important;
   }
 }
 
-@media screen and (max-width: 768px) and (min-width: 480px) {
+@media screen and (max-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 768px) {
   .container {
     margin: 0 auto;
     width: 100vw;
@@ -401,63 +410,66 @@ img {
   }
 
   .sectors {
-    width: 130%;
-    height: 150%;
-    top: 130% !important;
-    left: -5% !important;
+    height: 40%;
+    width: 70%;
+    top: 302% !important;
+    left: 26% !important;
   }
 
   .community {
-    height: 100%;
-    width: 100%;
-    top: 220% !important;
-    left: 10% !important;
+    height: 40%;
+    width: 70%;
+    top: 183% !important;
+    left: 2% !important;
   }
 
   .meet {
-    height: 100%;
-    width: 100%;
+    height: 80%;
+    width: 82%;
     top: 0% !important;
-    left: -0% !important;
+    left: 0% !important;
   }
 
   .join {
-    height: 100%;
-    width: 100%;
-    top: 85% !important;
-    left: -20% !important;
+    height: 40%;
+    width: 77%;
+    top: 92% !important;
+    left: 17% !important;
   }
 }
 
 @media screen and (max-width: 480px) {
   .container {
-    height: auto;
+    margin: 0 auto;
+    width: 100vw;
+    position: absolute;
   }
+
   .sectors {
-    width: 130%;
-    height: 130%;
-    top: 160% !important;
-    left: -5% !important;
+    width: 100%;
+    top: 206% !important;
+    left: 3% !important;
+    margin-bottom: 128px !important;
   }
 
   .community {
-    height: 100%;
-    width: 100%;
-    top: 110% !important;
-    left: 10% !important;
+    height: 92%;
+    width: 92%;
+    top: 128% !important;
+    left: 0% !important;
   }
 
   .meet {
-    height: 100%;
-    width: 100%;
-    top: 16% !important;
-    left: -0% !important;
+    height: 110%;
+    width: 110%;
+    top: 0% !important;
+    left: 0% !important;
   }
 
   .join {
-    height: 100%;
-    width: 100%;
-    top: 70% !important;
+    height: 110%;
+    width: 110%;
+    top: 66% !important;
     left: 0% !important;
   }
 }
