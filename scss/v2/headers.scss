@@ -93,17 +93,24 @@
       margin-left: -48px;
       max-width: 40%;
       width: 100%;
+      @media screen and (#{$media-md}) {
+        margin-left: -48px;
+        width: 100%;
+        min-width: 60%;
+        padding-left: 48px;
+      }
       @media screen and (#{$media-sm}) {
         margin-left: -48px;
-        max-width: unset;
         width: 100%;
+        min-width: 100%;
+        max-width: 100%;
         padding-left: 48px;
       }
 
       @media screen and (#{$media-xsm}) {
         margin-left: -48px;
         padding-left: 48px;
-        max-width: unset;
+        margin-top: 53vh;
       }
       background-color: $shark-black;
       padding-top: 48px;
