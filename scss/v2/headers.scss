@@ -97,16 +97,19 @@
         margin-left: -48px;
         max-width: 60%;
         width: 100%;
+        padding-left: 48px;
       }
 
       @media screen and (#{$media-sm}) {
         margin-left: -48px;
+        padding-left: 24px;
         max-width: 100%;
       }
       background-color: $shark-black;
       padding-top: 48px;
       padding-bottom: 48px;
       padding-right: 48px;
+      padding-left: 48px;
       display: inline-block;
     }
   }
