@@ -87,21 +87,24 @@
 
     &.black {
       @extend %max-width-inner-l;
-      max-width: none;
       margin-left: -48px;
+      width: auto;
+      max-width: 60%;
       @media screen and (#{$media-md}) {
         margin-left: -48px;
+        max-width: 60%;
+        width: 100%;
       }
 
       @media screen and (#{$media-sm}) {
-        margin-left: -24px;
+        margin-left: -48px;
+        max-width: 100%;
       }
       background-color: $shark-black;
       padding-top: 48px;
       padding-bottom: 48px;
       padding-right: 48px;
       display: inline-block;
-      width: auto;
     }
   }
 }
