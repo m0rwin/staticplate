@@ -221,7 +221,6 @@
     .tile_s,
      {
       @include grid-column(6);
-      z-index: 1;
       height: 450px;
       color: white;
       margin-bottom: 48px;
@@ -272,7 +271,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.9);
       }
     }
 
@@ -281,7 +280,7 @@
     }
 
     .tile_s .tile_s-overlay {
-      background: rgba(0, 145, 218, 0.6);
+      background: rgba(0, 145, 218, 0.5);
       height: 100%;
       width: 100%;
       left: 0;
@@ -296,10 +295,6 @@
 
     .tile_s:hover .tile_s-overlay {
       opacity: 1;
-    }
-
-    .consultanttiles-sectors {
-      z-index: 1;
     }
   }
 
@@ -408,7 +403,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
-        height: 320px;
+        min-height: 320px;
         position: relative;
         color: #fff;
         background-color: #1c1c1c;
@@ -760,7 +755,7 @@
   }
 
   .tile_z .tile_z-overlay {
-    background: rgba(0, 145, 218, 0.6);
+    background: rgba(0, 145, 218, 0.3);
     height: 100%;
     width: 100%;
     left: 0;
