@@ -91,7 +91,7 @@
     &.black {
       @extend %max-width-inner-l;
       margin-left: -48px;
-      max-width: 60%;
+      max-width: 48%;
       width: auto;
       @media screen and (#{$media-md}) {
         margin-left: -48px;
