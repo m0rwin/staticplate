@@ -91,18 +91,18 @@
     &.black {
       @extend %max-width-inner-l;
       margin-left: -48px;
-      max-width: 48%;
+      max-width: 60%;
       width: auto;
       @media screen and (#{$media-md}) {
         margin-left: -48px;
-        max-width: 48%;
+        max-width: 60%;
         width: 100%;
         padding-left: 48px;
       }
 
       @media screen and (#{$media-sm}) {
         margin-left: -48px;
-        padding-left: 24px;
+        padding-left: 48px;
         max-width: 100%;
       }
       background-color: $shark-black;
