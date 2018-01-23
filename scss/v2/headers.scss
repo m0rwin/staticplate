@@ -91,11 +91,11 @@
     &.black {
       @extend %max-width-inner-l;
       margin-left: -48px;
-      max-width: 48%;
+      max-width: 40%;
       width: 100%;
       @media screen and (#{$media-md}) {
         margin-left: -48px;
-        max-width: 100%;
+        max-width: 40%;
         width: auto;
         padding-left: 48px;
       }
