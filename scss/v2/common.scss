@@ -354,6 +354,12 @@ a.block {
     margin-bottom: 2em;
     margin-left: 1em;
   }
+  .lead {
+    font-weight: bold;
+  }
+  a[href] {
+    text-decoration: underline;
+  }
 }
 
 .left-side a:hover {
