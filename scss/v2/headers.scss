@@ -91,16 +91,22 @@
     &.black {
       @extend %max-width-inner-l;
       margin-left: -48px;
-      max-width: 60%;
-      width: auto;
+      max-width: 48%;
+      width: 100%;
       @media screen and (#{$media-md}) {
+        margin-left: -48px;
+        max-width: 100%;
+        width: auto;
+        padding-left: 48px;
+      }
+      @media screen and (#{$media-sm}) {
         margin-left: -48px;
         max-width: auto;
         width: 100%;
         padding-left: 48px;
       }
 
-      @media screen and (#{$media-sm}) {
+      @media screen and (#{$media-xsm}) {
         margin-left: -48px;
         padding-left: 48px;
         max-width: unset;
