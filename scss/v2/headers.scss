@@ -93,13 +93,6 @@
       margin-left: -48px;
       max-width: 40%;
       width: 100%;
-      @media screen and (max-width:1200px) {
-        margin-left: -48px;
-        width: auto;
-        max-width: 100%;
-
-        padding-left: 48px;
-      }
       @media screen and (#{$media-sm}) {
         margin-left: -48px;
         max-width: unset;
