@@ -144,7 +144,7 @@
         background-color: $shark-black;
         margin-bottom: 48px;
         &:before {
-          background-color: rgba(0, 0, 0, 0.3);
+          background-color: rgba(0, 0, 0, 0.5);
           content: '';
           height: 100%;
           left: 0;
@@ -195,7 +195,7 @@
           &:before {
             content: '';
             z-index: -1;
-            background: rgba(0, 0, 0, 0.3);
+            background: rgba(0, 0, 0, 0.5);
             top: 0;
             left: 0;
             right: 0;
@@ -248,7 +248,7 @@
       &:before {
         content: '';
         z-index: -1;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.5);
         top: 0;
         left: 0;
         right: 0;
@@ -272,7 +272,7 @@
     }
 
     .tile_z .tile_z-overlay {
-      background: rgba(0, 145, 218, 0.6);
+      background: rgba(0, 145, 218, 0.5);
       height: 100%;
       width: 100%;
       left: 0;
