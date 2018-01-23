@@ -296,6 +296,9 @@
     .tile_s:hover .tile_s-overlay {
       opacity: 1;
     }
+    .localsgrid {
+      z-index: 1;
+    }
   }
 
   ////////////* LATEST NEWS HEADER *////////////
