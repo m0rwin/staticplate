@@ -206,87 +206,101 @@
   );
 
   .consultanttiles-sectors {
-    @include grid-container;
-    @include grid-collapse;
-    @include grid-media($neat-tablet) {
+    .con-tiles {
+      @include grid-container;
       @include grid-collapse;
-    }
-    @include grid-media($neat-mobile) {
-      @include grid-collapse;
-    }
-    padding-bottom: 172px;
-  }
-
-  .tile_s,
-   {
-    @include grid-column(6);
-    height: 450px;
-    color: white;
-    margin-bottom: 48px;
-    position: relative;
-    transition: all 0.5s;
-    overflow: hidden;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top center;
-    background-image: url('..//assets/Benjamin-Gatt_greyscale_small.jpg');
-
-    @include grid-media($neat-tablet) {
-      @include grid-column(1);
-      position: relative;
-    }
-    @include grid-media($neat-mobile) {
-      @include grid-column(1);
-      margin-bottom: 24px;
-      height: 350px;
-      position: relative;
-    }
-
-    .copycontainer {
-      color: #fff;
-      font-size: 26px;
-      font-weight: 300;
-      font-family: 'muli' sans-serif;
-      padding: 48px;
-      left: 0;
-      bottom: 0;
-      position: absolute;
-      -webkit-font-smoothing: antialiased;
-      .name {
-        margin-bottom: 8px;
+      @include grid-media($neat-tablet) {
+        @include grid-collapse;
       }
-      .viewprofile {
-        font-size: 16px;
-        font-weight: bold;
-        text-transform: uppercase;
+      @include grid-media($neat-mobile) {
+        @include grid-collapse;
+      }
+      padding-bottom: 172px;
+    }
+
+    .tile_s,
+     {
+      @include grid-column(6);
+      z-index: 1;
+      height: 450px;
+      color: white;
+      margin-bottom: 48px;
+      position: relative;
+      transition: all 0.5s;
+      overflow: hidden;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
+
+      @include grid-media($neat-tablet) {
+        @include grid-column(1);
+        position: relative;
+      }
+      @include grid-media($neat-mobile) {
+        @include grid-column(1);
+        margin-bottom: 24px;
+        height: 350px;
+        position: relative;
+      }
+
+      .copycontainer {
+        color: #fff;
+        font-size: 26px;
+        font-weight: 300;
+        font-family: 'muli' sans-serif;
+        padding: 48px;
+        left: 0;
+        bottom: 0;
+        position: absolute;
         -webkit-font-smoothing: antialiased;
+        .name {
+          margin-bottom: 8px;
+        }
+        .viewprofile {
+          font-size: 16px;
+          font-weight: bold;
+          text-transform: uppercase;
+          -webkit-font-smoothing: antialiased;
+        }
+      }
+
+      &:before {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
       }
     }
-  }
 
-  .tile_s:hover {
-//  -ms-transform: scale(1.05,1.05); /* IE 9 */
-//  -webkit-transform: scale(1.05,1.05); /* Safari */
-//  transform: scale(1.05,1.05); /* Standard syntax */
-    transition: all 0.5s;
-  }
+    .tile_s:hover {
+      transition: all 0.5s;
+    }
 
-  .tile_s .tile_s-overlay {
-    background: rgba(0, 145, 218, 0.5);
-    height: 100%;
-    width: 100%;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-    -webkit-transition: all 0.4s ease-in-out 0s;
-    -moz-transition: all 0.4s ease-in-out 0s;
-    transition: all 0.4s ease-in-out 0s;
-  }
+    .tile_s .tile_s-overlay {
+      background: rgba(0, 145, 218, 0.5);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      opacity: 0;
+      -webkit-transition: all 0.4s ease-in-out 0s;
+      -moz-transition: all 0.4s ease-in-out 0s;
+      transition: all 0.4s ease-in-out 0s;
+    }
 
-  .tile_s:hover .tile_s-overlay {
-    opacity: 1;
+    .tile_s:hover .tile_s-overlay {
+      opacity: 1;
+    }
+
+    .consultanttiles-sectors {
+      z-index: 1;
+    }
   }
 
   ////////////* LATEST NEWS HEADER *////////////
@@ -352,7 +366,7 @@
       background-color: $shark-black;
       margin-bottom: 48px;
       &:before {
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: rgba(0, 0, 0, 0.3);
         content: '';
         height: 100%;
         left: 0;
@@ -394,13 +408,13 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top center;
-        min-height: 320px;
+        height: 320px;
         position: relative;
         color: #fff;
         background-color: #1c1c1c;
         margin-bottom: 48px;
         &:before {
-          background-color: rgba(0, 0, 0, 0.6);
+          background-color: rgba(0, 0, 0, 0.3);
           content: '';
           height: 100%;
           left: 0;
@@ -722,7 +736,7 @@
     &:before {
       content: '';
       z-index: -1;
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(0, 0, 0, 0.3);
       top: 0;
       left: 0;
       right: 0;
