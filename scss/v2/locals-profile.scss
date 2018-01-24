@@ -128,7 +128,7 @@ $grid-profile-gutter: 24px;
       }
     }
 
-    .no-touch & > a.block:hover {
+    > a.no-touch &.block:hover {
       background-color: $cerulean-blue;
     }
 
