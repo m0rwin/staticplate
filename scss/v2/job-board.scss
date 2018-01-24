@@ -313,7 +313,7 @@ $media-job-md-px: 1170px;
         margin-left: -31px;
       }
 
-      &:hover::before {
+      .no-touch &:hover::before {
         border-color: $cerulean-blue;
       }
       &.active {
@@ -322,7 +322,7 @@ $media-job-md-px: 1170px;
           background-color: $cerulean-blue;
           border-color: $cerulean-blue;
         }
-        &:hover::before {
+        .no-touch &:hover::before {
           border-color: lighten($cerulean-blue, 13);
         }
       }
@@ -339,7 +339,7 @@ $media-job-md-px: 1170px;
       font-size: 12px;
       line-height: 4;
 
-      &:hover {
+      .no-touch &:hover {
         text-decoration: underline;
       }
 
@@ -453,7 +453,7 @@ $media-job-md-px: 1170px;
           text-align: center;
         }
         &.active,
-        & a:hover {
+        .no-touch & a:hover {
           background: $shark-black;
           color: white;
           a { color: white; }
