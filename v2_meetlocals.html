@@ -479,6 +479,11 @@
     <script>
         var rellax = new Rellax();
     </script>
+    <script>
+        if (!("ontouchstart" in document.documentElement)) {
+            document.documentElement.className += "no-touch";
+        }
+    </script>
     <script src="/scripts/scrollreveal.js"></script>
     <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
     <script src="/scripts/bootstrap.min.js"></script>
