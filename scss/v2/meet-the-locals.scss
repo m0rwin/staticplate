@@ -201,7 +201,7 @@
       }
     }
 
-    .hellotrigger:hover {
+    .no-touch & .hellotrigger:hover {
       border-color: #fff;
       transition: all 0.3s ease-in-out;
     }
