@@ -191,11 +191,11 @@ body > main {
   line-height: 48px;
   cursor: pointer;
 
-  &:hover {
+  .no-touch &:hover {
     background-color: #0e577c;
   }
 
-  &.white {
+  .white {
     color: black;
     border: 1px solid #191b1d;
     background: white;
@@ -204,7 +204,7 @@ body > main {
     -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
     -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
     transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-    &:hover {
+    .no-touch &:hover {
       background-color: white;
       text-decoration: underline;
     }
@@ -297,7 +297,7 @@ sup {
   font-weight: bold;
   font-size: 1.1em;
 
-  &:hover {
+  .no-touch &:hover {
     text-decoration: underline;
   }
 }
@@ -318,7 +318,7 @@ a.block {
   display: block;
   background-color: $shark-black;
   color: white;
-  &:hover {
+  .no-touch &:hover {
     background-color: $curious-blue;
   }
 }
@@ -362,7 +362,7 @@ a.block {
   }
 }
 
-.left-side a:hover {
+.left-side .no-touch & a:hover {
   text-decoration: underline;
 }
 
