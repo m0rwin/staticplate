@@ -137,7 +137,7 @@ $break-sidebar: 'max-width: 1120px';
         border: none;
         background: none;
         border-radius: 3px;
-        &:hover {
+        .no-touch &:hover {
           background-color: $iron;
           text-decoration: line-through;
         }
@@ -169,7 +169,7 @@ $break-sidebar: 'max-width: 1120px';
         background-position: center center;
         border: 2px solid $white;
 
-        &:hover,
+        .no-touch &:hover,
         &:focus,
         &:focus-within {
           border: 2px solid $shark-black;

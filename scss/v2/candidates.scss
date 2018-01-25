@@ -154,14 +154,14 @@
 
     .candidates-pop-trigger {
       text-decoration: underline;
-      &:hover {
+      .no-touch &:hover {
         text-decoration: none;
       }
     }
 
     .tel {
       text-decoration: underline;
-      &:hover {
+      .no-touch &:hover {
         text-decoration: none;
       }
     }

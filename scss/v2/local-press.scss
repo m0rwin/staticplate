@@ -86,7 +86,7 @@
     margin-right: 24px;
     transition: all 0.4s;
 
-    &:hover {
+    .no-touch &:hover {
       background-color: $cerulean-blue;
       transition: all 0.4s;
     }
@@ -286,7 +286,7 @@
       transition: all 0.4s ease-in-out 0s;
     }
 
-    .tile_z:hover .tile_z-overlay {
+    .no-touch & .tile_z:hover .tile_z-overlay {
       transition: all 0.5s;
       opacity: 1;
     }

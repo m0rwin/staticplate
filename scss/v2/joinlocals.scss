@@ -221,7 +221,7 @@
       }
     }
 
-    .hellotrigger:hover {
+    .no-touch & .hellotrigger:hover {
       border-color: #fff;
       transition: all 0.3s ease-in-out;
     }
@@ -620,7 +620,7 @@ $neat-mobile: (
     font-size: 26px;
   }
 }
-.jointrigger:hover {
+.no-touch & .jointrigger:hover {
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   color: #2496d4;
