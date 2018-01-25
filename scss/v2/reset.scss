@@ -157,6 +157,9 @@ h4 {
   font-family: "Muli", Helvetica, Arial, sans-serif;
   font-weight: bold;
   line-height: 1.2;
+  @media screen and (#{$media-sm}) {
+    font-weight: normal;
+  }
 }
 
 h1 {
