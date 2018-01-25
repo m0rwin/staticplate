@@ -203,7 +203,7 @@ $grey-hover: #B3B3B3;
     }
   }
 
-  &:hover .navbar-icon span {
+  .no-touch &:hover .navbar-icon span {
     background-color: $grey-hover;
 
     &::before,
