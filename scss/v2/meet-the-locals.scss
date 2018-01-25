@@ -421,7 +421,7 @@
     }
   }
 
-  .no-touch & .tile_z:hover {
+  .tile_z:hover {
     transition: all 0.5s;
   }
 
@@ -439,7 +439,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .no-touch & .tile_z:hover .tile_z-overlay {
+  .tile_z:hover .tile_z-overlay {
     opacity: 1;
   }
 

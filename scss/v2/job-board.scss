@@ -313,7 +313,7 @@ $media-job-md-px: 1170px;
         margin-left: -31px;
       }
 
-      .no-touch &:hover::before {
+      :hover::before {
         border-color: $cerulean-blue;
       }
       &.active {
@@ -322,7 +322,7 @@ $media-job-md-px: 1170px;
           background-color: $cerulean-blue;
           border-color: $cerulean-blue;
         }
-        .no-touch &:hover::before {
+        :hover::before {
           border-color: lighten($cerulean-blue, 13);
         }
       }
@@ -452,7 +452,7 @@ $media-job-md-px: 1170px;
           padding: 7px 0;
           text-align: center;
         }
-        .no-touch &.active,
+        .active,
         & a:hover {
           background: $shark-black;
           color: white;

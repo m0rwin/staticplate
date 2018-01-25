@@ -137,7 +137,7 @@ $break-sidebar: 'max-width: 1120px';
         border: none;
         background: none;
         border-radius: 3px;
-        .no-touch &:hover {
+        :hover {
           background-color: $iron;
           text-decoration: line-through;
         }

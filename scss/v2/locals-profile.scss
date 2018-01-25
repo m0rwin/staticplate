@@ -128,7 +128,7 @@ $grid-profile-gutter: 24px;
       }
     }
 
-    > .no-touch & a.block:hover {
+    > a.block:hover {
       background-color: $cerulean-blue;
     }
 
@@ -166,7 +166,7 @@ $grid-profile-gutter: 24px;
           margin-right: 0.4em;
         }
 
-        .no-touch & li:hover {
+        & li:hover {
           transition: all 0.3s ease-in-out;
           color: $white;
           background-color: $curious-blue;

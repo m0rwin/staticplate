@@ -86,7 +86,7 @@
     margin-right: 24px;
     transition: all 0.4s;
 
-    .no-touch &:hover {
+    &:hover {
       background-color: $cerulean-blue;
       transition: all 0.4s;
     }
