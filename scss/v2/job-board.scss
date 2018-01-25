@@ -452,8 +452,8 @@ $media-job-md-px: 1170px;
           padding: 7px 0;
           text-align: center;
         }
-        &.active,
-        .no-touch & a:hover {
+        .no-touch &.active,
+        & a:hover {
           background: $shark-black;
           color: white;
           a { color: white; }

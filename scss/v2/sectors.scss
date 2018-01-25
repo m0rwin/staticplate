@@ -102,7 +102,7 @@
     -moz-osx-font-smoothing: grayscale;
     font-weight: bold;
   }
-  .sectorbutton:hover {
+  .no-touch & .sectorbutton:hover {
     background-color: rgb(17, 100, 138);
     -webkit-transition-duration: 0.5s; /* Safari */
     transition-duration: 0.5s;
@@ -264,7 +264,7 @@
     }
   }
 
-  .tile_s:hover {
+  .no-touch & .tile_s:hover {
 //  -ms-transform: scale(1.05,1.05); /* IE 9 */
 //  -webkit-transform: scale(1.05,1.05); /* Safari */
 //  transform: scale(1.05,1.05); /* Standard syntax */
@@ -285,7 +285,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .tile_s:hover .tile_s-overlay {
+  .no-touch & .tile_s:hover .tile_s-overlay {
     opacity: 1;
   }
 
@@ -448,7 +448,7 @@
   }
 
   .nest_second {
-    .news-content-container:hover {
+    .no-touch & .news-content-container:hover {
       background-color: $curious-blue;
       transition: all 0.5s ease-in-out;
     }
@@ -610,7 +610,7 @@
 
 
 
-  .role_z:hover {
+  .no-touch & .role_z:hover {
     transition: 1s;
   }
 
@@ -628,7 +628,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .role_z:hover .role_z-overlay {
+  .no-touch & .role_z:hover .role_z-overlay {
     opacity: 1;
   }
 
@@ -701,7 +701,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .role_sector_search:hover .role_sector_search-overlay {
+  .no-touch & .role_sector_search:hover .role_sector_search-overlay {
     opacity: 1;
   }
 
@@ -760,7 +760,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .tile_z:hover .tile_z-overlay {
+  .no-touch & .tile_z:hover .tile_z-overlay {
     transition: all 0.5s;
     opacity: 1;
   }
@@ -780,6 +780,6 @@
   transition: all 0.4s ease-in-out 0s;
 }
 
-.role_z:hover .role_z-overlay {
+.no-touch & .role_z:hover .role_z-overlay {
   opacity: 1;
 }
