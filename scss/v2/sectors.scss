@@ -285,7 +285,7 @@
     transition: all 0.4s ease-in-out 0s;
   }
 
-  .no-touch & .tile_s:hover .tile_s-overlay {
+  .tile_s:hover .tile_s-overlay {
     opacity: 1;
   }
 
