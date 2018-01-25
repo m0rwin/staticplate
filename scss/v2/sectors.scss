@@ -779,7 +779,7 @@
   -moz-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s;
 }
-
-.no-touch & .role_z:hover .role_z-overlay {
+.role_z:hover,
+.role_z-overlay {
   opacity: 1;
 }
