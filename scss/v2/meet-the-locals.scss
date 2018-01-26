@@ -428,6 +428,7 @@
   }
 
   .tile_z .tile_z-overlay {
+    pointer-events: none;
     background: rgba(0, 145, 218, 0.5);
     height: 100%;
     width: 100%;
