@@ -471,7 +471,7 @@ $media-job-md-px: 1170px;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
     &:hover {
       background-color: white !important;
-      text-decoration: underline !important;
+      text-decoration: none !important;
     }
   }
 }
