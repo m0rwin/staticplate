@@ -157,9 +157,6 @@ h4 {
   font-family: $font-muli;
   font-weight: bold;
   line-height: 1.2;
-  @media screen and (#{$media-sm}) {
-    font-weight: normal;
-  }
 }
 
 h1 {
