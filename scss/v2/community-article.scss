@@ -161,7 +161,7 @@ $container-max-width-mq: #{$container-max-width} + 48px;
         color: #fff;
         font-size: 26px;
         font-weight: 300;
-        font-family: 'muli' sans-serif;
+        font-family: $font-muli;
         padding: 48px;
         left: 0;
         bottom: 0;

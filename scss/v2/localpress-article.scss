@@ -12,8 +12,8 @@ $container-max-width-mq: #{$container-max-width} + 48px;
   .quote {
     font-size: 26px;
     font-weight: bold;
-    font-style: italic;
-    color: #000;
+    font-style: normal;
+    color: $shark-black;
     border-left: 6px solid #008eda;
     display: block;
     padding-left: 0.8em;

@@ -192,7 +192,7 @@
     }
 
     .quote {
-      font-family: 'muli';
+      font-family: $font-muli;
       font-weight: bold;
       font-size: 37px;
       color: #fff;
@@ -205,7 +205,7 @@
     }
 
     .hellotrigger {
-      font-family: 'muli';
+      font-family: $font-muli;
       font-weight: bold;
       font-size: 37px;
       color: #fff;
@@ -286,7 +286,7 @@
         margin-bottom: 128px;
       }
       .dna-head {
-        font-family: 'muli';
+        font-family: $font-muli;
         margin: 128px 24px 0px 0px;
         font-weight: bold;
         font-size: 37px;
@@ -455,7 +455,7 @@ $neat-mobile: (
     color: #fff;
     font-size: 26px;
     font-weight: normal;
-    font-family: 'muli' sans-serif;
+    font-family: $font-muli;
     text-align: center;
     padding-bottom: 8px;
     -webkit-font-smoothing: antialiased;
@@ -596,7 +596,7 @@ $neat-mobile: (
 }
 
 .quote {
-  font-family: 'muli';
+  font-family: $font-muli;
   font-weight: bold;
   font-size: 37px;
   color: #fff;
@@ -609,7 +609,7 @@ $neat-mobile: (
 }
 
 .jointrigger {
-  font-family: 'muli';
+  font-family: $font-muli;
   font-weight: bold;
   color: #fff;
   font-size: 26px;
