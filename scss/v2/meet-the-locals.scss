@@ -341,13 +341,13 @@
 
   $neat-tablet: (
   columns: 2,
-  media: '1422px',
+  media: 'screen and (max-width: 1422px)',
   gutter: 48px
 );
 
   $neat-mobile: (
   columns: 1,
-  media: '768px',
+  media: 'screen and (max-width: 768px)',
   gutter: 24px
 );
 
