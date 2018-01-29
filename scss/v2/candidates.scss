@@ -3,6 +3,7 @@
   h2 {
     font-size: 1.37em;
     @media screen and (#{$media-xsm}) {
+      font-size: 26px;
       margin-top: 24px;
       margin-bottom: 24px;
     }
@@ -176,6 +177,7 @@
       .right-contents {
         padding: 128px 0;
         color: $white;
+        font-weight: normal;
         @media screen and (#{$media-xsm}) {
           padding: 96px 0;
           font-size: 19px;
@@ -188,6 +190,7 @@
       font-weight: bold;
       @media screen and (#{$media-xsm}) {
         padding-left: 0px;
+        font-weight: bold;
         font-size: 26px;
       }
     }
