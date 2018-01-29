@@ -219,8 +219,8 @@
 
   .tile_s,
    {
-    @include grid-column(6);
-    height: 450px;
+    @include grid-column(4);
+    height: 300px;
     color: white;
     margin-bottom: 48px;
     position: relative;
