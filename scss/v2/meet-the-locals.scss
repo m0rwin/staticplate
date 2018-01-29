@@ -341,13 +341,13 @@
 
   $neat-tablet: (
   columns: 2,
-  media: 'screen and (max-width: 1422px)',
+  media: '1422px',
   gutter: 48px
 );
 
   $neat-mobile: (
   columns: 1,
-  media: 'screen and (max-width: 768px)',
+  media: '768px',
   gutter: 24px
 );
 
@@ -391,11 +391,9 @@
     @include grid-media($neat-tablet) {
       @include grid-column(1);
       position: relative;
-      max-width: calc(100% - 48px) !important;
     }
     @include grid-media($neat-mobile) {
       @include grid-column(1);
-      max-width: calc(100% - 48px) !important;
       margin-bottom: 24px;
       height: 350px;
       position: relative;
