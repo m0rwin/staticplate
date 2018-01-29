@@ -194,9 +194,6 @@ body > main {
 
   .no-touch &:hover {
     background-color: #0e577c;
-    @media screen and (max-width: 678px) {
-      display: none;
-    }
   }
 
   .white {
