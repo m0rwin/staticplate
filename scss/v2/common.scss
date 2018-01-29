@@ -197,17 +197,17 @@ body > main {
   }
 
   .white {
-    color: black;
-    border: 1px solid #191b1d;
-    background: white;
+    color: black !important;
+    border: 1px solid #191b1d !important;
+    background: white !important;
 
     -webkit-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
     -moz-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
     -o-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
     transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
     &:hover {
-      background-color: white;
-      text-decoration: underline;
+      background-color: white !important;
+      text-decoration: underline !important;
     }
   }
 }
