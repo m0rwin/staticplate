@@ -185,14 +185,14 @@ body > main {
   font-weight: bold;
   letter-spacing: 0.6px;
   text-transform: uppercase;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  -o-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
   line-height: 48px;
   cursor: pointer;
 
-  .no-touch &:hover {
+  &:hover {
     background-color: #0e577c;
   }
 
@@ -201,11 +201,11 @@ body > main {
     border: 1px solid #191b1d;
     background: white;
 
-    -webkit-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-    -moz-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-    -o-transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-    transition: color 0.3s ease-in-out, background 0.3s ease-in-out, border 0.3s ease-in-out;
-    .no-touch &:hover {
+    -webkit-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
+    -moz-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
+    -o-transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
+    transition: color 0.2s ease-in-out, background 0.2s ease-in-out, border 0.2s ease-in-out;
+    &:hover {
       background-color: white;
       text-decoration: underline;
     }
