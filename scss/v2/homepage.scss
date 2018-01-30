@@ -221,6 +221,13 @@
   @extend %stretch-over-max-width;
   position: relative;
   margin-bottom: 240px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 96px;
+  }
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: -24px;
+  }
 
   .wrapper {
     display: grid;
