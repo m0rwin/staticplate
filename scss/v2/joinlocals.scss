@@ -507,7 +507,7 @@ $neat-mobile: (
 
 // Q&A ///
 .qa-head {
-  font-family: Muli;
+  font-family: $font-muli;
   font-size: 53px;
   font-weight: bold;
   line-height: 1.21;
@@ -592,7 +592,7 @@ $neat-mobile: (
 // copy for video override
 .join {
   font-size: 26px !important;
-  font-weight: bold !important;
+  font-weight: normal !important;
 }
 
 .quote {
@@ -610,7 +610,7 @@ $neat-mobile: (
 
 .jointrigger {
   font-family: $font-muli;
-  font-weight: bold;
+  font-weight: normal;
   color: #fff;
   font-size: 26px;
   display: inline;
@@ -621,7 +621,7 @@ $neat-mobile: (
   }
 }
 .jointrigger:hover {
-  font-weight: bold;
+  font-weight: normal;
   transition: all 0.3s ease-in-out;
   color: #2496d4;
   @media only screen and (max-width: 768px) {
