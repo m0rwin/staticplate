@@ -96,10 +96,16 @@
     @media screen and (#{$media-sm}) {
       padding-top: 48px;
       padding-bottom: 48px;
+      padding-right: 24px;
     }
   }
 }
-
+.contact-top {
+  @media screen and (#{$media-sm}) {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
 .right-block,
 .block-contents,
 .contact-top {
