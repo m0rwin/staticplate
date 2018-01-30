@@ -167,6 +167,7 @@
       @media only screen and (max-width: 768px) {
         margin-bottom: 8px;
         padding-right: 24px;
+        font-size: 26px !important;
       }
     }
 
@@ -179,7 +180,7 @@
       -moz-osx-font-smoothing: grayscale;
       display: inline-block;
       @media only screen and (max-width: 768px) {
-        font-size: 26px;
+        font-size: 26px !important;
       }
     }
 
@@ -267,7 +268,7 @@
         font-family: "Lato", sans-serif;
         margin: 24px 24px 24px 0;
         font-weight: normal;
-        font-size: 37px;
+        font-size: 26px;
         color: #fff;
         position: relative;
         display: inline-block;
@@ -276,11 +277,17 @@
         width: 100%;
         -webkit-font-smoothing: antialiased;
         @media only screen and (max-width: 768px) {
-          font-size: 26px;
+          font-size: 19px !important;
           margin: 24px;
           margin-left: 0;
           padding: 24px;
           padding-left: 0;
+        }
+        .copy-video {
+          font-size: 37px !important;
+          @media only screen and (max-width: 768px) {
+            font-size: 26px !important;
+          }
         }
       }
     }

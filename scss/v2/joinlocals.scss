@@ -377,6 +377,12 @@
   }
 }
 
+.video-copy-join {
+  @media only screen and (max-width: 768px) {
+    font-size: 26px;
+  }
+}
+
 // DNA seconsd markup grid for copy section //
 
   ////////////* DNA *////////////
@@ -604,7 +610,7 @@ $neat-mobile: (
   -moz-osx-font-smoothing: grayscale;
   display: inline;
   @media only screen and (max-width: 768px) {
-    font-size: 26px;
+    font-size: 19px;
   }
 }
 
@@ -673,7 +679,7 @@ $neat-mobile: (
       @include grid-media($neat-mobile) {
         @include grid-column(12); //full width
         margin-bottom: 28px;
-        min-height: 350px;
+        min-height: 300px;
       }
       transition: all 0.5s;
       overflow: hidden;
