@@ -102,6 +102,9 @@
 
 #novobot {
   margin-bottom: 256px;
+  @media screen and (#{$media-sm}) {
+    margin-bottom: 176px;
+  }
 }
 .block-div {
   @extend %stretch-over-max-width-l;
@@ -159,7 +162,7 @@
 
   @media screen and (#{$media-sm}) {
     font-size: 28px;
-    padding: 48px;
+    padding: 24px;
     margin-right: 0px;
   }
 }
