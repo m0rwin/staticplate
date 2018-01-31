@@ -573,6 +573,7 @@ $neat-mobile: (
         padding-left: 0px;
         @media only screen and (max-width: 480px) {
           height: 320px;
+          font-size: 19px;
           padding-bottom: 48px !important;
         }
       }
@@ -588,7 +589,6 @@ $neat-mobile: (
     bottom: 0;
     margin-bottom: 24px;
     width: 100%;
-    padding-right: 24px;
   }
 
   .yes {
