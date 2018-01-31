@@ -520,6 +520,7 @@ $neat-mobile: (
   text-align: left;
   padding: 48px 0px 48px 0px;
   margin-bottom: 96px;
+  position: relative;
   @media only screen and (max-width: 768px) {
     font-size: 37px;
   }
@@ -530,6 +531,7 @@ $neat-mobile: (
   width: 100%;
   position: relative;
   z-index: 1;
+  transition: all 3s ease-in-out;
   @media only screen and (max-width: 768px) {
   }
 
@@ -539,7 +541,7 @@ $neat-mobile: (
     background-color: #1c1c1c;
     margin-bottom: 256px;
     .qa-head {
-      font-family: Muli;
+      font-family: $font-muli;
       font-size: 37px;
       font-weight: normal;
       line-height: 1.21;
@@ -559,7 +561,7 @@ $neat-mobile: (
         margin: 24px;
         margin-left: 0;
         padding: 24px;
-        padding-left: 0;
+        padding-left: 0px;
       }
     }
   }

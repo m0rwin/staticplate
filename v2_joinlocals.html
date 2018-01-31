@@ -337,25 +337,28 @@
                             <div class="rellax" data-rellax-speed="4">Novo</div>
                         </div>
 
-       <!-- Q&A section <section class="novoqa">
+                        <section class="novoqa">
                             <div class="qa-head">
                                 Are you built for Novo?
                             </div>
                             <div class="qa-container">
-                                <div id="progressbar"></div>
+                            <!--    <div id="progressbar"></div> -->
                                 <div class="qa-background">
-                                    <div class="qa-head"> Do you believe recruitment should be more service led than sales led?
+                                    <div class="qa-head"> 
+                                        <span id="questions"></span>
                                     </div>
                                     <div class="qabuttons">
-                                        <button class="button yes"> yes
+                                        <button class="button yes" id="yes"> yes
                                         </button>
-                                        <button class="button no"> No
+                                        <button class="button no" id="no"> No
+                                        </button>
+                                        <button class="button yes" id="contact"><a href="#">Lets talk</a>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                        </section> -->
-                        <!-- 2. news section -->
+                        </section>
+                        
                         <section class="gallerysection">                                    
                             <div class="sector-blog-grid">
                                 <div class="first" style="background-image: url('/assets/joinlocals_large.jpg');" >
@@ -371,7 +374,6 @@
                             </div>
                         </section>
                         <!-- 2. news section end-->
-                        <!--<div class="extra1 rellax" data-rellax-speed="-2">Extraordinary</div>-->
         </section>
     </main>
 
@@ -462,6 +464,34 @@
 
         window.sr = ScrollReveal();
             sr.reveal('.foo');
+    </script>
+    <script>
+        var questions = ['Do you believe recruitment should be more service led than sales led?', 'Do you work hard without incentives?', 'Do you hate stereotypical recruiters?'];
+        var questionPosition = 0;
+        var contactEl = $('#contact');
+        var qestionTime = $('#questions');
+        var noWay = $('#no');
+        var yesWay = $('#yes');
+
+
+        contactEl.hide();
+        qestionTime.text(questions[questionPosition]);
+        noWay.click(function(){
+        qestionTime.text('Mmm. Not sure this is the place for you. But good news there are literally thousands of recruiters out there who might be of interest.');
+        noWay.hide();
+        yesWay.hide();
+        });
+        yesWay.click(function(){
+        if (questionPosition < 2){
+            questionPosition += 1;
+            qestionTime.text(questions[questionPosition]);
+        } else{
+            contactEl.show();
+            qestionTime.text('Sounds like you talk our language. Give us a shout');
+            noWay.hide();
+            yesWay.hide();
+        }
+        });
     </script>
     <script>
         var APP_ID = "biiewbsz";

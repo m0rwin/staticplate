@@ -406,11 +406,14 @@
       font-size: 26px;
       font-weight: 300;
       font-family: "Lato", sans-serif;
-      padding: 24px;
+      padding: 48px;
       left: 0;
       bottom: 0;
       position: absolute;
       -webkit-font-smoothing: antialiased;
+      @media only screen and (max-width: 768px) {
+        padding: 24px;
+      }
       .name {
         margin-bottom: 8px;
         font-weight: normal;
