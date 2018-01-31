@@ -301,7 +301,7 @@
       background-color: #1c1c1c;
       margin-bottom: 128px;
       @media only screen and (max-width: 768px) {
-        margin-bottom: 128px;
+        margin-bottom: 48px;
       }
       .dna-head {
         font-family: $font-muli;
@@ -391,13 +391,13 @@
   z-index: 10;
   @media only screen and (max-width: 768px) {
     font-size: 37px;
-    margin-bottom: 48px;
+    margin-bottom: 24px;
   }
 }
 
 .video-copy-join {
   @media only screen and (max-width: 768px) {
-    font-size: 26px;
+    font-size: 19px;
   }
 }
 
@@ -591,6 +591,7 @@ $neat-mobile: (
         padding-left: 0px;
         @media only screen and (max-width: 480px) {
           height: 320px;
+          line-height: 27.55px;
           margin: 0px;
           font-size: 19px;
           padding-bottom: 48px !important;
@@ -684,7 +685,7 @@ $neat-mobile: (
   position: relative;
   z-index: 1;
   @media only screen and (max-width: 768px) {
-    margin-bottom: 96px;
+    margin-bottom: 48px;
   }
 
   .madness-background1 {
@@ -704,11 +705,14 @@ $neat-mobile: (
       width: 100%;
       -webkit-font-smoothing: antialiased;
       @media only screen and (max-width: 768px) {
-        font-size: 19px;
+        font-size: 26px !important;
         margin: 24px;
         margin-left: 0;
         padding: 0px;
         padding-left: 0;
+        @media only screen and (max-width: 480px) {
+          font-size: 19px !important;
+        }
       }
     }
   }
