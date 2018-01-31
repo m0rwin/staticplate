@@ -523,6 +523,7 @@ $neat-mobile: (
   position: relative;
   @media only screen and (max-width: 768px) {
     font-size: 37px;
+    margin-bottom: 24px;
   }
 }
 
@@ -531,15 +532,20 @@ $neat-mobile: (
   width: 100%;
   position: relative;
   z-index: 1;
-  transition: all 3s ease-in-out;
-  @media only screen and (max-width: 768px) {
-  }
+  transform: fade all 3s ease-in-out;
 
   .qa-background {
     @extend %stretch-over-max-width-r;
+    @extend %max-width-inner;
     padding: 48px;
     background-color: #1c1c1c;
     margin-bottom: 256px;
+    min-height: 300px;
+    @media only screen and (max-width: 768px) {
+      height: 450px;
+      margin-bottom: 128px;
+      padding: 24px;
+    }
     .qa-head {
       font-family: $font-muli;
       font-size: 37px;
@@ -556,6 +562,7 @@ $neat-mobile: (
       width: 100%;
       -webkit-font-smoothing: antialiased;
       text-align: left;
+      max-width: 1300px;
       @media only screen and (max-width: 768px) {
         font-size: 26px;
         margin: 24px;
@@ -569,7 +576,7 @@ $neat-mobile: (
 
 .qabuttons {
   margin-bottom: 48px;
-  position: relative;
+  bottom: 0;
 
   .yes {
     margin-left: 24px;
@@ -641,11 +648,11 @@ $neat-mobile: (
 /* responsive video section */
 .join-madness-container1 {
   width: 100%;
-  margin-bottom: 240px;
+  margin-bottom: 152px;
   position: relative;
   z-index: 1;
   @media only screen and (max-width: 768px) {
-    margin-bottom: 140px;
+    margin-bottom: 96px;
   }
 
   .madness-background1 {
