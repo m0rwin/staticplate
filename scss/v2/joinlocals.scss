@@ -372,7 +372,6 @@
   position: relative;
   z-index: 10;
   @media only screen and (max-width: 768px) {
-    font-weight: normal;
     font-size: 37px;
     margin-bottom: 48px;
   }
@@ -543,7 +542,6 @@ $neat-mobile: (
     margin-bottom: 256px;
     min-height: 300px;
     @media only screen and (max-width: 768px) {
-      height: 450px;
       margin-bottom: 128px;
       padding: 24px;
     }
@@ -564,6 +562,7 @@ $neat-mobile: (
       -webkit-font-smoothing: antialiased;
       text-align: left;
       max-width: 1300px;
+      margin-bottom: 48px;
       @media only screen and (max-width: 768px) {
         font-size: 26px;
         margin: 24px;
@@ -571,11 +570,8 @@ $neat-mobile: (
         padding: 24px;
         padding-left: 0px;
         @media only screen and (max-width: 480px) {
-          font-size: 19px;
-          margin: 24px;
-          margin-left: 0;
-          padding: 24px;
-          padding-left: 0px;
+          height: 320px;
+          padding-bottom: 48px !important;
         }
       }
     }
@@ -583,8 +579,15 @@ $neat-mobile: (
 }
 
 .qabuttons {
+  position: absolute;
   margin-bottom: 48px;
   bottom: 0;
+  @media screen and (#{$media-sm}) {
+    bottom: 0;
+    margin-bottom: 24px;
+    width: 100%;
+    padding-right: 24px;
+  }
 
   .yes {
     margin-left: 24px;
@@ -602,7 +605,6 @@ $neat-mobile: (
     }
   }
 }
-
 
 // progress bar //
 #progressbar {
