@@ -36,6 +36,9 @@
     top: 0%;
     left: 18%;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .thelocals1 {
@@ -49,6 +52,9 @@
     top: 8%;
     left: -5%;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .join_wise {
@@ -61,6 +67,9 @@
     right: -20%;
     top: 40%;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .join_wise2 {
@@ -74,6 +83,9 @@
     top: 48%;
     float: left;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .join_novo {
@@ -86,6 +98,9 @@
     left: 50%;
     margin-top: 600px;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .extra1 {
@@ -98,6 +113,9 @@
     bottom: 500px;
     left: -66%;
     z-index: 0;
+    @media only screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
 /* Extraodinary block */
@@ -573,6 +591,7 @@ $neat-mobile: (
         padding-left: 0px;
         @media only screen and (max-width: 480px) {
           height: 320px;
+          margin: 0px;
           font-size: 19px;
           padding-bottom: 48px !important;
         }
@@ -587,6 +606,7 @@ $neat-mobile: (
   bottom: 0;
   @media only screen and (max-width: 768px) {
     bottom: 0;
+    padding-bottom: 24px;
     margin-bottom: 24px;
     width: 100%;
   }
@@ -684,7 +704,7 @@ $neat-mobile: (
       width: 100%;
       -webkit-font-smoothing: antialiased;
       @media only screen and (max-width: 768px) {
-        font-size: 19px !important;
+        font-size: 19px;
         margin: 24px;
         margin-left: 0;
         padding: 0px;
