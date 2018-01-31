@@ -79,11 +79,17 @@
 
   .hello1 {
     left: -10px;
+    @media screen and (#{$media-sm}) {
+      display: none;
+    }
   }
 
   .hello2 {
     bottom: 100px;
     right: -10px;
+    @media screen and (#{$media-sm}) {
+      display: none;
+    }
   }
 }
 

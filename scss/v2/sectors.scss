@@ -144,6 +144,9 @@
     pointer-events: none;
     left: 25%;
     margin-top: 100px;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
 
@@ -157,6 +160,9 @@
     pointer-events: none;
     margin-top: -300px;
     left: -2%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
 
   .words-jobs {
@@ -169,6 +175,9 @@
     line-height: 0.9;
     margin-top: -300px;
     left: 55%;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
   }
   
   

@@ -2,11 +2,11 @@
 
 /* old school section novo main*/
 #novotop {
-  margin-top: 480px;
-  margin-bottom: 300px;
+  margin-top: 352px;
+  margin-bottom: 416px;
   @media screen and (#{$media-sm}) {
-    margin-top: 256px;
-    margin-bottom: 256px;
+    margin-top: 166px;
+    margin-bottom: 96px;
   }
 }
 .outer-div {
@@ -26,6 +26,9 @@
   width: 100%;
   height: 100%;
   padding: 72px 64px 48px 64px;
+  @media screen and (#{$media-sm}) {
+    padding: 94px 48px 48px 30px;
+  }
 }
 #adverb {
   font-size: 26px;
@@ -67,6 +70,7 @@
   @media screen and (#{$media-sm}) {
     font-size: 20px;
     padding-right: 24px;
+    padding: 76px 48px 48px 44px;
     padding-left: 0;
   }
 }
@@ -76,8 +80,8 @@
   margin-top: -416px;
   margin-left: -130px;
   @media screen and (#{$media-sm}) {
-    margin-left: -16px;
-    margin-top: -375px;
+    margin-left: 24px;
+    margin-top: -254px;
   }
 }
 
@@ -88,9 +92,8 @@
   text-align: left;
   color: #008eda;
   -webkit-font-smoothing: antialiased;
-
   @media screen and (#{$media-sm}) {
-    font-size: 146px;
+    font-size: 75px !important;
   }
 }
   
@@ -98,7 +101,7 @@
   /* old school section novo main 2*/
 
 #novobot {
-  margin-bottom: 120px;
+  margin-bottom: 256px;
 }
 .block-div {
   @extend %stretch-over-max-width-l;
@@ -117,15 +120,24 @@
   width: 100%;
   height: 100%;
   padding: 64px 64px 48px 64px;
+  @media screen and (#{$media-sm}) {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 91px 64px 48px 28px !important;
+  }
 }
 
 .whiteblock > div {
   min-height: 240px;
-  margin: -80px 0px 180px 40%;
+  margin: -80px 0px 0px 20%;
+  margin-right: 22%;
+  padding: 48px;
   @media screen and (#{$media-sm}) {
     margin: 0px 0px 180px 0px;
     min-height: 0px;
-    padding: 48px !important;
+    padding: 0px;
+    margin-right: 0px;
   }
   background-color: #ffffff;
   position: relative;
@@ -147,7 +159,8 @@
 
   @media screen and (#{$media-sm}) {
     font-size: 28px;
-    margin-right: 24px;
+    padding: 48px;
+    margin-right: 0px;
   }
 }
   
@@ -172,8 +185,7 @@
   overflow: visible;
   height: 0;
   @media screen and (#{$media-sm}) {
-    font-size: 300px;
-    left: 5%;
+    display: none;
   }
 }
 
@@ -191,8 +203,7 @@
   overflow: visible;
   height: 0;
   @media screen and (#{$media-sm}) {
-    top: -450px;
-    font-size: 300px;
+    display: none;
   }
 }
 
