@@ -285,9 +285,14 @@
       transition: all 0.4s ease-in-out 0s;
     }
 
-    .no-touch & .tile_z:hover .tile_z-overlay {
-      transition: all 0.5s;
-      opacity: 1;
+    .tile_z:hover .tile_z-overlay {
+      transition: all;
+      opacity: 0.5;
+    }
+
+    .no-touch .tile_z-overlay {
+      transition: all;
+      opacity: 0.5;
     }
   }
 
